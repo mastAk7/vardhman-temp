@@ -1,0 +1,1180 @@
+<%- include('partials/header') %>
+<br><br><br><br><br><br>
+<div class="contact-hero">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our aviation experts</p>
+        </div>
+    </div>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Ready to discuss your aviation project? Our team of experts is here to help you find the perfect solution for your airfield requirements.</p>
+                    
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        <div class="contact-details"> 
+                            <h3>Visit Us</h3>
+                            <p><strong>Delhi Office</strong><br>
+                            Vardhman Aviation Systems<br>
+                            I &amp; II Floor, Plot no. 13, C and 13/3, Rama Rd, Side,<br>
+                            Najafgarh Road Industrial Area,<br>
+                            Delhi, 110015<br>
+                            India</p>
+
+                            <br>
+
+                            <p><strong>Pune Office</strong><br>
+                            Office No. 334, 3rd Floor,<br>
+                            Amanora Chambers, Hadapsar,<br>
+                            Pune, 411028<br>
+                            India</p>
+                        </div>
+
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Call Us</h3>
+                                <p><a href="tel:+911234567890">+91 </a><br>
+                                <a href="tel:+911234567891">+91 123 456 7891</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email Us</h3>
+                                <p><a href="mailto:info@vardhmanaviation.com">info@vardhmanaviation.com</a><br>
+                                <a href="mailto:sales@vardhmanaviation.com">sales@vardhmanaviation.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Business Hours</h3>
+                                <p>Monday - Friday: 09:00 AM - 6:00 PM<br>
+                                Saturday: 10:00 AM - 2:00 PM<br>
+                                Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-header">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                    </div>
+
+                    <!-- Success/Error Messages -->
+                    <div id="formMessage" class="form-message" style="display: none;"></div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="error-message" id="firstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <span class="error-message" id="lastNameError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                                <span class="error-message" id="phoneError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="company">Company/Organization</label>
+                                <input type="text" id="company" name="company">
+                            </div>
+                            <div class="form-group">
+                                <label for="position">Position/Title</label>
+                                <input type="text" id="position" name="position">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="product-inquiry">Product Inquiry</option>
+                                <option value="quote-request">Quote Request</option>
+                                <option value="technical-support">Technical Support</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="maintenance">Maintenance Services</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message" id="subjectError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="products">Products of Interest</label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="products" value="airfield-lighting">
+                                    <span class="checkmark"></span>
+                                    Airfield Lighting Systems
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="products" value="atc-systems">
+                                    <span class="checkmark"></span>
+                                    Air Traffic Control Systems
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="products" value="weather-systems">
+                                    <span class="checkmark"></span>
+                                    Weather Monitoring Systems
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="products" value="communication">
+                                    <span class="checkmark"></span>
+                                    Communication Systems
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="products" value="navigation">
+                                    <span class="checkmark"></span>
+                                    Navigation Equipment
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="products" value="power-systems">
+                                    <span class="checkmark"></span>
+                                    Power Generation Systems
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="urgency">Project Urgency</label>
+                            <select id="urgency" name="urgency">
+                                <option value="">Select urgency level</option>
+                                <option value="immediate">Immediate (Within 1 month)</option>
+                                <option value="short-term">Short-term (1-3 months)</option>
+                                <option value="medium-term">Medium-term (3-6 months)</option>
+                                <option value="long-term">Long-term (6+ months)</option>
+                                <option value="planning">Planning phase</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Please provide details about your requirements, project scope, or any specific questions you have..." required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label privacy-label">
+                                <input type="checkbox" name="privacy" id="privacy" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" onclick="showPrivacyPolicy()">Privacy Policy</a> and consent to being contacted by Vardhman Aviation Systems *
+                            </label>
+                            <span class="error-message" id="privacyError"></span>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            <span id="btnText">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Google Maps Tabbed Section -->
+<section class="map-section" style="padding: 60px 20px; background: #f4f8fb;">
+  <div class="container">
+    <h2 style="text-align: center; margin-bottom: 30px;">Find Us</h2>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs justify-content-center mb-4" id="officeTabs" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="delhi-tab" data-bs-toggle="tab" data-bs-target="#delhi" type="button" role="tab" aria-controls="delhi" aria-selected="true">
+          Delhi Office
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pune-tab" data-bs-toggle="tab" data-bs-target="#pune" type="button" role="tab" aria-controls="pune" aria-selected="false">
+          Pune Office
+        </button>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content" id="officeTabsContent">
+
+      <!-- Delhi -->
+      <div class="tab-pane fade show active" id="delhi" role="tabpanel" aria-labelledby="delhi-tab">
+        <div class="map-container" style="border-radius: 12px; overflow: hidden;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.796304395649!2d77.16114567529034!3d28.665817175646563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d025e8a9da58d%3A0xad324c91accb5f8b!2sVardhman%20Airport%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1751017559610!5m2!1sen!2sin" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Pune -->
+      <div class="tab-pane fade" id="pune" role="tabpanel" aria-labelledby="pune-tab">
+        <div class="map-container" style="border-radius: 12px; overflow: hidden;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.237044784079!2d73.93339937496293!3d18.51818718257483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c22241555591%3A0x55b4e980eb492d65!2sAmanora%20Chambers!5e0!3m2!1sen!2sin!4v1751017653594!5m2!1sen!2sin" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closePrivacyPolicy()">&times;</span>
+            <h2>Privacy Policy</h2>
+            <div class="modal-body">
+                <p><strong>Data Collection:</strong> We collect information you provide through our contact form to respond to your inquiries and provide our services.</p>
+                <p><strong>Data Usage:</strong> Your information is used solely for business communication and will not be shared with third parties without your consent.</p>
+                <p><strong>Data Security:</strong> We implement appropriate security measures to protect your personal information.</p>
+                <p><strong>Contact:</strong> For privacy concerns, contact us at privacy@vardhmanaviation.com</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #1e1c1c;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .contact-hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative; /* ✅ REQUIRED */
+            overflow: hidden;   /* Optional: hide overflow from background pattern */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1; /* ✅ Places the text above the background */
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            color: #f0f0f0
+        }
+
+        .contact-section {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            color: #2a5298;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info > p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .contact-cards {
+            display: grid;
+            gap: 30px;
+        }
+
+        .contact-card {
+            display: flex;
+            align-items: flex-start;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(42, 82, 152, 0.15);
+        }
+
+        .contact-icon {
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .contact-details h3 {
+            color: #2a5298;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-details p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .contact-details a {
+            color: #2a5298;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: #1e3c72;
+        }
+
+        .contact-form-container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .form-header h2 {
+            color: #2a5298;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .form-header p {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-message {
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: slideIn 0.3s ease;
+        }
+
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            background: #fff;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2a5298;
+            box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.1);
+        }
+
+        .form-group input.error,
+        .form-group select.error,
+        .form-group textarea.error {
+            border-color: #dc3545;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-weight: normal !important;
+            margin-bottom: 0 !important;
+        }
+
+        .checkbox-label input[type="checkbox"] {
+            display: none;
+        }
+
+        .checkmark {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            margin-right: 12px;
+            position: relative;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .checkbox-label input[type="checkbox"]:checked + .checkmark {
+            background: #2a5298;
+            border-color: #2a5298;
+        }
+
+        .checkbox-label input[type="checkbox"]:checked + .checkmark::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .privacy-label {
+            margin-top: 20px;
+        }
+
+        .privacy-label a {
+            color: #2a5298;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .privacy-label a:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #2a5298, #1e3c72);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(42, 82, 152, 0.3);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .submit-btn .spinner {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ffffff33;
+            border-top: 2px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .map-section {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .map-section h2 {
+            text-align: center;
+            color: #2a5298;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .map-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 30px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            animation: slideInModal 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInModal {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .modal-body p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-info h2 {
+                font-size: 2rem;
+            }
+
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+
+    <script>
+        // Form validation and submission
+        class ContactForm {
+            constructor() {
+                this.form = document.getElementById('contactForm');
+                this.submitBtn = document.getElementById('submitBtn');
+                this.btnText = document.getElementById('btnText');
+                this.formMessage = document.getElementById('formMessage');
+                
+                this.init();
+            }
+
+            init() {
+                this.form.addEventListener('submit', this.handleSubmit.bind(this));
+                
+                // Real-time validation
+                const inputs = this.form.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', () => this.validateField(input));
+                    input.addEventListener('input', () => this.clearError(input));
+                });
+            }
+
+            validateField(field) {
+                const value = field.value.trim();
+                const name = field.name;
+                let isValid = true;
+                let errorMessage = '';
+
+                // Clear previous error
+                this.clearError(field);
+
+                switch(name) {
+                    case 'firstName':
+                    case 'lastName':
+                        if (!value) {
+                            errorMessage = `${name === 'firstName' ? 'First' : 'Last'} name is required`;
+                            isValid = false;
+                        } else if (value.length < 2) {
+                            errorMessage = `${name === 'firstName' ? 'First' : 'Last'} name must be at least 2 characters`;
+                            isValid = false;
+                        }
+                        break;
+
+                    case 'email':
+                        if (!value) {
+                            errorMessage = 'Email is required';
+                            isValid = false;
+                        } else if (!this.isValidEmail(value)) {
+                            errorMessage = 'Please enter a valid email address';
+                            isValid = false;
+                        }
+                        break;
+
+                    case 'phone':
+                        if (value && !this.isValidPhone(value)) {
+                            errorMessage = 'Please enter a valid phone number';
+                            isValid = false;
+                        }
+                        break;
+
+                    case 'subject':
+                        if (!value) {
+                            errorMessage = 'Please select a subject';
+                            isValid = false;
+                        }
+                        break;
+
+                    case 'message':
+                        if (!value) {
+                            errorMessage = 'Message is required';
+                            isValid = false;
+                        } else if (value.length < 10) {
+                            errorMessage = 'Message must be at least 10 characters';
+                            isValid = false;
+                        }
+                        break;
+
+                    case 'privacy':
+                        if (!field.checked) {
+                            errorMessage = 'You must agree to the privacy policy';
+                            isValid = false;
+                        }
+                        break;
+                }
+
+                if (!isValid) {
+                    this.showError(field, errorMessage);
+                }
+
+                return isValid;
+            }
+
+            isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+
+            isValidPhone(phone) {
+                const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+                return phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''));
+            }
+
+            showError(field, message) {
+                field.classList.add('error');
+                const errorElement = document.getElementById(field.name + 'Error');
+                if (errorElement) {
+                    errorElement.textContent = message;
+                }
+            }
+
+            clearError(field) {
+                field.classList.remove('error');
+                const errorElement = document.getElementById(field.name + 'Error');
+                if (errorElement) {
+                    errorElement.textContent = '';
+                }
+            }
+
+            validateForm() {
+                const requiredFields = ['firstName', 'lastName', 'email', 'subject', 'message'];
+                let isValid = true;
+
+                requiredFields.forEach(fieldName => {
+                    const field = this.form.querySelector(`[name="${fieldName}"]`);
+                    if (!this.validateField(field)) {
+                        isValid = false;
+                    }
+                });
+
+                // Check privacy checkbox
+                const privacyField = this.form.querySelector('[name="privacy"]');
+                if (!this.validateField(privacyField)) {
+                    isValid = false;
+                }
+
+                return isValid;
+            }
+
+            async handleSubmit(e) {
+                e.preventDefault();
+
+                if (!this.validateForm()) {
+                    this.showMessage('Please correct the errors above', 'error');
+                    return;
+                }
+
+                this.setLoading(true);
+
+                try {
+                    // Simulate form submission
+                    await this.submitForm();
+                    this.showMessage('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
+                    this.form.reset();
+                } catch (error) {
+                    this.showMessage('Sorry, there was an error sending your message. Please try again or contact us directly.', 'error');
+                } finally {
+                    this.setLoading(false);
+                }
+            }
+
+            async submitForm() {
+                // Simulate API call
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        // Simulate success (you would replace this with actual form submission)
+                        const formData = new FormData(this.form);
+                        console.log('Form Data:', Object.fromEntries(formData.entries()));
+                        resolve();
+                    }, 2000);
+                });
+            }
+
+            setLoading(loading) {
+                if (loading) {
+                    this.submitBtn.disabled = true;
+                    this.btnText.innerHTML = '<div class="spinner"></div> Sending...';
+                } else {
+                    this.submitBtn.disabled = false;
+                    this.btnText.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                }
+            }
+
+            showMessage(message, type) {
+                this.formMessage.textContent = message;
+                this.formMessage.className = `form-message ${type}`;
+                this.formMessage.style.display = 'block';
+                
+                // Auto-hide success messages after 5 seconds
+                if (type === 'success') {
+                    setTimeout(() => {
+                        this.formMessage.style.display = 'none';
+                    }, 5000);
+                }
+                
+                // Scroll to message
+                this.formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // Privacy Policy Modal Functions
+        function showPrivacyPolicy() {
+            document.getElementById('privacyModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePrivacyPolicy() {
+            document.getElementById('privacyModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('privacyModal');
+            if (event.target === modal) {
+                closePrivacyPolicy();
+            }
+        }
+
+        // Initialize form when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            new ContactForm();
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Add animation to contact cards on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe contact cards for animation
+            document.querySelectorAll('.contact-card').forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+
+            // Add character counter for message field
+            const messageField = document.getElementById('message');
+            const maxLength = 1000;
+            
+            // Create character counter element
+            const counterElement = document.createElement('div');
+            counterElement.className = 'character-counter';
+            counterElement.style.cssText = `
+                font-size: 12px;
+                color: #666;
+                text-align: right;
+                margin-top: 5px;
+            `;
+            messageField.parentNode.appendChild(counterElement);
+
+            messageField.addEventListener('input', function() {
+                const currentLength = this.value.length;
+                counterElement.textContent = `${currentLength}/${maxLength} characters`;
+                
+                if (currentLength > maxLength * 0.9) {
+                    counterElement.style.color = '#dc3545';
+                } else if (currentLength > maxLength * 0.7) {
+                    counterElement.style.color = '#ffc107';
+                } else {
+                    counterElement.style.color = '#666';
+                }
+            });
+
+            // Initialize character counter
+            messageField.dispatchEvent(new Event('input'));
+
+            // Add form progress indicator
+            const form = document.getElementById('contactForm');
+            const requiredFields = form.querySelectorAll('[required]');
+            
+            const progressBar = document.createElement('div');
+            progressBar.className = 'form-progress';
+            progressBar.innerHTML = `
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <span class="progress-text">0% Complete</span>
+            `;
+            
+            const progressStyles = document.createElement('style');
+            progressStyles.textContent = `
+                .form-progress {
+                    margin-bottom: 30px;
+                    padding: 15px;
+                    background: #f8f9fa;
+                    border-radius: 10px;
+                    border: 1px solid #e9ecef;
+                }
+                .progress-bar {
+                    width: 100%;
+                    height: 8px;
+                    background: #e9ecef;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    margin-bottom: 8px;
+                }
+                .progress-fill {
+                    height: 100%;
+                    background: linear-gradient(135deg, #2a5298, #1e3c72);
+                    width: 0%;
+                    transition: width 0.3s ease;
+                }
+                .progress-text {
+                    font-size: 14px;
+                    color: #666;
+                    font-weight: 500;
+                }
+            `;
+            document.head.appendChild(progressStyles);
+            
+            form.insertBefore(progressBar, form.firstChild);
+
+            function updateProgress() {
+                let filledFields = 0;
+                requiredFields.forEach(field => {
+                    if (field.type === 'checkbox') {
+                        if (field.checked) filledFields++;
+                    } else {
+                        if (field.value.trim()) filledFields++;
+                    }
+                });
+                
+                const progress = (filledFields / requiredFields.length) * 100;
+                const progressFill = document.querySelector('.progress-fill');
+                const progressText = document.querySelector('.progress-text');
+                
+                progressFill.style.width = progress + '%';
+                progressText.textContent = Math.round(progress) + '% Complete';
+            }
+
+            requiredFields.forEach(field => {
+                field.addEventListener('input', updateProgress);
+                field.addEventListener('change', updateProgress);
+            });
+
+            // Add tooltips for product checkboxes
+            const productCheckboxes = document.querySelectorAll('input[name="products"]');
+            const tooltipData = {
+                'airfield-lighting': 'LED runway lights, taxiway lights, approach lighting systems',
+                'atc-systems': 'Control tower equipment, radar systems, communication panels',
+                'weather-systems': 'Wind sensors, visibility meters, weather stations',
+                'communication': 'VHF radios, intercom systems, public address systems',
+                'navigation': 'ILS systems, VOR equipment, GPS navigation aids',
+                'power-systems': 'Backup generators, UPS systems, power distribution'
+            };
+
+            productCheckboxes.forEach(checkbox => {
+                const label = checkbox.closest('.checkbox-label');
+                const tooltip = document.createElement('div');
+                tooltip.className = 'tooltip';
+                tooltip.textContent = tooltipData[checkbox.value];
+                
+                const tooltipStyles = `
+                    position: absolute;
+                    background: #333;
+                    color: white;
+                    padding: 8px 12px;
+                    border-radius: 6px;
+                    font-size: 12px;
+                    white-space: nowrap;
+                    z-index: 1000;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: opacity 0.3s ease;
+                    bottom: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin-bottom: 5px;
+                `;
+                
+                tooltip.style.cssText = tooltipStyles;
+                label.style.position = 'relative';
+                label.appendChild(tooltip);
+
+                label.addEventListener('mouseenter', () => {
+                    tooltip.style.opacity = '1';
+                });
+
+                label.addEventListener('mouseleave', () => {
+                    tooltip.style.opacity = '0';
+                });
+            });
+        });
+
+        // Add keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            // Close modal with Escape key
+            if (e.key === 'Escape') {
+                const modal = document.getElementById('privacyModal');
+                if (modal.style.display === 'block') {
+                    closePrivacyPolicy();
+                }
+            }
+        });
+
+        // Add form auto-save functionality (in memory only)
+        let formAutoSave = {};
+
+        function saveFormData() {
+            const form = document.getElementById('contactForm');
+            const formData = new FormData(form);
+            
+            for (let [key, value] of formData.entries()) {
+                formAutoSave[key] = value;
+            }
+            
+            // Save checkboxes separately
+            const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach(checkbox => {
+                formAutoSave[checkbox.name + '_checked'] = checkbox.checked;
+            });
+        }
+
+        function loadFormData() {
+            const form = document.getElementById('contactForm');
+            
+            for (let [key, value] of Object.entries(formAutoSave)) {
+                if (key.endsWith('_checked')) {
+                    const fieldName = key.replace('_checked', '');
+                    const checkbox = form.querySelector(`input[name="${fieldName}"]`);
+                    if (checkbox && checkbox.type === 'checkbox') {
+                        checkbox.checked = value;
+                    }
+                } else {
+                    const field = form.querySelector(`[name="${key}"]`);
+                    if (field && field.type !== 'checkbox') {
+                        field.value = value;
+                    }
+                }
+            }
+        }
+
+        // Save form data periodically
+        setInterval(saveFormData, 10000); // Save every 10 seconds
+
+        // Load saved data when page loads
+        window.addEventListener('load', () => {
+            setTimeout(loadFormData, 500);
+        });
+    </script>
+
+<%- include('partials/footer') %>

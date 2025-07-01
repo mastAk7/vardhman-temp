@@ -1,0 +1,357 @@
+<%- include('partials/header') %> 
+
+    <br><br><br><br><br>
+
+    <link rel="stylesheet" href="/css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <body>
+        <!-- METAR Ticker Section -->
+        <div class="ticker-container" id="tickerWrapper">
+            <div class="ticker-content" id="ticker">
+                <% for (const code in metarData) { const data=metarData[code]; %>
+                    <span style="margin-right: 1.5rem;">
+                        <strong>
+                            <%= data.station %>
+                        </strong>: <%= data.raw %>
+                    </span>
+                    <% } %>
+            </div>
+            <div class="loading-indicator" id="loadingIndicator"></div>
+        </div>
+
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
+            data-bs-interval="3000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-div image-bg-16x9" style="background-image: url('/images/1.png');">
+                        <h1> Vardhman Airport Solutions </h1>
+                        <p>2015 certified, rapidly expanding premier organization providing quality products, solution
+                            and services</p>
+                        <button type="button" class="btn btn-light">View more</button>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-div image-bg-16x9" style="background-image: url('/images/2.png');">
+                        <h1> Products </h1>
+                        <p>actively engaged in tying up reputed companies with domain expertise for transfer of
+                            technology and building products </p>
+                        <button type="button" class="btn btn-light">View more</button>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-div image-bg-16x9" style="background-image: url('/images/4.png');">
+                        <h1> Projects </h1>
+                        <p>form the core growth engine of our business, encompassing large-scale E&M installation and
+                            integration initiatives</p>
+                        <button type="button" class="btn btn-light">View more</button>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-div image-bg-16x9" style="background-image: url('/images/5.png');">
+                        <h1> Services </h1>
+                        <p>services encompass ongoing operation, maintenance, and support for E&M installations</p>
+                        <button type="button" class="btn btn-light">View more</button>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-div image-bg-16x9" style="background-image: url('/images/6.jpg');">
+                        <h1> Competitive Landscape </h1>
+                        <p>Vardhman Airport Solutions Limited differentiates itself through a unique blend of
+                            capabilities and market positioning.</p>
+                        <button type="button" class="btn btn-light">View more</button>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-div image-bg-16x9" style="background-image: url('/images/7.jpg');">
+                        <h1> Market Landscape </h1>
+                        <p>Vardhman Airport Solutions Limited operates within a substantial and growing market, driven
+                            by India's aggressive focus on infrastructure development and modernization.</p>
+                        <button type="button" class="btn btn-light">View more</button>
+
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!-- Carousel Videos -->
+        <!-- <section style="margin: 0; padding: 0;">
+    <div class="video-carousel">
+      <video autoplay muted loop playsinline>
+        <source src="/videos/Video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video autoplay muted loop playsinline>
+        <source src="/videos/Ship.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <video autoplay muted loop playsinline>
+        <source src="/videos/radar.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section> -->
+
+
+        <section id="company">
+            <div class="container-fluid">
+                <h4 class="mission-statement">
+                    Our mission is to deliver high-quality products and innovative solutions, adhering to international
+                    best practices while ensuring affordability. Our vision is to solidify our position as a preferred
+                    partner for large-scale infrastructure projects and long-term service contracts, significantly
+                    contributing to the Government of India's "Make in India" initiative through local product
+                    development.
+                </h4>
+                <div class="features-section">
+                    <div class="features-container">
+                        <div class="features-grid">
+                            <div class="feature-card industry-leadership">
+                                <i class="fa-solid fa-user-tie feature-icon"></i>
+                                <h3>Industry Expertise</h3>
+                                <p>Driven by innovation and excellence, we are shaping industry leadership in
+                                    next-generation defense technologies.</p>
+                            </div>
+                            <div class="feature-card state-art">
+                                <i class="fa-solid fa-tools feature-icon"></i>
+                                <h3>State of Art Solutions</h3>
+                                <p>We deliver state-of-the-art defense solutions engineered for precision, reliability,
+                                    and operational superiority.</p>
+                            </div>
+                            <div class="feature-card maintenance">
+                                <i class="fa-solid fa-cogs feature-icon"></i>
+                                <h3>Maintenance Services</h3>
+                                <p>We provide comprehensive maintenance and lifecycle support to ensure optimal
+                                    performance and mission readiness of all deployed systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="products">
+            <div class="container-fluid">
+                <h1 class="heading"> Products </h1>
+                <div class="container-fluid">
+
+                    <div class="row g-4">
+                        <!-- Card 1 -->
+                        <div class="modern-card">
+                            <div class="modern-card-img" style="background-image: url('/images/1.png');"></div>
+                            <div class="modern-card-content">
+                                <h3 class="modern-card-title">Aviation</h3>
+                                <a href="#" class="modern-card-button">View Details</a>
+                            </div>
+                        </div>
+                        <div class="modern-card">
+                            <div class="modern-card-img" style="background-image: url('/images/2.png');"></div>
+                            <div class="modern-card-content">
+                                <h3 class="modern-card-title">Defense</h3>
+                                <a href="#" class="modern-card-button">View Details</a>
+                            </div>
+                        </div>
+                        <div class="modern-card">
+                            <div class="modern-card-img" style="background-image: url('/images/4.png');"></div>
+                            <div class="modern-card-content">
+                                <h3 class="modern-card-title">MES</h3>
+                                <a href="#" class="modern-card-button">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
+        <div id="clients">
+            <div class="slider" style="--width: 300px; --height: 200px; --quantity: 5;">
+                <div class="list">
+                    <div class="item" style="--position: 1">
+                        <div class="card">
+                            <img src="/logos/company1.png" alt="Company 1 Logo" class="logo" />
+                            <h3>Company One</h3>
+                            <p>Leading provider of defense systems and technology.</p>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 2">
+                        <div class="card">
+                            <img src="/logos/company2.png" alt="Company 2 Logo" class="logo" />
+                            <h3>Company Two</h3>
+                            <p>Innovative solutions for aerospace communications.</p>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 3">
+                        <div class="card">
+                            <img src="/logos/company3.png" alt="Company 3 Logo" class="logo" />
+                            <h3>Company Three</h3>
+                            <p>Advanced radar and surveillance technologies.</p>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 4">
+                        <div class="card">
+                            <img src="/logos/company4.png" alt="Company 4 Logo" class="logo" />
+                            <h3>Company Four</h3>
+                            <p>Experts in secure military communications.</p>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 5">
+                        <div class="card">
+                            <img src="/logos/company5.png" alt="Company 5 Logo" class="logo" />
+                            <h3>Company Five</h3>
+                            <p>Global leader in defense and aerospace electronics.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="director">
+            <div class="container-fluid">
+                <h1 class="heading"> Directors </h1>
+                <div class="container-fluid">
+
+                    <div class="row g-4">
+                        <!-- Card 1 -->
+                        <div class="modern-card">
+                            <div class="modern-card-img" style="background-image: url('/images/1.png');"></div>
+                            <div class="modern-card-content">
+                                <h3 class="modern-card-title">Director3</h3>
+                                <a href="#" class="modern-card-button">LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="modern-card">
+                            <div class="modern-card-img" style="background-image: url('/images/2.png');"></div>
+                            <div class="modern-card-content">
+                                <h3 class="modern-card-title">Director2</h3>
+                                <a href="#" class="modern-card-button">LinkedIn</a>
+                            </div>
+                        </div>
+                        <div class="modern-card">
+                            <div class="modern-card-img" style="background-image: url('/images/4.png');"></div>
+                            <div class="modern-card-content">
+                                <h3 class="modern-card-title">Director3</h3>
+                                <a href="#" class="modern-card-button">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+
+        <div id="certifications">
+            <div class="slider reverse" style="--width: 300px; --height: 200px; --quantity: 5;">
+                <div class="list">
+                    <div class="item" style="--position: 1">
+                        <div class="cert-card">
+                            <img src="/certs/cert1.png" alt="Certification 1" class="cert-img" />
+                            <h3>ISO 9001 Certified</h3>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 2">
+                        <div class="cert-card">
+                            <img src="/certs/cert2.png" alt="Certification 2" class="cert-img" />
+                            <h3>AS9100 Registered</h3>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 3">
+                        <div class="cert-card">
+                            <img src="/certs/cert3.png" alt="Certification 3" class="cert-img" />
+                            <h3>ISO 14001 Certified</h3>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 4">
+                        <div class="cert-card">
+                            <img src="/certs/cert4.png" alt="Certification 4" class="cert-img" />
+                            <h3>Cybersecurity Compliance</h3>
+                        </div>
+                    </div>
+                    <div class="item" style="--position: 5">
+                        <div class="cert-card">
+                            <img src="/certs/cert5.png" alt="Certification 5" class="cert-img" />
+                            <h3>Defense Standards</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+            <section class="news-section">
+                <h1 class="section-title">Latest News & Updates</h1>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-header press-release">Press Release</div>
+                        <div class="news-image agl-demo"></div>
+                        <div class="news-content">
+                            <h3 class="news-title">Vardhman AGL Systems Successfully Demonstrates Advanced LED
+                                Technology</h3>
+                            <p class="news-excerpt">Vardhman announced the successful performance of advanced LED inset
+                                lighting systems at major Indian airports. The implementation showcases cutting-edge
+                                technology in airfield ground lighting solutions.</p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-header in-news">In The News</div>
+                        <div class="news-image rocket-launch"></div>
+                        <div class="news-content">
+                            <h3 class="news-title">Vardhman's Advanced AVDGS Systems Achieve 100% Performance Standards
+                            </h3>
+                            <p class="news-excerpt">Vardhman Airport Solutions has announced that its Advanced Visual
+                                Docking Guidance Systems (AVDGS) have successfully completed performance testing,
+                                meeting international aviation standards for precision aircraft guidance.</p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-header press-release">Press Release</div>
+                        <div class="news-image contract-award"></div>
+                        <div class="news-content">
+                            <h3 class="news-title">Vardhman Receives ₹45 Crore AGL Infrastructure Contract Award</h3>
+                            <p class="news-excerpt">Vardhman, the leader in airport lighting solutions, has been
+                                selected as the prime contractor for a major AGL infrastructure project. The contract
+                                includes design, supply, installation and commissioning of complete lighting systems.
+                            </p>
+                            <a href="#" class="read-more-btn">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        <script src="/js/home.js"></script>
+        <%- include('partials/footer') %>
+    </body>

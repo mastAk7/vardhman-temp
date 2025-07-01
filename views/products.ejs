@@ -1,0 +1,631 @@
+<%- include('partials/header') %>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            padding: 2rem 0;
+            padding-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            padding: auto;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        /* Product Cards */
+        .products-section {
+            width: 100%;
+            margin-bottom: 4rem;
+            padding: 4rem;
+            background: #fff;
+        }
+
+        .products-section .headings h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .products-section .headings h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .products-section .headings h4 {
+            text-align: center;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #777;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-image {
+            height: 200px;
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3d6f 100%);
+            position: relative;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .product-image.led-lights {
+            background: url("/images/1.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .product-image.laser-system {
+            background: url("/images/2.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .product-image.ilcms {
+            background: url("/images/4.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .product-image.company-pics {
+            background: url("https://www.vardhmanairports.com/wp-content/uploads/2018/08/97.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .product-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1.5rem;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .product-cta {
+            color: #00bcd4;
+            font-size: 0.9rem;
+            text-decoration: none;
+            margin-top: 1rem;
+            align-self: flex-start;
+        }
+
+        .product-cta:hover {
+            text-decoration: underline;
+        }
+
+        /* News Cards */
+        .news-section {
+            margin-bottom: 4rem;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .news-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .news-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .news-header {
+            padding: 0.5rem 1rem;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .news-header.press-release {
+            background: #8b5a3c;
+        }
+
+        .news-header.in-news {
+            background: #2c5aa0;
+        }
+
+        .news-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .news-image.agl-demo {
+            background: linear-gradient(45deg, #4a90e2 30%, #357abd 100%);
+        }
+
+        .news-image.rocket-launch {
+            background: linear-gradient(45deg, #ff6b35 30%, #f7931e 100%);
+        }
+
+        .news-image.contract-award {
+            background: linear-gradient(45deg, #2c5aa0 30%, #1e3d6f 100%);
+        }
+
+        .news-content {
+            padding: 1.5rem;
+        }
+
+        .news-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .news-excerpt {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .read-more-btn {
+            background: #333;
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .read-more-btn:hover {
+            background: #555;
+        }
+
+        /* Icon overlays for product cards */
+        .product-icon {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+
+            .products-grid,
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            body {
+                padding: 1rem;
+            }
+        }
+ </style>
+    <br><br><br><br><br>
+    <!-- Hero Section with Background Image and Title -->
+    <section style="
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background: url('/images/Product_bg.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    ">
+    <!-- Transparent overlay -->
+    <div style="
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4); /* adjust alpha for transparency */
+        z-index: 1;
+    "></div>
+
+    <!-- Text content -->
+    <h1 style="
+        color: white;
+        font-size: 4rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        margin: 0;
+        z-index: 2;
+        position: relative;
+    ">
+        OUR PRODUCTS
+    </h1>
+    </section>
+
+<!-- Section: Animated Headline and Description -->
+<section class="hero-section animate-on-scroll">
+  <h1 class="headline">UNLOCK THE FUTURE</h1>
+  <p class="subtext">
+    Experience a powerful suite of next-generation solutions designed to transform how technology <strong>synergizes</strong> with operations.<br>
+    From intelligent safety systems to precision-engineered technologies, we empower aviation leaders to redefine efficiency and reliability.
+  </p>
+</section>
+
+<style>
+.hero-section {
+  padding: 80px 20px;
+  background: #001f3f;
+  text-align: center;
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.headline {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #84efff, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.subtext {
+  font-size: 1.4rem;
+  max-width: 850px;
+  margin: 0 auto;
+  color: #d9e6f2;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When in view */
+.hero-section.in-view .headline,
+.hero-section.in-view .subtext {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+        } else {
+          entry.target.classList.remove("in-view");
+        }
+      });
+    },
+    {
+      threshold: 0.3, // adjust as needed
+    }
+  );
+
+  document.querySelectorAll(".animate-on-scroll").forEach(section => {
+    observer.observe(section);
+  });
+});
+</script>
+
+    <!-- Updated Air Traffic Management Sections with Modern Card Layout -->
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section {
+            padding: 80px 60px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #001f54;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #001f54;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .card {
+            position: relative;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .card-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        .card-content .arrow {
+            font-size: 2rem;
+            transition: transform 0.3s ease;
+        }
+        .card:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+
+    <!-- Section Template -->
+    <section class="section">
+    <div class="section-title">Air Traffic Management System</div>
+    <div class="grid">
+        <div class="card" style="background-image: url('images/4.png');" onclick="location.href='/products/air_traffic_management_system';">
+        <div class="card-content">
+            <span>Air Traffic Management System</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+
+        <div class="card" style="background-image: url('images/1.png');" onclick="location.href='/products/trailer-mounted-mobile-atc';">
+        <div class="card-content">
+            <span>Mobile ATC Tower</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+
+        <div class="card" style="background-image: url('images/7.jpg');" onclick="location.href='/products/digital_voice_recorder_system';">
+        <div class="card-content">
+            <span>Digital Voice Recorder</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section">
+    <div class="section-title">Airfield Equipment</div>
+    <div class="grid">
+        <div class="card" style="background-image: url('images/helipad.jpg');" onclick="location.href='/products/airfield_lighting_system';">
+        <div class="card-content">
+            <span>Runway / Helipad Lighting System</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/alarm.png');" onclick="location.href='/products/airfield_alarm_system';">
+        <div class="card-content">
+            <span>Alarm System</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/barrier.jpg');" onclick="location.href='/products/airfield_road_traffic_management';">
+        <div class="card-content">
+            <span>Road Traffic Management</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/alert.jpg');" onclick="location.href='/products/emergency_alert_system';">
+        <div class="card-content">
+            <span>Emergency Alert System</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/cage.png');" onclick="location.href='/products/external_pilot_cage_protection';">
+        <div class="card-content">
+            <span>Pilot Cage Protection</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section">
+    <div class="section-title">Navigation & Tracking</div>
+    <div class="grid">
+        <div class="card" style="background-image: url('images/radar.jpg');" onclick="location.href='/products/portable_tracking_system';">
+        <div class="card-content">
+            <span>Portable Tracking System</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/ndb.jpg');" onclick="location.href='/products/ndb_beacon';">
+        <div class="card-content">
+            <span>NDB Beacon</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/cadf.jpg');" onclick="location.href='/products/cadf_system';">
+        <div class="card-content">
+            <span>CADF System</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/camera.png');" onclick="location.href='/products/aircraft_monitoring_system';">
+        <div class="card-content">
+            <span>Aircraft Monitoring System</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section">
+    <div class="section-title">Weather & Communication</div>
+    <div class="grid">
+        <div class="card" style="background-image: url('images/awos.jpg');" onclick="location.href='/products/automatic_weather_observation_system';">
+        <div class="card-content">
+            <span>Weather Observation System</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/radar.png');" onclick="location.href='/products/weather_radar';">
+        <div class="card-content">
+            <span>Weather Radar</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/tactical.png');" onclick="location.href='/products/tactical_communication_system';">
+        <div class="card-content">
+            <span>Tactical Communication</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="section">
+    <div class="section-title">Support Equipment</div>
+    <div class="grid">
+        <div class="card" style="background-image: url('images/power.jpg');" onclick="location.href='/products/power_generation_system';">
+        <div class="card-content">
+            <span>Power Generation System</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/equipment.png');" onclick="location.href='/products/equipment_shelter';">
+        <div class="card-content">
+            <span>Equipment Shelter</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/runway.jpg');" onclick="location.href='/products/runway_miscellaneous_equipment';">
+        <div class="card-content">
+            <span>Runway Equipment</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+        <div class="card" style="background-image: url('images/mes.jpg');" onclick="location.href='/products/smart_energy_meter';">
+        <div class="card-content">
+            <span>Smart Energy Meter</span>
+            <span class="arrow">&gt;</span>
+        </div>
+        </div>
+    </div>
+    </section>
+
+<%- include('partials/footer') %>
