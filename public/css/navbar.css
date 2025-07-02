@@ -13,7 +13,6 @@ body {
     padding-bottom: 0 !important;
 }
 
- 
 h1, h3{
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 700;
@@ -78,7 +77,31 @@ a {
     font-weight: 500;
 }
 
-/* Dropdown Styles (Desktop) */
+/* Dropdown toggle arrow positioning */
+.dropdown-toggle-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.dropdown-toggle-arrow {
+    cursor: pointer;
+    padding: 5px;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.dropdown-toggle-arrow:hover {
+    color: #007bff;
+}
+
+.dropdown-toggle-arrow.rotated {
+    transform: rotate(180deg);
+}
+
+/* Desktop Dropdown Styles */
 @media (min-width: 992px) {
     .navbar-nav .dropdown-menu {
         display: block;
@@ -127,6 +150,11 @@ a {
     .navbar-nav .dropdown-toggle::after {
         display: none;
     }
+    
+    /* Hide dropdown arrows on desktop */
+    .dropdown-toggle-arrow {
+        display: none;
+    }
 }
 
 /* Brand and logo */
@@ -144,7 +172,7 @@ a {
 }
 .navbar-brand:hover {
     transform: scale(1.05);
-}
+} 
 .mobile-logo {
     height: 60px;
     display: block;
@@ -215,20 +243,6 @@ a {
     margin: 0 10px;
 }
 
-/* Submenu arrow indicator */
-.dropdown-submenu > .dropdown-item::after {
-    content: '▶';
-    float: right;
-    margin-left: 10px;
-    font-size: 0.8em;
-    color: #6c757d;
-}
-@media (max-width: 991px) {
-    .dropdown-submenu > .dropdown-item::after {
-        transform: rotate(90deg);
-    }
-}
-
 /* Mobile Styles */
 @media (max-width: 576px) {
     .mobile-logo { height: 45px; }
@@ -249,6 +263,7 @@ a {
 
 /* Mobile Dropdown Styles */
 @media (max-width: 991px) {
+    /* Main dropdown styles */
     .dropdown-menu {
         position: static !important;
         transform: none !important;
@@ -257,13 +272,19 @@ a {
         display: none;
         box-shadow: none;
         border: none;
-        background: rgba(248, 249, 250, 0.5);
-        margin-top: 0.5rem;
-        border-radius: 6px;
+        background: rgba(248, 249, 250, 0.95);
+        margin: 0.5rem 0;
+        border-radius: 8px;
+        padding: 0.5rem 0;
+        border-left: 3px solid #007bff;
     }
+    
     .dropdown-menu.show {
         display: block;
+        animation: slideDown 0.3s ease-out;
     }
+    
+    /* Submenu styles */
     .dropdown-submenu .submenu {
         position: static !important;
         transform: none !important;
@@ -271,11 +292,67 @@ a {
         visibility: visible !important;
         display: none;
         box-shadow: none;
-        margin-left: 1rem;
-        margin-top: 0.5rem;
-        background: rgba(233, 236, 239, 0.5);
+        margin: 0.25rem 0 0.25rem 1rem;
+        background: rgba(233, 236, 239, 0.95);
+        border-radius: 6px;
+        padding: 0.25rem 0;
+        border-left: 2px solid #6c757d;
     }
+    
     .dropdown-submenu .submenu.show {
         display: block;
+        animation: slideDown 0.2s ease-out;
+    }
+    
+    /* Mobile dropdown item styling */
+    .dropdown-item {
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+        border-radius: 4px;
+        margin: 0 0.5rem;
+    }
+    
+    .dropdown-submenu .dropdown-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Remove desktop hover effects on mobile */
+    .dropdown-item:hover {
+        transform: none;
+        background-color: rgba(0, 123, 255, 0.1);
+    }
+    
+    /* Mobile navigation item styling */
+    .nav-item {
+        margin: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-item:last-child {
+        border-bottom: none;
+    }
+    
+    .nav-link {
+        padding: 1rem 0;
+        font-size: 1.1rem;
+    }
+    
+    /* Show dropdown arrows on mobile */
+    .dropdown-toggle-arrow {
+        display: inline-block;
+    }
+}
+
+/* Slide down animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

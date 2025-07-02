@@ -21,13 +21,15 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-    
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
             <!-- Brand (Logo + Line + DEFENCE) -->
@@ -60,12 +62,22 @@
                             <a class="nav-link" href="/about">About Us</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/products" id="productsDropdown">
-                                Our Products
-                            </a>
+                            <div class="dropdown-toggle-wrapper">
+                                <a class="nav-link" href="/products" id="productsDropdown">
+                                    Our Products
+                                </a>
+                                <span class="dropdown-toggle-arrow" tabindex="0">
+                                    <i class="fa fa-caret-down"></i>
+                                </span>
+                            </div>
                             <ul class="dropdown-menu" aria-labelledby="productsDropdown">
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Air Traffic Management</a>
+                                    <div class="dropdown-toggle-wrapper">
+                                        <a class="dropdown-item" href="#">Air Traffic Management</a>
+                                        <span class="dropdown-toggle-arrow" tabindex="0">
+                                            <i class="fa fa-caret-down"></i>
+                                        </span>
+                                    </div>
                                     <ul class="dropdown-menu submenu">
                                         <li><a class="dropdown-item" href="/products/air-traffic-management-system">Air
                                                 Traffic Management System</a></li>
@@ -77,7 +89,12 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Airfield Equipment</a>
+                                    <div class="dropdown-toggle-wrapper">
+                                        <a class="dropdown-item" href="#">Airfield Equipment</a>
+                                        <span class="dropdown-toggle-arrow" tabindex="0">
+                                            <i class="fa fa-caret-down"></i>
+                                        </span>
+                                    </div>
                                     <ul class="dropdown-menu submenu">
                                         <li><a class="dropdown-item" href="/products/airfield-lighting-system">Airfield
                                                 Lighting System</a></li>
@@ -92,7 +109,12 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Navigation & Tracking</a>
+                                    <div class="dropdown-toggle-wrapper">
+                                        <a class="dropdown-item" href="#">Navigation & Tracking</a>
+                                        <span class="dropdown-toggle-arrow" tabindex="0">
+                                            <i class="fa fa-caret-down"></i>
+                                        </span>
+                                    </div>
                                     <ul class="dropdown-menu submenu">
                                         <li><a class="dropdown-item" href="/products/portable-tracking-system">Portable
                                                 Tracking System</a></li>
@@ -104,7 +126,12 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Weather & Communication</a>
+                                    <div class="dropdown-toggle-wrapper">
+                                        <a class="dropdown-item" href="#">Weather & Communication</a>
+                                        <span class="dropdown-toggle-arrow" tabindex="0">
+                                            <i class="fa fa-caret-down"></i>
+                                        </span>
+                                    </div>
                                     <ul class="dropdown-menu submenu">
                                         <li><a class="dropdown-item"
                                                 href="/products/automatic-weather-observation-system">Weather
@@ -117,7 +144,12 @@
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Support Equipment</a>
+                                    <div class="dropdown-toggle-wrapper">
+                                        <a class="dropdown-item" href="#">Support Equipment</a>
+                                        <span class="dropdown-toggle-arrow" tabindex="0">
+                                            <i class="fa fa-caret-down"></i>
+                                        </span>
+                                    </div>
                                     <ul class="dropdown-menu submenu">
                                         <li><a class="dropdown-item" href="/products/power-generation-system">Power
                                                 Generation System</a></li>
@@ -135,9 +167,14 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="/solutions" id="solutionsDropdown">
-                                Our Solutions
-                            </a>
+                            <div class="dropdown-toggle-wrapper">
+                                <a class="nav-link" href="/solutions" id="solutionsDropdown">
+                                    Our Solutions
+                                </a>
+                                <span class="dropdown-toggle-arrow" tabindex="0">
+                                    <i class="fa fa-caret-down"></i>
+                                </span>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/news">News</a>
@@ -148,13 +185,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/contact">Contact</a>
                         </li>
-                        <!--
-                <li class="nav-item">
-                    <a class="nav-link" href="/search">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
-                </li>
-                -->
                     </ul>
                 </div>
             </div>
