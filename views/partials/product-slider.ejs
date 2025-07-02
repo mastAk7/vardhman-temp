@@ -265,30 +265,27 @@
     }
 
     @media (max-width: 480px) {
-        .product-slider .container-fluid {
-            padding: 0 .5rem;
-        }
-        .product-slider .modern-card {
+        #products .modern-card {
             min-width: 85vw;
             max-width: 85vw;
             margin: 0 auto;
             border-radius: 16px;
         }
 
-        .product-slider .modern-card-img {
+        #products .modern-card-img {
             height: 140px;
             font-size: 2rem;
         }
 
-        .product-slider .modern-card-content {
+        #products .modern-card-content {
             padding: 1.2rem 0.8rem;
         }
 
-        .product-slider .modern-card-title {
+        #products .modern-card-title {
             font-size: 1.1rem;
         }
 
-        .product-slider .modern-card-description {
+        #products .modern-card-description {
             font-size: 0.95rem;
         }
     }
@@ -463,7 +460,17 @@
             }
 
             updateSlider() {
-                const translateX = -this.currentIndex * this.cardWidth;
+                let translateX;
+                if (this.visibleCards === 1) {
+                    // Center the active card in the viewport
+                    const containerWidth = this.slider.parentElement.clientWidth;
+                    const cardWidth = this.cards[0].offsetWidth;
+                    const gap = parseInt(getComputedStyle(this.slider).gap) || 0;
+                    translateX = (containerWidth - cardWidth) / 2 - (this.currentIndex * (cardWidth + gap));
+                } else {
+                    // Default: align left
+                    translateX = -this.currentIndex * this.cardWidth;
+                }
                 this.slider.style.transform = `translateX(${translateX}px)`;
 
                 // Update navigation states
@@ -475,7 +482,6 @@
                     dot.classList.toggle('active', index === this.currentIndex);
                 });
             }
-
             goToSlide(index) {
                 this.currentIndex = Math.max(0, Math.min(index, this.maxIndex));
                 this.updateSlider();
