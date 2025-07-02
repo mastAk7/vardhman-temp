@@ -188,7 +188,7 @@
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
     justify-items: center;
     width: 100%;
@@ -764,4 +764,14 @@ h5 {
     .section-title {
         font-size: 2rem;
     }
+}
+
+@media (max-width: 600px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .feature-card {
+    padding: 1.2rem 0.7rem;
+  }
 }
