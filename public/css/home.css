@@ -188,10 +188,14 @@
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
     justify-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
 }
+
 
 .feature-card {
     background: #fff;
@@ -245,6 +249,20 @@
 }
 
 
+.products-grid,
+.directors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Responsive: single column on small screens */
+
+
 #products {
     padding: 4rem 0;
     background: linear-gradient(to bottom right, #f3f4f6, #e5e7eb);
@@ -269,14 +287,13 @@ h5 {
 
 /* Card container */
 .modern-card {
-    max-width: 380px;
-    border-radius: 1rem;
+    width: 100%;
+    border-radius: 16px;
     overflow: hidden;
-    background: #ffffff;
+    background: #fff;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    margin: 1.5rem auto;
     border: 1px solid #e4e4e7;
     padding: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -708,15 +725,11 @@ h5 {
     background: #1e40af;
 }
 
-/* Responsive Styles */
-@media (max-width: 992px) {
-    .features-grid {
+@media (max-width: 768px) {
+    .products-grid,
+    .directors-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .features-section {
-        padding: 40px 0;
+        gap: 1.2rem;
     }
 }
 
