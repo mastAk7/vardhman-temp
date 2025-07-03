@@ -102,6 +102,44 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
+        // Handle third-level submenu toggles
+        document.querySelectorAll('.dropdown-submenu .dropdown-submenu').forEach(submenu => {
+            const submenuToggle = submenu.querySelector('.dropdown-item.dropdown-toggle');
+            const arrow = submenu.querySelector('.dropdown-toggle-arrow');
+            const submenuDropdown = submenu.querySelector('.submenu-level-2');
+
+            if (arrow && submenuDropdown) {
+                arrow.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const icon = this.querySelector('i');
+                    if (submenuDropdown.classList.contains('show')) {
+                        icon.className = 'fa fa-caret-down';
+                    } else {
+                        icon.className = 'fa fa-caret-up';
+                    }
+
+                    // Close other third-level menus
+                    const parentSubmenu = submenu.closest('.submenu');
+                    if (parentSubmenu) {
+                        parentSubmenu.querySelectorAll('.submenu-level-2.show').forEach(menu => {
+                            if (menu !== submenuDropdown) {
+                                menu.classList.remove('show');
+                                const otherSubmenu = menu.closest('.dropdown-submenu');
+                                const otherArrow = otherSubmenu.querySelector('.dropdown-toggle-arrow i');
+                                if (otherArrow) {
+                                    otherArrow.className = 'fa fa-caret-down';
+                                }
+                            }
+                        });
+                    }
+
+                    submenuDropdown.classList.toggle('show');
+                });
+            }
+        });
+
         // Close dropdowns when clicking outside
         document.addEventListener('click', function (e) {
             if (!e.target.closest('.dropdown')) {
