@@ -13,6 +13,82 @@ const __dirname = dirname(__filename);
 // Load the JSON data
 const data = JSON.parse(readFileSync(join(__dirname, '../public/data/products.json'), 'utf8'));
 
+// Helper function to find similar products
+function findSimilarProducts(currentProductId, maxResults = 4) {
+  const currentProduct = data.products[currentProductId];
+  if (!currentProduct) return [];
+
+  // Find which category and classification this product belongs to
+  let productCategory = null;
+  let productClassification = null;
+  
+  // Search through categories
+  for (const [categoryId, category] of Object.entries(data.categories)) {
+    // Check if product is directly in category
+    if (category.products && category.products.includes(currentProductId)) {
+      productCategory = categoryId;
+      break;
+    }
+    
+    // Check if product is in a classification
+    if (category.classifications) {
+      for (const [classificationId, classification] of Object.entries(category.classifications)) {
+        if (classification.products && classification.products.includes(currentProductId)) {
+          productCategory = categoryId;
+          productClassification = classificationId;
+          break;
+        }
+      }
+      if (productCategory) break;
+    }
+  }
+
+  let similarProducts = [];
+  
+  if (productCategory) {
+    const category = data.categories[productCategory];
+    
+    // If product is in a classification, get other products from same classification first
+    if (productClassification && category.classifications) {
+      const classification = category.classifications[productClassification];
+      const classificationProducts = classification.products
+        .filter(id => id !== currentProductId && data.products[id])
+        .map(id => ({ key: id, ...data.products[id] }));
+      
+      similarProducts.push(...classificationProducts);
+    }
+    
+    // Then get other products from the same category
+    if (category.products) {
+      const categoryProducts = category.products
+        .filter(id => id !== currentProductId && data.products[id])
+        .map(id => ({ key: id, ...data.products[id] }));
+      
+      similarProducts.push(...categoryProducts);
+    }
+    
+    // If we still need more products, get from other classifications in the same category
+    if (similarProducts.length < maxResults && category.classifications) {
+      for (const [classId, classification] of Object.entries(category.classifications)) {
+        if (classId !== productClassification) {
+          const otherClassProducts = classification.products
+            .filter(id => id !== currentProductId && data.products[id])
+            .map(id => ({ key: id, ...data.products[id] }));
+          
+          similarProducts.push(...otherClassProducts);
+        }
+      }
+    }
+  }
+  
+  // Remove duplicates and limit results
+  const uniqueProducts = similarProducts.filter((product, index, self) => 
+    index === self.findIndex(p => p.key === product.key)
+  );
+  
+  return uniqueProducts.slice(0, maxResults);
+}
+
 // Main products page - shows all categories and 6 random products
 router.get('/', (req, res) => {
   const categories = data.categories;
@@ -149,12 +225,16 @@ router.get('/product/:productId', (req, res) => {
     return res.status(404).render('404', { message: 'Product not found' });
   }
   
+  // Get similar products
+  const similarProducts = findSimilarProducts(productId, 4);
+  
   res.render('products/product', {
     title: product.title,
     product: {
       key: productId,
       ...product
-    }
+    },
+    similarProducts
   });
 });
 
