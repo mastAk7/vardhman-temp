@@ -289,6 +289,29 @@
             font-size: 0.95rem;
         }
     }
+
+    @media (max-width: 480px) {
+        .product-slider .nav-btn {
+            width: 36px;
+            height: 36px;
+            font-size: 1.2rem;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+        }
+
+        .product-slider .slider-nav {
+            gap: 0.5rem;
+            margin-top: 1.2rem;
+        }
+
+        .product-slider .slider-container {
+            padding: 0.5rem 0 !important;
+        }
+
+        #products .container-fluid {
+            padding: 0 !important;
+        }
+    }
 </style>
 </head>
 
@@ -307,12 +330,12 @@
                                 </h3>
                                 <p class="modern-card-description">
                                     <%= product.description.substring(0, 150) %>
-                                    <% if(product.description.trim().length > 150) { %>
-                                    ...
-                                    <% } %>
+                                        <% if(product.description.trim().length> 150) { %>
+                                            ...
+                                            <% } %>
                                 </p>
-                                <a href="/products/product/<%= product.key %>"
-                                    class="modern-card-button">View Details</a>
+                                <a href="/products/product/<%= product.key %>" class="modern-card-button">View
+                                    Details</a>
                             </div>
                         </div>
                         <% }) %>
