@@ -1,0 +1,144 @@
+<%- include('../partials/header') %>
+
+<body>
+    <!-- Your header/navigation -->
+    
+    <main>
+        <!-- Product Detail Section -->
+        <section class="product-detail-section">
+            <div class="container">
+                <div class="product-detail-content">
+                    <!-- Product Images -->
+                    <div class="product-images">
+                        <div class="main-image">
+                            <img src="<%= product.image %>" alt="<%= product.title %>" id="mainProductImage">
+                        </div>
+                        <% if (product.portfolioImage) { %>
+                            <div class="thumbnail-images">
+                                <img src="<%= product.image %>" alt="<%= product.title %>" onclick="changeMainImage(this.src)" class="thumbnail active">
+                                <img src="<%= product.portfolioImage %>" alt="<%= product.title %>" onclick="changeMainImage(this.src)" class="thumbnail">
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <!-- Product Information -->
+                    <div class="product-info">
+                        <h1><%= product.title %></h1>
+                        <div class="product-description">
+                            <p><%= product.description %></p>
+                        </div>
+
+                        <!-- Portfolio Lines -->
+                        <% if (product.portfolioLines && product.portfolioLines.length > 0) { %>
+                            <div class="portfolio-lines">
+                                <h3>Key Highlights</h3>
+                                <ul>
+                                    <% product.portfolioLines.forEach(line => { %>
+                                        <li><%= line %></li>
+                                    <% }) %>
+                                </ul>
+                            </div>
+                        <% } %>
+
+                        <!-- Features -->
+                        <% if (product.features && product.features.length > 0) { %>
+                            <div class="product-features">
+                                <h3>Features</h3>
+                                <ul>
+                                    <% product.features.forEach(feature => { %>
+                                        <li><%= feature %></li>
+                                    <% }) %>
+                                </ul>
+                            </div>
+                        <% } %>
+
+                        <!-- Key Functionalities -->
+                        <% if (product.key_functionalities && product.key_functionalities.length > 0) { %>
+                            <div class="key-functionalities">
+                                <h3>Key Functionalities</h3>
+                                <ul>
+                                    <% product.key_functionalities.forEach(func => { %>
+                                        <li><%= func %></li>
+                                    <% }) %>
+                                </ul>
+                            </div>
+                        <% } %>
+
+                        <!-- Main Equipment -->
+                        <% if (product.main_equipment && product.main_equipment.length > 0) { %>
+                            <div class="main-equipment">
+                                <h3>Main Equipment</h3>
+                                <ul>
+                                    <% product.main_equipment.forEach(equipment => { %>
+                                        <li><%= equipment %></li>
+                                    <% }) %>
+                                </ul>
+                            </div>
+                        <% } %>
+
+                        <!-- Equipment List -->
+                        <% if (product.equipment_list && product.equipment_list.length > 0) { %>
+                            <div class="equipment-list">
+                                <h3>Equipment Specifications</h3>
+                                <div class="equipment-items">
+                                    <% product.equipment_list.forEach(item => { %>
+                                        <div class="equipment-item">
+                                            <h4><%= item.name %></h4>
+                                            <p><%= item.spec %></p>
+                                        </div>
+                                    <% }) %>
+                                </div>
+                            </div>
+                        <% } %>
+
+                        <!-- Components -->
+                        <% if (product.components && product.components.length > 0) { %>
+                            <div class="product-components">
+                                <h3>Components</h3>
+                                <div class="components-list">
+                                    <% product.components.forEach(component => { %>
+                                        <div class="component-item">
+                                            <h4><%= component.name %></h4>
+                                            <p><%= component.description %></p>
+                                        </div>
+                                    <% }) %>
+                                </div>
+                            </div>
+                        <% } %>
+
+                        <!-- Contact/Inquiry Button -->
+                        <div class="product-actions">
+                            <button class="btn btn-primary" onclick="openInquiryForm()">Request Information</button>
+                            <button class="btn btn-secondary" onclick="window.print()">Print Specifications</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Your footer -->
+    
+    <!-- Your JavaScript files -->
+    <script>
+        function changeMainImage(src) {
+            document.getElementById('mainProductImage').src = src;
+            
+            // Update active thumbnail
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => {
+                thumb.classList.remove('active');
+                if (thumb.src === src) {
+                    thumb.classList.add('active');
+                }
+            });
+        }
+        
+        function openInquiryForm() {
+            // Your inquiry form logic
+            console.log('Opening inquiry form for:', '<%= product.title %>');
+        }
+    </script>
+</body>
+
+<%- include('../partials/footer') %>

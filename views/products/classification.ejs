@@ -1,0 +1,54 @@
+<%- include('../partials/header') %>
+    <link rel="stylesheet" href="/css/category.css">
+
+    <body>
+        <br><br><br><br><br>
+        <!-- Your header/navigation -->
+
+        <main>
+            <!-- Breadcrumb Navigation -->
+            <section id="category-lander"
+                style="background: url('/images/Product_bg.jpg') center center / cover no-repeat;">
+                <div class="container-fluid">
+                    <h1>
+                        <%= classification.title %>
+                    </h1>
+                    <p>
+                        <%= classification.description %>
+                    </p>
+                </div>
+            </section>
+
+            <section id="category-products">
+                <div class="container-fluid">
+                    <div class="products-grid">
+                        <% products.forEach(product=> { %>
+                            <div class="modern-card">
+                                <div class="modern-card-img" style="background-image: url('<%= product.image %>');">
+                                </div>
+                                <div class="modern-card-content">
+                                    <h3 class="modern-card-title">
+                                        <%= product.title %>
+                                    </h3>
+                                    <p class="modern-card-description">
+                                        <%= product.description.substring(0, 150) %>
+                                            <% if(product.description.length> 150) { %>
+                                                ...
+                                                <% } %>
+                                    </p>
+                                    <a href="/products/product/<%= product.key %>" class="modern-card-button">View
+                                        Details</a>
+                                </div>
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Your footer -->
+
+        <!-- Your JavaScript files -->
+    </body>
+
+    <%- include('../partials/footer') %>

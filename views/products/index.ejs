@@ -1,0 +1,76 @@
+<%- include('../partials/header') %>
+
+    <link rel="stylesheet" href="/css/products.css">
+
+    <br><br><br><br><br>
+    <!-- Hero Section with Background Image and Title -->
+    <section id="products-lander" style="background: url('/images/Product_bg.jpg') center center / cover no-repeat;">
+        <div class="container-fluid">
+            <h1>Products</h1>
+            <p>Vardhman Airport Solutions Limited, part of the "Make in India" initiative, manufactures Airfield Ground
+                Lighting (AGL) lights, signs, AVDGS units, CCRs, ALCMS, and accessories. The company focuses on
+                high-quality, cost-effective products integrated with installations and services. It plans to expand
+                into air traffic management, AWOS, heliports, anti-drone systems, and smart meters, and is partnering
+                with leading firms for technology transfers to localize products currently imported.</p>
+        </div>
+    </section>
+    <!-- Transparent overlay -->
+
+
+    <section id="products-grid">
+        <div class="container-fluid">
+            <h1 class="heading"> Projects </h1>
+            <div class="products-grid">
+                <!-- Card 1 -->
+                <% Object.keys(categories).forEach(categoryId=> { %>
+                    <div class="modern-card">
+                        <div class="modern-card-content">
+                            <h3 class="modern-card-title">
+                                <%= categories[categoryId].title %>
+                            </h3>
+                            <p class="modern-card-description">
+                                <%= categories[categoryId].description %>
+                            </p>
+                            <a href="/products/category/<%= categoryId %>" class="modern-card-button">View Details</a>
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+    </section>
+
+    <section id="products-features">
+        <div class="container-fluid">
+            <h2 class="features-heading">Why Choose Vardhman Products?</h2>
+            <ul class="features-list">
+                <li>
+                    <i class="fa fa-check-circle"></i>
+                    BIS & ICAO certified Airfield Ground Lighting solutions
+                </li>
+                <li>
+                    <i class="fa fa-check-circle"></i>
+                    In-house R&D and manufacturing for quality assurance
+                </li>
+                <li>
+                    <i class="fa fa-check-circle"></i>
+                    Seamless integration with advanced control systems
+                </li>
+                <li>
+                    <i class="fa fa-check-circle"></i>
+                    Robust after-sales support and nationwide service
+                </li>
+                <li>
+                    <i class="fa fa-check-circle"></i>
+                    Customization for airports, heliports, and defenseCustomization for airports, heliports, and
+                    defenseCustomization for airports, heliports, and defenseCustomization for airports, heliports, and
+                    defense
+                </li>
+            </ul>
+        </div>
+    </section>
+ 
+
+
+
+    <%- include('../partials/product-slider') %>
+    <%- include('../partials/footer') %>
