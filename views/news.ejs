@@ -1,7 +1,358 @@
 <%- include('partials/header') %>
 
-<br><br><br><br><br>
+    <br><br><br><br><br>
 
-<div class='sk-ww-linkedin-page-post' data-embed-id='25574626'></div><script src='https://widgets.sociablekit.com/linkedin-page-posts/widget.js' defer></script>
+    <style>
+        /* SociableKit LinkedIn Feed - Complete Fix */
 
-<%- include('partials/footer') %>
+        /* Main container responsive fixes */
+        .sk-linkedin-feed,
+        .sk-linkedin-feed-container,
+        .sk-posts-body {
+            padding: 0 2rem !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+            overflow-x: hidden !important;
+        }
+
+        /* Responsive breakpoints */
+        @media (max-width: 1024px) {
+
+            .sk-linkedin-feed,
+            .sk-linkedin-feed-container,
+            .sk-posts-body {
+                padding: 0 1.5rem !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .sk-linkedin-feed,
+            .sk-linkedin-feed-container,
+            .sk-posts-body {
+                padding: 0 1rem !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .sk-linkedin-feed,
+            .sk-linkedin-feed-container,
+            .sk-posts-body {
+                padding: 0 0.5rem !important;
+            }
+        }
+
+        @media (max-width: 320px) {
+
+            .sk-linkedin-feed,
+            .sk-linkedin-feed-container,
+            .sk-posts-body {
+                padding: 0 0.25rem !important;
+            }
+        }
+
+        /* Individual post styling */
+        .sk-linkedin-post,
+        .sk-wm-post,
+        div[class*="post"] {
+            width: 100% !important;
+            max-width: 100% !important;
+            margin-bottom: 1.5rem !important;
+            border-radius: 12px !important;
+            background: white !important;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+            overflow: hidden !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Profile section improvements */
+        .sk-linkedin-post-header,
+        .sk-wm-post-header,
+        div[class*="header"] {
+            padding: 1rem !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 12px !important;
+            background: white !important;
+        }
+
+        /* Profile image fixes */
+        .sk-linkedin-post-avatar,
+        .sk-wm-post-avatar,
+        div[class*="avatar"],
+        img[class*="avatar"] {
+            width: 48px !important;
+            height: 48px !important;
+            border-radius: 50% !important;
+            flex-shrink: 0 !important;
+            background: #0077b5 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            overflow: hidden !important;
+            position: relative !important;
+        }
+
+        /* Default avatar for missing images */
+        .sk-linkedin-post-avatar:empty::after,
+        .sk-wm-post-avatar:empty::after,
+        div[class*="avatar"]:empty::after {
+            content: "👤" !important;
+            font-size: 20px !important;
+            color: white !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+        }
+
+        /* Hide broken profile images */
+        .sk-linkedin-post-avatar img[src=""],
+        .sk-linkedin-post-avatar img:not([src]),
+        .sk-wm-post-avatar img[src=""],
+        .sk-wm-post-avatar img:not([src]),
+        div[class*="avatar"] img[src=""],
+        div[class*="avatar"] img:not([src]) {
+            display: none !important;
+        }
+
+        /* Show fallback for broken images */
+        .sk-linkedin-post-avatar:has(img[src=""]):after,
+        .sk-linkedin-post-avatar:has(img:not([src])):after,
+        .sk-wm-post-avatar:has(img[src=""]):after,
+        .sk-wm-post-avatar:has(img:not([src])):after {
+            content: "👤" !important;
+            font-size: 20px !important;
+            color: white !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+        }
+
+        /* Post content area */
+        .sk-linkedin-post-content,
+        .sk-wm-post-content,
+        div[class*="content"] {
+            padding: 0 1rem 1rem !important;
+            line-height: 1.6 !important;
+            color: #333 !important;
+            word-wrap: break-word !important;
+        }
+
+        /* Image content fixes */
+        .sk-linkedin-post-image,
+        .sk-wm-post-image,
+        div[class*="image"] {
+            width: 100% !important;
+            margin-top: 1rem !important;
+            border-radius: 0 !important;
+            overflow: hidden !important;
+        }
+
+        .sk-linkedin-post-image img,
+        .sk-wm-post-image img,
+        div[class*="image"] img {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+        }
+
+        /* Broken post images */
+        .sk-linkedin-post-image img[src=""],
+        .sk-linkedin-post-image img:not([src]),
+        .sk-wm-post-image img[src=""],
+        .sk-wm-post-image img:not([src]),
+        div[class*="image"] img[src=""],
+        div[class*="image"] img:not([src]) {
+            display: none !important;
+        }
+
+        .sk-linkedin-post-image:has(img[src=""]),
+        .sk-linkedin-post-image:has(img:not([src])),
+        .sk-wm-post-image:has(img[src=""]),
+        .sk-wm-post-image:has(img:not([src])) {
+            display: none !important;
+        }
+
+        /* VIDEO POPUP FIXES */
+        /* Modal/popup container */
+        .sk-modal,
+        .sk-popup,
+        .sk-video-modal,
+        div[class*="modal"],
+        div[class*="popup"] {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100vw !important;
+            height: 100vh !important;
+            background: rgba(0, 0, 0, 0.8) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            z-index: 9999 !important;
+            padding: 2rem !important;
+            box-sizing: border-box !important;
+        }
+
+        /* Video container in popup */
+        .sk-video-container,
+        .sk-modal-content,
+        div[class*="video-container"] {
+            width: 90% !important;
+            max-width: 800px !important;
+            max-height: 80vh !important;
+            background: black !important;
+            border-radius: 8px !important;
+            overflow: hidden !important;
+            position: relative !important;
+        }
+
+        /* Video element fixes */
+        .sk-video,
+        .sk-modal-content video,
+        div[class*="video-container"] video,
+        video {
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
+            background: black !important;
+            min-height: 300px !important;
+        }
+
+        /* Ensure video controls are visible */
+        .sk-video::-webkit-media-controls,
+        video::-webkit-media-controls {
+            display: flex !important;
+        }
+
+        /* Close button for video popup */
+        .sk-modal-close,
+        .sk-popup-close,
+        button[class*="close"] {
+            position: absolute !important;
+            top: 10px !important;
+            right: 10px !important;
+            background: rgba(255, 255, 255, 0.9) !important;
+            border: none !important;
+            border-radius: 50% !important;
+            width: 30px !important;
+            height: 30px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: pointer !important;
+            font-size: 18px !important;
+            z-index: 10000 !important;
+        }
+
+        /* Video thumbnail/preview fixes */
+        .sk-video-thumbnail,
+        div[class*="video-thumbnail"] {
+            position: relative !important;
+            width: 100% !important;
+            height: auto !important;
+            cursor: pointer !important;
+            background: #f0f0f0 !important;
+            min-height: 200px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        .sk-video-thumbnail::after,
+        div[class*="video-thumbnail"]::after {
+            content: "▶" !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            font-size: 3rem !important;
+            color: white !important;
+            background: rgba(0, 0, 0, 0.7) !important;
+            width: 60px !important;
+            height: 60px !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            pointer-events: none !important;
+        }
+
+        /* Iframe video fixes (for embedded videos) */
+        .sk-video-iframe,
+        iframe[src*="video"],
+        iframe[src*="youtube"],
+        iframe[src*="vimeo"] {
+            width: 100% !important;
+            height: auto !important;
+            min-height: 315px !important;
+            border: none !important;
+            border-radius: 8px !important;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+
+            .sk-modal,
+            .sk-popup,
+            .sk-video-modal {
+                padding: 1rem !important;
+            }
+
+            .sk-video-container,
+            .sk-modal-content {
+                width: 95% !important;
+                max-height: 70vh !important;
+            }
+
+            .sk-video-thumbnail::after,
+            div[class*="video-thumbnail"]::after {
+                font-size: 2rem !important;
+                width: 50px !important;
+                height: 50px !important;
+            }
+        }
+
+        /* Ensure proper stacking and visibility */
+        .sk-linkedin-feed * {
+            box-sizing: border-box !important;
+        }
+
+        /* Hover effects */
+        .sk-linkedin-post:hover,
+        .sk-wm-post:hover,
+        div[class*="post"]:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+            transition: all 0.2s ease !important;
+        }
+
+        /* Loading and error states */
+        .sk-loading,
+        .sk-error {
+            text-align: center !important;
+            padding: 2rem !important;
+            color: #666 !important;
+        }
+
+        /* Force proper video rendering */
+        video {
+            object-fit: contain !important;
+        }
+
+        /* Fallback for any remaining layout issues */
+        .sk-linkedin-feed,
+        .sk-linkedin-feed * {
+            max-width: 100% !important;
+            overflow-x: hidden !important;
+        }
+    </style>
+
+    <div class='sk-ww-linkedin-page-post' data-embed-id='25574626'></div>
+    <script src='https://widgets.sociablekit.com/linkedin-page-posts/widget.js' defer></script>
+
+    <%- include('partials/footer') %>
