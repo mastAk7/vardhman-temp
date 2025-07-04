@@ -1,7 +1,20 @@
 <%- include('partials/header') %>
 
-<br><br><br><br><br>
+    <br><br><br><br><br>
 
-<div class='sk-ww-linkedin-page-post' data-embed-id='25574626'></div><script src='https://widgets.sociablekit.com/linkedin-page-posts/widget.js' defer></script>
+    <style>
+        .sk-posts-body {
+            padding: 0 5rem !important;
+        }
 
-<%- include('partials/footer') %>
+        @media (max-width: 480px) {
+            .sk-posts-body {
+                padding: 0 0.25rem !important;
+            }
+        }
+    </style>
+
+    <div class='sk-ww-linkedin-page-post' data-embed-id='25574626'></div>
+    <script src='https://widgets.sociablekit.com/linkedin-page-posts/widget.js' defer></script>
+
+    <%- include('partials/footer') %>
