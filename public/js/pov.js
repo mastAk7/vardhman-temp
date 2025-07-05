@@ -50,7 +50,6 @@ async function showPost(postId) {
         
         // Populate modal with post data
         modalContent.innerHTML = `
-            <br> <br>
             <h2 class="modal-post-title">${escapeHtml(post.title)}</h2>
             <div class="modal-post-meta">
                 <span class="modal-post-author">By ${escapeHtml(post.author)}</span>

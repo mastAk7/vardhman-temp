@@ -153,6 +153,7 @@
 .modal-content {
     background-color: #fff;
     margin: 2% auto;
+    margin-top: 10rem;
     padding: 2rem;
     border-radius: 12px;
     width: 90%;
@@ -230,6 +231,7 @@
     .modal-content {
         width: 95%;
         margin: 5% auto;
+        margin-top : 5rem;
         padding: 1.5rem;
     }
     

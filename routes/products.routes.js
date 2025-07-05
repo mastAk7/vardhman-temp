@@ -11,12 +11,12 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Load the JSON data
-const data = JSON.parse(readFileSync(join(__dirname, '../public/data/products.json'), 'utf8'));
+const data = JSON.parse(readFileSync(join(__dirname, '../data/products.json'), 'utf8'));
 
 // Helper function to find similar products
 function findSimilarProducts(currentProductId, maxResults = 4) {
   const currentProduct = data.products[currentProductId];
-  if (!currentProduct) return [];
+  if (!currentProduct) return []; 
 
   // Find which category and classification this product belongs to
   let productCategory = null;

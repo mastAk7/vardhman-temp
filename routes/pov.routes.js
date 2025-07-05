@@ -4,6 +4,10 @@ import path from 'path';
 import bcrypt from 'bcrypt';
 import multer from 'multer';
 import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
+dotenv.config();
+
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
 
 // For __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -71,13 +75,13 @@ const writePOVData = (data) => {
 };
 
 const readAdminData = () => {
-    try {
+    try { 
         if (fs.existsSync(ADMIN_PASSWORD_FILE)) {
             const data = fs.readFileSync(ADMIN_PASSWORD_FILE, 'utf8');
             return JSON.parse(data);
         }
         // Default admin password: "admin123" (hashed)
-        const defaultPassword = bcrypt.hashSync('admin123', 10);
+        const defaultPassword = bcrypt.hashSync(ADMIN_PASSWORD, 10);
         const defaultData = { password: defaultPassword };
         fs.writeFileSync(ADMIN_PASSWORD_FILE, JSON.stringify(defaultData, null, 2));
         return defaultData;
@@ -139,7 +143,7 @@ router.get('/download/:id', (req, res) => {
 // Admin login page
 router.get('/admin/login', (req, res) => {
     res.render('pov/admin/login', { error: null, title: 'Admin Login' });
-});
+}); 
 
 // Admin login process
 router.post('/admin/login', (req, res) => {
