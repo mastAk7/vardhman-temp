@@ -1,76 +1,172 @@
 <%- include('../partials/header') %>
 
-    <link rel="stylesheet" href="/css/products.css">
+<link rel="stylesheet" href="/css/products.css">
 
-    <br><br><br><br><br>
-    <!-- Hero Section with Background Image and Title -->
-    <section id="products-lander" style="background: url('/images/Product_bg.jpg') center center / cover no-repeat;">
-        <div class="container-fluid">
-            <h1>Products</h1>
-            <p>Vardhman Airport Solutions Limited, part of the "Make in India" initiative, manufactures Airfield Ground
-                Lighting (AGL) lights, signs, AVDGS units, CCRs, ALCMS, and accessories. The company focuses on
-                high-quality, cost-effective products integrated with installations and services. It plans to expand
-                into air traffic management, AWOS, heliports, anti-drone systems, and smart meters, and is partnering
-                with leading firms for technology transfers to localize products currently imported.</p>
-        </div>
-    </section>
-    <!-- Transparent overlay -->
+<br><br><br><br><br>
 
+<!-- Hero Section -->
+<!-- <section id="products-lander" style="background: url('/images/Product_bg.jpg') center center / cover no-repeat;">
+    <div class="container-fluid">
+        <h1>Products</h1>
+        <p>Vardhman Airport Solutions Limited, part of the "Make in India" initiative, manufactures Airfield Ground
+            Lighting (AGL) lights, signs, AVDGS units, CCRs, ALCMS, and accessories. The company focuses on
+            high-quality, cost-effective products integrated with installations and services.</p>
+    </div>
+</section> -->
 
-    <section id="products-grid">
-        <div class="container-fluid">
-            <h1 class="heading"> Projects </h1>
-            <div class="products-grid">
-                <!-- Card 1 -->
-                <% Object.keys(categories).forEach(categoryId=> { %>
-                    <div class="modern-card">
-                        <div class="modern-card-content">
-                            <h3 class="modern-card-title">
-                                <%= categories[categoryId].title %>
-                            </h3>
-                            <p class="modern-card-description">
-                                <%= categories[categoryId].description %>
-                            </p>
-                            <a href="/products/category/<%= categoryId %>" class="modern-card-button">View Details</a>
+<!-- Products Section with Sidebar -->
+<section id="products-main">
+    <div class="container-fluid">
+        <div class="products-layout">
+            
+            <!-- Sidebar -->
+            <div class="products-sidebar">
+                <div class="sidebar-sticky">
+                    <h3>Filter Products</h3>
+                    <div class="filter-section">
+                        <button id="clear-filters" class="clear-btn">Clear All Filters</button>
+                    </div>
+                </div>
+                
+                <!-- Search -->
+                <div class="filter-section">
+                    <label>Search Products</label>
+                    <input type="text" id="search-input" placeholder="Search products..." value="<%= filters.search || '' %>">
+                </div>
+
+                <!-- Sectors -->
+                <div class="filter-section">
+                    <div class="filter-header" data-filter="sectors">
+                        <span>Sectors</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="filter-content" id="sectors-content">
+                        <% sidebar.sectors.forEach(sector => { %>
+                            <div class="filter-item">
+                                <input type="radio" id="sector-<%= sector %>" name="sector" value="<%= sector %>" 
+                                       <%= filters.sector === sector ? 'checked' : '' %>>
+                                <label for="sector-<%= sector %>"><%= sector.charAt(0).toUpperCase() + sector.slice(1) %></label>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+
+                <!-- Categories -->
+                <div class="filter-section">
+                    <div class="filter-header" data-filter="categories">
+                        <span>Categories</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="filter-content" id="categories-content">
+                        <% Object.entries(sidebar.categories).forEach(([categoryId, category]) => { %>
+                            <div class="filter-item">
+                                <input type="radio" id="category-<%= categoryId %>" name="category" value="<%= categoryId %>" 
+                                       <%= filters.category === categoryId ? 'checked' : '' %>>
+                                <label for="category-<%= categoryId %>"><%= category.title %></label>
+                                
+                                <!-- Classifications (subcategories) -->
+                                <% if (category.hasClassifications && Object.keys(category.classifications).length > 0) { %>
+                                    <div class="sub-filter-content" id="classifications-<%= categoryId %>">
+                                        <% Object.entries(category.classifications).forEach(([classificationId, classification]) => { %>
+                                            <div class="sub-filter-item">
+                                                <input type="radio" id="classification-<%= classificationId %>" name="classification" value="<%= classificationId %>" 
+                                                       <%= filters.classification === classificationId ? 'checked' : '' %>>
+                                                <label for="classification-<%= classificationId %>"><%= classification.title %></label>
+                                            </div>
+                                        <% }); %>
+                                    </div>
+                                <% } %>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+
+                <!-- Markets -->
+                <div class="filter-section">
+                    <div class="filter-header" data-filter="markets">
+                        <span>Markets</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="filter-content" id="markets-content">
+                        <% sidebar.markets.forEach(market => { %>
+                            <div class="filter-item">
+                                <input type="radio" id="market-<%= market %>" name="market" value="<%= market %>" 
+                                       <%= filters.market === market ? 'checked' : '' %>>
+                                <label for="market-<%= market %>"><%= market %></label>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+
+                <!-- Types -->
+                <div class="filter-section">
+                    <div class="filter-header" data-filter="types">
+                        <span>Product Types</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="filter-content" id="types-content">
+                        <% sidebar.types.forEach(type => { %>
+                            <div class="filter-item">
+                                <input type="radio" id="type-<%= type %>" name="type" value="<%= type %>" 
+                                       <%= filters.type === type ? 'checked' : '' %>>
+                                <label for="type-<%= type %>"><%= type %></label>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+
+                
+                <!-- Clear Filters -->
+            </div>
+
+            <!-- Main Content -->
+            <div class="products-content">
+                <div class="products-header">
+                    <h2>Products</h2>
+                    <div class="results-info">
+                        <span>Results: <%= totalResults %></span>
+                        <div class="view-toggle">
+                            <button id="grid-view" class="view-btn active">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button id="list-view" class="view-btn">
+                                <i class="fas fa-list"></i>
+                            </button>
                         </div>
                     </div>
-                    <% }) %>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-grid" id="products-grid">
+                    <% if (products.length > 0) { %>
+                        <% products.forEach(product => { %>
+                            <div class="modern-card">
+                                <div class="modern-card-content">
+                                    <h3 class="modern-card-title"><%= product.title %></h3>
+                                    <p class="modern-card-description"><%= product.description %></p>
+                                    <div class="product-meta">
+                                        <span class="product-type"><%= product.type %></span>
+                                        <% if (Array.isArray(product.sector)) { %>
+                                            <span class="product-sector"><%= product.sector.join(', ') %></span>
+                                        <% } else { %>
+                                            <span class="product-sector"><%= product.sector %></span>
+                                        <% } %>
+                                    </div>
+                                    <a href="/products/product/<%= product.key %>" class="modern-card-button">View Details</a>
+                                </div>
+                            </div>
+                        <% }); %>
+                    <% } else { %>
+                        <div class="no-products">
+                            <h3>No products found</h3>
+                            <p>Try adjusting your filters to see more products.</p>
+                        </div>
+                    <% } %>
+                </div>
             </div>
         </div>
-    </section> 
-<!-- 
-    <section id="products-features">
-        <div class="container-fluid">
-            <h2 class="features-heading">Why Choose Vardhman Products?</h2>
-            <ul class="features-list">
-                <li>
-                    <i class="fa fa-check-circle"></i>
-                    BIS & ICAO certified Airfield Ground Lighting solutions
-                </li>
-                <li>
-                    <i class="fa fa-check-circle"></i>
-                    In-house R&D and manufacturing for quality assurance
-                </li>
-                <li>
-                    <i class="fa fa-check-circle"></i>
-                    Seamless integration with advanced control systems
-                </li>
-                <li>
-                    <i class="fa fa-check-circle"></i>
-                    Robust after-sales support and nationwide service
-                </li>
-                <li>
-                    <i class="fa fa-check-circle"></i>
-                    Customization for airports, heliports, and defenseCustomization for airports, heliports, and
-                    defenseCustomization for airports, heliports, and defenseCustomization for airports, heliports, and
-                    defense
-                </li>
-            </ul>
-        </div>
-    </section> -->
- 
+    </div>
+</section>
 
-
-
-    <%- include('../partials/product-slider') %>
-    <%- include('../partials/footer') %>
+<script src="/js/products.js"></script>
+<%- include('../partials/footer') %>

@@ -89,37 +89,158 @@ function findSimilarProducts(currentProductId, maxResults = 4) {
   return uniqueProducts.slice(0, maxResults);
 }
 
-// Main products page - shows all categories and 6 random products
+// Helper function to get all products with filtering
+function getFilteredProducts(filters = {}) {
+  const { sector, category, classification, market, type, search } = filters;
+  
+  let filteredProducts = Object.entries(data.products)
+    .map(([key, product]) => ({ key, ...product }));
+
+  // Filter by sector
+  if (sector) {
+    filteredProducts = filteredProducts.filter(product => {
+      if (Array.isArray(product.sector)) {
+        return product.sector.includes(sector);
+      }
+      return product.sector === sector;
+    });
+  }
+
+  // Filter by category
+  if (category) {
+    filteredProducts = filteredProducts.filter(product => 
+      product.category === category
+    );
+  }
+
+  // Filter by classification (subcategory)
+  if (classification) {
+    filteredProducts = filteredProducts.filter(product => 
+      product.subcategory === classification
+    );
+  }
+
+  // Filter by market
+  if (market) {
+    filteredProducts = filteredProducts.filter(product => {
+      if (Array.isArray(product.market)) {
+        return product.market.includes(market);
+      }
+      return product.market === market;
+    });
+  }
+
+  // Filter by type
+  if (type) {
+    filteredProducts = filteredProducts.filter(product => 
+      product.type === type
+    );
+  }
+
+  // Filter by search term
+  if (search) {
+    const searchLower = search.toLowerCase();
+    filteredProducts = filteredProducts.filter(product => 
+      product.title.toLowerCase().includes(searchLower) ||
+      product.description.toLowerCase().includes(searchLower)
+    );
+  }
+
+  return filteredProducts;
+}
+
+// Helper function to get sidebar data
+function getSidebarData() {
+  const sectors = new Set();
+  const categories = {};
+  const markets = new Set();
+  const types = new Set();
+
+  // Collect all unique sectors, markets, and types from products
+  Object.values(data.products).forEach(product => {
+    // Sectors
+    if (Array.isArray(product.sector)) {
+      product.sector.forEach(s => sectors.add(s));
+    } else {
+      sectors.add(product.sector);
+    }
+
+    // Markets
+    if (Array.isArray(product.market)) {
+      product.market.forEach(m => markets.add(m));
+    } else {
+      markets.add(product.market);
+    }
+
+    // Types
+    types.add(product.type);
+  });
+
+  // Process categories with their classifications
+  Object.entries(data.categories).forEach(([categoryId, category]) => {
+    categories[categoryId] = {
+      title: category.title,
+      hasClassifications: category.hasClassifications,
+      classifications: category.classifications || {}
+    };
+  });
+
+  return {
+    sectors: Array.from(sectors),
+    categories,
+    markets: Array.from(markets),
+    types: Array.from(types)
+  };
+}
+
+// Main products page - shows all products with sidebar filtering
 router.get('/', (req, res) => {
-  const categories = data.categories;
-  const products = data.products;
+  const filters = {
+    sector: req.query.sector,
+    category: req.query.category,
+    classification: req.query.classification,
+    market: req.query.market,
+    type: req.query.type,
+    search: req.query.search
+  };
 
-  // Filter: Only products with a non-empty description of reasonable length
-  let allProducts = Object.entries(products)
-    .filter(([key, p]) => p.description && p.description.trim().length > 40)
-    .map(([key, p]) => ({ key, ...p }));
-
-  // Sort by description length for uniformity
-  allProducts.sort((a, b) => a.description.length - b.description.length);
-
-  // Pick a "center" window of products with similar description lengths
-  const mid = Math.floor(allProducts.length / 2);
-  const windowSize = Math.min(12, allProducts.length);
-  const start = Math.max(0, mid - Math.floor(windowSize / 2));
-  const candidates = allProducts.slice(start, start + windowSize);
-
-  // Shuffle and pick 6 random products from the candidates
-  const shuffled = candidates.sort(() => 0.5 - Math.random());
-  const randomProducts = shuffled.slice(0, 6);
+  const filteredProducts = getFilteredProducts(filters);
+  const sidebarData = getSidebarData();
 
   res.render('products/index', {
     title: 'Products',
-    categories,
-    randomProducts
+    products: filteredProducts,
+    sidebar: sidebarData,
+    filters,
+    totalResults: filteredProducts.length
   });
 });
 
-// Category page - shows category details with classifications or products
+// Sector filter route - /products/airports, /products/defense, etc.
+router.get('/:sector', (req, res) => {
+  const sector = req.params.sector;
+  const filters = {
+    sector,
+    category: req.query.category,
+    classification: req.query.classification,
+    market: req.query.market,
+    type: req.query.type,
+    search: req.query.search
+  };
+
+  const filteredProducts = getFilteredProducts(filters);
+  const sidebarData = getSidebarData();
+
+  res.render('products/index', {
+    title: `${sector.charAt(0).toUpperCase() + sector.slice(1)} Products`,
+    products: filteredProducts,
+    sidebar: sidebarData,
+    filters,
+    totalResults: filteredProducts.length
+  });
+});
+
+// Category filter route - /products/category/air_traffic_management
 router.get('/category/:categoryId', (req, res) => {
   const categoryId = req.params.categoryId;
   const category = data.categories[categoryId];
@@ -128,91 +249,64 @@ router.get('/category/:categoryId', (req, res) => {
     return res.status(404).render('404', { message: 'Category not found' });
   }
   
-  let categoryData = {
-    id: categoryId,
-    ...category
+  const filters = {
+    sector: req.query.sector,
+    category: categoryId,
+    classification: req.query.classification,
+    market: req.query.market,
+    type: req.query.type,
+    search: req.query.search
   };
-  
-  // If category has classifications
-  if (category.hasClassifications && category.classifications) {
-    // Process each classification
-    const processedClassifications = {};
-    
-    Object.keys(category.classifications).forEach(classificationId => {
-      const classification = category.classifications[classificationId];
-      const classificationProducts = [];
-      
-      // Get products for this classification
-      classification.products.forEach(productId => {
-        if (data.products[productId]) {
-          classificationProducts.push({
-            key: productId,
-            ...data.products[productId]
-          });
-        }
-      });
-      
-      processedClassifications[classificationId] = {
-        id: classificationId,
-        ...classification,
-        products: classificationProducts,
-        displayType: classificationProducts.length > 6 ? 'slider' : 'grid'
-      };
-    });
-    
-    categoryData.processedClassifications = processedClassifications;
-  } else {
-    // No classifications - get all products directly
-    const categoryProducts = [];
-    category.products.forEach(productId => {
-      if (data.products[productId]) {
-        categoryProducts.push({
-          key: productId,
-          ...data.products[productId]
-        });
-      }
-    });
-    categoryData.products = categoryProducts;
-  }
-  
-  res.render('products/category', {
-    title: category.title,
-    category: categoryData
+
+  const filteredProducts = getFilteredProducts(filters);
+  const sidebarData = getSidebarData();
+
+  res.render('products/index', {
+    title: `${category.title} Products`,
+    products: filteredProducts,
+    sidebar: sidebarData,
+    filters,
+    totalResults: filteredProducts.length
   });
 });
 
-// Classification products page - shows all products in a classification
-router.get('/category/:categoryId/classification/:classificationId', (req, res) => {
-  const { categoryId, classificationId } = req.params;
-  const category = data.categories[categoryId];
+// Classification filter route - /products/classification/led_technology
+router.get('/classification/:classificationId', (req, res) => {
+  const classificationId = req.params.classificationId;
   
-  if (!category || !category.classifications || !category.classifications[classificationId]) {
-    return res.status(404).render('404', { message: 'Classification not found' });
-  }
+  // Find the classification across all categories
+  let foundClassification = null;
+  let parentCategory = null;
   
-  const classification = category.classifications[classificationId];
-  const products = [];
-  
-  classification.products.forEach(productId => {
-    if (data.products[productId]) {
-      products.push({
-        key: productId,
-        ...data.products[productId]
-      });
+  Object.entries(data.categories).forEach(([categoryId, category]) => {
+    if (category.classifications && category.classifications[classificationId]) {
+      foundClassification = category.classifications[classificationId];
+      parentCategory = category;
     }
   });
   
-  res.render('products/classification', {
-    title: classification.title,
-    category: {
-      id: categoryId,
-      title: category.title
-    },
-    classification: {
-      id: classificationId,
-      ...classification
-    },
-    products
+  if (!foundClassification) {
+    return res.status(404).render('404', { message: 'Classification not found' });
+  }
+  
+  const filters = {
+    sector: req.query.sector,
+    category: req.query.category,
+    classification: classificationId,
+    market: req.query.market,
+    type: req.query.type,
+    search: req.query.search
+  };
+
+  const filteredProducts = getFilteredProducts(filters);
+  const sidebarData = getSidebarData();
+
+  res.render('products/index', {
+    title: `${foundClassification.title} Products`,
+    products: filteredProducts,
+    sidebar: sidebarData,
+    filters,
+    totalResults: filteredProducts.length
   });
 });
 
