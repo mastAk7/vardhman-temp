@@ -30,10 +30,44 @@ function initializeFilters() {
         });
     });
     
-    // Handle filter changes
+    // Handle filter changes with radio button uncheck functionality
     const filterInputs = document.querySelectorAll('input[type="radio"]');
     
     filterInputs.forEach(input => {
+        // Store the previous state to enable unchecking
+        input.addEventListener('mousedown', function() {
+            // Store the current state before the click
+            this.wasChecked = this.checked;
+        });
+        
+        input.addEventListener('click', function(e) {
+            // If the radio was already checked, uncheck it
+            if (this.wasChecked) {
+                this.checked = false;
+                
+                // Handle special case for category unchecking - hide classifications
+                if (this.name === 'category') {
+                    const allClassifications = document.querySelectorAll('[id^="classifications-"]');
+                    allClassifications.forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    
+                    // Also uncheck any selected classification
+                    const selectedClassification = document.querySelector('input[name="classification"]:checked');
+                    if (selectedClassification) {
+                        selectedClassification.checked = false;
+                    }
+                }
+                
+                // Update filters after unchecking
+                updateFilters();
+            } else {
+                // If it wasn't checked, allow the selection and update filters
+                updateFilters();
+            }
+        });
+        
+        // Handle change event for programmatic changes
         input.addEventListener('change', function() {
             if (this.checked) {
                 updateFilters();
@@ -62,6 +96,20 @@ function initializeFilters() {
                 section.style.display = 'none';
             });
             
+            // Clear any selected classification that doesn't belong to the new category
+            const selectedClassification = document.querySelector('input[name="classification"]:checked');
+            let classificationCleared = false;
+            if (selectedClassification) {
+                const classificationId = selectedClassification.value;
+                const parentCategoryId = findParentCategory(classificationId);
+                
+                // If the selected classification doesn't belong to the new category, clear it
+                if (parentCategoryId !== this.value) {
+                    selectedClassification.checked = false;
+                    classificationCleared = true;
+                }
+            }
+            
             // Show classifications for selected category
             if (this.checked) {
                 const categoryId = this.value;
@@ -70,26 +118,31 @@ function initializeFilters() {
                     classificationsSection.style.display = 'block';
                 }
             }
+            
+            // If a classification was cleared, update the URL immediately
+            if (classificationCleared) {
+                // Use setTimeout to ensure the DOM updates are complete
+                setTimeout(() => {
+                    updateFilters();
+                }, 0);
+            }
         });
     });
     
-    // Handle classification selection to auto-select parent category
+    // Handle classification selection - don't auto-select parent category
     const classificationInputs = document.querySelectorAll('input[name="classification"]');
     classificationInputs.forEach(input => {
         input.addEventListener('change', function() {
             if (this.checked) {
-                // Find the parent category for this classification
+                // Just ensure the parent category's classifications are visible
                 const classificationId = this.value;
                 const parentCategoryId = findParentCategory(classificationId);
                 
                 if (parentCategoryId) {
-                    // Auto-select the parent category
-                    const parentCategoryInput = document.querySelector(`input[name="category"][value="${parentCategoryId}"]`);
-                    if (parentCategoryInput && !parentCategoryInput.checked) {
-                        parentCategoryInput.checked = true;
-                        
-                        // Trigger the category change event to show classifications
-                        parentCategoryInput.dispatchEvent(new Event('change'));
+                    // Show the classifications section
+                    const classificationsSection = document.getElementById(`classifications-${parentCategoryId}`);
+                    if (classificationsSection) {
+                        classificationsSection.style.display = 'block';
                     }
                 }
             }
@@ -105,13 +158,24 @@ function initializeFilters() {
             classificationsSection.style.display = 'block';
         }
     }
+    
+    // Also check if there's a selected classification and show its parent section
+    const selectedClassification = document.querySelector('input[name="classification"]:checked');
+    if (selectedClassification) {
+        const classificationId = selectedClassification.value;
+        const parentCategoryId = findParentCategory(classificationId);
+        
+        if (parentCategoryId) {
+            const classificationsSection = document.getElementById(`classifications-${parentCategoryId}`);
+            if (classificationsSection) {
+                classificationsSection.style.display = 'block';
+            }
+        }
+    }
 }
 
 // Helper function to find parent category for a classification
 function findParentCategory(classificationId) {
-    // This assumes your HTML structure has classification inputs with data attributes
-    // or you can determine the parent category from the classification ID
-    
     // Method 1: If you have data attributes on the classification inputs
     const classificationInput = document.querySelector(`input[name="classification"][value="${classificationId}"]`);
     if (classificationInput && classificationInput.dataset.parentCategory) {
@@ -158,11 +222,20 @@ function initializeSearch() {
     const searchInput = document.getElementById('search-input');
     let searchTimeout;
     
-    searchInput.addEventListener('input', function() {
+    // Remove the automatic search on input - only search on Enter or blur
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            clearTimeout(searchTimeout);
+            updateFilters();
+        }
+    });
+    
+    // Also trigger search when user clicks away from the input
+    searchInput.addEventListener('blur', function() {
         clearTimeout(searchTimeout);
         searchTimeout = setTimeout(() => {
             updateFilters();
-        }, 500); // Debounce search
+        }, 100); // Small delay to allow for other interactions
     });
 }
 
@@ -192,8 +265,6 @@ function initializeClearFilters() {
 }
 
 function updateFilters() {
-    const formData = new FormData();
-    
     // Get all filter values
     const sectorInput = document.querySelector('input[name="sector"]:checked');
     const categoryInput = document.querySelector('input[name="category"]:checked');
@@ -202,7 +273,7 @@ function updateFilters() {
     const typeInput = document.querySelector('input[name="type"]:checked');
     const searchInput = document.getElementById('search-input');
     
-    // Build query string
+    // Build query string for ALL filters
     const params = new URLSearchParams();
     
     if (sectorInput) params.append('sector', sectorInput.value);
@@ -212,26 +283,8 @@ function updateFilters() {
     if (typeInput) params.append('type', typeInput.value);
     if (searchInput.value.trim()) params.append('search', searchInput.value.trim());
     
-    // Determine the base URL
-    let baseUrl = '/products';
-    
-    // If sector is selected, use sector-specific URL
-    if (sectorInput) {
-        baseUrl = `/products/${sectorInput.value}`;
-        params.delete('sector'); // Remove sector from query params since it's in the URL
-    }
-    // If category is selected (but no sector), use category-specific URL
-    else if (categoryInput) {
-        baseUrl = `/products/category/${categoryInput.value}`;
-        params.delete('category'); // Remove category from query params since it's in the URL
-    }
-    // If classification is selected (but no category or sector), use classification-specific URL
-    else if (classificationInput) {
-        baseUrl = `/products/classification/${classificationInput.value}`;
-        params.delete('classification'); // Remove classification from query params since it's in the URL
-    }
-    
-    // Navigate to the new URL
+    // Use the base URL without /products prefix
+    const baseUrl = '/our-products';
     const queryString = params.toString();
     const newUrl = queryString ? `${baseUrl}?${queryString}` : baseUrl;
     
@@ -267,69 +320,95 @@ function initializeFromUrl() {
         }
     });
     
-    // Also check URL path for sector/category/classification
-    const pathParts = window.location.pathname.split('/');
-    if (pathParts.length >= 3) {
-        const lastPart = pathParts[pathParts.length - 1];
-        const secondLastPart = pathParts[pathParts.length - 2];
+    // Validate classification belongs to category after setting from URL
+    const selectedCategory = document.querySelector('input[name="category"]:checked');
+    const selectedClassification = document.querySelector('input[name="classification"]:checked');
+    
+    if (selectedCategory && selectedClassification) {
+        const categoryId = selectedCategory.value;
+        const classificationId = selectedClassification.value;
+        const parentCategoryId = findParentCategory(classificationId);
         
-        // Check if it's a sector URL
-        if (pathParts.length === 3 && pathParts[1] === 'products' && lastPart !== 'products') {
-            const sectorInput = document.querySelector(`input[name="sector"][value="${lastPart}"]`);
+        // If the classification doesn't belong to the selected category, clear it and update URL
+        if (parentCategoryId !== categoryId) {
+            selectedClassification.checked = false;
+            // Update the URL immediately to reflect the cleared classification
+            setTimeout(() => {
+                updateFilters();
+            }, 0);
+            return; // Exit early since we're updating the URL
+        }
+    }
+    
+    // Handle legacy URL path structure (for backward compatibility)
+    const pathParts = window.location.pathname.split('/').filter(part => part !== '');
+    
+    // Updated path detection - no longer looking for 'products' prefix
+    if (pathParts.length >= 1 && pathParts[0] !== 'our-products') {
+        const slug = pathParts[0];
+        
+        // Only set from path if no query parameters exist
+        if (!urlParams.toString()) {
+            // Try to determine what type of filter this slug represents
+            // Check if it's a sector
+            const sectorInput = document.querySelector(`input[name="sector"][value="${slug}"]`);
             if (sectorInput) {
                 sectorInput.checked = true;
+                return;
             }
-        }
-        
-        // Check if it's a category URL
-        if (secondLastPart === 'category') {
-            const categoryInput = document.querySelector(`input[name="category"][value="${lastPart}"]`);
+            
+            // Check if it's a category
+            const categoryInput = document.querySelector(`input[name="category"][value="${slug}"]`);
             if (categoryInput) {
                 categoryInput.checked = true;
+                
+                // Show classifications for this category
+                const classificationsSection = document.getElementById(`classifications-${slug}`);
+                if (classificationsSection) {
+                    classificationsSection.style.display = 'block';
+                }
+                return;
             }
-        }
-        
-        // Check if it's a classification URL
-        if (secondLastPart === 'classification') {
-            const classificationInput = document.querySelector(`input[name="classification"][value="${lastPart}"]`);
+            
+            // Check if it's a classification
+            const classificationInput = document.querySelector(`input[name="classification"][value="${slug}"]`);
             if (classificationInput) {
                 classificationInput.checked = true;
                 
-                // Auto-select parent category
-                const parentCategoryId = findParentCategory(lastPart);
+                // Show the classifications section for this classification
+                const parentCategoryId = findParentCategory(slug);
                 if (parentCategoryId) {
-                    const parentCategoryInput = document.querySelector(`input[name="category"][value="${parentCategoryId}"]`);
-                    if (parentCategoryInput) {
-                        parentCategoryInput.checked = true;
-                        
-                        // Show the classifications section
-                        const classificationsSection = document.getElementById(`classifications-${parentCategoryId}`);
-                        if (classificationsSection) {
-                            classificationsSection.style.display = 'block';
-                        }
+                    const classificationsSection = document.getElementById(`classifications-${parentCategoryId}`);
+                    if (classificationsSection) {
+                        classificationsSection.style.display = 'block';
                     }
                 }
+                return;
             }
         }
     }
     
-    // After setting all filters from URL, handle any selected classification to auto-select its category
-    const selectedClassification = document.querySelector('input[name="classification"]:checked');
-    if (selectedClassification) {
-        const classificationId = selectedClassification.value;
+    // Handle any selected classification to show its parent section
+    const finalSelectedClassification = document.querySelector('input[name="classification"]:checked');
+    if (finalSelectedClassification) {
+        const classificationId = finalSelectedClassification.value;
         const parentCategoryId = findParentCategory(classificationId);
         
         if (parentCategoryId) {
-            const parentCategoryInput = document.querySelector(`input[name="category"][value="${parentCategoryId}"]`);
-            if (parentCategoryInput && !parentCategoryInput.checked) {
-                parentCategoryInput.checked = true;
-                
-                // Show the classifications section
-                const classificationsSection = document.getElementById(`classifications-${parentCategoryId}`);
-                if (classificationsSection) {
-                    classificationsSection.style.display = 'block';
-                }
+            const classificationsSection = document.getElementById(`classifications-${parentCategoryId}`);
+            if (classificationsSection) {
+                classificationsSection.style.display = 'block';
             }
+        }
+    }
+    
+    // Show classifications for any selected category
+    const finalSelectedCategory = document.querySelector('input[name="category"]:checked');
+    if (finalSelectedCategory) {
+        const categoryId = finalSelectedCategory.value;
+        const classificationsSection = document.getElementById(`classifications-${categoryId}`);
+        if (classificationsSection) {
+            classificationsSection.style.display = 'block';
         }
     }
 }

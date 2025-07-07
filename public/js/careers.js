@@ -138,7 +138,7 @@ function formatTextWithBullets(text) {
     if (!text) return '';
     
     // Split by common bullet point indicators
-    const lines = text.split(/\n|•|\*|-/).filter(line => line.trim().length > 0);
+    const lines = text.split(/\n|•/).filter(line => line.trim().length > 0);
     
     if (lines.length > 1) {
         return '<ul>' + lines.map(line => `<li>${line.trim()}</li>`).join('') + '</ul>';

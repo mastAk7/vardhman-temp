@@ -1,305 +1,534 @@
 {
   "categories": {
-    "air_traffic_management": {
+    "airfield-ground-lights": {
+      "title": "Airfield Ground Lights",
+      "description": "Built on Experience, designed for the future Vardhman Airports provide a comprehensive range of airfield lighting solutions for clients all over the world.",
+      "image": "/images/categories/airfield-ground-lights.jpg",
+      "sector": [
+        "airports",
+        "defense"
+      ],
+      "hasClassifications": true,
+      "classifications": {
+        "approach-lighting": {
+          "title": "Approach Lighting",
+          "description": "Vardhman Airports offer a range of airfield lighting solutions in approach, threshold, end lighting compliant to all the latest standards.",
+          "products": [
+            "led-approach-light",
+            "led-threshold-light",
+            "led-runway-end-light",
+            "elevated-approach-side-row",
+            "elevated-threshold-threshold-wingbar",
+            "elevated-runway-end-light",
+            "inset-approach-siderow-barrette",
+            "inset-threshold-light",
+            "inset-runway-end-light",
+            "inset-threshold-wingbar",
+            "inset-threshold-runway-end-lights"
+          ]
+        },
+        "papi-lighting": {
+          "title": "PAPI Lighting",
+          "description": "Precision Approach Path Indicator (PAPI) lights for accurate glide path guidance during landing.",
+          "products": [
+            "papi-lighting"
+          ]
+        },
+        "runway-lighting": {
+          "title": "Runway Lighting",
+          "description": "Comprehensive runway lighting products for safe and efficient airfield operations.",
+          "products": [
+            "elevated-runway-edge-light",
+            "centerline-tdz-high-intensity-light",
+            "centerline-tdz-bi-directional-light",
+            "inset-runway-edge-light",
+            "runway-edge-high-intensity-bi-directional-inset-light",
+            "inset-runway-end-light",
+            "runway-edge-light",
+            "runway-centerline-light",
+            "runway-tdz-light"
+          ]
+        },
+        "taxiway-lighting": {
+          "title": "Taxiway Lighting",
+          "description": "High-quality taxiway lighting solutions for safe taxiing operations.",
+          "products": [
+            "taxiway-centerline-lighting",
+            "taxiway-stopbar",
+            "runway-guard-lights",
+            "taxiway-edge-light"
+          ]
+        },
+        "airfield-guidance-signs": {
+          "title": "Airfield Guidance Signs",
+          "description": "Essential signage for airfield guidance and operations.",
+          "products": [
+            "mandatory-information-signs",
+            "runway-distance-marker",
+            "stand-number-indicator-board",
+            "rhag-marker",
+            "parking-stop-sign",
+            "vor-aerodrome-check-point-signs",
+            "information-signs"
+          ]
+        },
+        "transformers-connector-kits": {
+          "title": "Transformers & Connector Kits",
+          "description": "Reliable transformers and connectors for airfield lighting systems.",
+          "products": [
+            "series-circuit-isolating-transformers",
+            "primary-connector-kits",
+            "primary-connector-kits-resin-type",
+            "secondary-connector-kits",
+            "isolating-transformer"
+          ]
+        },
+        "ccrs-accessories": {
+          "title": "CCRs & Accessories",
+          "description": "Constant current regulators and accessories for efficient airfield lighting control.",
+          "products": [
+            "micro-100-ccr",
+            "micro-200-ccr",
+            "multiway-circuit-selector-switch",
+            "series-circuit-cut-out-switch"
+          ]
+        },
+        "packaged-elevated-airfield-runway-lighting": {
+          "title": "Packaged Elevated Airfield Runway Lighting",
+          "description": "Complete packaged solutions for elevated airfield runway lighting.",
+          "products": [
+            "packaged-elevated-airfield-runway-lighting"
+          ]
+        },
+        "portable-lighting": {
+          "title": "Portable Lighting",
+          "description": "Portable airfield lighting solutions for temporary operations and emergencies.",
+          "products": [
+            "portable-lighting"
+          ]
+        },
+        "windsock-mast": {
+          "title": "Windsock Mast",
+          "description": "High-quality windsock masts for airfield operations.",
+          "products": [
+            "windsock-mast"
+          ]
+        },
+        "agnis-docking-aid": {
+          "title": "AGNiS Docking Aid",
+          "description": "Advanced Ground Navigation and Information System (AGNiS) for aircraft docking and parking guidance.",
+          "products": [
+            "agnis-docking-aid"
+          ]
+        }
+      }
+    },
+    "avdgs":{
+      "title": "Advanced Visual Docking Guidance Systems (AVDGS)",
+      "description": "State-of-the-art visual docking guidance systems for precise aircraft parking and guidance.",
+      "image": "/images/categories/avdgs.jpg",
+      "sector": "airports",
+      "hasClassifications": false,
+      "products": [
+        "avdgs"
+      ]
+    },
+    "photometric-system": {
+      "title": "Photometric System",
+      "description": "Advanced photometric systems for measuring and analyzing light performance in airfield lighting.",
+      "image": "/images/categories/photometric-system.jpg",
+      "sector": "airports",
+      "hasClassifications": false,
+      "products": [
+        "photometric-workshop-equipment",
+        "frame-reader-equipment",
+        "photometric-airfield-calibration",
+        "papi-photometric-calibration-system",
+        "airfield-guidance-signs-calibration-system",
+        "sodice-airfield-lighting-soda-powder-cleaning-equipment"
+      ]
+    },
+    "ilcms": {
+      "title": "Integrated Lighting Control and Monitoring Systems (ILCMS)",
+      "description": "Comprehensive systems for controlling and monitoring airfield lighting.",
+      "image": "/images/categories/ilcms.jpg",
+      "sector": "airports",
+      "hasClassifications": false,
+      "products": [
+        "ilcms"
+      ]
+    },
+    "heliport-lighting": {
+      "title": "Heliport Lighting",
+      "description": "Dedicated lighting systems for heliports and helipads.",
+      "image": "/images/categories/heliport-lighting.jpg",
+      "sector": ["airports", "defense"],
+      "hasClassifications": false,
+      "products": [
+        "aiming-point-lights",
+        "approach-steady",
+        "heliport-beacon",
+        "fato",
+        "floodlight-helipad-lighting-system",
+        "tlof",
+        "inset-omni-directional-light",
+        "inset-omni-directional-approach-light",
+        "elevated-omni-directional-tdz",
+        "omni-directional-approach-light"
+      ]
+    },
+    "air-traffic-management": {
       "title": "Air Traffic Management",
       "description": "Comprehensive systems for managing air traffic with advanced surveillance, communication, and control capabilities.",
       "image": "/images/categories/atm-category.jpg",
       "sector": "airports",
       "hasClassifications": false,
       "products": [
-        "air_traffic_management_system",
-        "trailer_mounted_mobile_atc",
-        "digital_voice_recorder_system"
+        "air-traffic-management-system",
+        "trailer-mounted-mobile-atc",
+        "digital-voice-recorder-system"
       ]
     },
-    "communication_systems": {
+    "communication-systems": {
       "title": "Communication Systems",
       "description": "Advanced communication systems for secure and reliable communications across multiple sectors.",
       "image": "/images/categories/communication-category.jpg",
-      "sector": ["airports", "defense", "railways"],
+      "sector": [
+        "airports",
+        "defense",
+        "railways"
+      ],
       "hasClassifications": false,
       "products": [
-        "secure_communication_system",
-        "tactical_radio_system",
-        "satellite_communication",
-        "tactical_communication_system"
+        "secure-communication-system",
+        "tactical-radio-system",
+        "satellite-communication",
+        "tactical-communication-system"
       ]
     },
-    "radar_systems": {
+    "radar-systems": {
       "title": "Radar Systems",
       "description": "Advanced radar systems for defense and civilian applications.",
       "image": "/images/categories/radar-category.jpg",
-      "sector": ["defense", "airports"],
+      "sector": [
+        "defense",
+        "airports"
+      ],
       "hasClassifications": false,
       "products": [
-        "surveillance_radar",
-        "tracking_radar",
-        "weather_radar_defense",
-        "weather_radar"
+        "surveillance-radar",
+        "tracking-radar",
+        "weather-radar-defense",
+        "weather-radar"
       ]
     },
-    "safety_systems": {
+    "safety-systems": {
       "title": "Safety Systems",
       "description": "Safety systems for accident prevention and emergency response across multiple sectors.",
       "image": "/images/categories/safety-category.jpg",
-      "sector": ["railways", "airports"],
+      "sector": [
+        "railways",
+        "airports"
+      ],
       "hasClassifications": false,
       "products": [
-        "train_protection_system",
-        "level_crossing_equipment",
-        "emergency_communication_system",
-        "emergency_alert_system"
+        "train-protection-system",
+        "level-crossing-equipment",
+        "emergency-communication-system",
+        "emergency-alert-system"
       ]
     },
-    "airfield_lighting": {
+    "airfield-lighting": {
       "title": "Airfield Lighting",
       "description": "Comprehensive lighting solutions for airfields including approach, runway, and guidance systems.",
       "image": "/images/categories/lighting-category.jpg",
       "sector": "airports",
       "hasClassifications": true,
       "classifications": {
-        "led_technology": {
+        "led-technology": {
           "title": "LED Technology",
           "description": "Advanced LED-based lighting solutions for modern airfield operations.",
           "products": [
-            "led_approach_light",
-            "led_threshold_light",
-            "led_runway_end_light"
+            "led-approach-light",
+            "led-threshold-light",
+            "led-runway-end-light"
           ]
         },
-        "halogen_technology": {
+        "halogen-technology": {
           "title": "Halogen Technology",
           "description": "Traditional halogen-based lighting solutions for airfield operations.",
           "products": [
-            "halogen_approach_light",
-            "halogen_threshold_light"
+            "halogen-approach-light",
+            "halogen-threshold-light"
           ]
         }
       }
     },
-    "signaling_systems": {
+    "signaling-systems": {
       "title": "Signaling Systems",
       "description": "Advanced signaling systems for safe and efficient railway operations.",
       "image": "/images/categories/signaling-category.jpg",
       "sector": "railways",
       "hasClassifications": false,
       "products": [
-        "electronic_interlocking_system",
-        "signal_control_system",
-        "track_circuit_system"
+        "electronic-interlocking-system",
+        "signal-control-system",
+        "track-circuit-system"
       ]
     }
   },
   "products": {
-    "led_approach_light": {
+    "led-approach-light": {
       "title": "LED Approach Light",
       "description": "High-intensity LED approach lighting system for enhanced aircraft guidance during landing operations with superior visibility and energy efficiency.",
       "image": "/images/led-approach.jpg",
       "sector": "airports",
-      "category": "airfield_lighting",
-      "subcategory": "led_technology",
+      "category": "airfield-lighting",
+      "subcategory": "led-technology",
       "type": "LED Elevated",
       "market": "Commercial"
     },
-    "led_threshold_light": {
+    "led-threshold-light": {
       "title": "LED Threshold Light",
       "description": "Advanced LED threshold lighting system providing clear runway boundary marking with exceptional durability and low maintenance requirements.",
       "image": "/images/led-threshold.jpg",
       "sector": "airports",
-      "category": "airfield_lighting",
-      "subcategory": "led_technology",
+      "category": "airfield-lighting",
+      "subcategory": "led-technology",
       "type": "LED Inset",
       "market": "Commercial"
     },
-    "led_runway_end_light": {
+    "led-runway-end-light": {
       "title": "LED Runway End Light",
       "description": "High-performance LED runway end lighting system for clear runway termination indication with weather-resistant design and long service life.",
       "image": "/images/led-runway-end.jpg",
       "sector": "airports",
-      "category": "airfield_lighting",
-      "subcategory": "led_technology",
+      "category": "airfield-lighting",
+      "subcategory": "led-technology",
       "type": "LED Elevated",
       "market": "Commercial"
     },
-    "halogen_approach_light": {
+    "halogen-approach-light": {
       "title": "Halogen Approach Light",
       "description": "Traditional halogen approach lighting system providing reliable aircraft guidance with proven technology and cost-effective operation.",
       "image": "/images/halogen-approach.jpg",
       "sector": "airports",
-      "category": "airfield_lighting",
-      "subcategory": "halogen_technology",
+      "category": "airfield-lighting",
+      "subcategory": "halogen-technology",
       "type": "Halogen Elevated",
       "market": "Commercial"
     },
-    "halogen_threshold_light": {
+    "papi-lighting": {
+      "title": "PAPI Lighting",
+      "description": "Precision Approach Path Indicator (PAPI) lighting system for accurate glide path guidance during landing.",
+      "image": "/images/papi-lighting.jpg",
+      "sector": "airports",
+      "category": "airfield-ground-lights",
+      "subcategory": "papi-lighting",
+      "type": "Halogen Elevated",
+      "market": "Commercial"
+    },
+    "halogen-threshold-light": {
       "title": "Halogen Threshold Light",
       "description": "Reliable halogen threshold lighting system for runway boundary marking with robust construction and field-proven performance.",
       "image": "/images/halogen-threshold.jpg",
       "sector": "airports",
-      "category": "airfield_lighting",
-      "subcategory": "halogen_technology",
+      "category": "airfield-lighting",
+      "subcategory": "halogen-technology",
       "type": "Halogen Inset",
       "market": "Commercial"
     },
-    "surveillance_radar": {
+    "surveillance-radar": {
       "title": "Surveillance Radar System",
       "description": "Advanced surveillance radar for defense and airport applications with long-range detection capabilities and multi-target tracking functionality.",
       "image": "/images/surveillance-radar.jpg",
-      "sector": ["defense", "airports"],
-      "category": "radar_systems",
+      "sector": [
+        "defense",
+        "airports"
+      ],
+      "category": "radar-systems",
       "type": "Radar",
-      "market": ["Military", "Commercial"]
+      "market": [
+        "Military",
+        "Commercial"
+      ]
     },
-    "tracking_radar": {
+    "tracking-radar": {
       "title": "Tracking Radar System",
       "description": "High-precision tracking radar system for defense applications with advanced signal processing and target identification capabilities.",
       "image": "/images/tracking-radar.jpg",
       "sector": "defense",
-      "category": "radar_systems",
+      "category": "radar-systems",
       "type": "Radar",
       "market": "Military"
     },
-    "weather_radar_defense": {
+    "weather-radar-defense": {
       "title": "Weather Radar System (Defense)",
       "description": "Military-grade weather radar system for defense applications with enhanced detection capabilities and tactical weather analysis.",
       "image": "/images/weather-radar-defense.jpg",
       "sector": "defense",
-      "category": "radar_systems",
+      "category": "radar-systems",
       "type": "Radar",
       "market": "Military"
     },
-    "weather_radar": {
+    "weather-radar": {
       "title": "Weather Radar System",
       "description": "Commercial weather radar system for airports and civilian applications with accurate weather monitoring and storm tracking capabilities.",
       "image": "/images/weather-radar.jpg",
       "sector": "airports",
-      "category": "radar_systems",
+      "category": "radar-systems",
       "type": "Radar",
       "market": "Commercial"
     },
-    "secure_communication_system": {
+    "secure-communication-system": {
       "title": "Secure Communication System",
       "description": "Military-grade secure communication system suitable for defense, airports, and railways with advanced encryption and reliability features.",
       "image": "/images/secure-comm.jpg",
-      "sector": ["defense", "airports", "railways"],
-      "category": "communication_systems",
+      "sector": [
+        "defense",
+        "airports",
+        "railways"
+      ],
+      "category": "communication-systems",
       "type": "Communication",
-      "market": ["Military", "Commercial", "Civil"]
+      "market": [
+        "Military",
+        "Commercial",
+        "Civil"
+      ]
     },
-    "tactical_radio_system": {
+    "tactical-radio-system": {
       "title": "Tactical Radio System",
       "description": "Advanced tactical radio communication system for defense operations with secure channels and battlefield-ready durability.",
       "image": "/images/tactical-radio.jpg",
       "sector": "defense",
-      "category": "communication_systems",
+      "category": "communication-systems",
       "type": "Communication",
       "market": "Military"
     },
-    "satellite_communication": {
+    "satellite-communication": {
       "title": "Satellite Communication System",
       "description": "High-capacity satellite communication system for remote locations with global coverage and reliable connectivity solutions.",
       "image": "/images/satellite-comm.jpg",
-      "sector": ["defense", "airports"],
-      "category": "communication_systems",
+      "sector": [
+        "defense",
+        "airports"
+      ],
+      "category": "communication-systems",
       "type": "Communication",
-      "market": ["Military", "Commercial"]
+      "market": [
+        "Military",
+        "Commercial"
+      ]
     },
-    "tactical_communication_system": {
+    "tactical-communication-system": {
       "title": "Tactical Communication System",
       "description": "Integrated tactical communication system for defense operations with multi-channel capability and field-deployable design.",
       "image": "/images/tactical-comm.jpg",
       "sector": "defense",
-      "category": "communication_systems",
+      "category": "communication-systems",
       "type": "Communication",
       "market": "Military"
     },
-    "emergency_alert_system": {
+    "emergency-alert-system": {
       "title": "Emergency Alert System",
       "description": "Comprehensive emergency alert system for airports and railways with multi-channel notification and automated response capabilities.",
       "image": "/images/emergency-alert.jpg",
-      "sector": ["airports", "railways"],
-      "category": "safety_systems",
+      "sector": [
+        "airports",
+        "railways"
+      ],
+      "category": "safety-systems",
       "type": "Safety",
-      "market": ["Commercial", "Civil"]
+      "market": [
+        "Commercial",
+        "Civil"
+      ]
     },
-    "train_protection_system": {
+    "train-protection-system": {
       "title": "Train Protection System",
       "description": "Advanced train protection system ensuring railway safety with automatic braking and collision avoidance technology.",
       "image": "/images/train-protection.jpg",
       "sector": "railways",
-      "category": "safety_systems",
+      "category": "safety-systems",
       "type": "Safety",
       "market": "Civil"
     },
-    "level_crossing_equipment": {
+    "level-crossing-equipment": {
       "title": "Level Crossing Equipment",
       "description": "Automated level crossing equipment for railway safety with barrier control and warning systems for road-rail intersections.",
       "image": "/images/level-crossing.jpg",
       "sector": "railways",
-      "category": "safety_systems",
+      "category": "safety-systems",
       "type": "Safety",
       "market": "Civil"
     },
-    "emergency_communication_system": {
+    "emergency-communication-system": {
       "title": "Emergency Communication System",
       "description": "Critical emergency communication system for railways and airports with redundant channels and priority messaging capabilities.",
       "image": "/images/emergency-comm.jpg",
-      "sector": ["railways", "airports"],
-      "category": "safety_systems",
+      "sector": [
+        "railways",
+        "airports"
+      ],
+      "category": "safety-systems",
       "type": "Safety",
-      "market": ["Commercial", "Civil"]
+      "market": [
+        "Commercial",
+        "Civil"
+      ]
     },
-    "electronic_interlocking_system": {
+    "electronic-interlocking-system": {
       "title": "Electronic Interlocking System",
       "description": "Advanced electronic interlocking system for safe railway operations with computer-based control and fail-safe mechanisms.",
       "image": "/images/interlocking.jpg",
       "sector": "railways",
-      "category": "signaling_systems",
+      "category": "signaling-systems",
       "type": "Electronic",
       "market": "Civil"
     },
-    "signal_control_system": {
+    "signal-control-system": {
       "title": "Signal Control System",
       "description": "Computerized signal control system for railway networks with centralized monitoring and automated train scheduling capabilities.",
       "image": "/images/signal-control.jpg",
       "sector": "railways",
-      "category": "signaling_systems",
+      "category": "signaling-systems",
       "type": "Electronic",
       "market": "Civil"
     },
-    "track_circuit_system": {
+    "track-circuit-system": {
       "title": "Track Circuit System",
       "description": "Reliable track circuit system for train detection and railway safety with continuous monitoring and fault detection features.",
       "image": "/images/track-circuit.jpg",
       "sector": "railways",
-      "category": "signaling_systems",
+      "category": "signaling-systems",
       "type": "Electronic",
       "market": "Civil"
     },
-    "air_traffic_management_system": {
+    "air-traffic-management-system": {
       "title": "Air Traffic Management System",
       "description": "Comprehensive air traffic management system with radar integration, flight tracking, and controller workstation capabilities.",
       "image": "/images/atm-system.jpg",
       "sector": "airports",
-      "category": "air_traffic_management",
+      "category": "air-traffic-management",
       "type": "Electronic",
       "market": "Commercial"
     },
-    "trailer_mounted_mobile_atc": {
+    "trailer-mounted-mobile-atc": {
       "title": "Trailer Mounted Mobile ATC",
       "description": "Mobile air traffic control system mounted on trailer for emergency operations and temporary airport services with full ATC capabilities.",
       "image": "/images/mobile-atc.jpg",
       "sector": "airports",
-      "category": "air_traffic_management",
+      "category": "air-traffic-management",
       "type": "Mobile",
       "market": "Commercial"
     },
-    "digital_voice_recorder_system": {
+    "digital-voice-recorder-system": {
       "title": "Digital Voice Recorder System",
       "description": "Advanced digital voice recording system for air traffic control with multi-channel recording and playback capabilities for safety and training.",
       "image": "/images/voice-recorder.jpg",
       "sector": "airports",
-      "category": "air_traffic_management",
+      "category": "air-traffic-management",
       "type": "Electronic",
       "market": "Commercial"
     }

@@ -35,8 +35,8 @@ app.use(session({
 
 
 app.use("/",homeRouter);
+app.use("/",productsRouter);
 app.use("/about",aboutRouter);
-app.use("/products",productsRouter);
 app.use("/solutions",solutionsRouter);
 app.use("/news",newsRouter);
 app.use("/careers",careersRouter);

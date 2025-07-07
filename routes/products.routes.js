@@ -193,8 +193,52 @@ function getSidebarData() {
   };
 }
 
+// Helper function to check if a slug is a category
+function findCategoryBySlug(slug) {
+  return Object.entries(data.categories).find(([categoryId, category]) => 
+    categoryId === slug
+  );
+}
+
+// Helper function to check if a slug is a classification
+function findClassificationBySlug(slug) {
+  for (const [categoryId, category] of Object.entries(data.categories)) {
+    if (category.classifications) {
+      const classification = Object.entries(category.classifications).find(([classificationId, classification]) => 
+        classificationId === slug
+      );
+      if (classification) {
+        return {
+          classificationId: classification[0],
+          classification: classification[1],
+          categoryId: categoryId
+        };
+      }
+    }
+  }
+  return null;
+}
+
+// Helper function to check if a slug is a product
+function findProductBySlug(slug) {
+  return data.products[slug] ? { key: slug, ...data.products[slug] } : null;
+}
+
+// Helper function to check if a slug is a sector
+function findSectorBySlug(slug) {
+  const sectors = new Set();
+  Object.values(data.products).forEach(product => {
+    if (Array.isArray(product.sector)) {
+      product.sector.forEach(s => sectors.add(s));
+    } else {
+      sectors.add(product.sector);
+    }
+  });
+  return Array.from(sectors).includes(slug);
+}
+
 // Main products page - shows all products with sidebar filtering
-router.get('/', (req, res) => {
+router.get('/our-products', (req, res) => {
   const filters = {
     sector: req.query.sector,
     category: req.query.category,
@@ -216,120 +260,100 @@ router.get('/', (req, res) => {
   });
 });
 
-// Sector filter route - /products/airports, /products/defense, etc.
-router.get('/:sector', (req, res) => {
-  const sector = req.params.sector;
-  const filters = {
-    sector,
-    category: req.query.category,
-    classification: req.query.classification,
-    market: req.query.market,
-    type: req.query.type,
-    search: req.query.search
-  };
-
-  const filteredProducts = getFilteredProducts(filters);
-  const sidebarData = getSidebarData();
-
-  res.render('products/index', {
-    title: `${sector.charAt(0).toUpperCase() + sector.slice(1)} Products`,
-    products: filteredProducts,
-    sidebar: sidebarData,
-    filters,
-    totalResults: filteredProducts.length
-  });
-});
-
-// Category filter route - /products/category/air_traffic_management
-router.get('/category/:categoryId', (req, res) => {
-  const categoryId = req.params.categoryId;
-  const category = data.categories[categoryId];
+// Dynamic route handler for SEO-friendly URLs
+router.get('/:slug', (req, res) => {
+  const slug = req.params.slug;
   
-  if (!category) {
-    return res.status(404).render('404', { message: 'Category not found' });
+  // Check if it's a product first (highest priority)
+  const product = findProductBySlug(slug);
+  if (product) {
+    const similarProducts = findSimilarProducts(slug, 4);
+    
+    return res.render('products/product', {
+      title: product.title,
+      product,
+      similarProducts
+    });
   }
   
-  const filters = {
-    sector: req.query.sector,
-    category: categoryId,
-    classification: req.query.classification,
-    market: req.query.market,
-    type: req.query.type,
-    search: req.query.search
-  };
+  // Check if it's a classification
+  const classificationData = findClassificationBySlug(slug);
+  if (classificationData) {
+    const filters = {
+      sector: req.query.sector,
+      category: req.query.category,
+      classification: classificationData.classificationId,
+      market: req.query.market,
+      type: req.query.type,
+      search: req.query.search
+    };
 
-  const filteredProducts = getFilteredProducts(filters);
-  const sidebarData = getSidebarData();
+    const filteredProducts = getFilteredProducts(filters);
+    const sidebarData = getSidebarData();
 
-  res.render('products/index', {
-    title: `${category.title} Products`,
-    products: filteredProducts,
-    sidebar: sidebarData,
-    filters,
-    totalResults: filteredProducts.length
-  });
-});
-
-// Classification filter route - /products/classification/led_technology
-router.get('/classification/:classificationId', (req, res) => {
-  const classificationId = req.params.classificationId;
-  
-  // Find the classification across all categories
-  let foundClassification = null;
-  let parentCategory = null;
-  
-  Object.entries(data.categories).forEach(([categoryId, category]) => {
-    if (category.classifications && category.classifications[classificationId]) {
-      foundClassification = category.classifications[classificationId];
-      parentCategory = category;
-    }
-  });
-  
-  if (!foundClassification) {
-    return res.status(404).render('404', { message: 'Classification not found' });
+    return res.render('products/index', {
+      title: `${classificationData.classification.title} Products`,
+      description: `${classificationData.classification.description}`,
+      products: filteredProducts,
+      sidebar: sidebarData,
+      filters,
+      totalResults: filteredProducts.length
+    });
   }
   
-  const filters = {
-    sector: req.query.sector,
-    category: req.query.category,
-    classification: classificationId,
-    market: req.query.market,
-    type: req.query.type,
-    search: req.query.search
-  };
+  // Check if it's a category
+  const categoryData = findCategoryBySlug(slug);
+  if (categoryData) {
+    const [categoryId, category] = categoryData;
+    
+    const filters = {
+      sector: req.query.sector,
+      category: categoryId,
+      classification: req.query.classification,
+      market: req.query.market,
+      type: req.query.type,
+      search: req.query.search
+    };
 
-  const filteredProducts = getFilteredProducts(filters);
-  const sidebarData = getSidebarData();
+    const filteredProducts = getFilteredProducts(filters);
+    const sidebarData = getSidebarData();
 
-  res.render('products/index', {
-    title: `${foundClassification.title} Products`,
-    products: filteredProducts,
-    sidebar: sidebarData,
-    filters,
-    totalResults: filteredProducts.length
-  });
-});
-
-// Individual product page
-router.get('/product/:productId', (req, res) => {
-  const productId = req.params.productId;
-  const product = data.products[productId];
-  
-  if (!product) {
-    return res.status(404).render('404', { message: 'Product not found' });
+    return res.render('products/index', {
+      title: `${category.title} Products`,
+      description: `${category.description}`,
+      products: filteredProducts,
+      sidebar: sidebarData,
+      filters,
+      totalResults: filteredProducts.length
+    });
   }
   
-  // Get similar products
-  const similarProducts = findSimilarProducts(productId, 4);
+  // Check if it's a sector
+  const isSector = findSectorBySlug(slug);
+  if (isSector) {
+    const filters = {
+      sector: slug,
+      category: req.query.category,
+      classification: req.query.classification,
+      market: req.query.market,
+      type: req.query.type,
+      search: req.query.search
+    };
+
+    const filteredProducts = getFilteredProducts(filters);
+    const sidebarData = getSidebarData();
+
+    return res.render('products/index', {
+      title: `${slug.charAt(0).toUpperCase() + slug.slice(1)} Products`,
+      products: filteredProducts,
+      sidebar: sidebarData,
+      filters,
+      totalResults: filteredProducts.length
+    });
+  }
   
-  res.render('products/product', {
-    title: product.title,
-    product: {
-      key: productId,
-      ...product
-    },
-    similarProducts
-  });
+  // If nothing matches, return 404
+  return res.status(404).render('404', { message: 'Page not found' });
 });
 
 export default router;
