@@ -31,29 +31,29 @@
                     <!-- Search -->
                     <div class="filter-section">
                         <label>Search Products</label>
-                        <div class="search-container">
-                            <input type="text" id="search-input" placeholder="Search products..."
+                        <div class="products-filter-search-container">
+                            <input type="text" id="products-filter-search-input" placeholder="Search products..."
                                 value="<%= filters.search || '' %>">
-                            <button type="button" id="search-btn" class="search-btn">
-                                <i class="fas fa-search"></i>
+                            <button type="button" id="products-filter-search-btn" class="products-filter-search-btn">
+                                <i class="fas fa-search"></i>                                
                             </button>
                         </div>
                     </div>
 
                     <style>
-                        .search-container {
+                        .products-filter-search-container {
                             position: relative;
                             display: flex;
                             align-items: center;
                         }
 
-                        .search-container input {
+                        .products-filter-search-container input {
                             flex: 1;
                             padding-right: 40px;
                             /* Make room for the button */
                         }
 
-                        .search-btn {
+                        .products-filter-search-btn {
                             position: absolute;
                             right: 5px;
                             background: none;
@@ -65,7 +65,7 @@
                             transition: color 0.3s ease;
                         }
 
-                        .search-btn:hover {
+                        .products-filter-search-btn:hover {
                             color: #333;
                             background-color: #f0f0f0;
                         }
@@ -135,47 +135,47 @@
                     </div>
 
                     <!-- Markets -->
-                    <% if(sidebar.markets && sidebar.markets.length > 0) { %>
-                    <div class="filter-section">
-                        <div class="filter-header" data-filter="markets">
-                            <span>Markets</span>
-                            <i class="fas fa-chevron-down"></i>
+                    <% if(sidebar.markets && sidebar.markets.length> 0) { %>
+                        <div class="filter-section">
+                            <div class="filter-header" data-filter="markets">
+                                <span>Markets</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="filter-content" id="markets-content">
+                                <% sidebar.markets.forEach(market=> { %>
+                                    <div class="filter-item">
+                                        <input type="radio" id="market-<%= market %>" name="market"
+                                            value="<%= market %>" <%=filters.market===market ? 'checked' : '' %>>
+                                        <label for="market-<%= market %>">
+                                            <%= market %>
+                                        </label>
+                                    </div>
+                                    <% }); %>
+                            </div>
                         </div>
-                        <div class="filter-content" id="markets-content">
-                            <% sidebar.markets.forEach(market=> { %>
-                                <div class="filter-item">
-                                    <input type="radio" id="market-<%= market %>" name="market" value="<%= market %>"
-                                        <%=filters.market===market ? 'checked' : '' %>>
-                                    <label for="market-<%= market %>">
-                                        <%= market %>
-                                    </label>
+                        <% } %>
+
+                            <!-- Types -->
+                            <div class="filter-section">
+                                <div class="filter-header" data-filter="types">
+                                    <span>Product Types</span>
+                                    <i class="fas fa-chevron-down"></i>
                                 </div>
-                                <% }); %>
-                        </div>
-                    </div>
-                    <% } %>
-
-                    <!-- Types -->
-                    <div class="filter-section">
-                        <div class="filter-header" data-filter="types">
-                            <span>Product Types</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="filter-content" id="types-content">
-                            <% sidebar.types.forEach(type=> { %>
-                                <div class="filter-item">
-                                    <input type="radio" id="type-<%= type %>" name="type" value="<%= type %>"
-                                        <%=filters.type===type ? 'checked' : '' %>>
-                                    <label for="type-<%= type %>">
-                                        <%= type %>
-                                    </label>
+                                <div class="filter-content" id="types-content">
+                                    <% sidebar.types.forEach(type=> { %>
+                                        <div class="filter-item">
+                                            <input type="radio" id="type-<%= type %>" name="type" value="<%= type %>"
+                                                <%=filters.type===type ? 'checked' : '' %>>
+                                            <label for="type-<%= type %>">
+                                                <%= type %>
+                                            </label>
+                                        </div>
+                                        <% }); %>
                                 </div>
-                                <% }); %>
-                        </div>
-                    </div>
+                            </div>
 
 
-                    <!-- Clear Filters -->
+                            <!-- Clear Filters -->
                 </div>
 
                 <!-- Main Content -->
@@ -224,9 +224,9 @@
                                                             <%= product.type %>
                                                         </span>
                                                         <% } %>
-                                                    <% if (Array.isArray(product.sector)) { %>
-                                                        <span class="product-sector">
-                                                            <%= product.sector.join(', ') %></span>
+                                                            <% if (Array.isArray(product.sector)) { %>
+                                                                <span class="product-sector">
+                                                                    <%= product.sector.join(', ') %></span>
                                         <% } else { %>
                                             <span class="product-sector"><%= product.sector %></span>
                                         <% } %>
