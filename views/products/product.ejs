@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
-<link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/product.css">
 
     <br><br><br><br><br>
-    
+
     <main>
         <!-- Product Detail Section -->
         <section class="product-detail-section">
@@ -17,103 +17,242 @@
                             </div>
                             <% if (product.portfolioImage) { %>
                                 <div class="thumbnail-images">
-                                    <img src="<%= product.image %>" alt="<%= product.title %>" onclick="changeMainImage(this.src)" class="thumbnail active">
-                                    <img src="<%= product.portfolioImage %>" alt="<%= product.title %>" onclick="changeMainImage(this.src)" class="thumbnail">
+                                    <img src="<%= product.image %>" alt="<%= product.title %>"
+                                        onclick="changeMainImage(this.src)" class="thumbnail active">
+                                    <img src="<%= product.portfolioImage %>" alt="<%= product.title %>"
+                                        onclick="changeMainImage(this.src)" class="thumbnail">
                                 </div>
-                            <% } %>
+                                <% } %>
                         </div>
 
                         <!-- Product Information -->
                         <div class="product-info">
-                            <h1 class="product-title"><%= product.title %></h1>
-                            
+                            <h1 class="product-title">
+                                <%= product.title %>
+                            </h1>
+
                             <div class="product-description">
-                                <p><%= product.description %></p>
+                                <p>
+                                    <%= product.description %>
+                                </p>
                             </div>
 
+                            <!-- Custom Sections -->
+
+
+
                             <!-- Portfolio Lines -->
-                            <% if (product.portfolioLines && product.portfolioLines.length > 0) { %>
+                            <% if (product.portfolioLines && product.portfolioLines.length> 0) { %>
                                 <div class="content-section">
                                     <h3 class="section-heading">Key Highlights</h3>
                                     <ul class="content-list">
-                                        <% product.portfolioLines.forEach(line => { %>
-                                            <li><%= line %></li>
-                                        <% }) %>
+                                        <% product.portfolioLines.forEach(line=> { %>
+                                            <li>
+                                                <%= line %>
+                                            </li>
+                                            <% }) %>
                                     </ul>
                                 </div>
-                            <% } %>
+                                <% } %>
 
-                            <!-- Features -->
-                            <% if (product.features && product.features.length > 0) { %>
-                                <div class="content-section">
-                                    <h3 class="section-heading">Features</h3>
-                                    <ul class="content-list">
-                                        <% product.features.forEach(feature => { %>
-                                            <li><%= feature %></li>
-                                        <% }) %>
-                                    </ul>
-                                </div>
-                            <% } %>
+                                    <!-- Features -->
+                                    <% if (product.features && product.features.length> 0) { %>
+                                        <div class="content-section">
+                                            <h3 class="section-heading">Features</h3>
+                                            <ul class="content-list">
+                                                <% product.features.forEach(feature=> { %>
+                                                    <li>
+                                                        <%= feature %>
+                                                    </li>
+                                                    <% }) %>
+                                            </ul>
+                                        </div>
+                                        <% } %>
 
-                            <!-- Key Functionalities -->
-                            <% if (product.key_functionalities && product.key_functionalities.length > 0) { %>
-                                <div class="content-section">
-                                    <h3 class="section-heading">Key Functionalities</h3>
-                                    <ul class="content-list">
-                                        <% product.key_functionalities.forEach(func => { %>
-                                            <li><%= func %></li>
-                                        <% }) %>
-                                    </ul>
-                                </div>
-                            <% } %>
+                                            <!-- Key Functionalities -->
+                                            <% if (product.key_functionalities && product.key_functionalities.length> 0)
+                                                { %>
+                                                <div class="content-section">
+                                                    <h3 class="section-heading">Key Functionalities</h3>
+                                                    <ul class="content-list">
+                                                        <% product.key_functionalities.forEach(func=> { %>
+                                                            <li>
+                                                                <%= func %>
+                                                            </li>
+                                                            <% }) %>
+                                                    </ul>
+                                                </div>
+                                                <% } %>
 
-                            <!-- Main Equipment -->
-                            <% if (product.main_equipment && product.main_equipment.length > 0) { %>
-                                <div class="content-section">
-                                    <h3 class="section-heading">Main Equipment</h3>
-                                    <ul class="content-list equipment-list">
-                                        <% product.main_equipment.forEach(equipment => { %>
-                                            <li><%= equipment %></li>
-                                        <% }) %>
-                                    </ul>
-                                </div>
-                            <% } %>
+                                                    <!-- Main Equipment -->
+                                                    <% if (product.main_equipment && product.main_equipment.length> 0) {
+                                                        %>
+                                                        <div class="content-section">
+                                                            <h3 class="section-heading">Main Equipment</h3>
+                                                            <ul class="content-list equipment-list">
+                                                                <% product.main_equipment.forEach(equipment=> { %>
+                                                                    <li>
+                                                                        <%= equipment %>
+                                                                    </li>
+                                                                    <% }) %>
+                                                            </ul>
+                                                        </div>
+                                                        <% } %>
 
-                            <!-- Equipment List -->
-                            <% if (product.equipment_list && product.equipment_list.length > 0) { %>
-                                <div class="content-section">
-                                    <h3 class="section-heading">Equipment Specifications</h3>
-                                    <div class="equipment-specs">
-                                        <% product.equipment_list.forEach(item => { %>
-                                            <div class="equipment-item">
-                                                <h4 class="equipment-name"><%= item.name %></h4>
-                                                <p class="equipment-spec"><%= item.spec %></p>
-                                            </div>
-                                        <% }) %>
-                                    </div>
-                                </div>
-                            <% } %>
+                                                            <!-- Equipment List -->
+                                                            <% if (product.equipment_list &&
+                                                                product.equipment_list.length> 0) { %>
+                                                                <div class="content-section">
+                                                                    <h3 class="section-heading">Equipment Specifications
+                                                                    </h3>
+                                                                    <div class="equipment-specs">
+                                                                        <% product.equipment_list.forEach(item=> { %>
+                                                                            <div class="equipment-item">
+                                                                                <h4 class="equipment-name">
+                                                                                    <%= item.name %>
+                                                                                </h4>
+                                                                                <p class="equipment-spec">
+                                                                                    <%= item.spec %>
+                                                                                </p>
+                                                                            </div>
+                                                                            <% }) %>
+                                                                    </div>
+                                                                </div>
+                                                                <% } %>
 
-                            <!-- Components -->
-                            <% if (product.components && product.components.length > 0) { %>
-                                <div class="content-section">
-                                    <h3 class="section-heading">Components</h3>
-                                    <div class="components-grid">
-                                        <% product.components.forEach(component => { %>
-                                            <div class="component-item">
-                                                <h4 class="component-name"><%= component.name %></h4>
-                                                <p class="component-description"><%= component.description %></p>
-                                            </div>
-                                        <% }) %>
-                                    </div>
-                                </div>
-                            <% } %>
+                                                                    <!-- Components -->
+                                                                    <% if (product.components &&
+                                                                        product.components.length> 0) { %>
+                                                                        <div class="content-section">
+                                                                            <h3 class="section-heading">Components</h3>
+                                                                            <div class="components-grid">
+                                                                                <%
+                                                                                    product.components.forEach(component=>
+                                                                                    { %>
+                                                                                    <div class="component-item">
+                                                                                        <h4 class="component-name">
+                                                                                            <%= component.name %>
+                                                                                        </h4>
+                                                                                        <p
+                                                                                            class="component-description">
+                                                                                            <%= component.description %>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                    <% }) %>
+                                                                            </div>
+                                                                        </div>
+                                                                        <% } %>
 
-                            <!-- Contact/Inquiry Button -->
-                            <div class="product-actions">
-                                <button class="btn btn-primary" onclick="openInquiryForm()">Request Information</button>
-                                <button class="btn btn-secondary" onclick="window.print()">Print Specifications</button>
-                            </div>
+                                                                            <% if (product.relatedProducts &&
+                                                                                product.relatedProducts.length> 0) { %>
+                                                                                <div class="content-section">
+                                                                                    <div class="simple-cards-grid">
+                                                                                        <%
+                                                                                            product.relatedProducts.forEach(relatedProduct=>
+                                                                                            { %>
+                                                                                            <div
+                                                                                                class="simple-product-card">
+                                                                                                <div
+                                                                                                    class="simple-card-image">
+                                                                                                    <img src="<%= relatedProduct.image %>"
+                                                                                                        alt="<%= relatedProduct.title %>">
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="simple-card-content">
+                                                                                                    <h4
+                                                                                                        class="simple-card-title">
+                                                                                                        <%= relatedProduct.title
+                                                                                                            %>
+                                                                                                    </h4>
+                                                                                                    <a href="/<%= relatedProduct.key %>"
+                                                                                                        class="simple-card-button">View
+                                                                                                        Details</a>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <% }) %>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <% } %>
+
+
+                                                                                    <% if (product.sections &&
+                                                                                        product.sections.length> 0) { %>
+                                                                                        <%
+                                                                                            product.sections.forEach(section=>
+                                                                                            { %>
+                                                                                            <div
+                                                                                                class="content-section custom-section">
+                                                                                                <% if (section.title) {
+                                                                                                    %>
+                                                                                                    <h3
+                                                                                                        class="section-heading">
+                                                                                                        <%= section.title
+                                                                                                            %>
+                                                                                                    </h3>
+                                                                                                    <% } %>
+
+                                                                                                        <% if
+                                                                                                            (section.para)
+                                                                                                            { %>
+                                                                                                            <div
+                                                                                                                class="section-paragraph">
+                                                                                                                <p>
+                                                                                                                    <%= section.para
+                                                                                                                        %>
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                            <% } %>
+
+                                                                                                                <% if
+                                                                                                                    (section.bullets
+                                                                                                                    &&
+                                                                                                                    section.bullets.length>
+                                                                                                                    0) {
+                                                                                                                    %>
+                                                                                                                    <ul
+                                                                                                                        class="content-list section-bullets">
+                                                                                                                        <%
+                                                                                                                            section.bullets.forEach(bullet=>
+                                                                                                                            {
+                                                                                                                            %>
+                                                                                                                            <li>
+                                                                                                                                <%= bullet
+                                                                                                                                    %>
+                                                                                                                            </li>
+                                                                                                                            <% })
+                                                                                                                                %>
+                                                                                                                    </ul>
+                                                                                                                    <% }
+                                                                                                                        %>
+
+                                                                                                                        <% if
+                                                                                                                            (section.image)
+                                                                                                                            {
+                                                                                                                            %>
+                                                                                                                            <div
+                                                                                                                                class="section-image">
+                                                                                                                                <img src="<%= section.image %>"
+                                                                                                                                    alt="<%= section.title || 'Section Image' %>"
+                                                                                                                                    class="section-img">
+                                                                                                                            </div>
+                                                                                                                            <% }
+                                                                                                                                %>
+                                                                                            </div>
+                                                                                            <% }) %>
+                                                                                                <% } %>
+
+                                                                                                    <!-- Contact/Inquiry Button -->
+                                                                                                    <div
+                                                                                                        class="product-actions">
+                                                                                                        <button
+                                                                                                            class="btn btn-primary"
+                                                                                                            onclick="openInquiryForm()">Request
+                                                                                                            Information</button>
+                                                                                                        <button
+                                                                                                            class="btn btn-secondary"
+                                                                                                            onclick="window.print()">Print
+                                                                                                            Specifications</button>
+                                                                                                    </div>
                         </div>
                     </div>
 
@@ -122,22 +261,28 @@
                         <div class="sidebar-content">
                             <h3 class="sidebar-heading">Similar Products</h3>
                             <div class="similar-products">
-                                <% if (similarProducts && similarProducts.length > 0) { %>
-                                    <% similarProducts.forEach(similarProduct => { %>
+                                <% if (similarProducts && similarProducts.length> 0) { %>
+                                    <% similarProducts.forEach(similarProduct=> { %>
                                         <div class="similar-product-card">
                                             <div class="similar-product-image">
-                                                <img src="<%= similarProduct.image %>" alt="<%= similarProduct.title %>">
+                                                <img src="<%= similarProduct.image %>"
+                                                    alt="<%= similarProduct.title %>">
                                             </div>
                                             <div class="similar-product-info">
-                                                <h4 class="similar-product-title"><%= similarProduct.title %></h4>
-                                                <p class="similar-product-description"><%= similarProduct.description.substring(0, 100) %>...</p>
-                                                <a href="/<%= similarProduct.key %>" class="similar-product-link">View Details</a>
+                                                <h4 class="similar-product-title">
+                                                    <%= similarProduct.title %>
+                                                </h4>
+                                                <p class="similar-product-description">
+                                                    <%= similarProduct.description.substring(0, 100) %>...
+                                                </p>
+                                                <a href="/<%= similarProduct.key %>" class="similar-product-link">View
+                                                    Details</a>
                                             </div>
                                         </div>
-                                    <% }) %>
-                                <% } else { %>
-                                    <p class="no-similar-products">No similar products found.</p>
-                                <% } %>
+                                        <% }) %>
+                                            <% } else { %>
+                                                <p class="no-similar-products">No similar products found.</p>
+                                                <% } %>
                             </div>
                         </div>
                     </div>
@@ -149,7 +294,7 @@
     <script>
         function changeMainImage(src) {
             document.getElementById('mainProductImage').src = src;
-            
+
             // Update active thumbnail
             const thumbnails = document.querySelectorAll('.thumbnail');
             thumbnails.forEach(thumb => {
@@ -159,7 +304,7 @@
                 }
             });
         }
-        
+
         function openInquiryForm() {
             // Your inquiry form logic
             console.log('Opening inquiry form for:', '<%= product.title %>');

@@ -177,7 +177,6 @@
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     padding: 3rem 0;
-    background: #222e3a;
 }
 
 .features-container {
@@ -188,7 +187,7 @@
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     justify-items: center;
     width: 100%;
@@ -196,16 +195,18 @@
     padding: 0;
 }
 
-
 .feature-card {
     background: #fff;
-    padding: 2.2rem 1.5rem 1.5rem 1.5rem;
     border-radius: 1rem;
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid #e2e8f0;
     color: #1e293b;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .feature-card:hover {
@@ -213,34 +214,39 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
-.feature-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1.2rem;
-    display: block;
+.feature-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
 }
 
-.industry-leadership .feature-icon {
-    color: #8b5cf6;
-}
-
-.state-art .feature-icon {
-    color: #10b981;
-}
-
-.maintenance .feature-icon {
-    color: #f59e0b;
+.feature-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
 }
 
 .feature-card h3 {
     font-weight: 700;
-    margin-bottom: 1rem;
+    margin: 1.5rem 1rem 1rem;
     color: #1e293b;
+    font-size: 1.2rem;
 }
 
 .feature-card p {
     color: #374151;
     font-weight: 500;
-    margin: 0;
+    margin: 0 1.5rem 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
 }
 
 .cta-center {
@@ -524,6 +530,61 @@
     text-align: left;
     color: #1e293b;
 }
+
+
+
+#director .modern-card {
+    position: relative;
+    overflow: hidden;
+}
+
+#director .modern-card-button {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+#director .modern-card:hover .modern-card-button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#director .modern-card-content {
+    padding: 1.4rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+#director .modern-card:hover .modern-card-content {
+    padding-bottom: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #director .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    #director .feature-image {
+        height: 150px;
+    }
+    
+    #director .feature-card h3 {
+        font-size: 1.1rem;
+        margin: 1rem 1rem 0.5rem;
+    }
+    
+    #director .feature-card p {
+        margin: 0 1rem 1rem;
+        font-size: 0.95rem;
+    }
+}
+
+
+
+
 
 #certifications .heading{
     font-family: "Playfair Display", Georgia, serif;

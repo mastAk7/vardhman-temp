@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
         });
+        
 
         // Handle submenu toggles
         document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
@@ -215,3 +216,157 @@ document.addEventListener('DOMContentLoaded', function () {
     // Update active nav item when navigating with browser back/forward buttons
     window.addEventListener('popstate', setActiveNavItem);
 });
+
+// Search functionality
+const searchData = [
+    // Airfield Ground Lights
+    { title: "LED Approach Light", category: "Approach Lighting", url: "/led-approach-light", description: "High-performance LED approach lighting system for aircraft guidance" },
+    { title: "LED Threshold Light", category: "Approach Lighting", url: "/led-threshold-light", description: "LED threshold lighting for runway approach systems" },
+    { title: "LED Runway End Light", category: "Approach Lighting", url: "/led-runway-end-light", description: "Advanced LED runway end lighting solutions" },
+    { title: "PAPI Lighting", category: "PAPI Lighting", url: "/papi-lighting", description: "Precision Approach Path Indicator lighting systems" },
+    { title: "Runway Edge Light", category: "Runway Lighting", url: "/runway-edge-light", description: "Professional runway edge lighting systems" },
+    { title: "Runway Centerline Light", category: "Runway Lighting", url: "/runway-centerline-light", description: "Centerline lighting for runway guidance" },
+    { title: "Taxiway Centerline Lighting", category: "Taxiway Lighting", url: "/taxiway-centerline-lighting", description: "Centerline lighting systems for taxiways" },
+    { title: "Runway Guard Lights", category: "Taxiway Lighting", url: "/runway-guard-lights", description: "Safety lighting for runway protection" },
+    { title: "Airfield Guidance Signs", category: "Airfield Guidance Signs", url: "/airfield-guidance-signs", description: "Comprehensive airfield signage solutions" },
+    { title: "Mandatory Information Signs", category: "Airfield Guidance Signs", url: "/mandatory-information-signs", description: "Required airfield information signage" },
+    { title: "Series Circuit Isolating Transformers", category: "Transformers & Connector Kits", url: "/series-circuit-isolating-transformers", description: "Electrical transformers for airfield lighting" },
+    { title: "Micro 100 CCR", category: "CCRs & Accessories", url: "/micro-100-ccr", description: "Constant current regulator systems" },
+    { title: "Portable Lighting", category: "Portable Lighting", url: "/portable-lighting", description: "Mobile lighting solutions for airports" },
+    { title: "Windsock Mast", category: "Windsock Mast", url: "/windsock-mast", description: "Wind direction indicator systems" },
+    { title: "AGNiS Docking Aid", category: "AGNiS Docking Aid", url: "/agnis-docking-aid", description: "Aircraft docking guidance systems" },
+    
+    // Other Products
+    { title: "AVDGS", category: "AVDGS", url: "/avdgs", description: "Advanced Visual Docking Guidance Systems" },
+    { title: "Photometric System", category: "Photometric System", url: "/photometric-system", description: "Light measurement and calibration systems" },
+    { title: "ILCMS", category: "ILCMS", url: "/ilcms", description: "Intelligent Lighting Control and Management System" },
+    { title: "Heliport Lighting", category: "Heliport Lighting", url: "/heliport-lighting", description: "Specialized lighting for helicopter operations" },
+    { title: "Air Traffic Management", category: "Air Traffic Management", url: "/air-traffic-management", description: "Comprehensive air traffic control solutions" },
+    { title: "Navigation & Tracking", category: "Navigation & Tracking", url: "/navigation-tracking", description: "Aircraft navigation and tracking systems" },
+    { title: "Weather & Communication", category: "Weather & Communication", url: "/weather-communication", description: "Weather monitoring and communication systems" },
+    { title: "Support Equipment", category: "Support Equipment", url: "/support-equipment", description: "Supporting equipment for airport operations" },
+    { title: "Smart Metering", category: "Smart Metering", url: "/smart-metering", description: "Smart energy metering solutions" },
+    
+    // Main Pages
+    { title: "About Us", category: "Company", url: "/about", description: "Learn about Vardhman Airport Solutions" },
+    { title: "Our Products", category: "Products", url: "/our-products", description: "Complete range of airport lighting and equipment" },
+    { title: "Our Solutions", category: "Solutions", url: "/solutions", description: "Comprehensive airport solutions" },
+    { title: "News", category: "News", url: "/news", description: "Latest news and updates" },
+    { title: "Point of View", category: "Insights", url: "/pov", description: "Industry insights and perspectives" },
+    { title: "Careers", category: "Careers", url: "/careers", description: "Join our team" },
+    { title: "Contact", category: "Contact", url: "/contact", description: "Get in touch with us" }
+];
+
+function initializeSearch() {
+    const searchToggle = document.getElementById('searchToggle');
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    const searchResults = document.getElementById('searchResults');
+    const searchLoading = document.getElementById('searchLoading');
+    const searchDropdown = document.querySelector('.search-dropdown');
+
+    if (!searchToggle || !searchInput || !searchBtn || !searchResults) return;
+
+    // Handle search toggle
+    searchToggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (window.innerWidth < 992) {
+            // Mobile behavior
+            searchDropdown.classList.toggle('show');
+            if (searchDropdown.classList.contains('show')) {
+                setTimeout(() => searchInput.focus(), 100);
+            }
+        } else {
+            // Desktop behavior - focus input when clicked
+            setTimeout(() => searchInput.focus(), 100);
+        }
+    });
+
+    // Handle search input
+    let searchTimeout;
+    searchInput.addEventListener('input', function() {
+        clearTimeout(searchTimeout);
+        const query = this.value.trim();
+        
+        if (query.length < 2) {
+            searchResults.innerHTML = '';
+            return;
+        }
+
+        searchLoading.classList.remove('d-none');
+        searchResults.innerHTML = '';
+
+        searchTimeout = setTimeout(() => {
+            performSearch(query);
+        }, 300);
+    });
+
+    // Handle search button
+    searchBtn.addEventListener('click', function() {
+        const query = searchInput.value.trim();
+        if (query.length >= 2) {
+            performSearch(query);
+        }
+    });
+
+    // Handle Enter key
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            const query = this.value.trim();
+            if (query.length >= 2) {
+                performSearch(query);
+            }
+        }
+    });
+
+    function performSearch(query) {
+        searchLoading.classList.add('d-none');
+        
+        const results = searchData.filter(item => 
+            item.title.toLowerCase().includes(query.toLowerCase()) ||
+            item.category.toLowerCase().includes(query.toLowerCase()) ||
+            item.description.toLowerCase().includes(query.toLowerCase())
+        );
+
+        displayResults(results, query);
+    }
+
+    function displayResults(results, query) {
+        if (results.length === 0) {
+            searchResults.innerHTML = `
+                <div class="search-no-results">
+                    <i class="fas fa-search"></i>
+                    <p>No results found for "${query}"</p>
+                </div>
+            `;
+            return;
+        }
+
+        const resultsHTML = results.slice(0, 8).map(item => `
+            <div class="search-result-item" onclick="window.location.href='${item.url}'">
+                <div class="search-result-title">${highlightMatch(item.title, query)}</div>
+                <div class="search-result-category">${item.category}</div>
+                <div class="search-result-description">${highlightMatch(item.description, query)}</div>
+            </div>
+        `).join('');
+
+        searchResults.innerHTML = resultsHTML;
+    }
+
+    function highlightMatch(text, query) {
+        const regex = new RegExp(`(${query})`, 'gi');
+        return text.replace(regex, '<mark>$1</mark>');
+    }
+
+    // Close search dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown') || !e.target.closest('.search-dropdown')) {
+            if (window.innerWidth < 992) {
+                searchDropdown.classList.remove('show');
+            }
+        }
+    });
+}
+
+// Initialize search when DOM is loaded
+initializeSearch();

@@ -17,7 +17,7 @@ const data = JSON.parse(readFileSync(join(__dirname, '../data/products.json'), '
 function findSimilarProducts(currentProductId, maxResults = 4) {
   const currentProduct = data.products[currentProductId];
   if (!currentProduct) return []; 
-
+  
   // Find which category and classification this product belongs to
   let productCategory = null;
   let productClassification = null;
@@ -42,8 +42,8 @@ function findSimilarProducts(currentProductId, maxResults = 4) {
       if (productCategory) break;
     }
   }
-
-  let similarProducts = [];
+  
+  let similarProducts = []; 
   
   if (productCategory) {
     const category = data.categories[productCategory];
@@ -153,7 +153,6 @@ function getFilteredProducts(filters = {}) {
 function getSidebarData() {
   const sectors = new Set();
   const categories = {};
-  const markets = new Set();
   const types = new Set();
 
   // Collect all unique sectors, markets, and types from products
@@ -165,15 +164,10 @@ function getSidebarData() {
       sectors.add(product.sector);
     }
 
-    // Markets
-    if (Array.isArray(product.market)) {
-      product.market.forEach(m => markets.add(m));
-    } else {
-      markets.add(product.market);
-    }
-
     // Types
-    types.add(product.type);
+    if(product.type){
+      types.add(product.type);
+    }
   });
 
   // Process categories with their classifications
@@ -188,7 +182,6 @@ function getSidebarData() {
   return {
     sectors: Array.from(sectors),
     categories,
-    markets: Array.from(markets),
     types: Array.from(types)
   };
 }

@@ -135,6 +135,7 @@
                     </div>
 
                     <!-- Markets -->
+                    <% if(sidebar.markets && sidebar.markets.length > 0) { %>
                     <div class="filter-section">
                         <div class="filter-header" data-filter="markets">
                             <span>Markets</span>
@@ -152,6 +153,7 @@
                                 <% }); %>
                         </div>
                     </div>
+                    <% } %>
 
                     <!-- Types -->
                     <div class="filter-section">
@@ -211,12 +213,17 @@
                                                     <%= product.title %>
                                                 </h3>
                                                 <p class="modern-card-description">
-                                                    <%= product.description %>
+                                                    <%= product.description.substring(0, 150) %>
+                                                        <% if(product.description.length> 150) { %>
+                                                            ...
+                                                            <% } %>
                                                 </p>
                                                 <div class="product-meta">
-                                                    <span class="product-type">
-                                                        <%= product.type %>
-                                                    </span>
+                                                    <% if(product.type) { %>
+                                                        <span class="product-type">
+                                                            <%= product.type %>
+                                                        </span>
+                                                        <% } %>
                                                     <% if (Array.isArray(product.sector)) { %>
                                                         <span class="product-sector">
                                                             <%= product.sector.join(', ') %></span>

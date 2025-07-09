@@ -1,126 +1,7 @@
 {
-  "categories": {
-    "air_traffic_management": {
-      "title": "Air Traffic Management",
-      "description": "Comprehensive systems for managing air traffic with advanced surveillance, communication, and control capabilities.",
-      "image": "/images/categories/atm-category.jpg",
-      "hasClassifications": false,
-      "products": [
-        "air_traffic_management_system",
-        "trailer_mounted_mobile_atc",
-        "digital_voice_recorder_system"
-      ]
-    },
-    "airfield_equipment": {
-      "title": "Airfield Equipment",
-      "description": "Essential equipment for airfield operations including lighting, alarms, and traffic management systems.",
-      "image": "/images/categories/airfield-category.jpg",
-      "hasClassifications": false,
-      "products": [
-        "airfield_lighting_system",
-        "airfield_alarm_system",
-        "airfield_road_traffic_management",
-        "external_pilot_cage_protection"
-      ]
-    },
-    "navigation_tracking": {
-      "title": "Navigation & Tracking",
-      "description": "Advanced navigation aids and tracking systems for enhanced situational awareness and flight safety.",
-      "image": "/images/categories/navigation-category.jpg",
-      "hasClassifications": false,
-      "products": [
-        "portable_tracking_system",
-        "ndb_beacon",
-        "cadf_system",
-        "aircraft_monitoring_system"
-      ]
-    },
-    "weather_communication": {
-      "title": "Weather & Communication",
-      "description": "Meteorological and communication systems for comprehensive weather monitoring and tactical communications.",
-      "image": "/images/categories/weather-category.jpg",
-      "hasClassifications": false,
-      "products": [
-        "automatic_weather_observation_system",
-        "weather_radar",
-        "tactical_communication_system"
-      ]
-    },
-    "support_equipment": {
-      "title": "Support Equipment",
-      "description": "Critical support systems including power generation, equipment shelters, and runway accessories.",
-      "image": "/images/categories/support-category.jpg",
-      "hasClassifications": false,
-      "products": [
-        "power_generation_system",
-        "equipment_shelter",
-        "runway_miscellaneous_equipment"
-      ]
-    },
-    "airfield_lighting": {
-      "title": "Airfield Lighting",
-      "description": "Comprehensive lighting solutions for airfields including approach, runway, and guidance systems.",
-      "image": "/images/categories/lighting-category.jpg",
-      "hasClassifications": true,
-      "classifications": {
-        "airfield_ground_lights": {
-          "title": "Airfield Ground Lights",
-          "description": "Ground-based lighting systems for aircraft navigation and safety.",
-          "products": [
-            "photometric_system",
-            "advanced_visual_docking_guidance_system",
-            "ilcms"
-          ]
-        },
-        "approach_lighting": {
-          "title": "Approach Lighting",
-          "description": "Lighting systems to guide aircraft during approach and landing phases.",
-          "products": [
-            "papi_lighting",
-            "runway_lighting",
-            "taxiway_lighting",
-            "airfield_guidance_signs",
-            "transformers_connector_kits",
-            "ccrs_accessories",
-            "heliport_lighting",
-            "packaged_elevated_airfield_runway_lighting_system",
-            "portable_lighting",
-            "other_agl_products"
-          ]
-        },
-        "led_technology": {
-          "title": "LED Technology",
-          "description": "Advanced LED-based lighting solutions for modern airfield operations.",
-          "products": [
-            "led_approach_light",
-            "led_threshold_light",
-            "led_runway_end_light",
-            "elevated_approach_side_row",
-            "elevated_threshold_threshold_wingbar",
-            "elevated_runway_end_light",
-            "inset_approach_siderow_barrette",
-            "inset_threshold_light",
-            "inset_runway_end_light",
-            "inset_threshold_wingbar",
-            "inset_threshold_runway_end_lights"
-          ]
-        }
-      }
-    },
-    "smart_solutions": {
-      "title": "Smart Solutions",
-      "description": "Innovative smart technology solutions for modern infrastructure management.",
-      "image": "/images/categories/smart-category.jpg",
-      "hasClassifications": false,
-      "products": [
-        "smart_energy_meter",
-        "emergency_alert_system"
-      ]
-    }
-  }, 
   "products": {
-    "air_traffic_management_system": {
-      "title": "AIR TRAFFIC MANAGEMENT SYSTEM",
+    "air-traffic-management-system": {
+      "title": "Air Traffic Management System",
       "description": "The ATM (Air Traffic Management) system is a modern, integrated framework designed to ensure the safe, efficient, and coordinated movement of aircraft both in controlled airspace and at airports. Built to function in real-time, it enhances situational awareness and supports air traffic controllers with intelligent tools and automation. Key features include:",
       "image": "/images/atm1.jpg",
       "portfolioImage": "/images/atm2.jpg",
@@ -140,7 +21,53 @@
         "Incorporates automation and redundancy for improved reliability",
         "Features safety nets, weather data integration, and advanced situational awareness tools",
         "Enhances operational efficiency to meet growing air traffic demands"
-      ]
+      ],
+      "sections": [
+        {
+          "title": "System Architecture",
+          "para": "Our ATM system is built on a modular architecture that ensures scalability and reliability. The system incorporates multiple layers of redundancy and fail-safe mechanisms to maintain operational continuity even during equipment failures.",
+          "bullets": [
+            "Distributed processing architecture for maximum uptime",
+            "Real-time data synchronization across all control centers",
+            "Hot-standby systems for critical components",
+            "Automated failover mechanisms"
+          ],
+          "image": "/images/atm-architecture.jpg"
+        },
+        {
+          "title": "Advanced Radar Integration",
+          "para": "The system seamlessly integrates with various radar systems including primary, secondary, and weather radar to provide comprehensive situational awareness.",
+          "bullets": [
+            "Multi-radar data fusion for enhanced accuracy",
+            "Automatic target tracking and correlation",
+            "Weather radar integration for hazard detection"
+          ]
+        },
+        {
+          "title": "Communication Systems",
+          "image": "/images/atm-communication.jpg",
+          "bullets": [
+            "VHF/UHF radio communication systems",
+            "Digital voice recording and playback",
+            "Emergency communication protocols",
+            "Intercom systems for controller coordination"
+          ]
+        },
+        {
+          "title": "Safety Features",
+          "para": "Safety is paramount in air traffic management. Our system includes multiple layers of safety nets and conflict detection algorithms to prevent incidents before they occur.",
+          "bullets": [
+            "Short-term conflict alert (STCA) systems",
+            "Minimum safe altitude warning (MSAW)",
+            "Area proximity warning (APW)",
+            "Runway incursion monitoring and alerting system (RIMAS)"
+          ]
+        }
+      ],
+      "sector": "airports",
+      "category": "air-traffic-management",
+      "type": "Electronic",
+      "market": "Commercial"
     },
     "airfield_lighting_system": {
       "title": "RUNWAY / HELIPAD LIGHTING SYSTEM",
