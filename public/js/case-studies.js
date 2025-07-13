@@ -11,7 +11,6 @@ const caseStudyCards = document.querySelectorAll('.case-study-card');
 const modalImage = document.getElementById('modalImage');
 const modalBadge = document.getElementById('modalBadge');
 const modalTitle = document.getElementById('modalTitle');
-const modalCategory = document.getElementById('modalCategory');
 const modalChallenge = document.getElementById('modalChallenge');
 const modalSolution = document.getElementById('modalSolution');
 const modalResults = document.getElementById('modalResults');
@@ -60,7 +59,6 @@ function openModal(caseId) {
     modalImage.alt = caseData.title;
     modalBadge.textContent = caseData.badge;
     modalTitle.textContent = caseData.title;
-    modalCategory.textContent = caseData.category;
 
     // Populate challenge section
     modalChallenge.innerHTML = createList(caseData.challenge);

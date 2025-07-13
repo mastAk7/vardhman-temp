@@ -617,6 +617,10 @@ mark {
     }
     
     /* Desktop dropdown styles */
+    .navbar-nav .search-dropdown {
+        min-width: 500px !important;
+        max-width: 600px;
+    }
     .navbar-nav .dropdown-menu {
         display: block;
         opacity: 0;
@@ -631,8 +635,8 @@ mark {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         z-index: 1000;
-        min-width: 500px;
-        max-width: 900px;
+        min-width: 220px;
+        max-width: 400px;
         width: auto;
     }
     
