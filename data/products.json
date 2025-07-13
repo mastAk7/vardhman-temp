@@ -5,7 +5,7 @@
             "description": "Built on Experience, designed for the future Vardhman Airports provide a comprehensive range of airfield lighting solutions for clients all over the world.",
             "image": "/images/categories/airfield-ground-lights.jpg",
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "hasClassifications": true,
@@ -129,7 +129,7 @@
             "title": "Advanced Visual Docking Guidance Systems (AVDGS)",
             "description": "State-of-the-art visual docking guidance systems for precise aircraft parking and guidance.",
             "image": "/images/categories/avdgs.jpg",
-            "sector": "airports",
+            "sector": "airport",
             "hasClassifications": false,
             "products": [
                 "avdgs"
@@ -139,7 +139,7 @@
             "title": "Photometric System",
             "description": "Advanced photometric systems for measuring and analyzing light performance in airfield lighting.",
             "image": "/images/categories/photometric-system.jpg",
-            "sector": "airports",
+            "sector": "airport",
             "hasClassifications": false,
             "products": [
                 "photometric-workshop-equipment",
@@ -154,7 +154,7 @@
             "title": "Integrated Lighting Control and Monitoring Systems (ILCMS)",
             "description": "Comprehensive systems for controlling and monitoring airfield lighting.",
             "image": "/images/categories/ilcms.jpg",
-            "sector": "airports",
+            "sector": "airport",
             "hasClassifications": false,
             "products": [
                 "ilcms"
@@ -165,7 +165,7 @@
             "description": "Dedicated lighting systems for heliports and helipads.",
             "image": "/images/categories/heliport-lighting.jpg",
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "hasClassifications": false,
@@ -191,7 +191,9 @@
             "products": [
                 "air-traffic-management-system",
                 "trailer-mounted-mobile-atc",
-                "digital-voice-recorder-system"
+                "digital-voice-recorder-system",
+                "airfield-alarm-system",
+                "airfield-road-traffic-management"
             ]
         },
         "navigation-tracking": {
@@ -229,7 +231,7 @@
                 "power-generation-system",
                 "equipment-shelter",
                 "runway-miscellaneous-equipment",
-                "atc-user-controls"
+                "external-pilot-cage-protection"
             ]
         },
         "smart-metering": {
@@ -279,7 +281,7 @@
                 }
             ],
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "category": "airfield-ground-lights",
@@ -317,7 +319,7 @@
                 }
             ],
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "category": "airfield-ground-lights",
@@ -355,7 +357,7 @@
                 }
             ],
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "category": "airfield-ground-lights",
@@ -392,7 +394,7 @@
                 }
             ],
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "category": "airfield-ground-lights",
@@ -429,7 +431,7 @@
                 }
             ],
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "category": "airfield-ground-lights",
@@ -466,7 +468,7 @@
                 }
             ],
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "category": "airfield-ground-lights",
@@ -505,7 +507,7 @@
                 }
             ],
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "category": "airfield-ground-lights",
@@ -544,7 +546,7 @@
                 }
             ],
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "category": "airfield-ground-lights",
@@ -583,7 +585,7 @@
                 }
             ],
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "category": "airfield-ground-lights",
@@ -625,7 +627,7 @@
                 }
             ],
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "category": "airfield-ground-lights",
@@ -664,7 +666,7 @@
                 }
             ],
             "sector": [
-                "airports",
+                "airport",
                 "defense"
             ],
             "category": "airfield-ground-lights",
@@ -706,7 +708,10 @@
                     "image": "/images/papi-lighting-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "papi-lighting"
         },
@@ -740,7 +745,10 @@
                     "image": "/images/elevated-runway-edge-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
         },
@@ -776,7 +784,10 @@
                     "image": "/images/centerline-tdz-high-intensity-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
         },
@@ -815,7 +826,10 @@
                     "image": "/images/centerline-tdz-bi-directional-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
         },
@@ -850,7 +864,10 @@
                     "image": "/images/inset-runway-edge-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
         },
@@ -884,7 +901,10 @@
                     "image": "/images/runway-edge-high-intensity-bi-directional-inset-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
         },
@@ -919,7 +939,10 @@
                     "image": "/images/runway-edge-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
         },
@@ -946,7 +969,10 @@
                     "image": "/images/runway-centerline-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
         },
@@ -987,7 +1013,10 @@
                     "image": "/images/another-product.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
         },
@@ -1027,7 +1056,10 @@
                     "image": "/images/high-intensity-lights-offset.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1045,7 +1077,10 @@
                     "image": "/images/low-intensity-lighting-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1063,7 +1098,10 @@
                     "image": "/images/high-intensity-light-narrow-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1081,7 +1119,10 @@
                     "image": "/images/high-intensity-light-offset-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1099,7 +1140,10 @@
                     "image": "/images/low-intensity-lights-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1117,7 +1161,10 @@
                     "image": "/images/high-intensity-lights-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1135,7 +1182,10 @@
                     "image": "/images/high-intensity-lights-offset-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1170,7 +1220,10 @@
                     "image": "/images/bi-directional-centreline-stopbar-light.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1188,7 +1241,10 @@
                     "image": "/images/stopbar-intensity-light-narrow-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1206,7 +1262,10 @@
                     "image": "/images/stopbar-intensity-light-wide-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1224,7 +1283,10 @@
                     "image": "/images/stopbar-intensity-light-offset-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1242,7 +1304,10 @@
                     "image": "/images/stopbar-intensity-lightcurved-section-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1250,7 +1315,7 @@
             "title": "Bi-Directional Centreline & Stopbar Light",
             "description": "For use in all weather operation installations up to ICAO category III systems for straight and curved sections.",
             "image": "/images/bi-directional-centreline-stopbar-light.jpg",
-            "features" : [
+            "features": [
                 "Body casting manufactured from aluminium alloy for lightness, strength and durability",
                 "Standard ATG body styles available",
                 "Long life lamps (objective life of 1500 hours at full brilliancy)",
@@ -1275,7 +1340,10 @@
                     "image": "/images/bi-directional-centreline-stopbar-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1295,7 +1363,10 @@
                     "image": "/images/high-intensity-runway-guard-light.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1303,10 +1374,10 @@
             "title": "Bi-Directional Centreline & Stopbar Light",
             "description": "Elevated runway guard lights for use at taxiway/runway intersections to avoid incursion onto an active taxiway/runway, as required by the standards (CAP 168 ICAO 5.3.22).",
             "image": "/images/low-intensity-runway-guard-light.jpg",
-            "features" : [
+            "features": [
                 "LED light source for exceptionally long life",
                 "LED light source complies with ICAO photometric requirements, flashing at 45 cycles per minute.",
-                "The unit can be adjusted from 0° to 20° vertically and locked by means of the mounting support brackets. For non-frangible arrangements, these support brackets can be bolted directly on to a concrete plinth, using M12 studs and nuts"  
+                "The unit can be adjusted from 0° to 20° vertically and locked by means of the mounting support brackets. For non-frangible arrangements, these support brackets can be bolted directly on to a concrete plinth, using M12 studs and nuts"
             ],
             "sections": [
                 {
@@ -1327,7 +1398,10 @@
                     "image": "/images/low-intensity-runway-guard-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1335,12 +1409,12 @@
             "title": "High Intensity Runway Guard Light",
             "description": "The Apollo Hi Intensity Elevated LED Runway Guard Light provides a warning to pilots or drivers of ground vehicles that they are approaching an active runway.",
             "image": "/images/high-intensity-runway-guard-light.jpg",
-            "features" : [
+            "features": [
                 "High Intensity Runway Guard Light",
                 "Available in either 6.6A series lighting circuit or 220/240V mains powered units.",
                 "Alternating flashes with a flash rate of 45-50 flashes per minute.",
                 "Main beam coverage: +/- 8° both vertical and horizontal.",
-                "Adjustable light beam: 0°, 5°, 10°, 15°, 20° vertically."  
+                "Adjustable light beam: 0°, 5°, 10°, 15°, 20° vertically."
             ],
             "sections": [
                 {
@@ -1361,7 +1435,10 @@
                     "image": "/images/high-intensity-runway-guard-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1401,7 +1478,10 @@
                     "image": "/images/taxiway-apron-edge-light.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1409,7 +1489,7 @@
             "title": "Omni-Directional Inset Light",
             "description": "Omni-directional inset fitting for Taxiway, Helipad, LI Runway Edge and general applications.",
             "image": "/images/omni-directional-inset-light.jpg",
-            "features" : [
+            "features": [
                 "Body casting manufactured from aluminium alloy for lightness, strength and durability",
                 "IEC body style as standard, PSA 8” 2 hole and 8” 3 hole versions available",
                 "3 hole body option for direct installation to SRA8/13 adaptor ring",
@@ -1420,7 +1500,7 @@
                 "Pre-focused optics to simplify maintenance procedures",
                 "Low profile (10mm)",
                 "Light channel within 5mm of Grade",
-                "Natural anodised finish (as standard), powder coated NATO green or golden yellow (Special Order)"  
+                "Natural anodised finish (as standard), powder coated NATO green or golden yellow (Special Order)"
             ],
             "sections": [
                 {
@@ -1436,7 +1516,10 @@
                     "image": "/images/omni-directional-inset-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1444,7 +1527,7 @@
             "title": "Elevated Omni-directional Light",
             "description": "It is an Omni-directional tungsten halogen taxiway and apron edge fitting for CAT III all weather operation airfield ground lighting (AGL) systems.",
             "image": "/images/elevated-omni-directional-light.jpg",
-            "features" : [
+            "features": [
                 "Lightweight and robust due to its predominantly aluminium alloy construction which also gives good corrosion resistance.",
                 "Removal of glass dome for lamp replacement or maintenance achieved without the need for any tools due to the simple bayonet fit of the glass.",
                 "Ball joint mounting arrangement facilitates levelling of the light on installation.",
@@ -1455,7 +1538,7 @@
                 "Bi-pin or PK30D lamp options.",
                 "Optional lamp by-pass device can be fitted if required.",
                 "Powder coat paint finish in golden yellow.",
-                "Lamp life no less than 1000hrs."  
+                "Lamp life no less than 1000hrs."
             ],
             "sections": [
                 {
@@ -1471,7 +1554,10 @@
                     "image": "/images/elevated-omni-directional-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1479,7 +1565,7 @@
             "title": "Low Intensity Inset Omni-Direction Light",
             "description": "Inset Taxiway Edge, Apron Edge or low intensity runway light, inset helipad edge light, security or traffic control light.",
             "image": "/images/low-intensity-inset-omni-direction-light.jpg",
-            "features" : [
+            "features": [
                 "Taxiway, helipad or runway edge light using J1 series lamps. Also 240V mains version available. (B.C. or E.S.) • Security light for vandal proof illumination of carparks, subways etc. or for under vehicle inspection at access/control points to secure facilities such as airports, barracks and other high risk sites. • Traffic light for mini roundabout identification, bollard illumination, traffic lane separation etc.",
                 "The body comprises an aluminium housing with a 203mm (8in) diameter flange, which is sealed at the top by a pressed heat-resisting glass dome seated in a moulded gasket and secured in position by a clamp ring. The substantial construction of the dome is designed to withstand a load of 1000lbs/sq.in."
             ],
@@ -1493,7 +1579,10 @@
                     "image": "/images/low-intensity-inset-omni-direction-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1515,7 +1604,10 @@
                     "image": "/images/taxiway-apron-edge-elevated-omni-directional-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1523,7 +1615,7 @@
             "title": "Inset omni-Directional Apron Light",
             "description": "Omni-directional inset fitting for Taxiway, Helipad, LI Runway Edge and general applications.",
             "image": "/images/inset-omni-directional-apron-light.jpg",
-            "features" : [
+            "features": [
                 "Body casting manufactured from aluminium alloy for lightness, strength and durability",
                 "IEC body style as standard, 8” 2 hole and 8” 3 hole versions available",
                 "3 hole body option for direct installation to SRA8/13 adaptor ring",
@@ -1546,7 +1638,10 @@
                     "image": "/images/inset-omni-directional-apron-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1564,7 +1659,10 @@
                     "image": "/images/taxiway-apron-edge-light-fixture.jpg"
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
         },
@@ -1572,7 +1670,7 @@
             "title": "Mandory/Information Signs",
             "description": "It is LED airfield guidance sign is the latest model of airfield sign to be manufactured by Vardhman airports. This sign is specifically designed to meet the ICAO requirements for Mandatory and Information airfield guidance signs. (ICAO Annex 14, Vol.I, Paragraph 5.4 and Appendix 4.)",
             "image": "/images/mandatory-information-signs.jpg",
-            "portfolioLines":[
+            "portfolioLines": [
                 "Information signs are signified by yellow characters on a black background (location signs) or black characters on a yellow background (destination signs) and are used to provide additional guidance to pilots manoeuvring aircraft on the ground.",
                 "Mandatory signs are characterised by white characters on a red background and are used to advise pilots (and vehicle drivers) of an airfield location beyond which they must not proceed unless authorised by air traffic control."
             ],
@@ -1592,7 +1690,7 @@
                 {
                     "title": "Power Supply",
                     "para": "The airfield guidance signs IR858I, are powered from a standard 6.6Amp AGL circuit through a suitably sized isolating transformer. The design of the power supply units allows for the signs to be powered from different types of CCR’s that can be found in airports around the world. The thyristor type CCR comparable to the Micro 100, or an IGBT / ferro resonant CCR which has a sinewave output similar to that of the Micro 200 regulator can be used.",
-                    "bullets":[
+                    "bullets": [
                         "As the circuit input current varies the output brilliancy of the sign will vary relative to the input current. The output luminance will not fall below 1/3rd its average minimum value (at 6.6A) at the lowest input step (2.8A).",
                         "Other power sources include 230/110volt upon special request."
                     ]
@@ -1610,7 +1708,10 @@
                     "para": "Stainless steel tethers are available to ensure that in the case of an incident the sign does not become a further FOD hazard."
                 }
             ],
-            "sector":["airports","defense"],
+            "sector": [
+                "airport",
+                "defense"
+            ],
             "category": "airfield-ground-lights",
             "subcategory": "airfield-guidance-signs"
         },
@@ -1618,7 +1719,7 @@
             "title": "Runway Distance Marker",
             "description": "Illuminated Runway Distance Markers indicate the distance to the end of the active runway to the pilot.",
             "image": "/images/runway-distance-marker.jpg",
-            "portfolioLines":[
+            "portfolioLines": [
                 "Illumination is provided by either the latest LED technology with a life expectancy in excess of 75,000 hours or with long life fluorescent tubes",
                 "The sign fascia is hinge mounted to the main casing to provide quick and easy access for maintenance and lamp change. If required the whole sign fascia can be lifted free from the casing to provide full, unrestricted access to the main casing",
                 "Each sign regardless of type is tested for the average light output, according to the procedures stipulated in ICAO annex 14 and CAP 168",
@@ -1632,45 +1733,1002 @@
                 "Double sided: 4mm polycarbonate",
                 "Coated in RAL 1007 aviation yellow"
             ],
-            "sections": [
-                {
-                    "title": "Housing",
-                    "para": "The enclosure of the guidance sign is manufactured from a corrosive resistant aluminium extrusion which is powder coated, white as standard. Other colors are available Black / yellow, by special order. The guidance sign housing can be either single sided, only one message displayed or double-sided allowing for two messages to be shown in a bidirectional format. Both types of signs are designed to have a minimum ingress value of IP55."
-                },
-                {
-                    "title": "Luminance / Chromaticity",
-                    "para": "This LED airfield guidance sign is designed specifically to comply with the ICAO specifications for color and luminance."
-                },
-                {
-                    "title": "Fascia",
-                    "para": "The legend panel is one single piece of substrate material that will cover all signs up to a maximum of 3m. To prevent damage to the message from external debris, such as stone chips created by jet blast, the inscription is applied on the inner face of the substrate material. The legend and fascia are UV resistant and flame retardant."
-                },
-                {
-                    "title": "Power Supply",
-                    "para": "The airfield guidance signs IR858I, are powered from a standard 6.6Amp AGL circuit through a suitably sized isolating transformer. The design of the power supply units allows for the signs to be powered from different types of CCR’s that can be found in airports around the world. The thyristor type CCR comparable to the Micro 100, or an IGBT / ferro resonant CCR which has a sinewave output similar to that of the Micro 200 regulator can be used.",
-                    "bullets":[
-                        "As the circuit input current varies the output brilliancy of the sign will vary relative to the input current. The output luminance will not fall below 1/3rd its average minimum value (at 6.6A) at the lowest input step (2.8A).",
-                        "Other power sources include 230/110volt upon special request."
-                    ]
-                },
-                {
-                    "title": "Isolator Switch",
-                    "para": "A rotary switch option is available which can be used to isolate the secondary current within the sign enclosure to enable safe maintenance work to be conducted. When the switch is activated a shorting link is also applied to the isolation transformer secondary. It is recommended however, that the primary circuit be isolated when working on AGL equipment."
-                },
-                {
-                    "title": "Bird Deterrent System",
-                    "para": "Spike strips can be provided to help prevent birds from landing on the sign which helps to detract birds from resting in critical areas and also assisting in eliminating possible damage. Bird wire can also be offered as an alternative."
-                },
-                {
-                    "title": "Tiedown Tether",
-                    "para": "Stainless steel tethers are available to ensure that in the case of an incident the sign does not become a further FOD hazard."
-                }
+            "sector": [
+                "airport",
+                "defense"
             ],
-            "sector":["airports","defense"],
             "category": "airfield-ground-lights",
             "subcategory": "airfield-guidance-signs"
         },
-
+        "stand-number-indicator-board": {
+            "title": "Stand Number Indicator Board",
+            "description": "Vardhman airports developed SNIBs designed to operate over the current range from 2.8 to 6.6 Amp standard AGL circuit via a suitable series isolating transformer or, optionally, 230V mains supply. Signs can be either 50 or 60 Hz operation. Standard series circuit transformers can be used for 6 or 12 amp circuits. An external FAA style moulded plug is supplied as standard for connection to AGL circuits.",
+            "image": "/images/stand-number-indicator-board.jpg",
+            "portfolioLines": [
+                "Highly visible in all weather conditions",
+                "Supplied fully assembled",
+                "Special design features for ease of maintenance",
+                "Extruded aluminium profile – up to 6.2m long anodised and powder coated in * RAL 1007 aviation yellow",
+                "Flexibility – can either be mounted on a stand, pole or wall support",
+                "10 year anti-fade guarantee on all fascias",
+                "UV stabilised 4mm polycarbonate",
+                "Cabinets and fascias proven to withstand wind loads of up to 90m/ps",
+                "Photo cell activation when ambient light falls below 100 lux",
+                "Powder coated corrosion resistant extruded aluminium casing",
+                "Hinged front face for ease of maintenance",
+                "Weather-proof to IP 655",
+                "Temperature range of -25°C to +55°C",
+                "Signfix channel to secure into position",
+                "Non oxidising stainless steel clips and fixings",
+                "The size of the cabinet is dependant on the amount of characters required."
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "airfield-guidance-signs"
+        },
+        "rhag-marker": {
+            "title": "RHAG Marker",
+            "description": "A RHAG marker (moon board) is primarily used by the military and is used to indicate the location of the aircraft arresting cable on the runway. Utilising a similar construction to the IRDM and SNIB’s manufactured by Vardhman, the RHAG markers aluminium extrusion allows them to withstand extreme weather conditions whilst still providing light output that exceeds all international standards and requirements.",
+            "image": "/images/rhag-marker.jpg",
+            "portfolioLines": [
+                "Illumination is provided by either the latest LED technology with a life expectancy in excess of 75,000 hours or with long life fluorescent tubes",
+                "The sign cases are an aluminium construction designed to withstand the extremes of climate conditions encountered on airfields and airports worldwide",
+                "The sign fascia is hinge mounted to the main casing to provide quick and easy access for maintenance and lamp change. If required the whole sign fascia can be lifted free from the casing to provide full, unrestricted access to the main casing",
+                "Each sign regardless of type is tested for the average light output, according to the procedures stipulated in ICAO annex 14 and CAP 168",
+                "All signs will exceed the light output requirements for a RVR of <800m 3500K light source provides improved colour contrast and legibility",
+                "IP Protection, IP 54",
+                "Bottom cable-entry",
+                "Temperature range -25°C/+55°C",
+                "Complete with frangible legs and mounting flanges for installation on a concrete pad",
+                "Double sided: 4mm polycarbonate",
+                "Coated in RAL 1007 aviation yellow"
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "airfield-guidance-signs"
+        },
+        "vor-aerodrome-check-point-signs": {
+            "title": "VOR Aerodrome Check Point Signs",
+            "description": "When a VOR aerodrome checkpoint is established, it shall be indicated by a VOR aerodrome checkpoint marking and sign.",
+            "image": "/images/vor-aerodrome-check-point-signs.jpg",
+            "portfolioLines": [
+                "A VOR aerodrome checkpoint sign shall be located as near as possible to the checkpoint and so that the inscriptions are visible from the cockpit of an aircraft properly positioned on the VOR aerodrome checkpoint marking.",
+                "A VOR aerodrome checkpoint sign shall consist of an inscription in black on a yellow background.",
+                "The inscriptions on a VOR checkpoint sign should be in accordance with the following:",
+                "– VOR is an abbreviation identifying this as a VOR checkpoint;",
+                "– 115.4 is an example of the radio frequency of the VOR concerned;",
+                "– 270° is an example of the VOR bearing, to the nearest degree, which should be indicated at the VOR checkpoint;",
+                "– 0.2 NM is an example of the distance in nautical miles to a DME collocated with the VOR concerned."
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "airfield-guidance-signs"
+        },
+        "parking-stop-sign": {
+            "title": "Parking Stop Sign",
+            "description": "The Vardhman parking Stop sign is designed for use on aircraft parking stands. The new Vardhman parking sign employs the latest in LED technology to offer superior clarity and long operational life.",
+            "image": "/images/parking-stop-sign.jpg",
+            "portfolioLines": [
+                "Flexilite LED strips which emit signal red.",
+                "Long life",
+                "Excellent clarity",
+                "100,000 hour guarantee against faulty workmanship",
+                "LED array is designed so that if one LED should fail the remainder will stay illuminated",
+                "Constructed from 2mm sheet steel, fully seam welded to ensure rigidity and give the unit a rating of IP65",
+                "To ensure the unit can withstand harsh environments the body is initially fully phosphated and then powder coated to give the body a 10 year perforation guarantee",
+                "The window glazing is constructed from 4mm polycarbonate and is UV stabilized, this assists the panel from discolouring",
+                "The panel is guaranteed for 10 years against normal defects",
+                "Wall mountable",
+                "IP65 enclosure"
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "airfield-guidance-signs"
+        },
+        "information-signs": {
+            "title": "Information Signs",
+            "description": "Type-I airfield guidance sign was originally manufactured by a Norwegian company called \u2018Smiths Airfield Equipment (SAFE)\u2019. The body of the sign is manufactured from anticorrosive aluminum extrusion which is powder coated with \u2018aviation yellow\u2019 paint. The extrusions interlocks creating a solid sign box structure which is water resistant to IP55. The fascia framework is also manufactured from an aluminum extrusion but is powder coated in black.",
+            "image": "/images/information-signs.jpg",
+            "portfolioLines": [
+                "When the type-I sign was first manufactured it utilised tungsten halogen lamps to illuminate the front polycarbonate fascia, but over time, technology has progressed. The concept of using fluorescent tubes was then adopted and specialized electronics were developed to control the brilliancy and operation of the unit. The third generation saw the implementation of LED\u2019s in a grid format for the illumination. Throughout the different generations the power consumption of the unit reduced helping to minimize the rating of the constant current regulator (CCR) that is used to power the circuits.",
+                "Although different light sources have been used internally, the ICAO candela requirements of 150cd\u2019s for yellow taxiway information signs, 300cd\u2019s for white used on a mandatory sign, and 30cd\u2019s for red colors, again on mandatory signs, have always been achieved.",
+                "Not only is the brilliancy of the sign important, but the chromaticity is essential ensuring that the information is displayed clearly to pilots and vehicles using the taxiway system. This is always tested during manufacture to ensure compliance of each sign against the necessary standards with a multispectral camera which also confirms light output.",
+                "There are different modes of operation the sign is designed to withstand, all of which are identified in the ICAO airport design manuals. These need to be considered when installing the sign as different couplings may need to be used. Discussion with atg airports customer support team should be able to assist in this matter.",
+                "Type-I LED Conversion retrofit kit:\nMany type-I signs are installed at airports all over the world, and some have been in operation for more than 20 years, before the LED was even considered for airfield lighting applications. However, to enable clients to benefit from the energy saving of LED usage, a conversion kit for the \u2018Smith (SAFE)\u2019 sign and also the type-I is available, thus extending the life of the sign. The kit is installed into the sign and the old tungsten halogen, fluorescent or cold cathode technology can be removed. Once converted, the sign will achieve the same efficiency benefits of the type-I LED sign."
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "airfield-guidance-signs"
+        },
+        "series-circuit-isolating-transformers": {
+            "title": "Series Circuit Isolating Transformers",
+            "description": "Series circuit airfield lighting isolating transformers are featuring plug-in connectors to simplify installation and maintenance.",
+            "image": "/images/series-circuit-isolating-transformers.jpg",
+            "sections": [
+                {
+                    "title": "Compliance with Standards",
+                    "para": "FAA L-830, AC 5345-47C"
+                },
+                {
+                    "title": "Range",
+                    "para": "A full range of transformers is available from 30/45 watts to 500 watts rated at 6.6A/6.6A. Other current capacities are available upon request including 6A, 8.33A, 12A and 20A. LED range is available from 10–20 Watts rated at 6.6A/0.4A and 6.6A/0.7A respectively."
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights"
+        },
+        "primary-connector-kits-2": {
+            "title": "Primary Connector Kits",
+            "description": "To provide separable waterproof connections between non-screened primary cable and an isolating transformer. To make a waterproof separable splice in non-screened primary supply cable.",
+            "sections": [
+                {
+                    "title": "Type",
+                    "para": "Model 54 with non locking – 5kV (or less), non-screened (unshielded) cable."
+                },
+                {
+                    "title": "Compliance with Standards",
+                    "para": "FAA L-823, AC 150/5345-26 D"
+                },
+                {
+                    "title": "Description",
+                    "para": "Each kit contains a plug housing, a receptacle housing and crimp applied electrical pin and socket contacts. These kits are directly interchangeable with kits having a locking feature and mate with the moulded-on primary connectors of an isolating transformer. The use of these connectors provides a test point at every isolating transformer. One kit is required for each splice or transformer installation."
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights"
+        },
+        "primary-connector-kits": {
+            "title": "Primary Connector Kits",
+            "description": "To provide separable waterproof connections between all classes of armoured or un-armoured airfield lighting cable and polychloropene encapsulated transformers. To make separable waterproof splice in all classes of armoured or un-armoured airfield lighting cable.",
+            "sections": [
+                {
+                    "title": "Type",
+                    "para": "Model CEG-52 – 5kV (or less), suitable for copper or brass tape screened and steel wire armour."
+                },
+                {
+                    "title": "Compliance with Standards",
+                    "para": "FAA L-823, AC 150/5345-26D"
+                },
+                {
+                    "title": "Description",
+                    "para": "Each kit contains a plug housing and a receptacle housing, each with screen continuity provision for use with a copper or brass tape screen, crimp applied connector for screen continuity, and crimp applied electrical pin and socket contacts dimensionally identical to FAA specification L-823 contacts, plus incorporating a locking system that will withstand a static pull load of 155N (35 pounds) without separating. These kits mate with the moulded-on primary connectors of an isolating transformer. The use of these connectors provides a test point at every isolating transformer. One kit is required for each splice or transformer installation."
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights"
+        },
+        "primary-connector-kits-resin-type": {
+            "title": "Primary Connector Kits (Resin Type)",
+            "description": "To provide separable waterproof connections between all classes of armoured or un-armoured airfield lighting cable and polychloroprene encapsulated transformers. To make separable waterproof splice in all classes of armoured or un-armoured airfield lighting cable.",
+            "sections": [
+                {
+                    "title": "Type",
+                    "para": "Model CEG-52 – 5kV (or less), suitable for copper or brass tape screened and steel wire armour."
+                },
+                {
+                    "title": "Compliance with Standard",
+                    "para": "FAA L-823, AC 150/5345-26D"
+                },
+                {
+                    "title": "Description",
+                    "para": "Each kit contains a plug housing and a receptacle housing, each with screen continuity provision for use with a copper or brass tape screen, crimp applied connector for screen continuity, and crimp applied electrical pin and socket contacts dimensionally identical to FAA specification L-823 contacts, plus incorporating a locking system that will withstand a static pull load of 155N (35 pounds) without separating. These kits mate with the moulded-on primary connectors of an isolating transformer. The use of these connectors provides a test point at every isolating transformer. One kit is required for each splice or transformer installation."
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "transformers-connector-kits"
+        },
+        "secondary-connector-kits": {
+            "title": "Secondary Connector Kits",
+            "description": "To terminate two core round waterproof insulated cable with a receptacle (female) connector conforming to FAA specification L-823, style 12 when field assembling a secondary extension lead, or when repairing a transformer secondary lead.",
+            "sections": [
+                {
+                    "title": "Type",
+                    "para": "Model 91R – 600 volt (or less), non-screened (unshielded) cable."
+                },
+                {
+                    "title": "Compliance with Standards",
+                    "para": "FAA L-823, AC 150/5345-26"
+                },
+                {
+                    "title": "Specification",
+                    "para": "Conforms to FAA L-823 and Transport Canada K255."
+                },
+                {
+                    "title": "Description",
+                    "para": "Each kit contains a plug housing, and a crimp applied plug insert that, when assembled, makes a connector that provides a separable waterproof splice when mated with a model 90P or 91P kit or a 95MR moulded on connector."
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "transformers-connector-kits"
+        },
+        "secondary-connector-kits-model-90r": {
+            "title": "Secondary Connector Kits (Model 90R)",
+            "description": "To provide separable waterproof connections between non-screened primary cable and an isolating transformer. To make a waterproof separable splice in non-screened primary supply cable.",
+            "sections": [
+                {
+                    "title": "Type",
+                    "para": "Model 90R – 600 volt (or less), nonscreened (unshielded) cable."
+                },
+                {
+                    "title": "Compliance with Standards",
+                    "para": "FAA L-823, AC 150/5345-26"
+                },
+                {
+                    "title": "Description",
+                    "para": "Each kit contains a plug housing, and a crimp applied plug insert that, when assembled, makes a connector that provides a separable waterproof splice when mated with a model 90R or 91R kit or a 95MR moulded on receptacle connector set such as is used to terminate the secondary lead of an airfield lighting transformer."
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "transformers-connector-kits"
+        },
+        "isolating-transformer": {
+            "title": "Isolating Transformer",
+            "description": "Isolating transformer for airfield lighting circuits with support for LED fixtures, robust environmental resistance and wide operating range.",
+            "features": [
+                "Operates LED AGL from airfield circuit",
+                "3 step or 5 step brilliancy control",
+                "Matches existing TH AGL performance",
+                "50/60Hz 6.6A circuits",
+                "FAA Style 1 & 7 Plug and socket",
+                "Interface between L-830/L-831 isolating transformer and LED fitting",
+                "Operates 1 watt to 7 watt LED products",
+                "Installation distance up to 100m from light fitting",
+                "Operating temperature -55°C to +60°C",
+                "Protection to IP68",
+                "Relative humidity 0-100%. Fully encapsulated in chemically resistant potting compound",
+                "Can be retro-fitted from 30 watt to 100 watt"
+            ],
+            "sections": [
+                {
+                    "title": "Compliance with standards",
+                    "para": "FAA L-830/831, AC 150/5345-46D"
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "transformers-connector-kits"
+        },
+        "micro-100-ccr": {
+            "title": "Micro 100 CCR",
+            "description": "The MCCR 100 is specifically designed for the efficient and effective supply of power to airfield ground lighting series circuits.",
+            "portfolioLines": [
+                "Power Factor: Up to 0.9 (≤10 kVA), 0.95 (≥12 kVA)",
+                "Efficiency: ≥90%",
+                "Output Ratings: 2.5 to 30 kVA at 380-415V; 2.5 to 15 kVA at 210-240V",
+                "Output Currents: 6.0, 6.6, 12, 20A",
+                "Input Voltages: 220–240V (1-phase), 380–440V (2-phase), 50/60 Hz"
+            ],
+            "features": [
+                "Pre-programmed with default operating parameters suitable for most applications",
+                "Front panel keypad for parameter changes; no PC required",
+                "Accurate control of RMS output for all loads from short circuit to full load",
+                "Multi-tapped output isolation transformer for optimal load matching",
+                "Output circuit isolated from mains",
+                "Minimal cubicle footprint",
+                "Air cooled — no fans",
+                "Low life cycle costs",
+                "Compatible with circuit selector and lamp switching equipment",
+                "Microprocessor-controlled display with diagnostics: Output Current, Brightness Step, % Output, Alarms, etc."
+            ],
+            "sections": [
+                {
+                    "title": "Compliance with Standards",
+                    "para": "FAA AC 150/5345-10F"
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "ccrs-accessories"
+        },
+        "micro-200-ccr": {
+            "title": "Micro 200 CCR",
+            "description": "The Micro 200 CCR is fitted with state-of-the-art circuits that adjust the output waveform thousands of times per second for improved response, fault protection, and efficient power delivery.",
+            "portfolioLines": [
+                "Power Factor: Better than 0.9 (up to 15 kW)",
+                "Efficiency: Better than 90%",
+                "Output Power: 1.5 to 7.5 kW (220–240V); 2.5 to 15 kW (380–415V)",
+                "Output Currents: 6.0A, 6.6A, 12A",
+                "Input Voltages: 220–240V or 380–415V, 50/60 Hz"
+            ],
+            "features": [
+                "PWM control of IGBT H-bridge for high quality sinusoidal output",
+                "Superior harmonic performance and fault protection",
+                "Same cubicle footprint as earlier designs",
+                "Front-panel diagnostics with CCR monitoring",
+                "Diagnostic info: Output Current, Brightness Step, % Output, Alarms, etc."
+            ],
+            "sections": [
+                {
+                    "title": "Compliance with Standard",
+                    "para": "FAA AC 150/5345-10F"
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "ccrs-accessories"
+        },
+        "multiway-circuit-selector-switch": {
+            "title": "Multiway Circuit Selector Switch",
+            "description": "Enables CCR to switch power to multiple series lighting circuits on runways, taxiways, etc., with safe and flexible output selection.",
+            "portfolioLines": [],
+            "features": [
+                "Supports any output combination within CCR power rating",
+                "Manual or remotely operated switching contactors",
+                "Indicator lamps show circuit selection and remote ATC indication",
+                "Interlock switches and remote-off-local control",
+                "Wall-mount design, ready to use",
+                "External brackets provided",
+                "External/internal voltage source compatible",
+                "Remote 48V DC control",
+                "Rated from 6.6A up to 5kV"
+            ],
+            "sections": [
+                {
+                    "title": "Compliance with Standards",
+                    "para": "FAA L-847, AC 150/5345-5"
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "ccrs-accessories"
+        },
+        "series-circuit-cut-out-switch": {
+            "title": "Series Circuit Cut-Out Switch",
+            "description": "Allows safe disconnection, isolation, and earthing of field series circuits in airfield ground lighting using a rotating connector lid.",
+            "portfolioLines": [],
+            "features": [
+                "Normal Running mode connects CCR to series circuit",
+                "Field Earthed applies open circuit to CCR",
+                "CCR Test shorts CCR and earths field for testing",
+                "Clamps support earthing of screened cable",
+                "Supports micro switches for CCR loop control",
+                "Safety lock in Field Earthed position",
+                "Easy access for testing field circuits",
+                "Retrofit-capable in cable termination panels",
+                "Installable in CCRs directly",
+                "Rear-mounted monitoring support",
+                "Supports CCR changeover in cubicles"
+            ],
+            "sections": [],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "ccrs-accessories"
+        },
+        "portable-lighting": {
+            "title": "Portable Lighting",
+            "description": "",
+            "image": "/images/categories/portable-lighting.jpg",
+            "relatedProducts": [
+                {
+                    "key": "portable-aviation-runway-lighting-fixture",
+                    "title": "Portable Aviation Runway Lights",
+                    "image": "/images/portable-aviation-runway-light.jpg"
+                },
+                {
+                    "key": "portable-aviation-led-light",
+                    "title": "Portable Aviation LED Light",
+                    "image": "/images/portable-aviation-led-light.jpg"
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "portable-lighting"
+        },
+        "portable-aviation-runway-lighting-fixture": {
+            "title": "Portable Aviation Runway Lights",
+            "description": "The Portable LED Lighting Kit is used to set up temporary or semipermanent lighting systems for aircraft or helicopters to land on grass strips, frozen lakes, or roadways, or as emergency runway lighting on major airports.",
+            "image": "/images/portable-aviation-runway-light.jpg",
+            "features": [],
+            "portfolioLines": [
+                "POLARIS can be used as a standalone fitting or as part of a complete transportable runway lighting kit and is available for all relevant applications including:",
+                "Runway Edge (white) bi & omnidirectional",
+                "Taxiway Edge (blue)",
+                "Runway end (red)",
+                "Threshold (green)",
+                "Combined Threshold/Runway End"
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "portable-lighting"
+        },
+        "portable-aviation-led-light": {
+            "title": "Portable Aviation LED Light",
+            "description": "For temporary installations at civil and military airfields and heliports in case of emergency or maintenance power-offs or to delineate areas temporarily closed to traffic for works.",
+            "image": "/images/portable-aviation-led-light.jpg",
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "portable-lighting"
+        },
+        "windsock-mast": {
+            "title": "Floodlit Windsock Mast",
+            "description": "All masts are fabricated from mild steel, then galvanised to BS 1729.\n\nBase Post 90mm x 6.3mm SHS\nMast 90mm x 3.6mm / 80mm x 3.6mm / 70mm x 3.6mm SHS box section & 60mm RHS tube.\n\nThe mast can be safely lowered and raised by one man using the auto-braked winch.\nThe light arms can be rotated to service any of the lamps from the ground.\nA mast lock secures the mast in the upright position when raised.\nFrangibility in the event of a collision is achieved by a slot system near the mast base.\nThe mast is powder coated over the galvanising in 7 x red & white bands as per ICAO Annex 14.",
+            "image": "/images/windsock-mast.jpg",
+            "features": [
+                "Base Post 90mm x 6.3mm SHS",
+                "Mast options: 90mm / 80mm / 70mm x 3.6mm SHS + 60mm RHS tube",
+                "Auto-braked winch enables single-person operation",
+                "Rotating arms allow servicing from the ground",
+                "Locking mechanism secures mast when raised",
+                "Slot system near base ensures frangibility",
+                "7x red & white ICAO-compliant bands",
+                "Powder coated over galvanised steel"
+            ],
+            "portfolioLines": [
+                "**Lighting System:**\nFour wide beam LED floodlights give the correct illumination throughout 360 degree wind direction. Total power consumption (including standard 8W LED Obstruction Light) when illuminated is less than 130W.\n\nIllumination is fully compliant with CAP 168 Appendix 7D – 9 ‘Test Procedure for Illuminated Wind Sleeve’, including 9.6 ‘Glare & Overall Performance’.\n\nThe lamps are 50,000 hour life and weatherproof to IP65.\nThey are mounted on arms above the windsock to spread the light evenly onto it irrespective of wind speed and direction, and point straight down to avoid pilot glare.\nAs standard, a Single 100k hour LED Obstruction Light is mounted on top of the mast.",
+                "**Electrical Control System:**\nA double switch is provided on the Base Post to allow control of the Obstruction Light and Floodlighting independently. The floodlighting is also controlled by a photocell mounted beside the switches.\n\nThe Obstruction Light has an integral photocell, which can be disabled. We despatch these set for manual use as most users want this on 24/7, but this setting is easily altered.\n\nFor ease of assembly, a junction box at the top of the mast distributes power to the floodlights and Obstruction Light. Two supply cable pass inside the mast to supply power to the junction box; one for Illumination, one for the Obstruction Light.\nFasteners are supplied to secure the supply cable to the Base Post. The ground supply cable is not supplied as this varies from one location to another.",
+                "**Windsock & Swivel Frame:**\nThe standard windsock is 3.6m / 12ft long x 0.91m / 36” mouth diameter, in dayglow orange polyester for long life. A Red & White (or other combination) 5 banded windsock can be provided if required.\n\nThe tail of the windsock has a unique design to prevent flutter, thus prolonging its life.\nNo chains, wire or metal hoops are used in the windsocks to maximise responsiveness and minimise chafe.\nThe Swivel Frame is specially designed in 316 stainless wire to minimise maintenance bearings."
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "windsock-mast"
+        },
+        "agnis-docking-aid": {
+            "title": "AGNiS Docking Aid",
+            "description": "AGNiS Docking Aid: Azimuth Guidance for Nose-In Stand (AGNiS) is one of the most popular forms of stand guidance. It consists of two coloured lights mounted side by side.\n\nIf the pilot is on the stand centreline they will see two green lights. If they are off centreline, one of the lights will appear red and the pilot then steers towards the green one. AGNiS alone provides only azimuth guidance, it does not inform pilots when they should stop. It is relatively imprecise but cheap to implement and reliable.",
+            "image": "/images/agnis-docking-aid.jpg",
+            "features": [],
+            "portfolioLines": [],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "airfield-ground-lights",
+            "subcategory": "agnis-docking-aid"
+        },
+        "avdgs": {
+            "title": "Advanced Visual Docking Guidance System (AVDGS)",
+            "description": "Cutting-edge 3D laser technology based Advanced Visual Docking Guidance System which fully complies with ICAO Annex 14 recommendations. It accommodate all aircraft types without the error factors resulting from variations in aircraft height and gross weight.",
+            "image": "/images/avdgs.jpg",
+            "features": [
+                "VDGS (Visual Docking Guidance System), which helps aircraft to dock at the exact position in front of the gate.",
+                "Docking can be accomplished by either the pilot or the copilot.",
+                "Alert is given if the aircraft approaching the gate is not the aircraft type set to be docking.",
+                "Large 8 inch highly visible alphanumeric display for the pilot and the copilot.",
+                "The familiar azimuth bar display format is used featuring large 12 inch high azimuth bars easily visible to the pilot or the copilot.",
+                "The operator interface uses a full graphic display for the clarity of the information presentation.",
+                "Optional multiple operator interface points per gate.",
+                "Optional host computer communication options for reporting and control.",
+                "Optional lockout input in the case that the passenger loading bridge is not parked.",
+                "Optional lockout output to prevent the passenger loading bridge from moving until the aircraft is docked.",
+                "Compliance to ICAO Annex 14 recommendations."
+            ],
+            "portfolioImage": [
+                "/images/avdgs.jpg"
+            ],
+            "portfolioLines": [
+                "Easy to monitor live time status of all & each gate.",
+                "Integrate live time video of each gate.",
+                "Integrate FOS or FIS Information for future billing system upgradable.",
+                "Clear report system of all the status or events for management.",
+                "Extremely accurate recording of every & each step by 10 mini-second timing.",
+                "Ease for RLG technicians to diagnose the issues.",
+                "Clarify the problem once it happened.",
+                "Be able to report system self-checking.",
+                "Optional interface with PBB, GPU, PCA, CCTV and Flight information system and lead in lights.",
+                "Provide the information to GOS (Gate Operation System), can be linked online with SITA AMS and provides in billing information and RIDS support."
+            ],
+            "sections": [
+                {
+                    "title": "",
+                    "image": "/images/avdgs-2.jpg"
+                },
+                {
+                    "title": "",
+                    "image": "/images/avdgs-2.jpg"
+                }
+            ],
+            "sector": [
+                "airport"
+            ],
+            "category": "avdgs"
+        },
+        "ilcms": {
+            "title": "Integrated Lighting Control and Monitoring Systems (ILCMS)",
+            "description": "",
+            "image": "/images/ilcms.jpg",
+            "sector": "airport",
+            "category": "ilcms"
+        },
+        "photometric-workshop-equipment": {
+            "title": "Photometric Workshop Equipment",
+            "description": "",
+            "image": "/images/photometric-workshop-equipment.jpg",
+            "relatedProducts": [
+                {
+                    "key": "pac",
+                    "title": "Photometric Airfield Calibration",
+                    "image": "/images/pac.jpg"
+                },
+                {
+                    "key": "workshop-photometry-controller",
+                    "title": "Workshop Photometry Controller",
+                    "image": "/images/workshop-photometry-controller.jpg"
+                }
+            ],
+            "sector": [
+                "airport"
+            ],
+            "category": "photometric-system",
+            "subcategory": "photometric-workshop-equipment"
+        },
+        "pac": {
+            "title": "Photometric Airfield Calibration",
+            "description": "",
+            "image": "/images/pac.jpg",
+            "portfolioLines": [
+                "PAC Lab II is an associate product of PAC system (Photometric Airfield Calibration).",
+                "The PAC Lab II system improves the maintenance work, making it more efficient and accurate by providing the capability to control the light output of each fitting before installing them on site.",
+                "The system measures and controls all the AGL inset and elevated lights. It is placed preferably inside a dark room or a specific enclosure can be built around the system if it has to be used in a clear open space. But, thanks to a specific cache to be installed on the sensors strip, runway or approach light fittings can be measured in a normally lit office room. The system uses a computer unit for monitoring the process.",
+                "The light fittings are positioned on a rotating plate in front of the PAC sensors strip fixed on a vertical bench. Bi-directional fittings are automatically measured both sides.",
+                "To facilitate the operator’s action, the rotating plate moves upwards and downwards so that fitting positioning remains user-friendly."
+            ],
+            "sector": [
+                "airport"
+            ],
+            "category": "photometric-system",
+            "subcategory": "photometric-workshop-equipment"
+        },
+        "workshop-photometry-controller": {
+            "title": "Workshop photometry controller",
+            "description": "",
+            "image": "/images/workshop-photometry-controller.jpg",
+            "features": [
+                "Measures all light fittings.",
+                "Beams of bi-directional fittings are measured automatically one after the other.",
+                "The system is preferably installed in a dark room or a specific enclosure can be provided upon request.",
+                "Or for runway and approach lights, using a dedicated cache, fittings can be measured in a normally lit office room.",
+                "Reliable, precise and quick results in candela.",
+                "Instant report edition",
+                "No adjustment prior measurements",
+                "Dedicated functions to support AGL maintenance",
+                "Variable measurement speed",
+                "Users of PAC system can share the same sensor strip for both in-field and workshop measurements.",
+                "In option, the AGL fittings (from LED low power lights to 500W halogen fittings can be supplied with the FB Technology µCCR (dedicated for workshop use)."
+            ],
+            "portfolioLines": [
+                "Average measurement speed : 10 to 30s per light (light pre-heating and fitting replacement not considered)",
+                "OS: Windows XP, 7 or 8®",
+                "Integrated Data-Base",
+                "Required space: 1.30m x 3,50m x 1.50m ( W x L x H )",
+                "Precision: ± 2 %",
+                "Temperature range: - 30 to + 70°C",
+                "System power supply: 220 Vac",
+                "Sensors strip (if provided) àWeight : 8 Kg / Dimension : 1m x 16cm x 12 cm (L x W x H)"
+            ],
+            "sector": [
+                "airport"
+            ],
+            "category": "photometric-system",
+            "subcategory": "photometric-workshop-equipment"
+        },
+        "pac-matrix": {
+            "title": "PAC Matrix",
+            "description": "The PAC Matrix (Matrix of sensors for Photometric Airfield Calibration) is a portable photometry measurement system that can be used both in workshop and on-site.",
+            "portfolioLines": [
+                "In workshop, the PAC Matrix provides quick photometry compliance to ICAO by collecting light samples from the fitting beam – up to 17 samples can be taken in the ICAO main beam in order to compute the average value of the fitting. Measurement is carried out in one second per fitting.",
+                "On site, the operator carries this light-weight device and places it in front of the light beam to be measured: either by positioning it on the ground, and sliding up to the required height or for higher fittings – such as approach lights and high wing-bar lights, by simply carrying the PAC Matrix in front of the beam."
+            ],
+            "sections": [
+                {
+                    "title": "Measurement Process",
+                    "bullets": [
+                        "Position the PAC Matrix in front of the light beam.",
+                        "Select the type of fitting to be measured on the 10.1” tablette (touchscreen).",
+                        "Make sure it is horizontal (check bubble levels) and at the adequate distance (see tablette information).",
+                        "When ready, press on “Start acquisition” and click on the push-button.",
+                        "Result is provided instantly with the average value in candela and the status Pass/ Fail.",
+                        "If required, the pdf report of the fitting measurement can be displayed immediately."
+                    ],
+                    "para": null
+                },
+                {
+                    "title": "PAC MATRIX for AGL fittings photometry",
+                    "bullets": [
+                        "Name of the airport",
+                        "Date and time of measurement",
+                        "Type of facility and fitting identification number (if available)",
+                        "The GPS co-ordinates as provided by the 10” tablette",
+                        "The ICAO Average value in candela, the ICAO standard percentage of compliancy and the status Pass/ Fail.",
+                        "The display of measured values on the Matrix schematic and in a summary chart."
+                    ],
+                    "para": "**PAC Matrix Individual light report**\nThe PAC Matrix provides the following"
+                },
+                {
+                    "title": "System performances",
+                    "bullets": [
+                        "Portable light-weight system (4.0kg – including rechargeable battery pack).",
+                        "Easy to use and to manipulate.",
+                        "Immediate display of results and immediate creation of pdf reports.",
+                        "Results include GPS co-ordinates of the fittings measured on-site.",
+                        "Using a database system to manage and record data used and collected during the measurement session.",
+                        "Data acquisition of light values in less than 1 second."
+                    ],
+                    "para": "**All our products are compliant with ICAO, FAA, STAC and ENAC standards and recommendations.**"
+                }
+            ],
+            "photos": [
+                "/images/pac-matrix-photo-1.jpg",
+                "/images/pac-matrix-photo-2.jpg",
+                "/images/pac-matrix-photo-3.jpg"
+            ],
+            "sector": [
+                "airport"
+            ],
+            "category": "photometric-system",
+            "subcategory": "frame-reader-equipment"
+        },
+        "photometric-airfield-calibration": {
+            "title": "Mobile Photometric Airfield Calibration",
+            "description": "The Innovation in Mobile Light Measurement of Airfield Lighting System",
+            "image": "/images/photometric-airfield-calibration.jpg",
+            "features": [
+                "Verification of compliance to ICAO or FAA standards of runway, taxiway and approach lights, including inset or elevated",
+                "Highly reliable and highly precise measuring equipment for maintenance",
+                "Worldwide references and customer satisfaction"
+            ],
+            "portfolioLines": [
+                "The system is installed on the front or at the back of any type of vehicle. Measurements are made in real time as the vehicle travels over the lights at a speed up to 60 km/h.",
+                "The luminous intensity detected by the sensors placed at the front and the back of the sensors strip is fed to input/output modules that are connected to a programmable logical controller installed inside the sensors strip.",
+                "The PLC allows for industrial grade data collection. Then the data are sent through a router via Wifi or via an Ethernet cable to a portable computer or a tablette operated by the users inside the vehicle.",
+                "Up to 65000 samples can be recorded for each light fitting with no limitation of number of fittings."
+            ],
+            "sections": [
+                {
+                    "title": "Installation",
+                    "bullets": [
+                        "The system can be installed on any vehicle.",
+                        "The customer can have this done by FB Technology or can do it himself, in which case he must have his installation checked by a FB Technology engineer. This can be done during the Training & Commissioning session.",
+                        "The distance measuring device is mounted on the side of the vehicle or on the supporting frame.",
+                        "The sensors strip communicates via WiFi or an Ethernet cable with the laptop/ tablette monitored by the operator inside the vehicle."
+                    ]
+                },
+                {
+                    "title": "Operating conditions",
+                    "bullets": [
+                        "Operation by night : yes",
+                        "Displacement speed: up to 60 km/h",
+                        "Measurement range: up to 30,000 candelas",
+                        "Weather condition: dry or wet surface"
+                    ]
+                },
+                {
+                    "title": "Guarantee and calibration",
+                    "bullets": [
+                        "The system is supplied with a full 1-year guarantee.",
+                        "After the guarantee period, a maintenance contract is required to cover yearly calibration and software updates."
+                    ]
+                }
+            ],
+            "sector": [
+                "airport"
+            ],
+            "category": "photometric-system",
+            "subcategory": "photometric-airfield-calibration"
+        },
+        "papi-photometric-calibration-system": {
+            "title": "PAPI Photometric Calibration System",
+            "description": "The PAPI (Precision Approach Path Indicator) system provides the pilot a positive indication of the aircraft’s position relative to the optimal glide slope during final approach to the runway, even in case of airports equipped with ILS.",
+            "image": "/images/papi-photometric-calibration.jpg",
+            "features": [
+                "A mobile vision sensor mounted on a tripod : PTZ camera + motorized axis.",
+                "High accuracy and precision in measuring angles : using a gyroscope.",
+                "Running a software using image processing algorithms.",
+                "Data exchange and connection assured by WIFI© connection."
+            ],
+            "portfolioLines": [
+                "High accuracy and precision.",
+                "Easy to use and to handle.",
+                "Automatic mode and procedure.",
+                "Instant dialog to provide the operator with the correction for a precise alignement.",
+                "Using a database system to manage and record data used and collected during the measurement session.",
+                "Hand portable.",
+                "Night and Day operations (see special conditions).",
+                "Full measurement (angles data, isocandela and azimutal opening) of the entire PAPI bar in less than one hour."
+            ],
+            "sector": [
+                "airport"
+            ],
+            "category": "photometric-system",
+            "subcategory": "papi-photometric-calibration-system"
+        },
+        "airfield-guidance-signs-calibration-system": {
+            "title": "Airfield Guidance Signs Calibration System",
+            "description": "The Airfield Signs are signs that are used to provide pilots with mandatory instructions, information on a specific location or destination on a movement area. These signs are installed mostly in the taxiway area. They have to fulfill mechanical and dimensional characteristics and also very precise light output criteria for illuminated signs.",
+            "image": "/images/airfield-guidance-signs-calibration.jpg",
+            "features": [
+                "A portable calibrated high precision camera for luminance and chromaticity measurements;",
+                "A portable computer running a user-friendly software for system operation, data acquisition and report display;",
+                "Laser distance measuring system;",
+                "Data exchange and connection assured by USB cable connection."
+            ],
+            "portfolioLines": [
+                "High accuracy and precision;",
+                "Easy to use;",
+                "Few seconds data acquisition and realtime processing of the data;",
+                "Can be used either in the field (airside) or in airport workshop;",
+                "Using a database system to manage and record data used and collected during the measurement session;",
+                "Hand portable;",
+                "Automatic mode and procedure;",
+                "Night operation for airside."
+            ],
+            "sector": [
+                "airport"
+            ],
+            "category": "photometric-system",
+            "subcategory": "airfield-guidance-signs-calibration-system"
+        },
+        "sodice-airfield-lighting-soda-powder-cleaning-equipment": {
+            "title": "Airfield Lighting Soda Powder Cleaning Equipment",
+            "description": "This system is designed for airports wishing to use safe and advanced equipment for cleaning their inset and elevated lights with the greatest efficiency and under all weather conditions. It uses pressurized soda bicarbonate powder.",
+            "portfolioLines": [
+                "Vardhman Airports provides a cleaning system that can be either installed in a vehicle or on a trailer allowing for rapid intervention, and in difficult climatic conditions.",
+                "The operator manipulates an arm fitted with pressure compressed-air injector. The control is carried out either automatically when installed on a trailer or by using a push-button installed on the arm for elevated lights cleaning. The pipe provided is 10 metres long.",
+                "The cleaning operation is done by projecting a mix of air and soda powder on the light prism.",
+                "The operation causes no damage to the prism and does not pollute the environment, neither attracting nor favouring development of the fauna surrounding the platforms ( rodents, birds, etc.). Only few grams of soda powder are left on the runways or taxiways."
+            ],
+            "image": "/images/sodice-airfield-lighting-soda-powder-cleaning-equipment.jpg",
+            "sector": [
+                "airport"
+            ],
+            "category": "photometric-system",
+            "subcategory": "sodice-airfield-lighting-soda-powder-cleaning-equipment"
+        },
+        "aiming-point-lights": {
+            "title": "Aiming Point Lights",
+            "description": "Where an aiming point marking is provided at a heliport intended for use at night, aiming point lights should be provided.",
+            "portfolioLines": [
+                "Aiming point lights shall be collocated with the aiming point marking.",
+                "Aiming point lights shall form a pattern of at least six omnidirectional white lights.",
+                "The lights shall be inset when a light extending above the surface could endanger helicopter operations."
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "heliport-lighting",
+            "subcategory": "aiming-point-lights",
+            "image": "/images/aiming-point-light.jpg"
+        },
+        "approach-steady": {
+            "title": "Approach Steady",
+            "description": "An approach lighting system should be provided at a heliport where it is desirable and practicable to indicate a preferred approach direction.",
+            "portfolioLines": [
+                "The approach lighting system shall be located in a straight line along the preferred direction of approach.",
+                "It should consist of a row of three lights spaced uniformly at 30 m intervals and of a crossbar 18m in length at 90 m from the FATO perimeter.",
+                "Additional lights spaced uniformly at 30m intervals should be added beyond the crossbar if more conspicuous final approach is needed.",
+                "The lights beyond the crossbar may be steady or sequenced flashing depending upon the environment."
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "heliport-lighting",
+            "subcategory": "approach-steady",
+            "image": "/images/approach-steady.jpg"
+        },
+        "heliport-beacon": {
+            "title": "Heliport Beacon",
+            "description": "A heliport beacon should be provided at a heliport where:\na) long-range visual guidance is considered necessary and is not provided by other visual means; or\nb) identification of the heliport is difficult due to surrounding lights",
+            "portfolioLines": [
+                "The heliport beacon shall be located on or adjacent to the heliport preferably at an elevated position and so that it does not dazzle a pilot at short range.",
+                "The heliport beacon emit repeated series of equispaced short duration white flashes.",
+                "The light from the beacon is show at all angels of azimuth."
+            ],
+            "sections": [
+                {
+                    "title": "Scope",
+                    "para": "This specification details Federal Aviation Administration requirements for airport light beacons at civil airports, military airports, seaplane bases, and heliports."
+                },
+                {
+                    "title": "Classification",
+                    "bullets": [
+                        "L-801H Medium intensity heliport beacon",
+                        "L-802H High intensity heliport beacon"
+                    ]
+                },
+                {
+                    "title": "Flash Rate",
+                    "bullets": [
+                        "L-801H 33 to 39 flashes per minute (fpm)",
+                        "L-802H 33 to 39 flashes per minute (fpm)"
+                    ]
+                },
+                {
+                    "title": "Flash Duration",
+                    "bullets": [
+                        "The duration of individual flashes must be from 75 to 300 milliseconds (ms).",
+                        "The requirement above may be met in capacitor discharge-type beacons by a series of rapid successive flashes which appear to the viewer to be one uninterrupted flash."
+                    ]
+                },
+                {
+                    "title": "Signal Format",
+                    "bullets": [
+                        "Airport beacons must provide the following signal colors:",
+                        "L-801H & L-802H Alternate white, green, and yellow"
+                    ]
+                },
+                {
+                    "title": "Input Voltage",
+                    "para": "The airport beacons must be designed to operate from a standard line voltage below 600 volts, at a tolerance of ±10 percent, 60 Hertz line frequency, alternating current."
+                }
+            ],
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "category": "heliport-lighting",
+            "subcategory": "heliport-beacon",
+            "image": "/images/heliport-beacon.jpg"
+        },
+        "fato": {
+            "title": "FATO",
+            "category": "heliport-lighting",
+            "image": "/images/fato/jpg",
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "subCategory": "fato",
+            "description": "Where a FATO is established at a surface-level heliport on ground intended for use at night, FATO lights shall be provided except that they may be omitted where the FATO and the TLOF are nearly coincidental or the extent of the FATO is self-evident.",
+            "portfolioLines": [
+                "FATO lights shall be placed along the edges of the FATO. The lights shall be uniformly spaced as follows:",
+                "for an area in the form of a square or rectangle, at intervals of not more than 50 m with a minimum of four lights on each side including a light at each corner; and",
+                "for any other shaped area, including a circular area, a intervals of not more than 5 m with a minimum of ten lights."
+            ]
+        },
+        "floodlight-helipad-lighting-system": {
+            "title": "Floodlight Helipad Lighting System",
+            "category": "heliport-lighting",
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "subCategory": "floodlight-helipad-lighting-system",
+            "images": "/images/floodlight-helipad-lighting-system.jpg",
+            "description": "The Surface Floodlights are designed to satisfy all the ICAO required performances:",
+            "portfolioLines": [
+                "they will provide the correct Touchdown and Lift-Off area illumination, as alternative or as integration of the perimeter lights, with a minimum of 10 cd/m2,",
+                "the maximum height is 13cm, less than the required 25cm, to increase safety during hovering/final approach operations,",
+                "the two pivoting lamp holders provides the correct illuminations in any installation, aside from helipad shape and light positioning",
+                "defenses on the lamp prevent the pilot from dazzling or direct light",
+                "The floodlights are normally installed along the perimeter of the Touchdown and Lift-Off area. They can be fixed on a special base by means of screws or bolts, or directly to the ground and must be carefully oriented, in order to achieve the most effective spreading of the light."
+            ]
+        },
+        "tlof": {
+            "title": "TLOF",
+            "category": "heliport-lighting",
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "subCategory": "tlof",
+            "images": "/images/tlof.jpg",
+            "description": "A TLOF lighting system shall be provided at a heliport intended for use at night.",
+            "portfolioLines": [
+                "The TLOF lighting system for a surface-level heliport shall consist of one or more of the following: a) perimeter lights; or b) floodlighting; or c) arrays of segmented point source lighting (ASPSL) or luminescent panel (LP) lighting to identify the TLOF when a) and b) are not practicable and FATO lights are available.",
+                "The TLOF lighting system for an elevated heliport or helideck shall consist of a) perimeter lights; and b) ASPSL and/or LPs to identify the touchdown marking where it is provided and/or floodlighting to illuminate the TLOF."
+            ]
+        },
+        "inset-omni-directional-light": {
+            "title": "Inset Omni Directional Taxiway Light",
+            "category": "heliport-lighting",
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "subCategory": "inset-omni-directional-light",
+            "image": "images/inset-omni-directional-light.jpg",
+            "description": "LED inset omni directional taxiway light",
+            "portfolioLines": [
+                "120V and 240V mains supply versions also available. Suitable for use in a dedicated passive circuit supplied from a 10W ir 25W 6.6A/0-4A isolating transformer. Power consumption is 10W."
+            ]
+        },
+        "inset-omni-directional-approach-light": {
+            "title": "Inset Omni Directional Approach Light",
+            "category": "heliport-lighting",
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "subCategory": "inset-omni-directional-approach-light",
+            "image": "/images/inset-omni-directional-approach-light.jpg",
+            "description": "Inset omni directional final approach and take off light",
+            "portfolioLines": [
+                "Inset Omni-directional fitting for Heliport Taxiway Suitable for use in 6.6A airfield lighting circuits normally supplied from 1 \u00d7 30W, 45W, 65W or 100W isolating transformer. 120V and 240V mains supply versions also available.",
+                "Suitable for use in a dedicated passive circuit supplied from a 10W ir 25W 6.6A/0-4A isolating transformer. Power consumption is 10W."
+            ]
+        },
+        "elevated-omni-directional-tdz": {
+            "title": "Elevated Omni Directional TDZ",
+            "category": "heliport-lighting",
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "subCategory": "elevated-omni-directional-tdz",
+            "image": "/images/elevated-omni-directional-tdz.jpg",
+            "description": "Elevated Helipad edge light | ZA216",
+            "portfolioLines": [
+                "Elevated Helipad edge light or low intensity light. Suitable for use in 6.6A airfield lighting circuits normally supplied from 1 \u00d7 45W isolating transformer. Also suitable for use in a dedicated passive circuit."
+            ]
+        },
+        "omni-directional-approach-light": {
+            "title": "Omni Directional Approach Light",
+            "category": "heliport-lighting",
+            "sector": [
+                "airport",
+                "defense"
+            ],
+            "subCategory": "omni-directional-approach-light",
+            "image": "/images/omni-directional-approach-light.jpg",
+            "description": "Elevated omni directional final approach and take off light",
+            "portfolioLines": [
+                "Elevated Helipad edge light or low intensity light. Suitable for use in 6.6A airfield lighting circuits normally supplied from 1 \u00d7 45W isolating transformer. Also suitable for use in a dedicated passive circuit."
+            ]
+        },
         "air-traffic-management-system": {
             "title": "Air Traffic Management System",
             "description": "The ATM (Air Traffic Management) system is a modern, integrated framework designed to ensure the safe, efficient, and coordinated movement of aircraft both in controlled airspace and at airports. Built to function in real-time, it enhances situational awareness and supports air traffic controllers with intelligent tools and automation. Key features include:",
@@ -1735,10 +2793,517 @@
                     ]
                 }
             ],
-            "sector": "airports",
+            "sector": "defense",
             "category": "air-traffic-management",
-            "type": "Electronic",
-            "market": "Commercial"
+            "subcategory": "air-traffic-management-system"
+        },
+        "automatic-weather-observation-system": {
+            "title": "Automatic Weather Observation System (AWOS)",
+            "description": "Automated Weather Observing System (AWOS) enhances airfield and operational safety by delivering continuous, real-time meteorological data. It plays a vital role in flight planning, runway management, and decision-making, ensuring accuracy and reliability under all weather conditions.",
+            "image": "/images/awos1.jpg",
+            "portfolioImage": "/images/awos2.jpg",
+            "portfolioLines": [
+                "Real-time meteorological updates for safe runway and airspace operations.",
+                "Automated METAR/SPECI reporting streamlines pilot briefings and ATC response.",
+                "Integrated wind, visibility, and cloud sensors for precise forecasting.",
+                "Remote access ensures continuous monitoring from control towers or command centers.",
+                "Designed for 24/7 reliability in extreme weather and tactical environments."
+            ],
+            "features": [
+                "Ensures airfield safety with real-time weather data",
+                "Monitors wind, temperature, humidity, visibility, and pressure",
+                "Supports automated METAR/SPECI reporting",
+                "Allows remote access from the ATC tower",
+                "Includes lightning detection and cloud height sensors",
+                "Reliable in all weather conditions for accurate forecasting"
+            ],
+            "sector": "defense",
+            "category": "weather-communication",
+            "subcategory": "automatic-weather-observation-system"
+        },
+        "portable-tracking-system": {
+            "title": "Portable Tracking System",
+            "description": "Portable Tracking System provides real-time aircraft tracking and enhanced situational awareness, ensuring efficient surveillance and coordination in dynamic airspace environments. Leveraging ADS-B technology, it offers precise flight monitoring and supports safer operations.",
+            "image": "/images/track.jpg",
+            "portfolioImage": "/images/ads-b.png",
+            "portfolioLines": [
+                "Real-time aircraft tracking with portable deployment capability.",
+                "Utilizes ADS-B for precise flight position, speed, and altitude reporting.",
+                "Integrated safety nets help prevent mid-air collisions and airspace conflicts.",
+                "Rapid setup enables deployment in remote or tactical operations zones.",
+                "Enhances situational awareness for both civilian and military coordination."
+            ],
+            "features": [
+                "Enhances situational awareness and real-time aircraft monitoring",
+                "Utilizes Automatic Dependent Surveillance–Broadcast (ADS-B) technology",
+                "Enables accurate position tracking using satellite navigation and periodic data transmission",
+                "Broadcasts key flight parameters: aircraft identification, location, altitude, and speed",
+                "Provides timely surveillance data to ground-based controllers and nearby aircraft",
+                "Improves safety, coordination, and airspace efficiency"
+            ],
+            "sector": "defense",
+            "category": "navigation-tracking",
+            "subcategory": "portable-tracking-system"
+        },
+        "aircraft-monitoring-system": {
+            "title": "Aircraft Monitoring System for Air Traffic Control Recording",
+            "description": "Aircraft Monitoring System delivers continuous, intelligent monitoring for secure and efficient airbase/heliport operations. With advanced imaging and tracking technologies, it ensures comprehensive situational awareness in all conditions.",
+            "image": "/images/moni1.jpg",
+            "portfolioImage": "/images/moni2.jpg",
+            "portfolioLines": [
+                "360° surveillance with intelligent tracking for real-time aircraft monitoring.",
+                "HD and starlight imaging ensures visibility during night and low-light operations.",
+                "Integrated safety nets for movement prediction and collision risk mitigation.",
+                "Supports coordinated take-off and landing oversight in dynamic environments.",
+                "Seamless integration with ATC systems enhances overall airbase situational awareness."
+            ],
+            "features": [
+                "Ideal for surveillance of aircraft and airbase operations",
+                "Equipped with optical zoom, HD imaging, and starlight technology for low-light clarity",
+                "Features intelligent tracking for dynamic object monitoring",
+                "Ensures 24/7 coverage of aircraft movements, take-offs, and landings",
+                "Rugged, weather-resistant design for dependable outdoor use",
+                "Offers 360° pan and tilt for complete area surveillance",
+                "Enhances security via real-time video streaming, video analytics, and integration with broader systems"
+            ],
+            "sector": "defense",
+            "category": "navigation-tracking",
+            "subcategory": "aircraft-monitoring-system"
+        },
+        "airfield-alarm-system": {
+            "title": "Airfield/Heliport Alarm System",
+            "description": "The Airfield alarm system swiftly alerts emergency services, including ambulances, fire departments, and other agencies, in the event of a crash. It is designed for scalability, allowing integration with multiple control panels. As a airfield alarm system, it supports various radio and wired communication methods at airports, such as HF/VHF/UHF, intercoms, analog phones, and IP phones. Operators using airfield alarm system can select between intercom and external communication via HF, VHF, UHF, or phone lines. Additionally, the system enables broadcasting audio messages and alarm notifications across all locations.",
+            "image": "/images/alarm1.jpg",
+            "portfolioImage": "/images/alarm.jpg",
+            "portfolioLines": [
+                "Instant emergency alerts trigger coordinated response from fire, ambulance, and security teams.",
+                "Supports multi-channel communication: HF/VHF/UHF radios, intercoms, analog & IP phones.",
+                "Broadcasts alarms and voice messages simultaneously across all airport zones.",
+                "Redundant network architecture ensures uninterrupted operation during crises.",
+                "Integrated safety logic and alert routing act as operational safety nets during emergencies."
+            ],
+            "features": [
+                "Complies with ICAO standards, making it well-suited for airport operations and fire alarm centers",
+                "Equipped with dual power supplies and two Ethernet networks (Primary and Backup) for reliability",
+                "Utilizes a VoIP-based platform and conforms to the ED137 B/C standard",
+                "Developed with structured software management in line with ED153 compliance",
+                "Seamlessly connects to digital radios following the ED-137B/C standard",
+                "Supports direct IP phone connectivity in accordance with RFC3261 guidelines",
+                "Enables integration with analog radios and telephone networks via a media gateway",
+                "Offers an interface for connecting to analog recording systems",
+                "Features an integrated control panel capable of short-term automatic conversation recording",
+                "Synchronizes with a GPS clock using NTP standards for precise timekeeping"
+            ],
+            "key_functionalities": [
+                "Airfield alarm system for immediate emergency response",
+                "Public address system for announcements and alerts",
+                "Input/output relays to control external devices like lights, sirens, and alarms",
+                "Intercom communication for efficient coordination",
+                "Connectivity between control panels and various airport systems",
+                "Direct communication between the control panel and radios",
+                "Seamless cross-connection between different communication methods",
+                "Ability to broadcast messages and alarms across all airport locations",
+                "Operates in English with customizable language and GUI settings",
+                "Designed for easy installation, deployment, and operation"
+            ],
+            "sector": "defense",
+            "category": "air-traffic-management",
+            "subcategory": "airfield-alarm-system"
+        },
+        "airfield-road-traffic-management": {
+            "title": "Airfield Road Traffic Management System",
+            "description": "Airfield Road Traffic Management System provides secure and efficient access control across critical runway areas, supporting operational safety through automation and visibility.",
+            "image": "/images/boom2.jpg",
+            "portfolioImage": "/images/boom1.jpg",
+            "portfolioLines": [
+                "Automated boom barriers ensure restricted vehicle access to critical airside zones.",
+                "Integrated traffic signals enhance movement coordination and safety across runways.",
+                "Wireless control from ATC and Crash Bay enables rapid override and emergency response.",
+                "Redundant command pathways act as operational safety nets for fail-safe access control.",
+                "Optimized for high-visibility and all-weather performance to maintain 24/7 reliability."
+            ],
+            "features": [
+                "Ensures safe and controlled access across runway safety zones",
+                "Fully automated boom barrier system with integrated traffic light signals",
+                "Weatherproof design for consistent performance in all environmental conditions",
+                "Visibility range effective up to 50 meters",
+                "Wireless control from both ATC Tower and Crash Bay for centralized operation and system redundancy"
+            ],
+            "sector": "defense",
+            "category": "air-traffic-management",
+            "subcategory": "airfield-road-traffic-management"
+        },
+        "tactical-communication-system": {
+            "title": "Tactical Communication System",
+            "description": "Tactical Communication Integrated System delivers reliable, secure, and multi-channel voice communication for coordinated command and control in dynamic environments.",
+            "image": "/images/comm2.jpg",
+            "portfolioImage": "/images/comm3.jpg",
+            "portfolioLines": [
+                "Multi-channel voice communication links fixed, mobile, and field command centers.",
+                "VoIP-enabled Controller Terminals support mission-specific voice conferencing and PTT.",
+                "Media Gateway integrates analog/digital radios and phones for seamless coordination.",
+                "Ruggedized for rapid deployment in tactical vehicles, ships, or remote posts.",
+                "Built-in safety nets with redundant power and network paths ensure uptime in critical ops."
+            ],
+            "features": [
+                "Enables fast communication across mobile and fixed command centres",
+                "Supports wired and wireless networks: fibre, copper, microwave, and satellite",
+                "Built-in redundancy for power and transmission ensures uninterrupted operation",
+                "Compact, rugged design allows rapid deployment on vehicles, ships, or fixed sites",
+                "Resistant to vibration, extreme temperatures, and humidity for all-terrain durability"
+            ],
+            "components": [
+                {
+                    "name": "Controller Terminal",
+                    "description": "The Controller Terminal is a VoIP device with a high-resolution touchscreen interface that allows users to operate the system efficiently. Its user interface layout can be customized based on individual configurations and requirements. Built to be compact, resistant to vibrations, and dustproof, the terminal includes a complete set of mounting accessories for vehicle installation or standalone use. Each unit comes fully equipped with headsets, handsets, and external speakers, enabling seamless connectivity with other system components. The Controller Terminal supports radio PTT, short-term recording, voice conferencing, internal voice communication, call queuing, and user-based configurations tailored to specific roles and tasks. Additionally, it provides log queries, records all user activity history, and displays functional areas on-screen for easy access."
+                },
+                {
+                    "name": "Media Gateway",
+                    "description": "The Media Gateway is a multimedia, multi-protocol interconnect device designed to convert various connection interfaces into an IP interface, ensuring seamless IP connectivity for other devices. It facilitates connections with Controller Terminals, analog radios, digital radios, RoIP, and PABX/PSTN systems. Users can configure this equipment for multiple purposes, such as an analog internal telephone system or an IP-based telephone exchange, depending on their communication needs. The Media Gateway supports a wide range of analog connectors (up to multiple interfaces) and IP phones (up to 150 terminals). Built on IP technology, it is designed for deployment in various command centers and can be easily expanded when necessary, making it a scalable and adaptable communication solution."
+                }
+            ],
+            "sector": "defense",
+            "category": "weather-communication",
+            "subcategory": "tactical-communication-system"
+        },
+        "digital-voice-recorder-system": {
+            "title": "Digital Voice Recorder System",
+            "description": "The Digital Recorder System shall be a complete network-based solution to record, playback and analyze all data exchanged in an ATC/ATM. System architecture is based on hardware and software components connected through a redundant LAN and must be Compliance with ICAO recommendations with features of Video, Audio and Data Acquisition and Sampling, Storage, Playback, Post-Analysis, System Management and automatic registration and security.",
+            "image": "/images/dvdr2.png",
+            "portfolioImage": "/images/dvdr.png",
+            "portfolioLines": [
+                "Network-based recording and analysis of voice, video, and data across ATC/ATM systems.",
+                "ICAO-compliant system supports VoIP, analog, and protocol-based data acquisition.",
+                "Secure, encrypted storage with redundancy via SSD, dual LAN, and NAS extensions.",
+                "Graphical timeline reconstruction enables precise playback for incident analysis.",
+                "Built-in safety nets like watchdog monitoring and SNMP alerts ensure 24/7 operational integrity."
+            ],
+            "features": [
+                "The Recorder system designed in accordance to the latest editions of ICAO standards",
+                "Recorder system should be based on distributed architecture, flexible, scalable, and redundant",
+                "Safe data acquisition, no streaming and multi-format data acquisition capability",
+                "Capability for multi-protocol data acquisition processing data packets based on different formats and protocols",
+                "VoIP / SIP streams with at least 24 VoIP Channels and 16 Analog channels",
+                "Maximum reliability with dual LAN connection in bonding, dual hot swappable Power Supply units",
+                "Local storage using Solid State Disk (SSD)- 1 TB or better and extended through NAS",
+                "Time Synchronization based on NTP",
+                "Watchdog feature to monitor system health with SNMP alarms & events",
+                "Integrated dashboard to monitor system health status and provide usage reports",
+                "Secure (https) remote archiving to centralized archive",
+                "Encrypted recordings",
+                "Secure (https) web-based user interface for search & replay, incident reconstruction, reporting, export and system management",
+                "Reconstruction features with graphical overview of recordings in timeline and audio mixing for 4 channels concurrently",
+                "Export recordings and metadata in MP4/AVI for video, WAV/MP3 for audio and TXT for Keyboard & Mouse data",
+                "Impound Module to export recordings and metadata securely (encrypted) to third party for investigation purposes",
+                "Full Audit Trail to log User & System Manager activity",
+                "Real-time and post-acquisition advanced data analysis, decoding data packets by protocol decoders",
+                "User Friendly Graphical User Interface"
+            ],
+            "sector": "defense",
+            "category": "air-traffic-management",
+            "subcategory": "digital-voice-recorder-system"
+        },
+        "external-pilot-cage-protection": {
+            "title": "External Pilot Cage Protection",
+            "description": "External Pilot Cage Protection system with remote control and operation as per specification below:",
+            "image": "/images/cage.jpg",
+            "portfolioImage": "/images/cage2.jpg",
+            "portfolioLines": [
+                "Hydraulic telescopic bollards offer secure access control for high-risk airfield zones.",
+                "Operable via dual-side control panels with key switch safety mechanisms.",
+                "Manual override and genset support ensure uninterrupted operation during emergencies.",
+                "IP67-rated construction and wide temperature tolerance for all-weather reliability.",
+                "High-load galvanized steel bollards act as physical safety nets against unauthorized vehicle access."
+            ],
+            "features": [
+                "Drive Mechanism: Hydraulic",
+                "Type of Boom: Telescopic / Two-Fence",
+                "Power Supply Type: 3-Phase 440V AC, 50 Hz",
+                "Motor Power Rating: 3.8 KW",
+                "Bollard Tube Diameter: 275 mm",
+                "Bollard Tube Height: 1200 mm",
+                "Bollard Tube Material: High Strength Galvanized Steel",
+                "Rising Time: Up to 6 seconds",
+                "Operating Temperature Range: -20°C to +60°C",
+                "Lowering Time: Up to 5 seconds",
+                "Manual Lowering Option: Required",
+                "Control Panel: Operable from both sides of the bollard via push buttons with key switch control",
+                "Ingress Protection Rating: IP 67",
+                "Duty Cycle Rating: 1",
+                "Illumination: Red LED / Reflective Tape",
+                "Emergency / Power Failure Operation: Manual operation with hand-pump, Operation with Genset",
+                "Total Weight: 400 - 600 kg",
+                "Total Load Capacity: 60 kN",
+                "Vertical Load Capacity: 100 kN",
+                "Electrical Control Enclosure: Steel or Galvanized Powder-Coated Cabinet"
+            ],
+            "sector": "defense",
+            "category": "support-equipment",
+            "subcategory": "external-pilot-cage-protection"
+        },
+        "power-generation-system": {
+            "title": "Power Generation System",
+            "description": "In an operational scenario, power failure can jeopardize the operation and in case of aviation, it could be even fatal. Therefore, an alternate power generating system is considered essential.",
+            "image": "/images/power1.jpg",
+            "portfolioImage": "/images/power3.jpg",
+            "portfolioLines": [
+                "Auto-start feature ensures uninterrupted power during mains failure, critical for ATC and airbase safety.",
+                "Silent diesel operation minimizes noise pollution in sensitive airfield zones.",
+                "Eco-compliant design meets CPCB-4 standards for sustainable aviation infrastructure.",
+                "Integrated AMF panel and load management system enable intelligent energy distribution.",
+                "Acts as a vital operational safety net, maintaining continuity of radar, lighting, and communication systems."
+            ],
+            "features": [
+                "Type: Silent Diesel Generator",
+                "Power Rating: 125 KVA",
+                "Voltage: 415 V",
+                "Compliance: CPCB-4 (Central Pollution Control Board – Stage 4)",
+                "Eco-Friendly Design: Yes",
+                "Automatic Start Feature: Auto start on mains power failure",
+                "Mounting: Engine and alternator mounted on common base frame",
+                "Included Components: Fuel tank, batteries with leads, AVM pads, residential silencer, exhaust pipes",
+                "Lube Oil: First fill included",
+                "Controller: Yes – with Auto Mains Failure (AMF) panel and load management",
+                "Distribution Accessories: Distribution box, cables, switches, etc. as per load rating and ISI compliance",
+                "Standards Compliance: ISI standards for all operational accessories"
+            ],
+            "sector": "defense",
+            "category": "support-equipment",
+            "subcategory": "power-generation-system"
+        },
+        "runway-miscellaneous-equipment": {
+            "title": "Runway/Tower Miscellaneous Equiqments",
+            "description": "",
+            "image": "/images/run3.jpg",
+            "portfolioImage": "/images/run4.jpg",
+            "portfolioLines": [
+                "Hydraulic-driven telescopic bollards provide high-impact resistance for critical airfield entry points.",
+                "Designed for extreme conditions with IP67 ingress protection and wide operating temperature range.",
+                "Manual override and hand-pump operation ensure functionality during emergencies or power failure.",
+                "Key-switch control and dual-side access panels enhance secure, controlled access management.",
+                "Acts as a robust safety net, protecting external pilot cages and preventing unauthorized intrusion."
+            ],
+            "features": [
+                "Lightning Protection: Protection for all external structures, Over-voltage protection on all subsystem cabling, Protection at all antenna-transceiver interfaces",
+                "Time Synchronization: All systems shall be synchronized centrally with a LAN-based Time Synchronization System to ensure uniform timekeeping across all units",
+                "Fire Fighting Arrangements: Appropriate and sufficient fire extinguishing measures should be implemented to ensure the safety of all equipment and personnel"
+            ],
+            "equipment_list": [
+                {
+                    "name": "Wind Direction Indicator",
+                    "spec": "Polyester PU fabric, ICAO Size 2 windsock, 4.5m frangible tower, 360° rotation, 4 LED lights, 1 obstruction light, stainless steel base, aviation red & white paint, foundation template"
+                },
+                {
+                    "name": "Landing T",
+                    "spec": "Illuminated to indicate wind/runway direction, clearly visible from airborne for distance & height"
+                },
+                {
+                    "name": "Ultrasonic Bird Scarer",
+                    "spec": "Coverage: up to 30 acres, Power: 12VDC/Solar, Weight: 7-10 kg, Sound Pressure: 125dB, Frequency: 2-10kHz, UL/CE compliant"
+                },
+                {
+                    "name": "Ground Comm. Handheld Sets",
+                    "spec": "Digital VHF/UHF, 446 MHz, 16 channels, ~10 km range, 8-72 hrs battery, easy to assemble, Motorola type"
+                },
+                {
+                    "name": "Base Station ICOM Set",
+                    "spec": "VHF 118-136.975 MHz, 25kHz/8.33kHz spacing, 6W output, 13.8/27.5V DC, -20°C to +60°C operation, compact/lightweight"
+                }
+            ],
+            "sector": "defense",
+            "category": "support-equipment",
+            "subcategory": "runway-miscellaneous-equipment"
+        },
+        "trailer-mounted-mobile-atc": {
+            "title": "Trailer Mounted Mobile ATC",
+            "description": "Provides flexible, reliable, and scalable air traffic control in various operational scenarios. Use Cases: Ideal for: Temporary airfields, Remote locations, Emergency air traffic management. Functionality: Enables seamless control and communication with aircraft. Tower Cabin: Elevatable design with adjustable height steps. Floor height over terrain options: 6.5 m, 8 m, or 12 m. Height depends on lifting system type requirements.",
+            "image": "/images/mobile2.jpg",
+            "portfolioImage": "/images/mobileatc.jpg",
+            "portfolioLines": [
+                "Rapid deployment capability for emergency, temporary, or remote ATC operations.",
+                "Elevated cabin design ensures 360° situational visibility and glare-free control.",
+                "Integrated communication suite and meteorological sensors for full ATC functionality.",
+                "Hydraulic lift system with safety locking enables flexible elevation based on terrain.",
+                "Acts as a mobile airspace safety net, supporting controlled aircraft movement in tactical zones."
+            ],
+            "features": [
+                "Type: Container with 360 deg view with tilted and tinted bulletproof glass to avoid glare effect inside ATC",
+                "Size of container: 6m*3m*3m (approx.)",
+                "Sitting: Provision and supply of sitting arrangement and foldable bunker bed for 3 person. Modular & foldable interior furniture",
+                "AC – 02 no's: Air Conditioned with external power option",
+                "Power: Provision and supply of silent generator along with power change over switch and module to take on load of all Equipments and electronic items",
+                "Lighting: Sufficient lighting to meet Day & Night operational requirement. Also, to fit Aerodrome beacon light",
+                "Hydraulic Lift: Option to lift the cabin and locking option to raise and lock the lift at various heights levels upto 10 feet",
+                "Staircase/ Ladder: Provision and supply of staircase/ladder compatible with the container at all heights",
+                "Communication: 02 x A210 Ground to Air VHF Transceiver radio set Adequate power supply points and ports for fitments of requisite antennas",
+                "Met eqpt: One compact AWOS with antenna and accessories",
+                "Earthing Protection: ATC Cabin must have sufficient earthing points for safety",
+                "Interior Safety: Interior must be fireproof. Entire cabin must be thermo-conditioned using correct insulation materials/ panels, suitable to the requirements as per environmental conditions",
+                "Sound Proofing: Adequate sound proofing with correct and suitable materials",
+                "Mount: Trailer based. 04 x all terrain tyres",
+                "Fire Safety: Fire retardant interior material Provision of fitment for adequate and suitable firefighting equipment",
+                "Camouflage: Exterior surface must be designed and painted to have camouflage, as per terrain suitability"
+            ],
+            "sector": "defense",
+            "category": "air-traffic-management",
+            "subcategory": "trailer-mounted-mobile-atc"
+        },
+        "weather-radar": {
+            "title": "Weather Radar",
+            "description": "A Weather Radar is a specialized radar system designed to detect and track meteorological conditions such as rain, storms, wind patterns, and cloud formations. It plays a vital role in enhancing flight safety, providing early warnings, and assisting in air traffic management, especially during adverse weather. By continuously monitoring atmospheric conditions, it supports operational planning, real-time awareness, and informed decision-making by pilots, air traffic controllers, and meteorologists.",
+            "image": "/images/radar2.jpg",
+            "portfolioImage": "/images/radar3.png",
+            "portfolioLines": [
+                "Real-time detection of rainfall, thunderstorms, and turbulence enhances flight safety.",
+                "Doppler capabilities allow early identification of wind shear and storm cell movement.",
+                "Improves situational awareness for pilots and ATC during adverse weather conditions.",
+                "Supports proactive planning and routing to minimize weather-related delays and risks.",
+                "Acts as a safety net by issuing early warnings for hazardous weather in terminal and en-route zones."
+            ],
+            "features": [
+                "Radio Wave Transmission: Sends radio waves into the atmosphere to detect weather disturbances",
+                "Precipitation Detection: Identifies particles like raindrops or hail through signal reflection",
+                "Return Signal Analysis: Detects rain intensity, Determines weather location and distance, Tracks storm movement and speed, Measures wind shear and turbulence using Doppler technology",
+                "Severe Weather Monitoring: Enhances flight planning and safety during severe weather conditions",
+                "Early Hazard Warnings: Provides alerts for hazardous weather, helping prevent in-flight and operational risks",
+                "Operational Integration: Assists in decision-making for air traffic control and meteorological services"
+            ],
+            "sector": "defense",
+            "category": "weather-communication",
+            "subcategory": "weather-radar"
+        },
+        "ndb-beacon": {
+            "title": "NDB - Non-Directional Beacon",
+            "description": "A Non-Directional Beacon (NDB) is a ground-based radio transmitter used in aviation for navigation. It emits signals in all directions to provide bearing information to aircraft, aiding pilots in determining their direction relative to the beacon. NDBs operate in the low to medium frequency (LF/MF) bands and function reliably under all weather conditions.",
+            "image": "/images/ndb2.jpg",
+            "portfolioImage": "/images/ndb1.jpg",
+            "portfolioLines": [
+                "Provides continuous 360° bearing signals for reliable aircraft navigation.",
+                "Enables pilots to determine position relative to the beacon using onboard ADF systems.",
+                "Functions as a dependable navigation aid in all weather and visibility conditions.",
+                "Supports enroute tracking and non-precision approach procedures at remote or secondary airfields.",
+                "Acts as a cost-effective safety net and backup to satellite-based navigation systems."
+            ],
+            "features": [
+                "Operates in the low to medium frequency (LF/MF) bands",
+                "Emits signals in all directions to provide 360° coverage",
+                "Provides bearing information, not distance",
+                "Functions reliably in all weather conditions",
+                "Compatible with aircraft Automatic Direction Finder (ADF) systems",
+                "Supports enroute navigation and non-precision approaches",
+                "Serves as a backup navigation aid to GPS and other modern systems",
+                "Simple and cost-effective ground-based navigation aid"
+            ],
+            "sector": "defense",
+            "category": "navigation-tracking",
+            "subcategory": "ndb-beacon"
+        },
+        "cadf-system": {
+            "title": "CADF - Commutated Aerial Direction Finding",
+            "description": "CADF is a ground-based system that detects the direction from which a radio signal is transmitted by an aircraft. It helps air traffic controllers locate aircraft, especially when radar or ADS-B is unavailable. CADF improves navigation, search and rescue operations, and serves as a reliable backup tracking system.",
+            "image": "/images/cad1.jpg",
+            "portfolioImage": "/images/cad2.jpg",
+            "portfolioLines": [
+                "Real-time direction-finding of aircraft transmissions enhances situational awareness.",
+                "Supports search and rescue operations by triangulating signal sources during emergencies.",
+                "Functions as a resilient backup when radar or ADS-B coverage is lost or degraded.",
+                "Integrated with ATC systems for seamless signal triangulation and coordination.",
+                "Essential safety net for airbases, remote airfields, and high-risk operational zones."
+            ],
+            "features": [
+                "Receives VHF/UHF radio transmissions from aircraft",
+                "Calculates the direction or bearing of the received signal",
+                "Sends real-time data to air traffic controllers for enhanced aircraft location awareness",
+                "Often integrated with radar and communication systems for better coordination",
+                "Supports operations in airport towers, area control centres, and military airbases",
+                "Enhances navigation, search and rescue, and backup tracking capabilities",
+                "Provides critical situational awareness during loss of primary surveillance systems"
+            ],
+            "sector": "defense",
+            "category": "navigation-tracking",
+            "subcategory": "cadf-system"
+        },
+        "equipment-shelter": {
+            "title": "Equipment Shelter",
+            "description": "An equipment shelter is a secure, weather-resistant structure designed to house and protect sensitive electronic or mechanical equipment. These shelters are commonly used in defense for telecommunications utilities.",
+            "image": "/images/runnn.jpg",
+            "portfolioImage": "/images/equipment.png",
+            "portfolioLines": [
+                "Secure, climate-controlled enclosures protect mission-critical electronics from harsh environments.",
+                "Customizable interiors support racks, power systems, fire suppression, and network gear.",
+                "Designed for high-security zones with reinforced walls and intrusion-resistant features.",
+                "Optional mobility allows rapid deployment for field operations and tactical scenarios.",
+                "Integrated with backup power and connectivity to ensure uninterrupted functionality."
+            ],
+            "features": [
+                "Environmental Protection: Shield equipment from rain, snow, wind, dust, and extreme temperatures. Often include insulation and Air conditioning systems to maintain controlled internal conditions",
+                "Security: Lockable doors, reinforced structures, and sometimes surveillance systems to protect against theft and vandalism",
+                "Power and Connectivity: Equipped with electrical power distribution, backup power systems (like batteries or generators), and network connections",
+                "Customization: Can be tailored to specific needs: size, internal racks, cooling systems, lighting, fire suppression, etc.",
+                "Mobility (Optional): Some shelters are portable or mounted on trailers for rapid deployment in remote or temporary locations"
+            ],
+            "sector": "defense",
+            "category": "support-equipment",
+            "subcategory": "equipment-shelter"
+        },
+        "smart-energy-meter": {
+            "title": "Smart Energy Meter",
+            "description": "The Smart Energy Meter is a modern power monitoring device designed to bring visibility, efficiency, and control to energy usage. It helps users track how much electricity is being consumed in real time, manage consumption more responsibly, and make informed energy decisions. Whether in homes, offices, or large facilities, this meter empowers users to reduce wastage and promote a more sustainable lifestyle.",
+            "image": "/images/smart2.jpg",
+            "portfolioImage": "/images/smart-mtr.jpg",
+            "portfolioLines": [
+                "Reliable enclosures that keep vital equipment safe from extreme weather and tough conditions.",
+                "Flexible interior setups that can be tailored to fit power systems, network devices, and other essential gear.",
+                "Built for secure areas, with strong construction to prevent unauthorized access.",
+                "Can be designed for mobility, making them easy to move and deploy wherever needed.",
+                "Comes with built-in power backup and connectivity options to keep operations running without interruption."
+            ],
+            "features": [
+                "Accurately measures electricity usage and displays consumption data clearly",
+                "Enables users to monitor daily, weekly, and monthly power usage patterns",
+                "Provides timely alerts and notifications to avoid excessive energy consumption",
+                "Supports load management to prioritize critical devices during peak usage",
+                "Displays total usage even during power outages using backup display mode",
+                "Allows secure data access for billing and reporting purposes",
+                "Designed to resist tampering and unauthorized access",
+                "Includes built-in safety protections and works reliably in varied environmental conditions",
+                "Ideal for use in homes, commercial buildings, and industrial setups",
+                "Encourages smarter energy choices and contributes to lower electricity bills"
+            ],
+            "sector": [
+                "defense",
+                "railways"
+            ],
+            "category": "smart-metering",
+            "subcategory": "smart-energy-meter"
+        },
+        "emergency-alert-system": {
+            "title": "Emergency Alert System",
+            "description": "The Emergency Alert System is a dedicated device equipped with an integrated application designed to send instant emergency SMS alerts. Users can quickly select the type of emergency and their location details, which are included in the alert message. It ensures rapid notification to designated contacts during critical situations, supporting faster response and improved situational awareness.",
+            "image": "/images/alert3.jpg",
+            "portfolioImage": "/images/alert1.jpeg",
+            "portfolioLines": [
+                "Secure, climate-controlled enclosures protect mission-critical electronics from harsh environments.",
+                "Customizable interiors support racks, power systems, fire suppression, and network gear.",
+                "Designed for high-security zones with reinforced walls and intrusion-resistant features.",
+                "Optional mobility allows rapid deployment for field operations and tactical scenarios.",
+                "Integrated with backup power and connectivity to ensure uninterrupted functionality."
+            ],
+            "features": [
+                "Sends emergency SMS alerts instantly via a dedicated hardware device",
+                "User-friendly interface for selecting emergency type: medical, fire, intrusion, etc.",
+                "Allows users to include location details with the alert message",
+                "Pre-configured contact groups ensure alerts reach the right people every time",
+                "Operates independently without requiring constant connectivity",
+                "Stores alert history for post-incident review and analysis",
+                "Compact, durable design suitable for critical environments"
+            ],
+            "sector": [
+                "defense",
+                "railways"
+            ],
+            "category": "smart-metering",
+            "subcategory": "emergency-alert-system"
         }
     }
 }
