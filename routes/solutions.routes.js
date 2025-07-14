@@ -7,7 +7,7 @@ const systemIntegrationData = {
         title: 'SITC of Cat-II Lighting at Calicut Airport',
         category: 'SITC/Turnkey Projects',
         badge: '₹7 Cr.',
-        image: '/images/calicut-airport-case.jpg',
+        image: '/images/caseStudies/calicut-airport-case.jpg',
         challenge: [
             'Timelines Reduced to 120 Days by AAI',
             'LED lighting Installations on typical existing Installations',
@@ -33,10 +33,10 @@ const systemIntegrationData = {
             { label: 'Achievement', value: 'Record Time' }
         ],
         gallery: [
-            '/images/calicut-1.jpg',
-            '/images/calicut-2.jpg',
-            '/images/calicut-3.jpg',
-            '/images/calicut-4.jpg'
+            '/images/caseStudies/calicut-1.jpg',
+            '/images/caseStudies/calicut-2.jpg',
+            '/images/caseStudies/calicut-3.png',
+            '/images/caseStudies/calicut-4.png'
         ]
     },
 
@@ -44,7 +44,7 @@ const systemIntegrationData = {
         title: 'First ILCMS project of Defense Market - SITC of Cat-IIIB Lighting at Palam Airbase',
         category: 'SITC/Turnkey Projects',
         badge: '₹7 Cr.',
-        image: '/images/palam-airbase-case.jpg',
+        image: '/images/caseStudies/palam-airbase-case.jpg',
         challenge: [
             'Multiple clients and working area was under control of IAF and AAI',
             'Secondary Cable laying on Concrete Slabs',
@@ -69,10 +69,8 @@ const systemIntegrationData = {
             { label: 'Specialty', value: 'First Defense ILCMS' }
         ],
         gallery: [
-            '/images/palam-1.jpg',
-            '/images/palam-2.jpg',
-            '/images/palam-3.jpg',
-            '/images/palam-4.jpg'
+            '/images/caseStudies/palam-1.jpg',
+            '/images/caseStudies/palam-2.jpg'
         ]
     },
 
@@ -80,7 +78,7 @@ const systemIntegrationData = {
         title: 'Divine place - SITC of Cat-I Lighting at Maharishi Valmiki International Airport Ayodhya',
         category: 'SITC/Turnkey Projects',
         badge: '₹7 Cr.',
-        image: '/images/ayodhya-airport-case.jpg',
+        image: '/images/caseStudies/ayodhya-airport-case.jpg',
         challenge: [
             'First Cat-I Airport Constructed by Up Government',
             'Regular Visit of the CM of UP and their officials, which led to Regular Scope change',
@@ -104,10 +102,8 @@ const systemIntegrationData = {
             { label: 'Media Coverage', value: 'National News' }
         ],
         gallery: [
-            '/images/ayodhya-1.jpg',
-            '/images/ayodhya-2.jpg',
-            '/images/ayodhya-3.jpg',
-            '/images/ayodhya-4.jpg'
+            '/images/caseStudies/ayodhya-1.jpg',
+            '/images/caseStudies/ayodhya-2.jpg'
         ]
     },
 
@@ -115,7 +111,7 @@ const systemIntegrationData = {
         title: '23 No\'s AVDGS AT JAIPUR AIRPORT',
         category: 'SITC/Turnkey Projects',
         badge: '₹8 Cr.',
-        image: '/images/jaipur-airport-case.jpg',
+        image: '/images/caseStudies/jaipur-airport-case.jpg',
         challenge: [
             'Installation on remote parking bays',
             'Integration with existing GOS',
@@ -141,10 +137,9 @@ const systemIntegrationData = {
             { label: 'Integration', value: 'Seamless' }
         ],
         gallery: [
-            '/images/jaipur-1.jpg',
-            '/images/jaipur-2.jpg',
-            '/images/jaipur-3.jpg',
-            '/images/jaipur-4.jpg'
+            '/images/caseStudies/jaipur-1.jpg',
+            '/images/caseStudies/jaipur-2.png',
+            '/images/caseStudies/jaipur-3.jpg'
         ]
     },
 
@@ -152,7 +147,7 @@ const systemIntegrationData = {
         title: 'SITC of Cat-IIIB Lighting at Chandigarh Airport',
         category: 'SITC/Turnkey Projects',
         badge: '₹10 Cr.',
-        image: '/images/chandigarh-airport-case.jpg',
+        image: '/images/caseStudies/chandigarh-airport-case.png',
         challenge: [
             'Multiple clients and working area was under control of IAF and AAI',
             'Secondary Cable laying on Concrete Slabs',
@@ -176,10 +171,8 @@ const systemIntegrationData = {
             { label: 'Conversion', value: 'Halogen to LED' }
         ],
         gallery: [
-            '/images/chandigarh-1.jpg',
-            '/images/chandigarh-2.jpg',
-            '/images/chandigarh-3.jpg',
-            '/images/chandigarh-4.jpg'
+            '/images/caseStudies/chandigarh-1.png',
+            '/images/caseStudies/chandigarh-2.png'
         ]
     },
 
@@ -187,7 +180,7 @@ const systemIntegrationData = {
         title: 'SITC of AGL System at BIAL Airport',
         category: 'SITC/Turnkey Projects',
         badge: '₹15 Cr.',
-        image: '/images/bial-airport-case.jpg',
+        image: '/images/caseStudies/bial-airport-case.png',
         challenge: [
             'Execution of work during the covid lockdown and pandemic situation',
             'IR Value was too low due to heavy raining in most days',
@@ -213,19 +206,14 @@ const systemIntegrationData = {
             { label: 'Safety Record', value: '0 Incidents' },
             { label: 'Completion', value: 'On Schedule' }
         ],
-        gallery: [
-            '/images/bial-1.jpg',
-            '/images/bial-2.jpg',
-            '/images/bial-3.jpg',
-            '/images/bial-4.jpg'
-        ]
+        gallery: []
     },
 
     'prayagraj-airport': {
         title: 'AVDGS AT PRAYAGRAJ AIRPORT',
         category: 'SITC/Turnkey Projects',
         badge: '₹5 Cr.',
-        image: '/images/prayagraj-airport-case.jpg',
+        image: '/images/caseStudies/prayagraj-airport-case.png',
         challenge: [
             'Stringent timeline of 3 months for inauguration by PM before Kumbh mela for greenfield airport',
             'Approval of DGCA as per CAR',
@@ -250,12 +238,7 @@ const systemIntegrationData = {
             { label: 'Installation', value: '2 Days' },
             { label: 'Event', value: 'Kumbh Mela' }
         ],
-        gallery: [
-            '/images/prayagraj-1.jpg',
-            '/images/prayagraj-2.jpg',
-            '/images/prayagraj-3.jpg',
-            '/images/prayagraj-4.jpg'
-        ]
+        gallery: []
     },
 };
 
@@ -265,7 +248,7 @@ const sitcTurnkeyData = {
         title: 'Refurbishment of MAFI AIRBASE-Hasimara',
         category: 'System Integration',
         badge: '₹3 Cr.',
-        image: '/images/hasimara-airbase-case.jpg',
+        image: '/images/caseStudies/hasimara-airbase-case.png',
         challenge: [
             'System Installed at airbase is a proprietary system',
             'Integration of airfield lighting to Existing Tata Make CMS',
@@ -289,19 +272,14 @@ const sitcTurnkeyData = {
             { label: 'Integration', value: 'Tata CMS' },
             { label: 'Client', value: 'IAF' }
         ],
-        gallery: [
-            '/images/hasimara-1.jpg',
-            '/images/hasimara-2.jpg',
-            '/images/hasimara-3.jpg',
-            '/images/hasimara-4.jpg'
-        ]
+        gallery: []
     },
 
     'amritsar-airport': {
         title: 'CAT IIIB AGL MAINTENANCE AMRITSAR AIRPORT',
         category: 'System Integration',
         badge: '₹1.65 Cr.',
-        image: '/images/amritsar-airport-case.jpg',
+        image: '/images/caseStudies/amritsar-airport-case.png',
         challenge: [
             'Integration of 6 different types of CCRs in ALCMS',
             'Shifting the CCRs in operational airport',
@@ -325,12 +303,7 @@ const sitcTurnkeyData = {
             { label: 'Integration Time', value: '2 Months' },
             { label: 'Hardware Change', value: '1 Day' }
         ],
-        gallery: [
-            '/images/amritsar-1.jpg',
-            '/images/amritsar-2.jpg',
-            '/images/amritsar-3.jpg',
-            '/images/amritsar-4.jpg'
-        ]
+        gallery: []
     },
 };
 
@@ -340,7 +313,7 @@ const onmData = {
         title: 'AGL Maintenance at Guwahati International AIRPORT (ADANI)',
         category: 'O&M',
         badge: '₹4 Cr.',
-        image: '/images/guwahati-airport-case.jpg',
+        image: '/images/caseStudies/guwahati-6.jpg',
         challenge: [
             'Taking over the site with in 5 days, from AAI contractor',
             'BCAS clearance',
@@ -365,10 +338,13 @@ const onmData = {
             { label: 'CMMS Implementation', value: 'Successful' }
         ],
         gallery: [
-            '/images/guwahati-1.jpg',
-            '/images/guwahati-2.jpg',
-            '/images/guwahati-3.jpg',
-            '/images/guwahati-4.jpg'
+            '/images/caseStudies/guwahati-1.jpg',
+            '/images/caseStudies/guwahati-2.jpg',
+            '/images/caseStudies/guwahati-3.jpg',
+            '/images/caseStudies/guwahati-4.jpg',
+            '/images/caseStudies/guwahati-5.jpg',
+            '/images/caseStudies/guwahati-airport-case.jpg',
+            '/images/caseStudies/guwahati-7.jpg'
         ]
     }
 };
