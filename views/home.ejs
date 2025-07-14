@@ -6,19 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <body>
-        <!-- METAR Ticker Section -->
-        <div class="ticker-container" id="tickerWrapper">
-            <div class="ticker-content" id="ticker">
-                <% for (const code in metarData) { const data=metarData[code]; %>
-                    <span style="margin-right: 1.5rem;">
-                        <strong>
-                            <%= data.station %>
-                        </strong>: <%= data.raw %>
-                    </span>
-                    <% } %>
-            </div>
-            <div class="loading-indicator" id="loadingIndicator"></div>
-        </div>
+        
 
         <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel"
             data-bs-interval="3000">
@@ -137,23 +125,22 @@
                         <div class="features-grid">
                             <div class="feature-card industry-leadership">
                                 <div class="feature-image"
-                                    style="background-image: url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop');">
+                                    style="background-image: url('/images/home/1.jpg');">
                                 </div>
                                 <h3>Industry Expertise</h3>
-                                <p>Driven by innovation and excellence, we are shaping industry leadership in
-                                    next-generation defense technologies with over 20 years of proven experience.</p>
+                                <p>Driven by innovation and a bold vision, we're reimagining infrastructure for the airport and defense sectors—bringing fresh ideas, reliable solutions, and a commitment to building a smarter, more connected future.</p>
                             </div>
                             <div class="feature-card state-art">
                                 <div class="feature-image"
                                     style="background-image: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=300&fit=crop');">
                                 </div>
                                 <h3>State of Art Solutions</h3>
-                                <p>We deliver state-of-the-art defense solutions engineered for precision, reliability,
+                                <p>We deliver state-of-the-art airports and defense solutions engineered for precision, reliability,
                                     and operational superiority across all mission-critical applications.</p>
                             </div>
                             <div class="feature-card maintenance">
                                 <div class="feature-image"
-                                    style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop');">
+                                    style="background-image: url('/images/home/3.png');">
                                 </div>
                                 <h3>Maintenance Services</h3>
                                 <p>We provide comprehensive maintenance and lifecycle support to ensure optimal
@@ -169,7 +156,7 @@
                             </div>
                             <div class="feature-card innovation">
                                 <div class="feature-image"
-                                    style="background-image: url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop');">
+                                    style="background-image: url('/images/1.png');">
                                 </div>
                                 <h3>Innovation & Technology</h3>
                                 <p>Continuous investment in R&D and strategic partnerships with leading manufacturers to
@@ -177,7 +164,7 @@
                             </div>
                             <div class="feature-card turnkey-solutions">
                                 <div class="feature-image"
-                                    style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=300&fit=crop');">
+                                    style="background-image: url('/images/home/6.png');">
                                 </div>
                                 <h3>Turnkey Solutions</h3>
                                 <p>End-to-end project management from design and supply to installation, commissioning,
@@ -426,21 +413,24 @@
                         <div class="modern-card-img" style="background-image: url('/images/director/1.png');"></div>
                         <div class="modern-card-content">
                             <h3 class="modern-card-title">Sushim Jain</h3>
-                            <a href="#" class="modern-card-button">LinkedIn</a>
+                            <p class="modern-card-description">24 years+ experience of working in India & in multinational companies like GTL, Tech Mahindra and Honeywell.</p>
+                            <a target="_blank" href="https://www.linkedin.com/in/sushimjain/" class="modern-card-button">LinkedIn</a>
                         </div>
                     </div>
                     <div class="modern-card">
                         <div class="modern-card-img" style="background-image: url('/images/director/2.png');"></div>
                         <div class="modern-card-content">
                             <h3 class="modern-card-title">Anshul Jain</h3>
-                            <a href="#" class="modern-card-button">LinkedIn</a>
+                            <p class="modern-card-description">15+ years of experience working in top multinational companies like Honeywell, Allied Digital and L&T.</p>
+                            <a target="_blank" href="https://www.linkedin.com/in/anshulzen/" class="modern-card-button">LinkedIn</a>
                         </div>
                     </div>
                     <div class="modern-card">
                         <div class="modern-card-img" style="background-image: url('/images/director/3.png');"></div>
                         <div class="modern-card-content">
                             <h3 class="modern-card-title">Praveen Dubey </h3>
-                            <a href="#" class="modern-card-button">LinkedIn</a>
+                            <p class="modern-card-description">24 years+ experience in  Airport's domain with top multinational companies like  AMA , BIAL and Honeywell.</p>
+                            <a target="_blank" href="https://www.linkedin.com/in/praveen-dubey-03781117/" class="modern-card-button">LinkedIn</a>
                         </div>
                     </div>
                 </div>
