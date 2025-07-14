@@ -84,6 +84,7 @@
 
 .image-bg-16x9 {
     width: 100%;
+    padding: 20%;
     aspect-ratio: 16 / 12;
     overflow: hidden;
     background-size: cover;
@@ -96,7 +97,7 @@
     position: relative;
 }
 
-.carousel-div button {
+.carousel-div a {
     margin: 0.5rem auto;
     width: 10rem;
 }
@@ -550,7 +551,7 @@
 }
 
 #director .modern-card-img{
-    aspect-ratio: 10/9;
+    aspect-ratio: 1/1;
 }
 
 #director .modern-card-button {

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             }
         });
-        
+
 
         // Handle submenu toggles
         document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
@@ -220,42 +220,53 @@ document.addEventListener('DOMContentLoaded', function () {
 // Search functionality
 const searchData = [
     // Airfield Ground Lights
-    { title: "LED Approach Light", category: "Approach Lighting", url: "/led-approach-light", description: "High-performance LED approach lighting system for aircraft guidance" },
-    { title: "LED Threshold Light", category: "Approach Lighting", url: "/led-threshold-light", description: "LED threshold lighting for runway approach systems" },
-    { title: "LED Runway End Light", category: "Approach Lighting", url: "/led-runway-end-light", description: "Advanced LED runway end lighting solutions" },
-    { title: "PAPI Lighting", category: "PAPI Lighting", url: "/papi-lighting", description: "Precision Approach Path Indicator lighting systems" },
-    { title: "Runway Edge Light", category: "Runway Lighting", url: "/runway-edge-light", description: "Professional runway edge lighting systems" },
-    { title: "Runway Centerline Light", category: "Runway Lighting", url: "/runway-centerline-light", description: "Centerline lighting for runway guidance" },
-    { title: "Taxiway Centerline Lighting", category: "Taxiway Lighting", url: "/taxiway-centerline-lighting", description: "Centerline lighting systems for taxiways" },
-    { title: "Runway Guard Lights", category: "Taxiway Lighting", url: "/runway-guard-lights", description: "Safety lighting for runway protection" },
-    { title: "Airfield Guidance Signs", category: "Airfield Guidance Signs", url: "/airfield-guidance-signs", description: "Comprehensive airfield signage solutions" },
-    { title: "Mandatory Information Signs", category: "Airfield Guidance Signs", url: "/mandatory-information-signs", description: "Required airfield information signage" },
-    { title: "Series Circuit Isolating Transformers", category: "Transformers & Connector Kits", url: "/series-circuit-isolating-transformers", description: "Electrical transformers for airfield lighting" },
-    { title: "Micro 100 CCR", category: "CCRs & Accessories", url: "/micro-100-ccr", description: "Constant current regulator systems" },
-    { title: "Portable Lighting", category: "Portable Lighting", url: "/portable-lighting", description: "Mobile lighting solutions for airports" },
-    { title: "Windsock Mast", category: "Windsock Mast", url: "/windsock-mast", description: "Wind direction indicator systems" },
-    { title: "AGNiS Docking Aid", category: "AGNiS Docking Aid", url: "/agnis-docking-aid", description: "Aircraft docking guidance systems" },
-    
+    { title: "LED Approach Light", category: "Approach Lighting", url: "/led-approach-light", description: "High-intensity, Uni-directional, Elevated Runway Approach,Threshold, Threshold Wingbar & Runway End lights used in SAPL & ICAO category I, II & III runways." },
+    { title: "LED Threshold Light", category: "Approach Lighting", url: "/led-threshold-light", description: "High-intensity, Uni-directional, Elevated Threshold lights for ICAO category I, II & III runways." },
+    { title: "LED Runway End Light", category: "Approach Lighting", url: "/led-runway-end-light", description: "High-intensity, Uni-directional, Elevated Runway End lights for ICAO category I, II & III runways." },
+    { title: "PAPI Lighting", category: "PAPI Lighting", url: "/papi-lighting", description: "Precision Approach Path Indicator for aircraft glide slope guidance using visual light array." },
+    { title: "Runway Edge Light", category: "Runway Lighting", url: "/runway-edge-light", description: "Medium intensity omni-directional inset runway edge light for general applications." },
+    { title: "Runway Centerline Light", category: "Runway Lighting", url: "/runway-centerline-light", description: "Runway centerline light for CAT III airfield ground lighting systems with LAHSO support." },
+    { title: "Taxiway Centerline Lighting", category: "Taxiway Lighting", url: "/taxiway-centerline-lighting", description: "High-performance taxiway centerline lighting system." },
+    { title: "Runway Guard Lights", category: "Taxiway Lighting", url: "/runway-guard-light", description: "Elevated runway guard lights for taxiway/runway intersections to avoid incursions." },
+    { title: "Airfield Guidance Signs", category: "Airfield Guidance Signs", url: "/airfield-guidance-signs", description: "Comprehensive airfield signage system for pilot navigation and safety." },
+    { title: "Mandatory Information Signs", category: "Airfield Guidance Signs", url: "/mandatory-information-signs", description: "LED signs meeting ICAO requirements for mandatory and informational guidance." },
+    { title: "Series Circuit Isolating Transformers", category: "Transformers & Connector Kits", url: "/series-circuit-isolating-transformers", description: "Plug-in type isolating transformers for series airfield lighting circuits." },
+    { title: "Micro 100 CCR", category: "CCRs & Accessories", url: "/micro-100-ccr", description: "Compact Constant Current Regulator with high efficiency for AGL circuits." },
+    { title: "Portable Lighting", category: "Portable Lighting", url: "/portable-lighting", description: "Portable airfield lighting for temporary and emergency operations." },
+    { title: "Windsock Mast", category: "Windsock Mast", url: "/windsock-mast", description: "Floodlit windsock mast with ICAO-compliant visibility and design." },
+    { title: "AGNiS Docking Aid", category: "AGNiS Docking Aid", url: "/agnis-docking-aid", description: "Azimuth guidance system for safe aircraft stand alignment." },
+
     // Other Products
-    { title: "AVDGS", category: "AVDGS", url: "/avdgs", description: "Advanced Visual Docking Guidance Systems" },
-    { title: "Photometric System", category: "Photometric System", url: "/photometric-system", description: "Light measurement and calibration systems" },
-    { title: "ILCMS", category: "ILCMS", url: "/ilcms", description: "Intelligent Lighting Control and Management System" },
-    { title: "Heliport Lighting", category: "Heliport Lighting", url: "/heliport-lighting", description: "Specialized lighting for helicopter operations" },
-    { title: "Air Traffic Management", category: "Air Traffic Management", url: "/air-traffic-management", description: "Comprehensive air traffic control solutions" },
-    { title: "Navigation & Tracking", category: "Navigation & Tracking", url: "/navigation-tracking", description: "Aircraft navigation and tracking systems" },
-    { title: "Weather & Communication", category: "Weather & Communication", url: "/weather-communication", description: "Weather monitoring and communication systems" },
-    { title: "Support Equipment", category: "Support Equipment", url: "/support-equipment", description: "Supporting equipment for airport operations" },
-    { title: "Smart Metering", category: "Smart Metering", url: "/smart-metering", description: "Smart energy metering solutions" },
-    
+    { title: "AVDGS", category: "AVDGS", url: "/avdgs", description: "Advanced Visual Docking Guidance System with 3D laser tracking and ICAO compliance." },
+    { title: "Photometric System", category: "Photometric System", url: "/photometric-system", description: "Advanced light performance measurement and calibration systems." },
+    { title: "ILCMS", category: "ILCMS", url: "/ilcms", description: "Integrated Lighting Control and Monitoring System for airfield lighting infrastructure." },
+    { title: "Heliport Lighting", category: "Heliport Lighting", url: "/heliport-lighting", description: "Specialized lighting systems for heliports and helipads including TLOF, FATO, beacon, etc." },
+    { title: "Air Traffic Management", category: "Air Traffic Management", url: "/air-traffic-management", description: "Integrated systems for managing air traffic with surveillance, radar, communication and alarms." },
+    { title: "Navigation & Tracking", category: "Navigation & Tracking", url: "/navigation-tracking", description: "Precision navigation and tracking systems including NDB, ADS-B, and monitoring." },
+    { title: "Weather & Communication", category: "Weather & Communication", url: "/weather-communication", description: "Automated weather monitoring and tactical communication solutions." },
+    { title: "Support Equipment", category: "Support Equipment", url: "/support-equipment", description: "Auxiliary equipment like shelters, power generators, pilot cages for airfield operations." },
+    { title: "Smart Metering", category: "Smart Metering", url: "/smart-metering", description: "Modern metering systems for energy management and emergency alerts." },
+
     // Main Pages
     { title: "About Us", category: "Company", url: "/about", description: "Learn about Vardhman Airport Solutions" },
-    { title: "Our Products", category: "Products", url: "/our-products", description: "Complete range of airport lighting and equipment" },
-    { title: "Our Solutions", category: "Solutions", url: "/solutions", description: "Comprehensive airport solutions" },
-    { title: "News", category: "News", url: "/news", description: "Latest news and updates" },
-    { title: "Point of View", category: "Insights", url: "/pov", description: "Industry insights and perspectives" },
-    { title: "Careers", category: "Careers", url: "/careers", description: "Join our team" },
-    { title: "Contact", category: "Contact", url: "/contact", description: "Get in touch with us" }
+    { title: "Our Products", category: "Products", url: "/our-products", description: "Complete range of airport lighting and infrastructure products" },
+    { title: "Our Solutions", category: "Solutions", url: "/solutions", description: "Tailored airport and defense solutions from Vardhman" },
+    { title: "News", category: "News", url: "/news", description: "Latest news, updates, and innovations" },
+    { title: "Point of View", category: "Insights", url: "/pov", description: "Expert perspectives on airport systems and technologies" },
+    { title: "Careers", category: "Careers", url: "/careers", description: "Join the Vardhman team and shape airport technology" },
+    { title: "Contact", category: "Contact", url: "/contact", description: "Reach out to Vardhman for product or business inquiries" },
+
+    { title: "Defense Solutions", category: "Sector", url: "/our-products?sector=defense", description: "Explore defense-grade airport systems, radar, lighting, ATC shelters and tactical equipment." },
+    { title: "Airport Infrastructure", category: "Sector", url: "/our-products?sector=airport", description: "Advanced airport solutions for lighting, docking, communication, and navigation systems." },
+    { title: "Railway Systems", category: "Sector", url: "/our-products?sector=railways", description: "Smart metering and communication systems tailored for rail infrastructure." },
+    { title: "Smart Infrastructure", category: "Sector", url: "/our-products", description: "Integrated lighting, energy, and monitoring systems for modern infrastructure needs." },
+    { title: "Tactical Communication", category: "Defense", url: "/weather-communication", description: "Military-grade tactical communication systems and emergency response tools." },
+    { title: "Air Traffic Control", category: "Air Traffic Management", url: "/air-traffic-management", description: "Real-time ATC solutions, mobile towers, alarm systems, and voice recorders." },
+    { title: "Meteorological Systems", category: "Weather & Communication", url: "/weather-communication", description: "Weather radars, AWOS, and observation tools for all-weather operations." },
+    { title: "Lighting Control", category: "ILCMS", url: "/ilcms", description: "Integrated Lighting Control and Monitoring Systems for airfields." },
+
 ];
+
 
 function initializeSearch() {
     const searchToggle = document.getElementById('searchToggle');
@@ -268,7 +279,7 @@ function initializeSearch() {
     if (!searchToggle || !searchInput || !searchBtn || !searchResults) return;
 
     // Handle search toggle
-    searchToggle.addEventListener('click', function(e) {
+    searchToggle.addEventListener('click', function (e) {
         e.preventDefault();
         if (window.innerWidth < 992) {
             // Mobile behavior
@@ -284,10 +295,10 @@ function initializeSearch() {
 
     // Handle search input
     let searchTimeout;
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', function () {
         clearTimeout(searchTimeout);
         const query = this.value.trim();
-        
+
         if (query.length < 2) {
             searchResults.innerHTML = '';
             return;
@@ -302,7 +313,7 @@ function initializeSearch() {
     });
 
     // Handle search button
-    searchBtn.addEventListener('click', function() {
+    searchBtn.addEventListener('click', function () {
         const query = searchInput.value.trim();
         if (query.length >= 2) {
             performSearch(query);
@@ -310,7 +321,7 @@ function initializeSearch() {
     });
 
     // Handle Enter key
-    searchInput.addEventListener('keypress', function(e) {
+    searchInput.addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
             const query = this.value.trim();
             if (query.length >= 2) {
@@ -321,8 +332,8 @@ function initializeSearch() {
 
     function performSearch(query) {
         searchLoading.classList.add('d-none');
-        
-        const results = searchData.filter(item => 
+
+        const results = searchData.filter(item =>
             item.title.toLowerCase().includes(query.toLowerCase()) ||
             item.category.toLowerCase().includes(query.toLowerCase()) ||
             item.description.toLowerCase().includes(query.toLowerCase())
@@ -359,7 +370,7 @@ function initializeSearch() {
     }
 
     // Close search dropdown when clicking outside
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         if (!e.target.closest('.dropdown') || !e.target.closest('.search-dropdown')) {
             if (window.innerWidth < 992) {
                 searchDropdown.classList.remove('show');
