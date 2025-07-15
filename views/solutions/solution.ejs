@@ -14,8 +14,40 @@
 </section>
 
 <!-- Parallax Image Section -->
-<section class="about-parallax">
+<section class="about-parallax" style="background-image: url(<%= pageImage %>);">
     <h1 class="heading"><%= pageTitle || 'Our Solutions' %></h1>
+</section>
+
+<!-- Key Features Section -->
+<section class="key-features">
+    <div class="container-fluid">
+        <% if (typeof pageBullets !== 'undefined' && pageBullets && pageBullets.length > 0) { %>
+            <div class="features-grid">
+                <% pageBullets.forEach((bullet) => { %>
+                    <div class="feature-item">
+                        <!-- <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20,6 9,17 4,12"></polyline>
+                            </svg>
+                        </div> -->
+                        <div class="feature-content">
+                            <% 
+                            const colonIndex = bullet.indexOf(':');
+                            if (colonIndex > 0) {
+                                const title = bullet.substring(0, colonIndex);
+                                const description = bullet.substring(colonIndex + 1).trim();
+                            %>
+                                <h3><%= title %></h3>
+                                <p><%= description %></p>
+                            <% } else { %>
+                                <p><%= bullet %></p>
+                            <% } %>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        <% } %>
+    </div>
 </section>
 
 <!-- Case Studies Section -->

@@ -273,38 +273,7 @@ const sitcTurnkeyData = {
             { label: 'Client', value: 'IAF' }
         ],
         gallery: []
-    },
-
-    'amritsar-airport': {
-        title: 'CAT IIIB AGL MAINTENANCE AMRITSAR AIRPORT',
-        category: 'System Integration',
-        badge: '₹1.65 Cr.',
-        image: '/images/caseStudies/amritsar-airport-case.png',
-        challenge: [
-            'Integration of 6 different types of CCRs in ALCMS',
-            'Shifting the CCRs in operational airport',
-            'Legacy hardwares',
-            'Changing IT hardware during live operations'
-        ],
-        solution: [
-            'Serial and parallel comms integration of CCRs',
-            'Experienced and qualified technicians identified',
-            'Adopted written lock in and lock out procedures',
-            'NOTAM taken for performing work on the system'
-        ],
-        results: [
-            'Integration project completed in 2 months',
-            'CCRs shifted in record time of 2 days',
-            'IT hardware of ALCMS changed in 1 day'
-        ],
-        stats: [
-            { label: 'Project Value', value: '₹1.65 Cr.' },
-            { label: 'CCR Types', value: '6' },
-            { label: 'Integration Time', value: '2 Months' },
-            { label: 'Hardware Change', value: '1 Day' }
-        ],
-        gallery: []
-    },
+    }
 };
 
 // O&M (Operations & Maintenance) Case Studies Data
@@ -346,7 +315,38 @@ const onmData = {
             '/images/caseStudies/guwahati-airport-case.jpg',
             '/images/caseStudies/guwahati-7.jpg'
         ]
-    }
+    },
+
+    'amritsar-airport': {
+        title: 'CAT IIIB AGL MAINTENANCE AMRITSAR AIRPORT',
+        category: 'O&M',
+        badge: '₹1.65 Cr.',
+        image: '/images/caseStudies/amritsar-airport-case.png',
+        challenge: [
+            'Integration of 6 different types of CCRs in ALCMS',
+            'Shifting the CCRs in operational airport',
+            'Legacy hardwares',
+            'Changing IT hardware during live operations'
+        ],
+        solution: [
+            'Serial and parallel comms integration of CCRs',
+            'Experienced and qualified technicians identified',
+            'Adopted written lock in and lock out procedures',
+            'NOTAM taken for performing work on the system'
+        ],
+        results: [
+            'Integration project completed in 2 months',
+            'CCRs shifted in record time of 2 days',
+            'IT hardware of ALCMS changed in 1 day'
+        ],
+        stats: [
+            { label: 'Project Value', value: '₹1.65 Cr.' },
+            { label: 'CCR Types', value: '6' },
+            { label: 'Integration Time', value: '2 Months' },
+            { label: 'Hardware Change', value: '1 Day' }
+        ],
+        gallery: []
+    },
 };
 
 // Lifecycle Services Case Studies Data
@@ -371,49 +371,92 @@ router.get("/", (req, res) => {
 router.get("/system-integration", (req, res) => {
     res.render("solutions/solution.ejs", { 
         caseStudiesData: systemIntegrationData,
+        pageImage: "/images/solutions/1.jpg",
         pageTitle: "System Integration",
-        pageDescription: "Delivering seamless integration of multi-vendor systems for airfields, defense, and railway infrastructure. Ensuring interoperability, centralized control, and reliability."
+        pageDescription: "Complexity can be a major hurdle, but we turn it into synergy. Our System Integration solutions seamlessly blend diverse systems from multiple vendors into a single, cohesive, and fully functional whole.",
+        pageBullets: [
+            "Seamless Interoperability: We ensure all your systems, regardless of origin, communicate and operate flawlessly, eliminating data silos and boosting operational flow.",
+            "Centralized Control: Gain a unified, intuitive command center for your entire infrastructure, simplifying management, enhancing awareness, and enabling faster decisions.",
+            "Enhanced Reliability: By optimizing system interactions and proactively eliminating potential failure points, we significantly increase the stability and dependability of your operations.",
+            "Industry Expertise: We specialize in the unique demands of complex environments like airfields, defense installations, and railway infrastructure, understanding their specific needs and regulatory requirements."
+        ]
     });
 });
 
 router.get("/sitc-turnkey-projects", (req, res) => {
     res.render("solutions/solution.ejs", { 
         caseStudiesData: sitcTurnkeyData,
+        pageImage: "/images/solutions/2.jpg",
         pageTitle: "SITC Turnkey Projects",
-        pageDescription: "Complete turnkey solutions from design to commissioning. Delivering end-to-end project management with guaranteed performance and quality standards."
+        pageDescription: "Have a critical infrastructure project? We take it from concept to completion. Our Supply, Installation, Testing, and Commissioning (SITC) / Turnkey Project solutions offer a complete, end-to-end approach, handling every phase for you.",
+        pageBullets: [
+            "Comprehensive Project Management: We manage the entire lifecycle, from detailed design and planning to procurement, installation, and rigorous testing.",
+            "Single Point of Contact: Benefit from a streamlined process with one dedicated team overseeing all aspects, reducing complexity and ensuring clear communication.",
+            "Guaranteed Performance: Our methodical approach and stringent quality controls ensure the commissioned infrastructure meets or exceeds all performance and regulatory standards.",
+            "Reduced Burden: We alleviate the operational stress on your team, letting you focus on your core business while we deliver a fully operational system."
+        ]
     });
 });
 
 router.get("/onm", (req, res) => {
     res.render("solutions/solution.ejs", { 
         caseStudiesData: onmData,
+        pageImage: "/images/4.png",
         pageTitle: "Operations & Maintenance",
-        pageDescription: "Comprehensive operations and maintenance services ensuring optimal performance, maximum uptime, and cost-effective lifecycle management of critical infrastructure."
+        pageDescription: "Your critical systems are vital. Our Operation & Maintenance (O&M) solutions provide long-term, proactive support to ensure continuous, safe, and compliant operation of your infrastructure.",
+        pageBullets: [
+            "Maximized Uptime: Through continuous monitoring, preventive maintenance, and rapid incident response, we minimize downtime, ensuring your systems are always available when you need them.",
+            "Ensured Safety: We adhere to the highest safety protocols and industry best practices, safeguarding both personnel and assets during all operational and maintenance activities.",
+            "Regulatory Compliance: Our team stays updated on all relevant industry regulations and standards, ensuring your infrastructure consistently meets legal and operational compliance requirements.",
+            "Proactive & Reactive Support: We offer both scheduled preventive maintenance to prevent issues and swift reactive support to address any unforeseen problems, keeping your operations smooth."
+        ]
     });
 });
 
 router.get("/lifecycle-services", (req, res) => {
     res.render("solutions/solution.ejs", { 
         caseStudiesData: lifecycleData,
+        pageImage: "/images/solutions/3.png",
         pageTitle: "Lifecycle Services",
-        pageDescription: "Complete asset lifecycle management from initial design through modernization to end-of-life. Maximizing value and performance throughout the entire asset journey."
+        pageDescription: "Infrastructure is a significant investment. Our Lifecycle Services solutions offer a holistic approach to managing your assets, from initial planning through to eventual retirement, ensuring you achieve maximum return on investment (ROI).",
+        pageBullets: [
+            "Strategic Planning: We help develop long-term strategies for your infrastructure, aligning technology investments with your organizational goals.",
+            "Optimized Deployment: Our expertise ensures efficient and effective deployment of new systems and upgrades, minimizing disruption and maximizing benefits.",
+            "Continuous Monitoring & Optimization: We use advanced tools and techniques to continuously monitor asset performance, identify areas for improvement, and optimize operational efficiency.",
+            "Strategic Retirement & Replacement: We guide you through the responsible retirement of aging assets and the strategic planning for their replacement, ensuring a smooth transition and continuous operational capability."
+        ]
     });
 });
 
 router.get("/repair-upgrade-services", (req, res) => {
     res.render("solutions/solution.ejs", { 
         caseStudiesData: repairUpgradeData,
+        pageImage: "/images/solutions/4.png",
         pageTitle: "Repair & Upgrade Services",
-        pageDescription: "Specialized repair and upgrade services for aging infrastructure. Modernizing systems with latest technology while maintaining operational continuity."
+        pageDescription: "Don't let aging systems hold you back. Our dedicated Repair & Upgrade Services solutions extend the operational life and enhance the performance of your existing infrastructure.",
+        pageBullets: [
+            "Timely Repairs: Our skilled technicians provide prompt and effective repairs, minimizing system downtime and quickly restoring full functionality.",
+            "Strategic Retrofits: We implement modern enhancements and modifications to existing hardware, improving efficiency, safety, or compatibility without requiring a full system replacement.",
+            "Hardware Upgrades: Boost performance and capacity with state-of-the-art hardware component upgrades, ensuring your systems remain competitive and capable.",
+            "Software Updates: We ensure your systems are running on the latest, most secure, and feature-rich software versions, enhancing functionality and protecting against vulnerabilities."
+        ]
     });
 });
 
 router.get("/3rd-party", (req, res) => {
     res.render("solutions/solution.ejs", { 
         caseStudiesData: itemAndSpares,
+        pageImage: "/images/solutions/5.jpg",
         pageTitle: "3rd Party Items & Spares",
-        pageDescription: "Procurement and supply of genuine 3rd party components, spare parts, and accessories from trusted global OEMs. Full support for legacy and modern systems alike."
+        pageDescription: "Having the right part at the right time is crucial. We specialize in the reliable Procurement and Supply of Genuine 3rd Party Components, Spare Parts, and Accessories from a global network of trusted Original Equipment Manufacturers (OEMs).",
+        pageBullets: [
+            "Genuine Parts Guarantee: We ensure the supply of authentic, high-quality components directly from manufacturers, guaranteeing compatibility and performance.",
+            "Extensive Network: Our global procurement network allows us to source even hard-to-find parts for a wide range of systems, both legacy and modern.",
+            "Full System Support: We provide comprehensive support for integrating these components, ensuring they seamlessly fit into your existing infrastructure.",
+            "Minimizing Downtime: Quick access to essential spares helps reduce lead times for repairs and maintenance, minimizing potential operational disruptions."
+        ]
     });
 });
+
 
 export default router;

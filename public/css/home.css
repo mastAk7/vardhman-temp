@@ -91,7 +91,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-blend-mode: darken;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.2);
     /* background-color: rgba(30, 41, 59, 0.9);  */
     /* dark overlay */
     position: relative;

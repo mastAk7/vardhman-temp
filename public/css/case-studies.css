@@ -22,6 +22,134 @@
     margin-bottom: 0;
 }
 
+/* Key Features Section */
+.key-features {
+    background: #fff;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.key-features::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+}
+
+.features-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+}
+
+.feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
+    border-color: #cbd5e1;
+}
+
+.feature-icon {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    color: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.feature-content {
+    flex: 1;
+    padding-top: 0.25rem;
+}
+
+.feature-content h3 {
+    color: #1e293b;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.feature-content p {
+    color: #64748b;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .key-features {
+        padding: 3rem 0;
+    }
+    
+    .features-grid {
+        padding: 0 1rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .feature-item {
+        padding: 1.5rem;
+    }
+    
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 1rem;
+    }
+    
+    .feature-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .feature-content p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        gap: 1.5rem;
+    }
+    
+    .feature-item {
+        padding: 1.25rem;
+    }
+}
+
 .case-studies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));

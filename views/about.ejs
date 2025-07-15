@@ -19,14 +19,14 @@
 
 
   <!-- 3. Parallax Image Section -->
-  <section class="about-parallax">
+  <!-- <section class="about-parallax">
     <h1 class="heading"> About Us </h1>
-  </section>
+  </section> -->
 
 
   <style>
     .hero-section {
-      padding: 80px 20px;
+      padding: 0 20px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -159,7 +159,7 @@
     .timeline-marker {
       position: absolute;
       left: 50%;
-      top: 50px;
+      top: 45%;
       transform: translateX(-50%);
       width: 50px;
       height: 50px;
@@ -232,9 +232,9 @@
     }
 
     .achievement-tag:hover {
-      background: #4A90E2;
-      color: white;
-      border-color: #4A90E2;
+      background: #4A90E2 !important;
+      color: white !important;
+      border-color: #4A90E2 !important;
     }
 
     .stats-section {
@@ -377,10 +377,80 @@
         excellence</p>
     </div>
   </div>
+  <style>
+    .timeline-container, .timeline:before{
+      max-height: 1600px;
+    }
+    .timeline-item-2{
+      position: relative;
+      bottom: 10rem;
+    }
+    .timeline-item-3{
+      position: relative;
+      bottom: 20rem;
+    }
+    .timeline-item-4{
+      position: relative;
+      bottom: 30rem;
+    }
+    .timeline-item-5{
+      position: relative;
+      bottom: 40rem;
+    }
+    .timeline-item-6{
+      position: relative;
+      bottom: 50rem;
+    }
+    .stats-section{
+      margin-top: 100px;
+    }
+
+    @media (max-width: 1050px){
+      .timeline-container, .timeline:before{
+      max-height: 1750px;
+    }
+    }
+    @media (max-width: 1000px){
+      .timeline-container, .timeline:before{
+      max-height: 1800px;
+    }
+    }
+    @media (max-width: 950px){
+      .timeline-container, .timeline:before{
+      max-height: 1850px;
+    }
+    }
+    @media (max-width: 900px){
+      .timeline-container, .timeline:before{
+      max-height: 1950px;
+    }
+    }
+    @media (max-width: 850px){
+      .timeline-container, .timeline:before{
+      max-height: 2050px;
+    }
+    }
+    @media (max-width: 800px){
+      .timeline-container, .timeline:before{
+      max-height: 2150px;
+    }
+    }
+    @media (max-width: 768px){
+      .timeline-item-2,.timeline-item-3,.timeline-item-4,.timeline-item-5,.timeline-item-6{
+        position: initial;
+      }
+      .timeline-container, .timeline:before{
+        max-height: none;
+      }
+      .stats-section{
+      margin-top: 40px;
+    }
+    }
+  </style>
 
   <div class="timeline-container">
     <div class="timeline">
-      <div class="timeline-item">
+      <div class="timeline-item timeline-item-1">
         <div class="timeline-marker">2017</div>
         <div class="timeline-content">
           <div class="year-badge">2017</div>
@@ -394,7 +464,7 @@
         </div>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item timeline-item-2">
         <div class="timeline-marker">2018</div>
         <div class="timeline-content">
           <div class="year-badge">2018</div>
@@ -409,7 +479,7 @@
         </div>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item timeline-item-3">
         <div class="timeline-marker">2020</div>
         <div class="timeline-content">
           <div class="year-badge">2020</div>
@@ -423,7 +493,7 @@
         </div>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item timeline-item-4">
         <div class="timeline-marker">2023</div>
         <div class="timeline-content">
           <div class="year-badge">2018-2023</div>
@@ -438,7 +508,7 @@
         </div>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item timeline-item-5">
         <div class="timeline-marker">2024</div>
         <div class="timeline-content">
           <div class="year-badge">2024</div>
@@ -453,7 +523,7 @@
         </div>
       </div>
 
-      <div class="timeline-item">
+      <div class="timeline-item timeline-item-6">
         <div class="timeline-marker">2025</div>
         <div class="timeline-content">
           <div class="year-badge">March 2025</div>
@@ -484,8 +554,8 @@
         <div class="stat-label">Key Sectors</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">15+</div>
-        <div class="stat-label">Major Projects</div>
+        <div class="stat-number">200+</div>
+        <div class="stat-label">Projects</div>
       </div>
     </div>
   </div>
@@ -548,38 +618,26 @@
       <div class="products-grid">
         <!-- Card 1 -->
         <div class="modern-card">
-          <div class="modern-card-img" style="background-image: url('/images/1.png');"></div>
+          <div class="modern-card-img" style="background-image: url('/images/about/1.jpg');"></div>
           <div class="modern-card-content">
             <h3 class="modern-card-title">Airport</h3>
-            <p class="modern-card-description"> The company’s ₹3500 Crore estimate for the airport market is a credible
-              target for its comprehensive E&M solutions, extending beyond just AGL. With the global commercial airport
-              lighting market valued at USD 700–750 million in 2024 (~₹5800–₹6200 Crores) and India projected to grow at
-              over 9.4% CAGR (IMARC, Jan 2024), this estimate aligns well within a growing aviation infrastructure
-              sector.</p>
+            <p class="modern-card-description"> Vardhman targets ₹3500 Cr in the airport market, supported by its E&M solutions beyond AGL. With the global airport lighting market valued at ₹5800–₹6200 Cr and India growing at 9.4% CAGR, the estimate is well-aligned with infrastructure growth.</p>
             <a href="/airport" class="modern-card-button">View Details</a>
           </div>
         </div>
         <div class="modern-card">
-          <div class="modern-card-img" style="background-image: url('/images/2.png');"></div>
+          <div class="modern-card-img" style="background-image: url('/images/about/2.jpg');"></div>
           <div class="modern-card-content">
             <h3 class="modern-card-title">Defense</h3>
-            <p class="modern-card-description"> The ₹3500 Crore estimate for the defense sector reflects Vardhman’s
-              focused niche in E&M infrastructure for Army Aviation and defense establishments. While India’s overall
-              defense budget is projected to reach ₹6.8 lakh crore in 2025–26, Vardhman’s target represents a realistic
-              share of this vast market. With India’s defense market estimated at USD 17.3 billion (~₹1.43 lakh crore)
-              in 2024 (IMARC, May 2025), the figure aligns with its specialized and addressable segment.</p>
+            <p class="modern-card-description"> Vardhman’s ₹3500 Cr defense estimate focuses on Army Aviation and defense E&M infrastructure. With India's defense budget reaching ₹6.8 lakh Cr and the market valued at ₹1.43 lakh Cr (2024), the target reflects a realistic niche opportunity.</p>
             <a href="/defense" class="modern-card-button">View Details</a>
           </div>
         </div>
         <div class="modern-card">
-          <div class="modern-card-img" style="background-image: url('/images/4.png');"></div>
+          <div class="modern-card-img" style="background-image: url('/images/about/3.jpg');"></div>
           <div class="modern-card-content">
-            <h3 class="modern-card-title">Railways</h3>
-            <p class="modern-card-description"> The ₹2500 Crore estimate for the MES/Railways sector aligns closely with
-              India’s current smart meter market size. IMARC reported the market at USD 288.3 million (₹2393 Crores) in
-              2024, while Zion estimated it at USD 212 million (₹1759 Crores) in 2023, with projections reaching over
-              ₹23,000 Crores by 2032 at a 33.3% CAGR. With Vardhman actively entering this space and securing MES smart
-              metering projects, the ₹2500 Crore figure reflects a credible and focused market opportunity.
+            <h3 class="modern-card-title">Railways/MES</h3>
+            <p class="modern-card-description"> The ₹2500 Cr target for MES/Railways aligns with India’s ₹2393 Cr smart meter market (2024), projected to cross ₹23,000 Cr by 2032 at 33.3% CAGR. Vardhman’s smart metering projects support this focused and credible market entry.
             </p>
             <a href="/railways" class="modern-card-button">View Details</a>
           </div>
@@ -589,11 +647,10 @@
   </section>
 
 
-  <section id="products">
+  <!-- <section id="products">
     <div class="container-fluid">
       <h1 class="heading"> Glance at Our References </h1>
       <div class="products-grid">
-        <!-- Card 1 -->
         <div class="modern-card">
           <div class="modern-card-img" style="background-image: url('/images/1.png');"></div>
           <div class="modern-card-content">
@@ -620,7 +677,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
 
@@ -653,8 +710,7 @@
           <div class="modern-card-img" style="background-image: url('/images/director/1.png');"></div>
           <div class="modern-card-content">
             <h3 class="modern-card-title">Sushim Jain</h3>
-            <p class="modern-card-description">24 years+ experience of working in India & in multinational companies
-              like GTL, Tech Mahindra and Honeywell.</p>
+            <p class="modern-card-description">With 25+ years of experience, Sushim Jain has driven 14X revenue and 38X PAT growth at Vardhman Airport Solutions, scaling the team to 230. A former Honeywell leader, he excels in finance, strategy, product development, and project management. He is an alumnus of IIM Mumbai and MIT Manipal.</p>
             <a target="_blank" href="https://www.linkedin.com/in/sushimjain/" class="modern-card-button">LinkedIn</a>
           </div>
         </div>
@@ -662,8 +718,7 @@
           <div class="modern-card-img" style="background-image: url('/images/director/2.png');"></div>
           <div class="modern-card-content">
             <h3 class="modern-card-title">Anshul Jain</h3>
-            <p class="modern-card-description">15+ years of experience working in top multinational companies like
-              Honeywell, Allied Digital and L&T.</p>
+            <p class="modern-card-description">Anshul Jain, Director at Vardhman Airport Solutions, specializes in airport automation, security, and lighting. Known for strategic growth and key account management, he won Honeywell’s President Club Award for exceeding targets by 347%. He leads major projects for clients like DIAL and AAI.</p>
             <a target="_blank" href="https://www.linkedin.com/in/anshulzen/" class="modern-card-button">LinkedIn</a>
           </div>
         </div>
@@ -671,8 +726,7 @@
           <div class="modern-card-img" style="background-image: url('/images/director/3.jpg');"></div>
           <div class="modern-card-content">
             <h3 class="modern-card-title">Praveen Dubey </h3>
-            <p class="modern-card-description">24 years+ experience in Airport's domain with top multinational
-              companies like AMA , BIAL and Honeywell.</p>
+            <p class="modern-card-description">Praveen Dubey, Director of Engineering & Operations at Vardhman Airport Solutions, has 20+ years in infrastructure and project delivery. He leads AGL and VDGS projects, including IGI Airport’s CAT III Lighting. He also established Vardhman’s defense vertical, known for timely, on-budget execution.</p>
             <a target="_blank" href="https://www.linkedin.com/in/praveen-dubey-03781117/"
               class="modern-card-button">LinkedIn</a>
           </div>
@@ -752,23 +806,23 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/1.png');">
+          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/training/1.png');">
           </div>
         </div>
         <div class="carousel-item">
-          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/2.png');"></div>
+          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/training/2.jpg');"></div>
         </div>
         <div class="carousel-item">
-          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/4.png');"></div>
+          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/training/3.jpg');"></div>
         </div>
         <div class="carousel-item">
-          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/5.png');"></div>
+          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/training/4.png');"></div>
         </div>
         <div class="carousel-item">
-          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/6.jpg');"></div>
+          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/training/5.png');"></div>
         </div>
         <div class="carousel-item">
-          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/7.jpg');"></div>
+          <div class="carousel-div alt-carousel-img" style="background-image: url('/images/training/6.jpg');"></div>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#trainingProgramsCarousel"
