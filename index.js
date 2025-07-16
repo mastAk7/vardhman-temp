@@ -18,7 +18,7 @@ import povRouter from './routes/pov.routes.js'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORT = 3000;
+const PORT = 4444;
 const app = express();
 
 app.use(express.static(path.join(__dirname,"public")))

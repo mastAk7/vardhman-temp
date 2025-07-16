@@ -314,7 +314,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    filter: brightness(0.9) contrast(1.1) saturate(0.9) sepia(0.1);
+    /* filter: brightness(0.9) contrast(1.1) saturate(0.9) sepia(0.1); */
 }
 
 
@@ -322,7 +322,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.2) !important;
+    background: rgb(247, 247, 247) !important;
     mix-blend-mode: multiply;
     /* blend with image */
 }

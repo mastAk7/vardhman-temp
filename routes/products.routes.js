@@ -256,6 +256,10 @@ router.get('/our-products', (req, res) => {
 // Dynamic route handler for SEO-friendly URLs
 router.get('/:slug', (req, res) => {
   const slug = req.params.slug;
+
+  // if(slug=""){
+
+  // }
   
   // Check if it's a product first (highest priority)
   const product = findProductBySlug(slug);
