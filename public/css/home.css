@@ -279,7 +279,7 @@
     padding: 0 5rem;
 }
 
-#products .heading{
+#products .heading {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 700;
     text-align: center;
@@ -383,7 +383,7 @@
 
 
 
-#clients .heading{
+#clients .heading {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 700;
     text-align: center;
@@ -465,9 +465,7 @@
     position: absolute;
     left: calc((var(--width) + var(--gap, 20px)) * (var(--position) - 1));
     animation: autoRun var(--duration) linear infinite;
-    animation-delay: calc(
-        (var(--duration) / var(--quantity)) * (var(--position) - 1) * -1
-    ) !important;
+    animation-delay: calc((var(--duration) / var(--quantity)) * (var(--position) - 1) * -1) !important;
     transition: filter 0.5s;
 }
 
@@ -497,7 +495,7 @@
 }
 
 #clients .slider[reverse="true"] .item {
-  animation: reversePlay var(--duration) linear infinite;
+    animation: reversePlay var(--duration) linear infinite;
 }
 
 @keyframes reversePlay {
@@ -519,17 +517,17 @@
 }
 
 #director .directors-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
 }
 
 #director .container-fluid {
     padding: 0 5rem;
 }
 
-#director .heading{
+#director .heading {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 700;
     text-align: center;
@@ -550,7 +548,7 @@
     overflow: hidden;
 }
 
-#director .modern-card-img{
+#director .modern-card-img {
     aspect-ratio: 1/1;
 }
 
@@ -584,16 +582,16 @@
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
+
     #director .feature-image {
         height: 150px;
     }
-    
+
     #director .feature-card h3 {
         font-size: 1.1rem;
         margin: 1rem 1rem 0.5rem;
     }
-    
+
     #director .feature-card p {
         margin: 0 1rem 1rem;
         font-size: 0.95rem;
@@ -604,13 +602,14 @@
 
 
 
-#certifications .heading{
+#certifications .heading {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 700;
     text-align: center;
     padding: 0 0 2rem 0;
     margin: 0;
     color: #1e293b;
+    font-size: 2.5rem;
 }
 
 #certifications {
@@ -620,7 +619,7 @@
 #certifications .cert-card {
     width: 100%;
     height: 100%;
-    padding: 1.2rem 1rem;
+    padding: 0.5rem;
     border-radius: 1rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
     background: #ffffff;
@@ -632,6 +631,7 @@
     transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
     border: 1px solid #f0f0f0;
     margin-bottom: 1.5rem;
+    overflow: hidden;
 }
 
 #certifications .cert-card:hover {
@@ -641,10 +641,17 @@
 }
 
 #certifications .cert-card .cert-img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin-bottom: 1rem;
+    width: calc(100% - 1rem);
+    height: calc(100% - 1rem);
+    object-fit: cover;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+#certifications .cert-card .cert-img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
 }
 
 #certifications .cert-card h3 {
@@ -704,6 +711,82 @@
     filter: grayscale(0);
 }
 
+/* Modal styles for expanded view */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 10rem;
+    width: 100%;
+    height: 80%;
+    background-color: rgba(0, 0, 0, 0.9);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 1rem;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 0.3s ease;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ccc;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #certifications .cert-card .cert-img {
+        width: calc(100% - 0.5rem);
+        height: calc(100% - 0.5rem);
+    }
+
+    #certifications .cert-card {
+        padding: 0.25rem;
+    }
+}
 
 
 
@@ -739,7 +822,7 @@
     margin-bottom: 1.5rem;
 }
 
-.news-card:hover { 
+.news-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
@@ -817,6 +900,7 @@
 }
 
 @media (max-width: 768px) {
+
     .products-grid,
     .directors-grid {
         grid-template-columns: 1fr;
@@ -858,11 +942,12 @@
 }
 
 @media (max-width: 600px) {
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-  .feature-card {
-    padding: 1.2rem 0.7rem;
-  }
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .feature-card {
+        padding: 1.2rem 0.7rem;
+    }
 }

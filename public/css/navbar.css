@@ -432,7 +432,7 @@ a {
 }
 
 /* Enhanced Mobile/Offcanvas Search Styles */
-@media (max-width: 991px) {
+@media (max-width: 1199.2px) {
     .search-dropdown {
         min-width: 100%;
         max-width: 100%;
@@ -610,7 +610,7 @@ mark {
 }
 
 /* Desktop Styles */
-@media (min-width: 992px) {
+@media (min-width: 1199.2px) {
     /* Hide dropdown arrows on desktop */
     .dropdown-toggle-arrow {
         display: none;

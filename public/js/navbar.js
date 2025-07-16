@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Mobile dropdown functionality
-    if (window.innerWidth < 992) {
+    if (window.innerWidth < 1199.2) {
         // Handle main dropdown toggles
         document.querySelectorAll('.dropdown').forEach(dropdown => {
             const dropdownToggle = dropdown.querySelector('.nav-link.dropdown-toggle');
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Handle window resize to reset dropdowns when switching between mobile/desktop
     window.addEventListener('resize', function () {
-        if (window.innerWidth >= 992) {
+        if (window.innerWidth >= 1199.2) {
             // Remove show classes when switching to desktop view
             document.querySelectorAll('.dropdown-menu.show, .submenu.show').forEach(menu => {
                 menu.classList.remove('show');
@@ -280,11 +280,13 @@ function initializeSearch() {
 
     // Handle search toggle
     searchToggle.addEventListener('click', function (e) {
+        console.log("yes")
         e.preventDefault();
-        if (window.innerWidth < 992) {
+        if (window.innerWidth < 1199.2) {
             // Mobile behavior
             searchDropdown.classList.toggle('show');
             if (searchDropdown.classList.contains('show')) {
+                console.log("true")
                 setTimeout(() => searchInput.focus(), 100);
             }
         } else {
@@ -372,7 +374,7 @@ function initializeSearch() {
     // Close search dropdown when clicking outside
     document.addEventListener('click', function (e) {
         if (!e.target.closest('.dropdown') || !e.target.closest('.search-dropdown')) {
-            if (window.innerWidth < 992) {
+            if (window.innerWidth < 1199.2) {
                 searchDropdown.classList.remove('show');
             }
         }
