@@ -224,7 +224,8 @@
                 "power-generation-system",
                 "equipment-shelter",
                 "runway-miscellaneous-equipment",
-                "external-pilot-cage-protection"
+                "external-pilot-cage-protection",
+                "emergency-alert-system"
             ]
         },
         "smart-metering": {
@@ -237,8 +238,7 @@
             ],
             "hasClassifications": false,
             "products": [
-                "smart-energy-meter",
-                "emergency-alert-system"
+                "smart-energy-meter"
             ]
         }
     },
@@ -274,8 +274,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
@@ -312,8 +311,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
@@ -350,8 +348,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
@@ -387,8 +384,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
@@ -424,8 +420,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
@@ -461,8 +456,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
@@ -500,8 +494,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
@@ -539,8 +532,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
@@ -578,8 +570,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": [
@@ -620,8 +611,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
@@ -659,8 +649,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
@@ -702,8 +691,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "papi-lighting"
@@ -739,8 +727,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
@@ -778,8 +765,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
@@ -820,8 +806,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
@@ -858,8 +843,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
@@ -895,8 +879,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
@@ -933,8 +916,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
@@ -963,8 +945,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
@@ -1007,8 +988,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "runway-lighting"
@@ -1050,8 +1030,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1071,8 +1050,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1092,8 +1070,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1113,8 +1090,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1134,8 +1110,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1155,8 +1130,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1176,8 +1150,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1214,8 +1187,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1235,8 +1207,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1256,8 +1227,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1277,8 +1247,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1298,8 +1267,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1334,8 +1302,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1357,8 +1324,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1392,8 +1358,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1429,8 +1394,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1472,8 +1436,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1510,8 +1473,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1548,8 +1510,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1573,8 +1534,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1598,8 +1558,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1632,8 +1591,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1653,8 +1611,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "taxiway-lighting"
@@ -1702,8 +1659,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "airfield-guidance-signs"
@@ -1727,8 +1683,7 @@
                 "Coated in RAL 1007 aviation yellow"
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "airfield-guidance-signs"
@@ -1756,8 +1711,7 @@
                 "The size of the cabinet is dependant on the amount of characters required."
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "airfield-guidance-signs"
@@ -1780,8 +1734,7 @@
                 "Coated in RAL 1007 aviation yellow"
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "airfield-guidance-signs"
@@ -1800,8 +1753,7 @@
                 "– 0.2 NM is an example of the distance in nautical miles to a DME collocated with the VOR concerned."
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "airfield-guidance-signs"
@@ -1824,8 +1776,7 @@
                 "IP65 enclosure"
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "airfield-guidance-signs"
@@ -1842,8 +1793,7 @@
                 "Type-I LED Conversion retrofit kit:\nMany type-I signs are installed at airports all over the world, and some have been in operation for more than 20 years, before the LED was even considered for airfield lighting applications. However, to enable clients to benefit from the energy saving of LED usage, a conversion kit for the \u2018Smith (SAFE)\u2019 sign and also the type-I is available, thus extending the life of the sign. The kit is installed into the sign and the old tungsten halogen, fluorescent or cold cathode technology can be removed. Once converted, the sign will achieve the same efficiency benefits of the type-I LED sign."
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "airfield-guidance-signs"
@@ -1863,8 +1813,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights"
         },
@@ -1886,8 +1835,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights"
         },
@@ -1909,8 +1857,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights"
         },
@@ -1932,8 +1879,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "transformers-connector-kits"
@@ -1960,8 +1906,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "transformers-connector-kits"
@@ -1984,8 +1929,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "transformers-connector-kits"
@@ -2014,8 +1958,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "transformers-connector-kits"
@@ -2049,8 +1992,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "ccrs-accessories"
@@ -2079,8 +2021,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "ccrs-accessories"
@@ -2107,8 +2048,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "ccrs-accessories"
@@ -2132,8 +2072,7 @@
             ],
             "sections": [],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "ccrs-accessories"
@@ -2155,8 +2094,7 @@
                 }
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "portable-lighting"
@@ -2175,8 +2113,7 @@
                 "Combined Threshold/Runway End"
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "portable-lighting"
@@ -2186,8 +2123,7 @@
             "description": "For temporary installations at civil and military airfields and heliports in case of emergency or maintenance power-offs or to delineate areas temporarily closed to traffic for works.",
             "image": "/images/portable-aviation-led-light.jpg",
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "portable-lighting"
@@ -2212,8 +2148,7 @@
                 "**Windsock & Swivel Frame:**\nThe standard windsock is 3.6m / 12ft long x 0.91m / 36” mouth diameter, in dayglow orange polyester for long life. A Red & White (or other combination) 5 banded windsock can be provided if required.\n\nThe tail of the windsock has a unique design to prevent flutter, thus prolonging its life.\nNo chains, wire or metal hoops are used in the windsocks to maximise responsiveness and minimise chafe.\nThe Swivel Frame is specially designed in 316 stainless wire to minimise maintenance bearings."
             ],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "windsock-mast"
@@ -2225,8 +2160,7 @@
             "features": [],
             "portfolioLines": [],
             "sector": [
-                "airport",
-                "defense"
+                "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "agnis-docking-aid"
@@ -3295,7 +3229,7 @@
                 "defense",
                 "railways"
             ],
-            "category": "smart-metering",
+            "category": "support-equipment",
             "subcategory": "emergency-alert-system"
         }
     }

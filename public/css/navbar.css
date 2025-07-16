@@ -39,14 +39,14 @@ a {
 }
 
 /* Focus styles for accessibility */
-a:focus,
+/* a:focus,
 .nav-link:focus,
 .dropdown-item:focus,
 .dropdown-toggle:focus {
     outline: 2px solid #007bff;
     outline-offset: 2px;
     border-radius: 4px;
-}
+} */
 
 /* Skip link for screen readers */
 .skip-link {

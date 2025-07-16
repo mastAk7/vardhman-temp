@@ -11,7 +11,7 @@ import newsRouter from './routes/news.routes.js'
 import contactRouter from './routes/contact.routes.js'
 import careersRouter from './routes/careers.routes.js'
 import searchRouter from './routes/search.routes.js'
-import METARRouter from './routes/METAR.routes.js'
+// import METARRouter from './routes/METAR.routes.js'
 import homeRouter from './routes/home.routes.js'
 import povRouter from './routes/pov.routes.js'
 
@@ -41,7 +41,7 @@ app.use("/news",newsRouter);
 app.use("/careers",careersRouter);
 app.use("/contact",contactRouter);
 app.use("/search",searchRouter);
-app.use("/metar",METARRouter);
+// app.use("/metar",METARRouter);
 app.use("/pov",povRouter);
 app.use("/",productsRouter);
 
