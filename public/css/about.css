@@ -4,23 +4,29 @@
   text-align: center;
 }
 
-.about-heading .mission-statement {
-  font-size: 1.4rem;
-  color: #333;
+.about-heading h1{
+  font-size: 3rem;
+}
+
+.about-parallax .mission-statement {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 40%;
+  color: #fff;
   padding-bottom: 0;
 }
 
 .about-parallax {
   height: 400px;
-  background: url('/images/6.jpg') center center / cover no-repeat fixed;
+  background: #1e293b center center / cover no-repeat fixed;
   background-blend-mode: darken;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(65, 61, 61, 0.9);
   position: relative;
 }
 
 .about-parallax .heading {
   position: absolute;
-  top: 32%;
+  top: 7%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;

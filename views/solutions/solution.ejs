@@ -2,11 +2,12 @@
 
 <link rel="stylesheet" href="/css/about.css">
 <link rel="stylesheet" href="/css/case-studies.css">
-<br><br><br><br><br>
+<br><br><br><br>
 
 <!-- About Us Heading -->
 <section class="about-heading">
     <div class="container-fluid">
+        <h1 class="heading"><%= pageTitle || 'Our Solutions' %></h1>
         <h4 class="mission-statement">
             <%= pageDescription || 'Delivering comprehensive solutions for modern infrastructure challenges.' %>
         </h4>
@@ -14,9 +15,8 @@
 </section>
 
 <!-- Parallax Image Section -->
-<section class="about-parallax" style="background-image: url(<%= pageImage %>);">
-    <h1 class="heading"><%= pageTitle || 'Our Solutions' %></h1>
-</section>
+<!-- <section class="about-parallax" style="background-image: url(<%= pageImage %>);">
+</section> -->
 
 <!-- Key Features Section -->
 <section class="key-features">

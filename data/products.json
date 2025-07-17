@@ -190,7 +190,7 @@
             ]
         },
         "navigation-tracking": {
-            "title": "Navigation & Tracking",
+            "title": "Navigation Aids",
             "description": "Advanced navigation aids and tracking systems for enhanced situational awareness and flight safety.",
             "image": "/images/categories/navigation-category.jpg",
             "sector": "defense",
@@ -215,7 +215,7 @@
             ]
         },
         "support-equipment": {
-            "title": "Support Equipment",
+            "title": "Smart Equipment",
             "description": "Critical support systems including power generation, equipment shelters, and runway accessories.",
             "image": "/images/categories/support-category.jpg",
             "hasClassifications": false,
