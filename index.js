@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import fs from 'fs';
 import { fileURLToPath } from 'url';
 import session from 'express-session';
 import FileStore from 'session-file-store';
@@ -7,12 +8,6 @@ import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 
 
-const fileStore = FileStore(session);
-
-const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10000, // limit each IP to 100 requests
-});
 
 
 import productsRouter from './routes/products.routes.js'
@@ -29,11 +24,74 @@ import povRouter from './routes/pov.routes.js'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+const sessionDir = path.join(__dirname, 'sessions');
+if (!fs.existsSync(sessionDir)) {
+    fs.mkdirSync(sessionDir);
+}
+
 const PORT = 4444;
 const app = express();
 
+
+
+const fileStore = FileStore(session);
+
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 10000, // limit each IP to 100 requests
+});
+
 app.disable('x-powered-by');
-app.use(helmet());
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: [
+          "'self'",
+          "'unsafe-inline'", // allows inline <script> blocks
+          "'unsafe-eval'", // allows eval()
+          "https://kit.fontawesome.com",
+          "https://ka-f.fontawesome.com",
+          "https://cdnjs.cloudflare.com",
+          "https://cdn.jsdelivr.net",
+          "https://ajax.googleapis.com",
+          "https://code.jquery.com"
+        ],
+        // ✅ THIS IS THE IMPORTANT ONE FOR `onclick=""` SUPPORT
+        scriptSrcAttr: ["'unsafe-inline'"],
+
+        styleSrc: [
+          "'self'",
+          "'unsafe-inline'",
+          "https://kit.fontawesome.com",
+          "https://ka-f.fontawesome.com",
+          "https://fonts.googleapis.com",
+          "https://cdnjs.cloudflare.com",
+          "https://cdn.jsdelivr.net"
+        ],
+        fontSrc: [
+          "'self'",
+          "https://kit.fontawesome.com",
+          "https://ka-f.fontawesome.com",
+          "https://fonts.gstatic.com",
+          "data:"
+        ],
+        imgSrc: ["'self'", "data:", "https:", "http:"],
+        connectSrc: [
+          "'self'",
+          "https://kit.fontawesome.com",
+          "https://ka-f.fontawesome.com"
+        ],
+        frameSrc: ["'self'", "https://www.google.com"],
+        objectSrc: ["'none'"],
+        mediaSrc: ["'self'"],
+        childSrc: ["'self'"]
+      }
+    }
+  })
+);
+
 app.use(limiter);
 app.use(express.static(path.join(__dirname, "public")))
 app.use(express.urlencoded({ extended: true, limit: '10kb' }))
@@ -72,3 +130,6 @@ app.use("/", productsRouter);
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
 })
+// app.listen(3000, '0.0.0.0', () => {
+//   console.log("Server running on port 3000");
+// });
