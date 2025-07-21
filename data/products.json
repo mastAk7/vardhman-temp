@@ -2794,9 +2794,9 @@
             ],
             "features": [
                 "Compact design",
-                "suitable for remote operations",
-                "easy integration with air traffic management system",
-                "icao complied "
+                "Suitable for remote operations",
+                "Easy integration with air traffic management system",
+                "ICAO complied"
             ],
             "sector": "defense",
             "category": "navigation-tracking",
@@ -2815,11 +2815,6 @@
                 "Rugged, weather-resistant design for dependable outdoor use"
             ],
             "features": [
-                "Ideal for surveillance of aircraft and airbase operations",
-                "Equipped with optical zoom, HD imaging, and starlight technology for low-light clarity",
-                "Features intelligent tracking for dynamic object monitoring",
-                "Ensures 24/7 coverage of aircraft movements, take-offs, and landings",
-                "Rugged, weather-resistant design for dependable outdoor use",
                 "Enhances security via real-time video streaming, video analytics, and integration with broader systems",
                 "Suitable for outdoor applications ",
                 "High MTBF",
@@ -2888,15 +2883,14 @@
         },
         "voice-communication-control-system": {
             "title": "Voice Communication Control System",
-            "description": "Tactical Communication Integrated System delivers reliable, secure, and multi-channel voice communication for coordinated command and control in dynamic environments.",
+            "description": "Voice Communication Control System delivers reliable, secure, and multi-channel voice communication for coordinated command and control in dynamic environments.",
             "image": "/images/comm2.jpg",
             "portfolioImage": "/images/comm3.png",
             "portfolioLines": [
                 "Multi-channel voice communication links fixed, mobile, and field command centers.",
                 "VoIP-enabled Controller Terminals support mission-specific voice conferencing and PTT.",
                 "Media Gateway integrates analog/digital radios and phones for seamless coordination.",
-                "Ruggedized for rapid deployment in tactical vehicles, ships, or remote posts.",
-                "Built-in safety nets with redundant power and network paths ensure uptime in critical ops."
+                "Ruggedized for rapid deployment in tactical vehicles, ships, or remote posts."
             ],
             "components": [
                 {
@@ -2911,7 +2905,6 @@
             "sections": [
                 {
                     "title": "Communication Systems",
-                    "image": "/images/atm-communication.jpg",
                     "bullets": [
                         "VHF/UHF radio communication systems",
                         "Digital voice recording and playback",
