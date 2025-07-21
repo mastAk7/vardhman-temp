@@ -36,7 +36,7 @@ const storage = multer.diskStorage({
     }
 });
 const upload = multer({
-    storage: storage,
+    storage: multer.memoryStorage(), // Store in memory instead of disk
     limits: { fileSize: 5 * 1024 * 1024 },
     fileFilter: function (req, file, cb) {
         const allowedTypes = /pdf|doc|docx/;
@@ -106,10 +106,30 @@ const readAdminFile = () => {
 
 // Middleware to check if user is admin
 function isAdmin(req, res, next) {
-    if (req.session && req.session.isCareerAdmin) {
+    // Check if session exists and user is admin
+    if (req.session && req.session.isCareerAdmin === true) {
         return next();
     }
-    res.redirect('/careers/admin/login');
+    
+    // If session might not be fully loaded, try to reload it
+    if (req.session) {
+        req.session.reload((err) => {
+            if (err) {
+                console.error('Session reload error:', err);
+            }
+            
+            // Check again after reload
+            if (req.session && req.session.isCareerAdmin === true) {
+                return next();
+            }
+            
+            // Not authenticated, redirect to login
+            res.redirect('/careers/admin/login');
+        });
+    } else {
+        // No session at all, redirect to login
+        res.redirect('/careers/admin/login');
+    }
 }
 
 // Main careers page
@@ -155,7 +175,7 @@ router.post('/apply/:id', upload.single('resume'), async (req, res) => {
 
         const mailOptions = {
             from: `"Careers Portal" <${process.env.EMAIL_USER}>`,
-            to: 'careers@vardhmanairports.com',
+            to: 'aryankansal15@gmail.com',
             subject: `New Application for ${job.title}`,
             text: `
 A new application has been submitted.
@@ -170,7 +190,8 @@ Reference: ${reference || ''}
             attachments: [
                 {
                     filename: req.file.originalname,
-                    path: req.file.path
+                    content: req.file.buffer, // Use buffer instead of path
+                    contentType: req.file.mimetype
                 }
             ]
         };
@@ -191,17 +212,36 @@ router.get('/admin/login', (req, res) => {
 
 // Admin login POST (bcrypt check, session set)
 router.post('/admin/login', async (req, res) => {
-    const { password } = req.body;
-    const adminData = readAdminFile();
-    if (!adminData || !adminData.password) {
-        return res.render('careers/admin/login', { error: 'Admin not configured' });
-    }
-    const match = await bcrypt.compare(password, adminData.password);
-    if (match) {
-        req.session.isCareerAdmin = true;
-        res.redirect('/careers/admin');
-    } else {
-        res.render('careers/admin/login', { error: 'Invalid password' });
+    try {
+        const { password } = req.body;
+        const adminData = readAdminFile();
+        
+        if (!adminData || !adminData.password) {
+            return res.render('careers/admin/login', { error: 'Admin not configured' });
+        }
+        
+        const match = await bcrypt.compare(password, adminData.password);
+        
+        if (match) {
+            // Set session data
+            req.session.isCareerAdmin = true;
+            
+            // IMPORTANT: Save the session before redirecting
+            req.session.save((err) => {
+                if (err) {
+                    console.error('Session save error:', err);
+                    return res.render('careers/admin/login', { error: 'Login failed. Please try again.' });
+                }
+                
+                // Session is now saved, safe to redirect
+                res.redirect('/careers/admin');
+            });
+        } else {
+            res.render('careers/admin/login', { error: 'Invalid password' });
+        }
+    } catch (error) {
+        console.error('Login error:', error);
+        res.render('careers/admin/login', { error: 'An error occurred. Please try again.' });
     }
 });
 
@@ -214,8 +254,20 @@ router.get('/admin', isAdmin, (req, res) => {
 
 // Admin logout
 router.post('/admin/logout', (req, res) => {
-    req.session.destroy();
-    res.redirect('/careers');
+    if (req.session) {
+        req.session.destroy((err) => {
+            if (err) {
+                console.error('Session destroy error:', err);
+                // Even if destroy fails, clear the session data
+                req.session = null;
+            }
+            // Clear the session cookie
+            res.clearCookie('connect.sid'); // Default session cookie name
+            res.redirect('/careers');
+        });
+    } else {
+        res.redirect('/careers');
+    }
 });
 
 // Add new job

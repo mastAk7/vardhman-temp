@@ -91,14 +91,33 @@ const readAdminData = () => {
     }
 };
 
-// Middleware to check admin authentication
-const requireAdmin = (req, res, next) => {
-    if (req.session && req.session.isAdmin) {
-        next();
+// Middleware to check if user is admin
+function requireAdmin(req, res, next) {
+    // Check if session exists and user is admin
+    if (req.session && req.session.isPOVAdmin === true) {
+        return next();
+    }
+    
+    // If session might not be fully loaded, try to reload it
+    if (req.session) {
+        req.session.reload((err) => {
+            if (err) {
+                console.error('Session reload error:', err);
+            }
+            
+            // Check again after reload
+            if (req.session && req.session.isPOVAdmin === true) {
+                return next();
+            }
+            
+            // Not authenticated, redirect to login
+            res.redirect('/pov/admin/login');
+        });
     } else {
+        // No session at all, redirect to login
         res.redirect('/pov/admin/login');
     }
-};
+}
 
 // Public Routes
 
@@ -146,19 +165,37 @@ router.get('/admin/login', (req, res) => {
 }); 
 
 // Admin login process
-router.post('/admin/login', (req, res) => {
-    const { password } = req.body;
-    const adminData = readAdminData();
-    
-    if (!adminData) {
-        return res.render('pov/admin/login', { error: 'System error', title: 'Admin Login' });
-    }
-    
-    if (bcrypt.compareSync(password, adminData.password)) {
-        req.session.isAdmin = true;
-        res.redirect('/pov/admin');
-    } else {
-        res.render('pov/admin/login', { error: 'Invalid password', title: 'Admin Login' });
+router.post('/admin/login', async (req, res) => {
+    try {
+        const { password } = req.body;
+        const adminData = readAdminData();
+        
+        if (!adminData || !adminData.password) {
+            return res.render('pov/admin/login', { error: 'Admin not configured', title: 'Admin Login' });
+        }
+        
+        const match = await bcrypt.compare(password, adminData.password);
+        
+        if (match) {
+            // Set session data
+            req.session.isPOVAdmin = true;
+            
+            // IMPORTANT: Save the session before redirecting
+            req.session.save((err) => {
+                if (err) {
+                    console.error('Session save error:', err);
+                    return res.render('pov/admin/login', { error: 'Login failed. Please try again.', title: 'Admin Login' });
+                }
+                
+                // Session is now saved, safe to redirect
+                res.redirect('/pov/admin');
+            });
+        } else {
+            res.render('pov/admin/login', { error: 'Invalid password', title: 'Admin Login' });
+        }
+    } catch (error) {
+        console.error('Login error:', error);
+        res.render('pov/admin/login', { error: 'An error occurred. Please try again.', title: 'Admin Login' });
     }
 });
 
@@ -170,8 +207,20 @@ router.get('/admin', requireAdmin, (req, res) => {
 
 // Admin logout
 router.post('/admin/logout', (req, res) => {
-    req.session.destroy();
-    res.redirect('/');
+    if (req.session) {
+        req.session.destroy((err) => {
+            if (err) {
+                console.error('Session destroy error:', err);
+                // Even if destroy fails, clear the session data
+                req.session = null;
+            }
+            // Clear the session cookie
+            res.clearCookie('connect.sid'); // Default session cookie name
+            res.redirect('/pov');
+        });
+    } else {
+        res.redirect('/pov');
+    }
 });
 
 // Add new post page

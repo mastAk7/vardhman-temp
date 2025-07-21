@@ -211,7 +211,7 @@
             "products": [
                 "automatic-weather-observation-system",
                 "weather-radar",
-                "tactical-communication-system"
+                "voice-communication-control-system"
             ]
         },
         "support-equipment": {
@@ -278,7 +278,27 @@
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
-            "type": "LED Elevated"
+            "type": "LED Elevated",
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "AXON LED Approach Inset, 12 inch",
+                        "url": "axon-led-datasheet.pdf"
+                    }
+                ],
+                "manual": [
+                    {
+                        "title": "Installation Manual",
+                        "url": "axon-led-manual.pdf",
+                        "languages": [
+                            {
+                                "code": "en"
+                            }
+                        ]
+                    }
+                ],
+                "certification": []
+            }
         },
         "led-threshold-light": {
             "title": "LED Threshold Light",
@@ -2700,16 +2720,6 @@
                     ]
                 },
                 {
-                    "title": "Communication Systems",
-                    "image": "/images/atm-communication.jpg",
-                    "bullets": [
-                        "VHF/UHF radio communication systems",
-                        "Digital voice recording and playback",
-                        "Emergency communication protocols",
-                        "Intercom systems for controller coordination"
-                    ]
-                },
-                {
                     "title": "Safety Features",
                     "para": "Safety is paramount in air traffic management. Our system includes multiple layers of safety nets and conflict detection algorithms to prevent incidents before they occur.",
                     "bullets": [
@@ -2737,12 +2747,34 @@
                 "Designed for 24/7 reliability in extreme weather and tactical environments."
             ],
             "features": [
-                "Ensures airfield safety with real-time weather data",
-                "Monitors wind, temperature, humidity, visibility, and pressure",
-                "Supports automated METAR/SPECI reporting",
-                "Allows remote access from the ATC tower",
-                "Includes lightning detection and cloud height sensors",
-                "Reliable in all weather conditions for accurate forecasting"
+                "Fully automatic, highly reliable, and efficient system operation",
+                "Complies with ICAO and WMO standards",
+                "User-friendly graphical interface with remote access capabilities",
+                "Customizable modules based on user requirements",
+                "Interfaces for editing or inputting missing or incorrect data",
+                "Seamless integration with other airport and defense systems",
+                "Automatic system monitoring with alerts for hazardous weather",
+                "Displays MET REPORT/SPECIAL and METAR/SPECI bulletins",
+                "Stores long-term, time-indexed weather statistics",
+                "Designed for round-the-clock operation in harsh environments"
+            ],
+            "sections": [
+                {
+                    "title": "SENSORS",
+                    "bullets": [
+                        "Wind direction and speed",
+                        "Visibility",
+                        "Backlight level",
+                        "Runway landing lights intensity (CHC)",
+                        "Current weather phenomena",
+                        "Thunderstorm detection",
+                        "Cloud quantity and height",
+                        "Air temperature",
+                        "Air humidity",
+                        "Atmospheric pressure",
+                        "Rainfall measurement"
+                    ]
+                }
             ],
             "sector": "defense",
             "category": "weather-communication",
@@ -2756,17 +2788,15 @@
             "portfolioLines": [
                 "Real-time aircraft tracking with portable deployment capability.",
                 "Utilizes ADS-B for precise flight position, speed, and altitude reporting.",
-                "Integrated safety nets help prevent mid-air collisions and airspace conflicts.",
+                "Provision for integration with air traffic management system for safety nets which help prevent mid-air collisions and airspace conflicts.",
                 "Rapid setup enables deployment in remote or tactical operations zones.",
                 "Enhances situational awareness for both civilian and military coordination."
             ],
             "features": [
-                "Enhances situational awareness and real-time aircraft monitoring",
-                "Utilizes Automatic Dependent Surveillance–Broadcast (ADS-B) technology",
-                "Enables accurate position tracking using satellite navigation and periodic data transmission",
-                "Broadcasts key flight parameters: aircraft identification, location, altitude, and speed",
-                "Provides timely surveillance data to ground-based controllers and nearby aircraft",
-                "Improves safety, coordination, and airspace efficiency"
+                "Compact design",
+                "suitable for remote operations",
+                "easy integration with air traffic management system",
+                "icao complied "
             ],
             "sector": "defense",
             "category": "navigation-tracking",
@@ -2774,15 +2804,15 @@
         },
         "aircraft-monitoring-system": {
             "title": "Aircraft Monitoring System for Air Traffic Control Recording",
-            "description": "Aircraft Monitoring System delivers continuous, intelligent monitoring for secure and efficient airbase/heliport operations. With advanced imaging and tracking technologies, it ensures comprehensive situational awareness in all conditions.",
-            "image": "/images/moni1.jpg",
+            "description": "Aircraft Monitoring System delivers continuous, intelligent monitoring for secure and efficient airbase/heliport operations. With advanced AI based imaging and tracking technologies, it ensures comprehensive situational awareness in all conditions.",
+            "image": "/images/moni1.png",
             "portfolioImage": "/images/moni2.jpg",
             "portfolioLines": [
                 "360° surveillance with intelligent tracking for real-time aircraft monitoring.",
-                "HD and starlight imaging ensures visibility during night and low-light operations.",
-                "Integrated safety nets for movement prediction and collision risk mitigation.",
-                "Supports coordinated take-off and landing oversight in dynamic environments.",
-                "Seamless integration with ATC systems enhances overall airbase situational awareness."
+                "Equipped with 30x optical zoom, HD imaging, and starlight technology for low-light clarity",
+                "Features intelligent tracking for dynamic object monitoring",
+                "Ensures 24/7 coverage of aircraft movements, take-offs, and landings",
+                "Rugged, weather-resistant design for dependable outdoor use"
             ],
             "features": [
                 "Ideal for surveillance of aircraft and airbase operations",
@@ -2790,8 +2820,11 @@
                 "Features intelligent tracking for dynamic object monitoring",
                 "Ensures 24/7 coverage of aircraft movements, take-offs, and landings",
                 "Rugged, weather-resistant design for dependable outdoor use",
-                "Offers 360° pan and tilt for complete area surveillance",
-                "Enhances security via real-time video streaming, video analytics, and integration with broader systems"
+                "Enhances security via real-time video streaming, video analytics, and integration with broader systems",
+                "Suitable for outdoor applications ",
+                "High MTBF",
+                "Geo-fencing and zone monitoring ",
+                "Option for installation on ICAO complied frangible mast near runway"
             ],
             "sector": "defense",
             "category": "navigation-tracking",
@@ -2801,14 +2834,7 @@
             "title": "Airfield/Heliport Alarm System",
             "description": "The Airfield alarm system swiftly alerts emergency services, including ambulances, fire departments, and other agencies, in the event of a crash. It is designed for scalability, allowing integration with multiple control panels. As a airfield alarm system, it supports various radio and wired communication methods at airports, such as HF/VHF/UHF, intercoms, analog phones, and IP phones. Operators using airfield alarm system can select between intercom and external communication via HF, VHF, UHF, or phone lines. Additionally, the system enables broadcasting audio messages and alarm notifications across all locations.",
             "image": "/images/alarm1.jpg",
-            "portfolioImage": "/images/alarm.jpg",
-            "portfolioLines": [
-                "Instant emergency alerts trigger coordinated response from fire, ambulance, and security teams.",
-                "Supports multi-channel communication: HF/VHF/UHF radios, intercoms, analog & IP phones.",
-                "Broadcasts alarms and voice messages simultaneously across all airport zones.",
-                "Redundant network architecture ensures uninterrupted operation during crises.",
-                "Integrated safety logic and alert routing act as operational safety nets during emergencies."
-            ],
+            "portfolioImage": "/images/alarm.png",
             "features": [
                 "Complies with ICAO standards, making it well-suited for airport operations and fire alarm centers",
                 "Equipped with dual power supplies and two Ethernet networks (Primary and Backup) for reliability",
@@ -2860,24 +2886,17 @@
             "category": "air-traffic-management",
             "subcategory": "airfield-road-traffic-management"
         },
-        "tactical-communication-system": {
-            "title": "Tactical Communication System",
+        "voice-communication-control-system": {
+            "title": "Voice Communication Control System",
             "description": "Tactical Communication Integrated System delivers reliable, secure, and multi-channel voice communication for coordinated command and control in dynamic environments.",
             "image": "/images/comm2.jpg",
-            "portfolioImage": "/images/comm3.jpg",
+            "portfolioImage": "/images/comm3.png",
             "portfolioLines": [
                 "Multi-channel voice communication links fixed, mobile, and field command centers.",
                 "VoIP-enabled Controller Terminals support mission-specific voice conferencing and PTT.",
                 "Media Gateway integrates analog/digital radios and phones for seamless coordination.",
                 "Ruggedized for rapid deployment in tactical vehicles, ships, or remote posts.",
                 "Built-in safety nets with redundant power and network paths ensure uptime in critical ops."
-            ],
-            "features": [
-                "Enables fast communication across mobile and fixed command centres",
-                "Supports wired and wireless networks: fibre, copper, microwave, and satellite",
-                "Built-in redundancy for power and transmission ensures uninterrupted operation",
-                "Compact, rugged design allows rapid deployment on vehicles, ships, or fixed sites",
-                "Resistant to vibration, extreme temperatures, and humidity for all-terrain durability"
             ],
             "components": [
                 {
@@ -2889,25 +2908,36 @@
                     "description": "The Media Gateway is a multimedia, multi-protocol interconnect device designed to convert various connection interfaces into an IP interface, ensuring seamless IP connectivity for other devices. It facilitates connections with Controller Terminals, analog radios, digital radios, RoIP, and PABX/PSTN systems. Users can configure this equipment for multiple purposes, such as an analog internal telephone system or an IP-based telephone exchange, depending on their communication needs. The Media Gateway supports a wide range of analog connectors (up to multiple interfaces) and IP phones (up to 150 terminals). Built on IP technology, it is designed for deployment in various command centers and can be easily expanded when necessary, making it a scalable and adaptable communication solution."
                 }
             ],
+            "sections": [
+                {
+                    "title": "Communication Systems",
+                    "image": "/images/atm-communication.jpg",
+                    "bullets": [
+                        "VHF/UHF radio communication systems",
+                        "Digital voice recording and playback",
+                        "Emergency communication protocols",
+                        "Intercom systems for controller coordination"
+                    ]
+                }
+            ],
             "sector": "defense",
             "category": "weather-communication",
-            "subcategory": "tactical-communication-system"
+            "subcategory": "voice-communication-control-system"
         },
         "digital-voice-recorder-system": {
             "title": "Digital Voice Recorder System",
             "description": "The Digital Recorder System shall be a complete network-based solution to record, playback and analyze all data exchanged in an ATC/ATM. System architecture is based on hardware and software components connected through a redundant LAN and must be Compliance with ICAO recommendations with features of Video, Audio and Data Acquisition and Sampling, Storage, Playback, Post-Analysis, System Management and automatic registration and security.",
             "image": "/images/dvdr2.png",
-            "portfolioImage": "/images/dvdr.png",
+            "portfolioImage": "/images/dvdr.jpg",
             "portfolioLines": [
                 "Network-based recording and analysis of voice, video, and data across ATC/ATM systems.",
                 "ICAO-compliant system supports VoIP, analog, and protocol-based data acquisition.",
                 "Secure, encrypted storage with redundancy via SSD, dual LAN, and NAS extensions.",
-                "Graphical timeline reconstruction enables precise playback for incident analysis.",
-                "Built-in safety nets like watchdog monitoring and SNMP alerts ensure 24/7 operational integrity."
+                "Graphical timeline reconstruction enables precise playback for incident analysis."
             ],
             "features": [
                 "The Recorder system designed in accordance to the latest editions of ICAO standards",
-                "Recorder system should be based on distributed architecture, flexible, scalable, and redundant",
+                "Recorder system is based on distributed architecture, flexible, scalable, and redundant",
                 "Safe data acquisition, no streaming and multi-format data acquisition capability",
                 "Capability for multi-protocol data acquisition processing data packets based on different formats and protocols",
                 "VoIP / SIP streams with at least 24 VoIP Channels and 16 Analog channels",

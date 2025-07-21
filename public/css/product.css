@@ -801,6 +801,143 @@
     color: #8b5cf6;
 }
 
+/* Downloads Section */
+.downloads-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+.download-tabs {
+    display: flex;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 2rem;
+}
+
+.download-tab {
+    background: none;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6b7280;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.download-tab.active {
+    color: #2563eb;
+    border-bottom-color: #2563eb;
+    background: #f8fafc;
+}
+
+.download-tab:hover {
+    color: #2563eb;
+    background: #f8fafc;
+}
+
+.download-content {
+    position: relative;
+}
+
+.download-panel {
+    display: none;
+}
+
+.download-panel.active {
+    display: block;
+}
+
+.download-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.download-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.download-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1e293b;
+}
+
+.language-flags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.flag {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background: #2563eb;
+    color: white;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.flag.en { background: #dc2626; }
+.flag.fr { background: #2563eb; }
+.flag.es { background: #ea580c; }
+.flag.de { background: #1f2937; }
+
+.download-btn {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #15803d;
+    transform: translateY(-1px);
+}
+
+.no-files {
+    text-align: center;
+    padding: 3rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.no-files p {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.enquiry-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.enquiry-btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}   
+
 /* Simple Product Cards Section - Add this to your product.css file */
 
 /* Simple Cards Grid */

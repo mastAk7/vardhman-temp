@@ -7,9 +7,6 @@ import FileStore from 'session-file-store';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 
-
-
-
 import productsRouter from './routes/products.routes.js'
 import aboutRouter from './routes/about.routes.js'
 import solutionsRouter from './routes/solutions.routes.js'
@@ -24,15 +21,26 @@ import povRouter from './routes/pov.routes.js'
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Create session directory with better error handling
 const sessionDir = path.join(__dirname, 'sessions');
-if (!fs.existsSync(sessionDir)) {
-    fs.mkdirSync(sessionDir);
+try {
+    if (!fs.existsSync(sessionDir)) {
+        fs.mkdirSync(sessionDir, { recursive: true });
+        console.log('Session directory created:', sessionDir);
+    }
+    
+    // Test write permissions
+    const testFile = path.join(sessionDir, 'test.txt');
+    fs.writeFileSync(testFile, 'test');
+    fs.unlinkSync(testFile);
+    console.log('Session directory is writable');
+} catch (error) {
+    console.error('Error creating or accessing session directory:', error);
+    console.log('Falling back to memory store...');
 }
 
 const PORT = 4444;
 const app = express();
-
-
 
 const fileStore = FileStore(session);
 
@@ -99,21 +107,31 @@ app.use(express.json({ limit: '10kb' }));
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
 
+// Configure session with fallback to memory store
+let sessionStore;
+try {
+    sessionStore = new fileStore({
+        path: sessionDir, // Use the actual path variable
+        ttl: 86400, // 1 day
+        retries: 0, // Don't retry failed operations
+        logFn: function() {} // Disable logging
+    });
+} catch (error) {
+    console.error('Failed to initialize file store, using memory store:', error);
+    sessionStore = undefined; // Will use default memory store
+}
+
 app.use(session({
     secret: 'vardhman-secret-key',
     resave: false,
     saveUninitialized: false,
-    store: new fileStore({
-        path: './sessions',
-        ttl: 86400 // 1 day
-    }),
+    store: sessionStore, // This will be file store or undefined (memory store)
     cookie: {
         secure: false, // Set to false for development, true for production with HTTPS
         httpOnly: true,
         maxAge: 1000 * 60 * 60 * 24 // 1 day
     }
 }));
-
 
 app.use("/", homeRouter);
 app.use("/about", aboutRouter);
@@ -126,10 +144,6 @@ app.use("/search", searchRouter);
 app.use("/pov", povRouter);
 app.use("/", productsRouter);
 
-
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
-})
-// app.listen(3000, '0.0.0.0', () => {
-//   console.log("Server running on port 3000");
-// });
+});
