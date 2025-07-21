@@ -11,6 +11,7 @@
                     <!-- Main Product Content (Left Side) -->
                     <div class="product-main-content">
                         <!-- Product Images -->
+                        <% if(product.image){ %>
                         <div class="product-images">
                             <div class="main-image">
                                 <img src="<%= product.image %>" alt="<%= product.title %>" id="mainProductImage">
@@ -24,6 +25,7 @@
                                 </div>
                                 <% } %>
                         </div>
+                        <% } %>
 
                         <!-- Product Information -->
                         <div class="product-info">
