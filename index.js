@@ -77,7 +77,8 @@ app.use(
           "https://ka-f.fontawesome.com",
           "https://fonts.googleapis.com",
           "https://cdnjs.cloudflare.com",
-          "https://cdn.jsdelivr.net"
+          "https://cdn.jsdelivr.net",
+          "https://widgets.sociablekit.com"
         ],
         fontSrc: [
           "'self'",
@@ -93,7 +94,8 @@ app.use(
           "https://ka-f.fontawesome.com",
           "https://widgets.sociablekit.com",
           "https://data.accentapi.com",          // ✅ Add this
-          "https://api.sociablekit.com"          // ✅ And this
+          "https://api.sociablekit.com",
+          "https://widgets.sociablekit.com"          // ✅ And this
         ],
         frameSrc: ["'self'", "https://www.google.com"],
         objectSrc: ["'none'"],
