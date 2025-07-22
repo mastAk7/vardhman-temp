@@ -101,13 +101,6 @@
                     "products": [
                         "windsock-mast"
                     ]
-                },
-                "agnis-docking-aid": {
-                    "title": "AGNiS Docking Aid",
-                    "description": "Advanced Ground Navigation and Information System (AGNiS) for aircraft docking and parking guidance.",
-                    "products": [
-                        "agnis-docking-aid"
-                    ]
                 }
             }
         },
@@ -129,7 +122,8 @@
             "hasClassifications": false,
             "products": [
                 "photometric-workshop-equipment",
-                "frame-reader-equipment",
+                "workshop-photometry-controller",
+                "pac-matrix",
                 "photometric-airfield-calibration",
                 "papi-photometric-calibration-system",
                 "airfield-guidance-signs-calibration-system",
@@ -161,12 +155,7 @@
                 "approach-steady",
                 "heliport-beacon",
                 "fato",
-                "floodlight-helipad-lighting-system",
-                "tlof",
-                "inset-omni-directional-light",
-                "inset-omni-directional-approach-light",
-                "elevated-omni-directional-tdz",
-                "omni-directional-approach-light"
+                "floodlight-helipad-lighting-system"
             ]
         },
         "air-traffic-management": {
@@ -758,7 +747,7 @@
             "type" : "LED Elevated"
         },
         "centerline-tdz-high-intensity-light": {
-            "title": "Inset LED Runway Centreline Light",
+            "title": "z",
             "description": "Uni or bi-directional inset fitting suitable for use in category I, II and III all weather operation as: Runway centreline fitting.",
             "sections": [
                 {
