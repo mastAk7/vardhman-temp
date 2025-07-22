@@ -64,7 +64,8 @@ app.use(
           "https://cdnjs.cloudflare.com",
           "https://cdn.jsdelivr.net",
           "https://ajax.googleapis.com",
-          "https://code.jquery.com"
+          "https://code.jquery.com",
+          "https://widgets.sociablekit.com"
         ],
         // ✅ THIS IS THE IMPORTANT ONE FOR `onclick=""` SUPPORT
         scriptSrcAttr: ["'unsafe-inline'"],

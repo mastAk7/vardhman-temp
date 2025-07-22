@@ -65,7 +65,7 @@ const systemIntegrationData = {
         stats: [
             { label: 'Project Value', value: '₹7 Cr.' },
             { label: 'System Type', value: 'Cat-IIIB' },
-            { label: 'Client', value: 'IAF & AAI' },
+            { label: 'Client', value: 'IAF' },
             { label: 'Specialty', value: 'First Defense ILCMS' }
         ],
         gallery: [
@@ -165,7 +165,7 @@ const systemIntegrationData = {
             'Completion certificate issued AAI'
         ],
         stats: [
-            { label: 'Project Value', value: '₹10 Cr.' },
+            { label: 'Project Value', value: '₹1.75 Cr.' },
             { label: 'System Type', value: 'Cat-IIIB' },
             { label: 'Client', value: 'IAF & AAI' },
             { label: 'Conversion', value: 'Halogen to LED' }
@@ -201,7 +201,7 @@ const systemIntegrationData = {
             'Completed the project with zero incident and accident following every safety procedures'
         ],
         stats: [
-            { label: 'Project Value', value: '₹15 Cr.' },
+            { label: 'Project Value', value: '₹2 Cr.' },
             { label: 'System Type', value: 'AGL' },
             { label: 'Safety Record', value: '0 Incidents' },
             { label: 'Completion', value: 'On Schedule' }
@@ -233,7 +233,7 @@ const systemIntegrationData = {
             'Performance certificate issued by Tata Projects'
         ],
         stats: [
-            { label: 'Project Value', value: '₹5 Cr.' },
+            { label: 'Project Value', value: '₹1 Cr.' },
             { label: 'Timeline', value: '3 Months' },
             { label: 'Installation', value: '2 Days' },
             { label: 'Event', value: 'Kumbh Mela' }
@@ -269,7 +269,6 @@ const sitcTurnkeyData = {
         stats: [
             { label: 'Project Value', value: '₹3 Cr.' },
             { label: 'System Type', value: 'Proprietary' },
-            { label: 'Integration', value: 'Tata CMS' },
             { label: 'Client', value: 'IAF' }
         ],
         gallery: []

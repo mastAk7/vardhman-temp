@@ -42,8 +42,6 @@
                         "centerline-tdz-high-intensity-light",
                         "centerline-tdz-bi-directional-light",
                         "inset-runway-edge-light",
-                        "runway-edge-high-intensity-bi-directional-inset-light",
-                        "inset-runway-end-light",
                         "runway-edge-light",
                         "runway-centerline-light",
                         "runway-tdz-light"
@@ -55,8 +53,12 @@
                     "products": [
                         "taxiway-centerline-lighting",
                         "taxiway-stopbar",
-                        "runway-guard-light",
-                        "taxiway-edge-light"
+                        "taxiway-indicator",
+                        "taxiway-indermediate",
+                        "high-intensity-runway-guard-light",
+                        "elevated-omni-directional-light",
+                        "taxiway-apron-edge-elevated-omni-directional-light",
+                        "inset-omni-directional-apron-light"
                     ]
                 },
                 "airfield-guidance-signs": {
@@ -64,12 +66,7 @@
                     "description": "Vardhman airports offer a range of airfield guidance signs,LED Runway guidance signs, LED taxiway guidance signs, RHAG markers, Mandatory Instruction Signs, Information Signs, Vor Aerodome checkpoint signs, Aerodome Identification Signs, Aircraft stand number indicators, Road holding position signs and parking stop signs.",
                     "products": [
                         "mandatory-information-signs",
-                        "runway-distance-marker",
-                        "stand-number-indicator-board",
-                        "rhag-marker",
-                        "parking-stop-sign",
-                        "vor-aerodrome-check-point-signs",
-                        "information-signs"
+                        "runway-distance-marker"
                     ]
                 },
                 "transformers-connector-kits": {
@@ -77,12 +74,9 @@
                     "description": "Reliable transformers and connectors for airfield lighting systems.",
                     "products": [
                         "series-circuit-isolating-transformers",
-                        "primary-connector-kits",
                         "primary-connector-kits-2",
                         "primary-connector-kits-resin-type",
-                        "secondary-connector-kits",
-                        "secondary-connector-kits-model-90r",
-                        "isolating-transformer"
+                        "secondary-connector-kits"
                     ]
                 },
                 "ccrs-accessories": {
@@ -90,7 +84,6 @@
                     "description": "Constant current regulators and accessories for efficient airfield lighting control.",
                     "products": [
                         "micro-100-ccr",
-                        "micro-200-ccr",
                         "multiway-circuit-selector-switch",
                         "series-circuit-cut-out-switch"
                     ]
@@ -140,11 +133,12 @@
                 "photometric-airfield-calibration",
                 "papi-photometric-calibration-system",
                 "airfield-guidance-signs-calibration-system",
-                "sodice-airfield-lighting-soda-powder-cleaning-equipment"
+                "sodice-airfield-lighting-soda-powder-cleaning-equipment",
+                "m-tac"
             ]
         },
         "ilcms": {
-            "title": "Integrated Lighting Control and Monitoring Systems (ILCMS)",
+            "title": "Airfield Lighting Control and Monitoring Systems (ALCMS)",
             "description": "Comprehensive systems for controlling and monitoring airfield lighting.",
             "image": "/images/categories/ilcms.jpg",
             "sector": "airport",
@@ -244,9 +238,9 @@
     },
     "products": {
         "led-approach-light": {
-            "title": "LED Approach Light",
+            "title": "LED Elevated Approach Light",
             "description": "High-intensity, Uni-directional, Elevated Runway Approach,Threshold, Threshold Wingbar & Runway End lights used in SAPL & ICAO category I, II & III runways. Siderow Barrette used in ICAO category II & III runways.",
-            "image": "/images/airport/ledAL.png",
+            "image": "/images/airport/ledAL.jpg",
             "features": [
                 "Aluminium alloy body- light weight, corrosion-resistant & powder coated.",
                 "Frangible coupling to ensure flight safety.",
@@ -282,26 +276,16 @@
             "downloads": {
                 "datasheet": [
                     {
-                        "title": "AXON LED Approach Inset, 12 inch",
-                        "url": "axon-led-datasheet.pdf"
+                        "title": "Datasheet - Approach,Threshold & End - LED",
+                        "url": "ledAL.pdf"
                     }
                 ],
-                "manual": [
-                    {
-                        "title": "Installation Manual",
-                        "url": "axon-led-manual.pdf",
-                        "languages": [
-                            {
-                                "code": "en"
-                            }
-                        ]
-                    }
-                ],
+                "manual": [],
                 "certification": []
             }
         },
         "led-threshold-light": {
-            "title": "LED Threshold Light",
+            "title": "LED Elevated Threshold Light",
             "description": "High-intensity, Uni-directional, Elevated Runway Approach,Threshold, Threshold Wingbar & Runway End lights used in SAPL & ICAO category I, II & III runways. Siderow Barrette used in ICAO category II & III runways.",
             "image": "/images/airport/ledTL.png",
             "features": [
@@ -330,6 +314,16 @@
                     "image": "/images/airport/ledTL-f.webp"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Approach,Threshold & End - LED",
+                        "url": "ledAL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -338,7 +332,7 @@
             "type": "LED Elevated"
         },
         "led-runway-end-light": {
-            "title": "LED Runway End Light",
+            "title": "LED Elevated Runway End Light",
             "description": "High-intensity, Uni-directional, Elevated Runway Approach,Threshold, Threshold Wingbar & Runway End lights used in SAPL & ICAO category I, II & III runways. Siderow Barrette used in ICAO category II & III runways.",
             "image": "/images/airport/ledRL.png",
             "features": [
@@ -367,6 +361,16 @@
                     "image": "/images/airport/ledRL-f.webp"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Approach,Threshold & End - LED",
+                        "url": "ledAL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -375,7 +379,7 @@
             "type": "LED Elevated"
         },
         "elevated-approach-siderow-barrette": {
-            "title": "Elevated Approach & Siderow Barrette",
+            "title": "Halogen Elevated Approach & Siderow Light",
             "description": "High intensity, uni-directional, elevated runway approach and siderow barrette lights suitable for use in all weather operation installations up to ICAO category III systems.",
             "image": "/images/airport/eleAP.png",
             "features": [
@@ -403,6 +407,16 @@
                     "image": "/images/airport/eleAP-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Approach,Threshold & End - Halogen",
+                        "url": "ledAL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -411,7 +425,7 @@
             "type": "Halogen Elevated"
         },
         "elevated-threshold-threshold-wingbar": {
-            "title": "Elevated Threshold & Threshold Wingbar",
+            "title": "Halogen Elevated Threshold & Threshold Light",
             "description": "High intensity uni-directional elevated threshold and threshold wingbar and suitable for use in all weather operation installations up to ICAO category III systems.",
             "image": "/images/airport/eleTH.png",
             "features": [
@@ -439,6 +453,16 @@
                     "image": "/images/airport/eleTH-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Approach,Threshold & End - Halogen",
+                        "url": "ledAL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -447,7 +471,7 @@
             "type": "Halogen Elevated"
         },
         "elevated-runway-end-light": {
-            "title": "Elevated Runway End Light",
+            "title": "Halogen Elevated Runway End Light",
             "description": "High intensity, uni-directional, elevated runway end lights suitable for use in all weather operation installations up to ICAO category III systems.",
             "image": "/images/airport/eleRL.png",
             "features": [
@@ -475,6 +499,16 @@
                     "image": "/images/airport/eleRL-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Approach,Threshold & End - Halogen",
+                        "url": "ledAL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -483,36 +517,28 @@
             "type": "Halogen Elevated"
         },
         "inset-approach-siderow-barrette": {
-            "title": "Inset Approach Siderow Barrette",
+            "title": "Inset LED Approach Light",
             "description": "High intensity inset siderow barrette fitting suitable for use in category I, II and III all weather operation airfield lighting systems.",
-            "image": "/images/airport/insAP.png",
-            "features": [
-                "Lightweight and robust due to its aluminium alloy construction.",
-                "Long life halogen lamps with a life of 1500 hours at full intensity or over 3500 hours in normal usage.",
-                "Standard adaptor rings to suit 15”, 15.5” bases.",
-                "Prism removal and replacement achieved without the need for adhesive or sealants.",
-                "Colour beam variations achieved by dichroic coating.",
-                "Lamp bypass options available when required.",
-                "Pre-focused optics to simplify maintenance procedures.",
-                "Light channel within 5mm of grade.",
-                "Plug for pressure testing.",
-                "Low temperature - temperature at centre of top cover remains below 160°C ICAO and FAA limit.",
-                "All fasteners are stainless steel."
-            ],
             "sections": [
                 {
                     "title": "Complience with standards",
                     "para": "FAA L-850, AC 150/5345-46"
-                },
-                {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits normally supplied from 100W, 200W or 300W isolating transformers."
-                },
-                {
-                    "title": "Fixture position on runway",
-                    "image": "/images/airport/insAP-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Inset Approach",
+                        "url": "insAP.pdf"
+                    },
+                    {
+                        "title": "Datasheet - Inset Approach Siderow Barrette",
+                        "url": "ial.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -521,36 +547,28 @@
             "type": "LED Inset"
         },
         "inset-threshold-light": {
-            "title": "Inset Threshold Light",
+            "title": "Inset LED Threshold Light",
             "description": "High intensity inset threshold light fitting suitable for use in category I, II and III all weather operation airfield lighting systems.",
-            "image": "/images/airport/insTH.png",
-            "features": [
-                "Lightweight and robust due to its aluminium alloy construction.",
-                "Long life halogen lamps with a life of 1500 hours at full intensity or over 3500 hours in normal usage.",
-                "Standard adaptor rings to suit 15”, 15.5” bases.",
-                "Prism removal and replacement achieved without the need for adhesive or sealants.",
-                "Colour beam variations achieved by dichroic coating.",
-                "Lamp bypass options available when required.",
-                "Pre-focused optics to simplify maintenance procedures.",
-                "Light channel within 5mm of grade.",
-                "Plug for pressure testing.",
-                "Low temperature - temperature at centre of top cover remains below 160°C ICAO and FAA limit.",
-                "All fasteners are stainless steel."
-            ],
             "sections": [
                 {
                     "title": "Complience with standards",
                     "para": "FAA L-850, AC 150/5345-46"
                 },
                 {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits normally supplied from 100W, 200W or 300W isolating transformers."
-                },
-                {
                     "title": "Fixture position on runway",
                     "image": "/images/airport/insTH-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Inset Threshold Light",
+                        "url": "insTH.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -559,36 +577,29 @@
             "type": "LED Inset"
         },
         "inset-runway-end-light": {
-            "title": "Inset Runway End Light",
+            "title": "Inset LED Runway End Light",
             "description": "High intensity inset Runway End fitting suitable for use in category I, II and III all weather operation airfield lighting systems.",
-            "image": "/images/airport/insRL.png",
-            "features": [
-                "Lightweight and robust due to its aluminium alloy construction.",
-                "Long life halogen lamps with a life of 1500 hours at full intensity or over 3500 hours in normal usage.",
-                "Standard adaptor rings to suit 15”, 15.5” bases.",
-                "Prism removal and replacement achieved without the need for adhesive or sealants.",
-                "Colour beam variations achieved by dichroic coating.",
-                "Lamp bypass options available when required.",
-                "Pre-focused optics to simplify maintenance procedures.",
-                "Light channel within 5mm of grade.",
-                "Plug for pressure testing.",
-                "Low temperature - temperature at centre of top cover remains below 160°C ICAO and FAA limit.",
-                "All fasteners are stainless steel."
-            ],
             "sections": [
                 {
                     "title": "Compliance with standards",
                     "para": "FAA L-850, AC 150/5345-46"
                 },
                 {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits normally supplied from 100W, 200W or 300W isolating transformers."
-                },
-                {
                     "title": "Fixture position on runway",
                     "image": "/images/airport/insRL-f.png"
                 }
             ],
+            
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Inset Runway End Light",
+                        "url": "insRL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -599,78 +610,62 @@
         "inset-threshold-runway-end-lights": {
             "title": "Inset Threshold/Runway End Light",
             "description": "High intensity inset Threshold/Runway End fitting suitable for use in category I, II and III all weather operation airfield lighting systems.",
-            "image": "/images/airport/insEL.png",
-            "features": [
-                "Lightweight and robust due to its aluminium alloy construction.",
-                "Long life halogen lamps with a life of 1500 hours at full intensity or over 3500 hours in normal usage.",
-                "Standard adaptor rings to suit 15”, 15.5” bases.",
-                "Prism removal and replacement achieved without the need for adhesive or sealants.",
-                "Colour beam variations achieved by dichroic coating.",
-                "Lamp bypass options available when required.",
-                "Pre-focused optics to simplify maintenance procedures.",
-                "Light channel within 5mm of grade.",
-                "Plug for pressure testing.",
-                "Low temperature - temperature at centre of top cover remains below 160°C ICAO and FAA limit.",
-                "All fasteners are stainless steel."
-            ],
             "sections": [
                 {
                     "title": "Compliance with standards",
                     "para": "FAA L-850, AC 150/5345-46"
-                },
-                {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits normally supplied from 100W, 200W or 300W isolating transformers."
                 },
                 {
                     "title": "Fixture position on runway",
                     "image": "/images/airport/insEL-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Inset Threshold/Runway End Light",
+                        "url": "insEL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
-            "type": "Halogen Inset"
+            "type": "LED Inset"
         },
         "inset-threshold-wingbar": {
             "title": "Inset Threshold Wingbar",
             "description": "High intensity inset threshold wingbar suitable for use in category I, II and III all weather operation airfield lighting systems.",
-            "image": "/images/airport/insWB.png",
-            "features": [
-                "Lightweight and robust due to its aluminium alloy construction.",
-                "Long life halogen lamps with a life of 1500 hours at full intensity or over 3500 hours in normal usage.",
-                "Standard adaptor rings to suit 15”, 15.5” bases.",
-                "Prism removal and replacement achieved without the need for adhesive or sealants.",
-                "Colour beam variations achieved by dichroic coating.",
-                "Lamp bypass options available when required.",
-                "Pre-focused optics to simplify maintenance procedures.",
-                "Light channel within 5mm of grade.",
-                "Plug for pressure testing.",
-                "Low temperature - temperature at centre of top cover remains below 160°C ICAO and FAA limit.",
-                "All fasteners are stainless steel."
-            ],
             "sections": [
                 {
                     "title": "Compliance with standards",
                     "para": "FAA L-850, AC 150/5345-46"
                 },
                 {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits normally supplied from 100W, 200W or 300W isolating transformers."
-                },
-                {
                     "title": "Fixture position on runway",
                     "image": "/images/airport/insWB-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Inset Threshold Wingbar",
+                        "url": "insWB.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "approach-lighting",
-            "type": "Halogen Inset"
+            "type": "LED Inset"
         },
         "papi-lighting": {
             "title": "PAPI Lighting",
@@ -707,231 +702,171 @@
                     "image": "/images/airport/papi-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - PAPI",
+                        "url": "papi1.pdf"
+                    },
+                    {
+                        "title": "Datasheet - PAPI-Clinometer (Digital)",
+                        "url": "papi2.pdf"
+                    },
+                    {
+                        "title": "Datasheet - PAPI-Clinometer (Mechanical)",
+                        "url": "papi3.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "airfield-ground-lights",
-            "subcategory": "papi-lighting"
+            "subcategory": "papi-lighting",
+            "type": "Halogen Elevated"
         },
         "elevated-runway-edge-light": {
-            "title": "Elevated Runway End Light",
+            "title": "LED Elevated Runway Edge Light",
             "description": "High intensity, Elevated bi-directional (with omni-directional component), elevated runway edge light for use in all weather operation installations up to ICAO category III systems. Medium intensity, bi/uni-directional elevated threshold/end light.",
-            "image": "/images/airport/eleEL.png",
-            "features": [
-                "Choice of three mounting stems available: M32 threaded frangible spigot, 25mm I/D socket with side cable entry, 25mm O/D spigot suitable for an FAA type frangible coupling",
-                "Lamp change possible without tools using the ‘twist lock’ facility.",
-                "Outer glass dome moulded in low expansion glass to resist thermal shock.",
-                "Smooth outer glass surface resists build up of dirt and provides for easier cleaning.",
-                "All sub-assemblies are keyed to simplify routine maintenance and ensure correct alignment.",
-                "Robust corrosion resistant aluminium construction for strength and durability.",
-                "Gimble mounting for ease of alignment and levelling.",
-                "Screws are stainless steel.",
-                "Silicon rubber gaskets seal the dome against ingress of liquids.",
-                "Powder coat paint finish in golden yellow. All fasteners are stainless steel."
-            ],
             "sections": [
                 {
                     "title": "Compliance with standards",
                     "para": "FAA l-861, AC 150/5345-46"
                 },
                 {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits, normally supplied from either a 45W, 100W, 150W or 200W series circuit isolating transformer. Power consumption varies depending upon type of lamp fitted."
-                },
-                {
                     "title": "Fixture Position on Runway",
                     "image": "/images/airport/eleEL-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Runway Edge - LED",
+                        "url": "eleEL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "airfield-ground-lights",
-            "subcategory": "runway-lighting"
+            "subcategory": "runway-lighting",
+            "type" : "LED Elevated"
         },
         "centerline-tdz-high-intensity-light": {
-            "title": "Centreline & TZH High Intensity Light",
-            "description": "Uni or bi-directional inset fitting suitable for use in category I, II and III all weather operation as: Runway centreline, TDZ fitting.",
-            "image": "/images/airport/cenIL.png",
-            "features": [
-                "Lightweight and robust due to its aluminium alloy construction.",
-                "Long life halogen lamps with a typical life of 1500 hours at full intensity or over 3500 hours in normal usage.",
-                "Bi-directional Runway Centreline utilises 2 x 48W lamps.",
-                "Standard adaptor rings to suit 15”, 15.5” bases.",
-                "Prism removal and replacement achieved without the need for adhesive or sealants.",
-                "Colour beam variations achieved by dichroic coating.",
-                "Lamp bypass options available when required.",
-                "Pre-focused optics to simplify maintenance procedures.",
-                "Light channel within 5mm of grade.",
-                "Plug for pressure testing.",
-                "Low temperature - temperature at centre of top cover remains below 160°C ICAO and FAA limit.",
-                "All fasteners are stainless steel."
-            ],
+            "title": "Inset LED Runway Centreline Light",
+            "description": "Uni or bi-directional inset fitting suitable for use in category I, II and III all weather operation as: Runway centreline fitting.",
             "sections": [
                 {
                     "title": "Compliance with standards",
                     "para": "FAA L-850, AC 150/5345-46"
-                },
-                {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits normally supplied from 45W, 65W, 100W, 200W or 300W isolating transformers."
                 },
                 {
                     "title": "Fixture Position on Runway",
                     "image": "/images/airport/cenIL-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - INSET RUNWAY CENTER LINE LIGHT",
+                        "url": "eleEL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "airfield-ground-lights",
-            "subcategory": "runway-lighting"
+            "subcategory": "runway-lighting",
+            "type" : "LED Inset"
         },
         "centerline-tdz-bi-directional-light": {
-            "title": "Centreline & TZH Bi-Directional Light",
+            "title": "Inset LED TDZ Uni-Directional Light",
             "description": "Inset Runway centreline or touchdown zone fixture for use in category I, II & III all weather operation airfield lighting systems.",
-            "image": "/images/airport/cenBL.png",
-            "features": [
-                "Lightweight and robust aluminium alloy construction which also gives good corrosion resistance.",
-                "Dichroic coated lenses for coloured light options.",
-                "Full range of FAA and PSA adaptors available.",
-                "Anti-rotation pin locations.",
-                "Left and right toe-in option for TDZ version.",
-                "Long life, low energy lamps (1500 hrs/45W or 49W at full brilliancy) - 1 or 2 off per fitting.",
-                "Pre-focused optics simplify maintenance procedures.",
-                "Light channel within 5mm of grade.",
-                "Two point fixing into mounting adaptor/seating pot for faster installation and removal of light cartridge.",
-                "Low profile (12mm) to reduce possibility of damage to aircraft and vehicle tyres.",
-                "Twin-lead, bi-directional (switchable) versions available.",
-                "Prisms accurately located and secured in the body casting without the need for sealing compound to facilitate removal and replacement.",
-                "Optional lamp by-pass devices can be fitted if required.",
-                "Compatible with IEC seating pots.",
-                "Clear anodised. All fasteners are stainless steel."
-            ],
             "sections": [
                 {
                     "title": "Compliance with standards",
-                    "para": "FAA L-850, AC 150/5345-46"
-                },
-                {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits, normally supplied from one 100W/150W or two 45W/65W series circuit isolating transformers."
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/cenBL-f.png"
+                    "bullets": [
+                        "ICAO : Annex 14 - Volume 1",
+                        "FAA : AC 150/5345-46",
+                        "FAA : Engineering Brief 67D",
+                        "IEC : 61827"
+                    ]
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - INSET RUNWAY TOUCHDOWN ZONE LIGHT",
+                        "url": "runTDZ.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "airfield-ground-lights",
-            "subcategory": "runway-lighting"
+            "subcategory": "runway-lighting",
+            "type" : "LED Inset"
         },
         "inset-runway-edge-light": {
             "title": "Inset Runway Edge Light",
-            "description": "High intensity, inset runway edge fitting suitable for use in category I, II and III all weather operation airfield lighting systems.Suitable for use in 6.6A airfield lighting circuits normally supplied from 100W, 200W or 300W isolating transformers.",
-            "image": "/images/airport/insED.png",
-            "features": [
-                "Lightweight and robust due to its aluminium alloy construction.",
-                "Long life halogen lamps with a typical life of 1500 hours at full intensity or over 3500 hours in normal usage.",
-                "Standard adaptor rings to suit 15”, 15.5” bases.",
-                "Prism removal and replacement achieved without the need for adhesive or sealants.",
-                "Colour beam variations achieved by dichroic coating.",
-                "Lamp bypass options available when required.",
-                "Pre-focused optics to simplify maintenance procedures.",
-                "Light channel within 5mm of grade.",
-                "Plug for pressure testing.",
-                "Low temperature - temperature at centre of top cover remains below 160°C ICAO and FAA limit.",
-                "All fasteners are stainless steel."
-            ],
+            "description": "High intensity, inset runway edge fitting suitable for use in category I, II and III all weather operation airfield lighting systems.",
             "sections": [
                 {
                     "title": "Compliance with standards",
                     "para": "FAA L-850, AC 150/5345-46"
-                },
-                {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits normally supplied from 45W, 65W, 100W, 200W or 300W isolating transformers."
                 },
                 {
                     "title": "Fixture Position on Runway",
                     "image": "/images/airport/insED-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - INSET RUNWAY EDGE LIGHT",
+                        "url": "runTDZ.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "airfield-ground-lights",
-            "subcategory": "runway-lighting"
-        },
-        "runway-edge-high-intensity-bi-directional-inset-light": {
-            "title": "Runway Edge High Intensity Bi-Directional Inset Light",
-            "description": "Inset Runway end fitting for use in category I, II & III all weather operation airfield lighting systems.",
-            "image": "/images/airport/runIL.png",
-            "features": [
-                "Lightweight and robust due to its aluminium alloy construction which also gives good corrosion resistance.",
-                "Designed to be mounted in 12” or 15.5” adaptor flange.",
-                "Full range of FAA and PSA adaptors available.",
-                "Long life, low energy lamps (1500 hrs/105W 6.6A at full brilliancy), 2 off per fitting.",
-                "Pre-focused optics simplify maintenance procedures.",
-                "Light channel within 5mm of grade.",
-                "Two point fixing into mounting adaptor for faster installation and removal of light fitting.",
-                "Low profile (12mm) to reduce possibility of damage to aircraft and vehicle tyres.",
-                "Prisms accurately located and secured in the body casting without the need for sealing compound to facilitate removal and replacement.",
-                "All fasteners are stainless steel."
-            ],
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-850, AC 150/5345-46"
-                },
-                {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits, normally supplied from either one 200W or two 100W isolating transformers."
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/runIL-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "runway-lighting"
+            "subcategory": "runway-lighting",
+            "type" : "LED Inset"
         },
         "runway-edge-light": {
-            "title": "Runway Edge Light",
-            "description": "Omni-directional medium intensity inset fitting for taxiway, helipad, LI runway edge and general applications.",
-            "image": "/images/airport/runEL.png",
-            "features": [
-                "Body casting manufactured from aluminium alloy for lightness, strength and durability.",
-                "IEC body style as standard, 8” 2 hole and 8” 3 hole versions available.",
-                "Long life lamps (objective life of 1500 hours at full brilliancy).",
-                "Prism removal and replacement achieved without the need for adhesive or sealants.",
-                "3 hole body option for direct installation to SRA8/13 adaptor ring.",
-                "Colour beam variations achieved by dichroic coated or coloured glass.",
-                "Lamp by-pass options available if required.",
-                "Pre-focused optics to simplify maintenance procedures.",
-                "Low profile (10mm).",
-                "Light channel within 5mm of Grade.",
-                "Natural anodised finish (as standard), powder coated NATO green or golden yellow."
-            ],
+            "title": "Inset LED Turn Pad Light",
+            "description": "Omni-directional medium intensity inset fitting for taxiway, helipad, turnpad edge and general applications.",
             "sections": [
                 {
                     "title": "Compliance with standards",
                     "para": "FAA L-852, AC 150/5345-46"
-                },
-                {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits normally supplied from 1 x 45W, 65W or 100W isolating transformer. 120V and 240V mains supply versions also available. Power consumption is either 30W, 36W, 40W, 49W or 105W depending upon type of lamp fitted."
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/runEL-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - INSET RUNWAY TURN PAD LIGHT",
+                        "url": "insTP.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -997,382 +932,91 @@
             "subcategory": "runway-lighting"
         },
         "taxiway-centerline-lighting": {
-            "title": "Taxiway Centerline Lighting",
+            "title": "Inset LED Taxiway Center Line Light",
             "description": "",
-            "image": "/images/airport/taxCL.png",
-            "relatedProducts": [
-                {
-                    "key": "low-intensity-lighting",
-                    "title": "Low Intensity Lighting",
-                    "image": "/images/airport/taxLIL.png"
-                },
-                {
-                    "key": "high-intensity-light-narrow",
-                    "title": "High Intensity Lighting(Narrow)",
-                    "image": "/images/airport/taxHILN.png"
-                },
-                {
-                    "key": "high-intensity-light-offset",
-                    "title": "High Intensity Lighting(Offset)",
-                    "image": "/images/airport/taxHILO.png"
-                },
-                {
-                    "key": "low-intensity-lights",
-                    "title": "Low Intensity Lights",
-                    "image": "/images/airport/taxLI.png"
-                },
-                {
-                    "key": "high-intensity-lights",
-                    "title": "High Intensity Lights",
-                    "image": "/images/airport/taxHIL.png"
-                },
-                {
-                    "key": "high-intensity-lights-offset",
-                    "title": "High Intensity Lights(offset)",
-                    "image": "/images/airport/taxHILs.png"
-                }
-            ],
             "sector": [
                 "airport"
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - INSET TAXIWAY CENTERLINE LIGHT",
+                        "url": "insTC.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "low-intensity-lighting": {
-            "title": "Low Intensity Lighting",
-            "description": "CAT I airfield ground lighting (AGL) systems suitable for operations in RVR > 350m. Taxiway centerline, Straight sections; Clearance bar (>=1200 Runway Visual Range (RVR)). Light Direction and Colors, Bidirectional (narrow beam): green-green, green-yellow, yellow-yellow, Unidirectional (narrow beam): green, yellow.",
-            "image": "/images/airport/taxLIL.png",
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-852 A, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/taxLIL-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "high-intensity-light-narrow": {
-            "title": "High Intensity Lighting(Narrow)",
-            "description": "Taxiway centerline Straight section; Clearance bar (<1200 RVR). CAT III all weather operation airfield ground lighting (agl) systems. Taxiway centreline applications, lead on, clearance bars, immediate holding positions. Light Direction and Colors, Bidirectional (narrow beam): green-green, green-yellow, yellow-yellow. Unidirectional (narrow beam): green, yellow",
-            "image": "/images/airport/taxHILN.png",
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-852 C, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/taxHILN-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "high-intensity-light-offset": {
-            "title": "High Intensity Lighting(Offset)",
-            "description": "CAT III all weather operation airfield ground lighting (agl) systems.Taxiway centre line high intensity lighting solutions, straight sections.",
-            "image": "/images/airport/taxHILO.png",
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L- 852, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/taxHILO-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "low-intensity-lights": {
-            "title": "Low Intensity Lights",
-            "description": "CAT I airfield ground lighting (AGL) systems suitable operations in RVR > 350m.Taxiway centreline low intensity lighting solutions curved sections.Taxiway centre line low intensity lighting solutions curved sections. Light Direction and Colors, Bidirectional (wide beam): green-green, yellow-yellow.",
-            "image": "/images/airport/taxLI.png",
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-852 J, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/taxLI-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "high-intensity-lights": {
-            "title": "High Intensity Lights",
-            "description": "It is a High intensity, LED Inset, Bi Directional/Uni Directional Taxiway Center line for us on curved sections of taxiways, The fixture is suitable for CAT III all weather operation airfield ground lighting (AGL) systems. The goal of the IR range of fittings is to enhance the efficiency of an airfield by optimizing power consumption, increasing reliability, reducing costs and CO2 emissions to the airport. Taxiway centerline Straight section; Clearance bar (<1200 RVR). Light Direction and Colors, Bidirectional (wide beam): green-green, yellow-yellow. Unidirectional (wide beam): green, yellow.",
-            "image": "/images/airport/taxHIL.png",
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-852 D , AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/taxHIL-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "high-intensity-lights-offset": {
-            "title": "High Intensity Lights(Offset)",
-            "description": "Taxiway centerline, curved sections (<1200 RVR ).CAT III all weather operation airfield ground lighting (agl) systems.Taxiway centre line, high intensity lighting solutions, curved sections. Light Direction and Colors , Bidirectional (wide beam): green-green, yellow-yellow.",
-            "image": "/images/airport/taxHILs.png",
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-852 K, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/taxHILs-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
+            "subcategory": "taxiway-lighting",
+            "type": "LED Inset"
         },
         "taxiway-stopbar": {
-            "title": "Taxiway Stopbar",
+            "title": "Inset LED Taxiway Stop Bar Light",
             "description": "",
-            "image": "/images/airport/taxSB.png",
-            "relatedProducts": [
-                {
-                    "key": "stopbar-intensity-light-narrow",
-                    "title": "Stopbar Intensity Light (Narrow)",
-                    "image": "/images/airport/taxSILN.png"
-                },
-                {
-                    "key": "stopbar-intensity-light-wide",
-                    "title": "Stopbar Intensity Light(Wide)",
-                    "image": "/images/airport/taxSILW.png"
-                },
-                {
-                    "key": "stopbar-intensity-light-offset",
-                    "title": "Stopbar Intensity Light (offset)",
-                    "image": "/images/airport/taxSILO.png"
-                },
-                {
-                    "key": "stopbar-intensity-lightcurved-section",
-                    "title": "Stopbar Intensity Light(Curved Section)",
-                    "image": "/images/airport/taxSILC.png"
-                },
-                {
-                    "key": "bi-directional-centreline-stopbar-light",
-                    "title": "Bi-Directional Centreline & Stopbar Light",
-                    "image": "/images/airport/taxSL.png"
-                }
-            ],
             "sector": [
                 "airport"
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - INSET STOP BAR LIGHT",
+                        "url": "insSB.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
+            "subcategory": "taxiway-lighting",
+            "type": "LED Inset"
         },
-        "stopbar-intensity-light-narrow": {
-            "title": "Stopbar Intensity Light (Narrow)",
-            "description": "It is a High intensity, LED inset, Bi Directional/Uni Directional Stopbar fixture suitable for CAT III all weather operation airfield ground lighting (AGL) systems. The goal of the IR range of fittings is to enhance the efficiency of an airfield by optimizing power consumption, increasing reliability, reducing costs and CO2 emissions to the airport.",
-            "image": "/images/airport/taxSILN.png",
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-852, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/taxSILN-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "stopbar-intensity-light-wide": {
-            "title": "Stopbar Intensity Light(Wide)",
-            "description": "It is a High intensity, LED inset, Uni-directional Stopbar wide fitting and suitable for CAT III all weather operation airfield ground lighting (AGL) systems. The goal of the IR range of fixtures is to enhance the efficiency of an airfield by optimizing power consumption, increasing reliability, reducing costs and CO2 emissions to the airport.",
-            "image": "/images/airport/taxSILW.png",
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-852 S, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/taxSILW-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "stopbar-intensity-light-offset": {
-            "title": "Stopbar Intensity Light (offset)",
-            "description": "It is a High intensity, LED inset, Bi Directional/Uni Directional Stopbar for use on offset straight sections. This application is suitable for CAT III all weather operation airfield ground lighting (AGL) systems. The goal of the IR range of fixtures is to enhance the efficiency of an airfield by optimizing power consumption, increasing reliability, reducing costs and CO2 emissions to the airport.",
-            "image": "/images/airport/taxSILO.png",
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-852, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/taxSILO-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "stopbar-intensity-lightcurved-section": {
-            "title": "Stopbar Intensity Light(Curved Section)",
-            "description": "It is a High intensity, LED inset, Bi Directional/Uni Directional Stopbar for curved sections. The fitting is suitable for CAT III all weather operation airfield ground lighting (AGL) systems. The goal of the IR range of fixtures is to enhance the efficiency of an airfield by optimizing power consumption, increasing reliability and reducing costs and CO2 emissions to the airport.",
-            "image": "/images/airport/taxSILC.png",
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-852, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/taxSILC-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "bi-directional-centreline-stopbar-light": {
-            "title": "Bi-Directional Centreline & Stopbar Light",
-            "description": "For use in all weather operation installations up to ICAO category III systems for straight and curved sections.",
-            "image": "/images/airport/taxSL.png",
-            "features": [
-                "Body casting manufactured from aluminium alloy for lightness, strength and durability",
-                "Standard ATG body styles available",
-                "Long life lamps (objective life of 1500 hours at full brilliancy)",
-                "Prism removal and replacement achieved without the need for adhesive or sealants",
-                "A window blank is available for uni-directional applications",
-                "Lamp by-pass options available",
-                "Pre-focused optics to simplify maintenance procedures",
-                "Light channel within 5mm of grade",
-                "Natural anodised finish (as standard), powder coated NATO green or golden yellow"
-            ],
-            "sections": [
-                {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits normally supplied from 1 x 45W, 1 x 65W or 1 x 100W isolating transformer. Power consumption is either 49W or 105W."
-                },
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-852, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/taxSL-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "runway-guard-light": {
-            "title": "Runway Guard Lights",
+        "taxiway-indicator": {
+            "title": "Inset LED Rapid Exit Taxiway Indicator Light",
             "description": "",
-            "image": "/images/airport/rgl.png",
-            "relatedProducts": [
-                {
-                    "key": "low-intensity-runway-guard-light",
-                    "title": "Bi-Directional Centreline & Stopbar Light",
-                    "image": "/images/airport/rglLI.png"
-                },
-                {
-                    "key": "high-intensity-runway-guard-light",
-                    "title": "High Intensity Runway Guard Light",
-                    "image": "/images/airport/rglHI.png"
-                }
-            ],
             "sector": [
                 "airport"
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - INSET RAPID EXIT TAXIWAY INDICATOR LIGHT",
+                        "url": "insTI.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
+            "subcategory": "taxiway-lighting",
+            "type": "LED Inset"
         },
-        "low-intensity-runway-guard-light": {
-            "title": "Bi-Directional Centreline & Stopbar Light",
-            "description": "Elevated runway guard lights for use at taxiway/runway intersections to avoid incursion onto an active taxiway/runway, as required by the standards (CAP 168 ICAO 5.3.22).",
-            "image": "/images/airport/rglLI.png",
-            "features": [
-                "LED light source for exceptionally long life",
-                "LED light source complies with ICAO photometric requirements, flashing at 45 cycles per minute.",
-                "The unit can be adjusted from 0° to 20° vertically and locked by means of the mounting support brackets. For non-frangible arrangements, these support brackets can be bolted directly on to a concrete plinth, using M12 studs and nuts"
-            ],
-            "sections": [
-                {
-                    "title": "Electrical supply",
-                    "para": "Nominal power consumption is approximately 28 watts. Supplied as one of the following:",
-                    "bullets": [
-                        "Airfield Constant Current (2.8 – 6.6A supply) using a 45W isolating transformer",
-                        "110V AC mains supply",
-                        "220V AC mains supply"
-                    ]
-                },
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-804 AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/rglLI-f.png"
-                }
-            ],
+        "taxiway-indermediate": {
+            "title": "Inset LED Intermediate Holding Position Light",
+            "description": "",
             "sector": [
                 "airport"
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - INSET INTERMEDIATE HOLDING POSITION LIGHT",
+                        "url": "insPL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
+            "subcategory": "taxiway-lighting",
+            "type": "LED Inset"
         },
         "high-intensity-runway-guard-light": {
             "title": "High Intensity Runway Guard Light",
-            "description": "The Apollo Hi Intensity Elevated LED Runway Guard Light provides a warning to pilots or drivers of ground vehicles that they are approaching an active runway.",
-            "image": "/images/airport/rglHI.png",
+            "description": "",  
             "features": [
                 "High Intensity Runway Guard Light",
-                "Available in either 6.6A series lighting circuit or 220/240V mains powered units.",
+                "Available in either 6.6A series lighting circuit powered units.",
                 "Alternating flashes with a flash rate of 45-50 flashes per minute.",
                 "Main beam coverage: +/- 8° both vertical and horizontal.",
                 "Adjustable light beam: 0°, 5°, 10°, 15°, 20° vertically."
@@ -1396,93 +1040,25 @@
                     "image": "/images/airport/rglHI-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - High Intensity Runway Guard Light",
+                        "url": "runGL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "taxiway-edge-light": {
-            "title": "Taxiway Edge Light",
-            "description": "",
-            "image": "/images/airport/tel.png",
-            "relatedProducts": [
-                {
-                    "key": "omni-directional-inset-light",
-                    "title": "Omni-Directional Inset Light",
-                    "image": "/images/airport/telIL.png"
-                },
-                {
-                    "key": "elevated-omni-directional-light",
-                    "title": "Elevated Omni-directional Light",
-                    "image": "/images/airport/telEL.png"
-                },
-                {
-                    "key": "low-intensity-inset-omni-direction-light",
-                    "title": "Low Intensity Inset Omni-Direction Light",
-                    "image": "/images/airport/telLIL.png"
-                },
-                {
-                    "key": "taxiway-apron-edge-elevated-omni-directional-light",
-                    "title": "Taxiway & apron edge Elevated Omni-Directional Light",
-                    "image": "/images/airport/telTL.png"
-                },
-                {
-                    "key": "inset-omni-directional-apron-light",
-                    "title": "Inset omni-Directional Apron Light",
-                    "image": "/images/airport/telAL.png"
-                },
-                {
-                    "key": "taxiway-apron-edge-light",
-                    "title": "Taxiway & apron edge Elevated Omni-Directional Light",
-                    "image": "/images/airport/telAEL.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "omni-directional-inset-light": {
-            "title": "Omni-Directional Inset Light",
-            "description": "Omni-directional inset fitting for Taxiway, Helipad, LI Runway Edge and general applications.",
-            "image": "/images/airport/telIL.png",
-            "features": [
-                "Body casting manufactured from aluminium alloy for lightness, strength and durability",
-                "IEC body style as standard, PSA 8” 2 hole and 8” 3 hole versions available",
-                "3 hole body option for direct installation to SRA8/13 adaptor ring",
-                "Long life lamps (objective life of 1500 hours at full brilliancy)",
-                "Prism removal and replacement achieved without the need for adhesive or sealants",
-                "Colour beam variations achieved by dichroic coated or coloured glass",
-                "Lamp by-pass options available if required",
-                "Pre-focused optics to simplify maintenance procedures",
-                "Low profile (10mm)",
-                "Light channel within 5mm of Grade",
-                "Natural anodised finish (as standard), powder coated NATO green or golden yellow (Special Order)"
-            ],
-            "sections": [
-                {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits normally supplied from 1 x 45W, 65W or 100W isolating transformer. 120V and 240V mains supply versions also available. Power consumption is either 30W, 36W, 40W, 49W or 105W depending upon type of lamp fitted."
-                },
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-852, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/telIL-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
+            "subcategory": "taxiway-lighting",
+            "type": "LED Elevated"
         },
         "elevated-omni-directional-light": {
-            "title": "Elevated Omni-directional Light",
+            "title": "Elevated Halogen Taxiway Edge Light",
             "description": "It is an Omni-directional tungsten halogen taxiway and apron edge fitting for CAT III all weather operation airfield ground lighting (AGL) systems.",
             "image": "/images/airport/telEL.png",
             "features": [
@@ -1512,38 +1088,25 @@
                     "image": "/images/airport/telEL-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Halogen TAXIWAY EDGE LIGHT",
+                        "url": "halTE.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "low-intensity-inset-omni-direction-light": {
-            "title": "Low Intensity Inset Omni-Direction Light",
-            "description": "Inset Taxiway Edge, Apron Edge or low intensity runway light, inset helipad edge light, security or traffic control light.",
-            "image": "/images/airport/telLIL.png",
-            "features": [
-                "Taxiway, helipad or runway edge light using J1 series lamps. Also 240V mains version available. (B.C. or E.S.) • Security light for vandal proof illumination of carparks, subways etc. or for under vehicle inspection at access/control points to secure facilities such as airports, barracks and other high risk sites. • Traffic light for mini roundabout identification, bollard illumination, traffic lane separation etc.",
-                "The body comprises an aluminium housing with a 203mm (8in) diameter flange, which is sealed at the top by a pressed heat-resisting glass dome seated in a moulded gasket and secured in position by a clamp ring. The substantial construction of the dome is designed to withstand a load of 1000lbs/sq.in."
-            ],
-            "sections": [
-                {
-                    "title": "Electrical supply",
-                    "para": "The lights are designed for use on a 6.6amp series circuit system. Each light requires an isolating transformer. Also available with GLS lamp for mains operation."
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/telLIL-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
+            "subcategory": "taxiway-lighting",
+            "type": "LED Elevated"
         },
         "taxiway-apron-edge-elevated-omni-directional-light": {
-            "title": "Taxiway & apron edge Elevated Omni-Directional Light",
+            "title": "Elevated LED Taxiway & apron edge Light",
             "description": "It is an Omni-directional taxiway and apron edge fitting suitable for CAT III all weather operation airfield ground lighting (AGL) systems. The goal of the IR range of fixtures is to enhance the efficiency of an airfield by optimizing power consumption, increasing reliability, reducing costs and CO2 emissions to the airport.",
             "image": "/images/airport/telTL.png",
             "sections": [
@@ -1560,34 +1123,28 @@
                     "image": "/images/airport/telTL-f.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Taxiway & apron edge Light",
+                        "url": "eleTE.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
+            "subcategory": "taxiway-lighting",
+            "type": "LED Elevated"
         },
         "inset-omni-directional-apron-light": {
-            "title": "Inset omni-Directional Apron Light",
-            "description": "Omni-directional inset fitting for Taxiway, Helipad, LI Runway Edge and general applications.",
+            "title": "Inset LED Aircraft Stand Manoeuvring Guidance Light",
+            "description": "Omni-directional inset fitting for Stand Manoeuvring in Apron.",
             "image": "/images/airport/telAL.png",
-            "features": [
-                "Body casting manufactured from aluminium alloy for lightness, strength and durability",
-                "IEC body style as standard, 8” 2 hole and 8” 3 hole versions available",
-                "3 hole body option for direct installation to SRA8/13 adaptor ring",
-                "Long life lamps (objective life of 1500 hours at full brilliancy)",
-                "Prism removal and replacement achieved without the need for adhesive or sealants",
-                "Colour beam variations achieved by dichroic coated or coloured glass",
-                "Lamp by-pass options available if required",
-                "Pre-focused optics to simplify maintenance procedures",
-                "Low profile (10mm)",
-                "Light channel within 5mm of Grade",
-                "Natural anodised finish (as standard), powder coated NATO green or golden yellow"
-            ],
             "sections": [
-                {
-                    "title": "Electrical supply",
-                    "para": "Suitable for use in 6.6A airfield lighting circuits normally supplied from 1 x 30W, 45W, 65W or 100W isolating transformer. 120V and 240V mains supply. Suitable for use in a dedicated passive circuit supplied from a 10W ir 6.6A/0.35A isolating transformer. Power consumption is 10W."
-                },
                 {
                     "title": "Fixture Position on Runway",
                     "image": "/images/airport/telAL-f.png"
@@ -1596,28 +1153,19 @@
             "sector": [
                 "airport"
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Taxiway & apron edge Light",
+                        "url": "insAPR.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
-        },
-        "taxiway-apron-edge-light": {
-            "title": "Taxiway & apron edge Elevated Omni-Directional Light",
-            "description": "CAT III all weather operation airfield ground lighting (agl) systems.It is used in Taxiway edge, Apron edge and light Direction and Colors are Omni-directional and blue.",
-            "image": "/images/airport/telAEL.png",
-            "sections": [
-                {
-                    "title": "Compliant with Standards",
-                    "para": "FAA L-852 T, AC 150/5345-46"
-                },
-                {
-                    "title": "Fixture Position on Runway",
-                    "image": "/images/airport/telAEL-f.png"
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "taxiway-lighting"
+            "subcategory": "taxiway-lighting",
+            "type": "LED Inset"
         },
         "mandatory-information-signs": {
             "title": "Mandory/Information Signs",
@@ -1627,40 +1175,16 @@
                 "Information signs are signified by yellow characters on a black background (location signs) or black characters on a yellow background (destination signs) and are used to provide additional guidance to pilots manoeuvring aircraft on the ground.",
                 "Mandatory signs are characterised by white characters on a red background and are used to advise pilots (and vehicle drivers) of an airfield location beyond which they must not proceed unless authorised by air traffic control."
             ],
-            "sections": [
-                {
-                    "title": "Housing",
-                    "para": "The enclosure of the guidance sign is manufactured from a corrosive resistant aluminium extrusion which is powder coated, white as standard. Other colors are available Black / yellow, by special order. The guidance sign housing can be either single sided, only one message displayed or double-sided allowing for two messages to be shown in a bidirectional format. Both types of signs are designed to have a minimum ingress value of IP55."
-                },
-                {
-                    "title": "Luminance / Chromaticity",
-                    "para": "This LED airfield guidance sign is designed specifically to comply with the ICAO specifications for color and luminance."
-                },
-                {
-                    "title": "Fascia",
-                    "para": "The legend panel is one single piece of substrate material that will cover all signs up to a maximum of 3m. To prevent damage to the message from external debris, such as stone chips created by jet blast, the inscription is applied on the inner face of the substrate material. The legend and fascia are UV resistant and flame retardant."
-                },
-                {
-                    "title": "Power Supply",
-                    "para": "The airfield guidance signs IR858I, are powered from a standard 6.6Amp AGL circuit through a suitably sized isolating transformer. The design of the power supply units allows for the signs to be powered from different types of CCR’s that can be found in airports around the world. The thyristor type CCR comparable to the Micro 100, or an IGBT / ferro resonant CCR which has a sinewave output similar to that of the Micro 200 regulator can be used.",
-                    "bullets": [
-                        "As the circuit input current varies the output brilliancy of the sign will vary relative to the input current. The output luminance will not fall below 1/3rd its average minimum value (at 6.6A) at the lowest input step (2.8A).",
-                        "Other power sources include 230/110volt upon special request."
-                    ]
-                },
-                {
-                    "title": "Isolator Switch",
-                    "para": "A rotary switch option is available which can be used to isolate the secondary current within the sign enclosure to enable safe maintenance work to be conducted. When the switch is activated a shorting link is also applied to the isolation transformer secondary. It is recommended however, that the primary circuit be isolated when working on AGL equipment."
-                },
-                {
-                    "title": "Bird Deterrent System",
-                    "para": "Spike strips can be provided to help prevent birds from landing on the sign which helps to detract birds from resting in critical areas and also assisting in eliminating possible damage. Bird wire can also be offered as an alternative."
-                },
-                {
-                    "title": "Tiedown Tether",
-                    "para": "Stainless steel tethers are available to ensure that in the case of an incident the sign does not become a further FOD hazard."
-                }
-            ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Datasheet - Sign Board Slim edge lit- LED",
+                        "url": "mis.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -1691,116 +1215,6 @@
             "category": "airfield-ground-lights",
             "subcategory": "airfield-guidance-signs"
         },
-        "stand-number-indicator-board": {
-            "title": "Stand Number Indicator Board",
-            "description": "Vardhman airports developed SNIBs designed to operate over the current range from 2.8 to 6.6 Amp standard AGL circuit via a suitable series isolating transformer or, optionally, 230V mains supply. Signs can be either 50 or 60 Hz operation. Standard series circuit transformers can be used for 6 or 12 amp circuits. An external FAA style moulded plug is supplied as standard for connection to AGL circuits.",
-            "image": "/images/airport/snib.png",
-            "portfolioLines": [
-                "Highly visible in all weather conditions",
-                "Supplied fully assembled",
-                "Special design features for ease of maintenance",
-                "Extruded aluminium profile – up to 6.2m long anodised and powder coated in * RAL 1007 aviation yellow",
-                "Flexibility – can either be mounted on a stand, pole or wall support",
-                "10 year anti-fade guarantee on all fascias",
-                "UV stabilised 4mm polycarbonate",
-                "Cabinets and fascias proven to withstand wind loads of up to 90m/ps",
-                "Photo cell activation when ambient light falls below 100 lux",
-                "Powder coated corrosion resistant extruded aluminium casing",
-                "Hinged front face for ease of maintenance",
-                "Weather-proof to IP 655",
-                "Temperature range of -25°C to +55°C",
-                "Signfix channel to secure into position",
-                "Non oxidising stainless steel clips and fixings",
-                "The size of the cabinet is dependant on the amount of characters required."
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "airfield-guidance-signs"
-        },
-        "rhag-marker": {
-            "title": "RHAG Marker",
-            "description": "A RHAG marker (moon board) is primarily used by the military and is used to indicate the location of the aircraft arresting cable on the runway. Utilising a similar construction to the IRDM and SNIB’s manufactured by Vardhman, the RHAG markers aluminium extrusion allows them to withstand extreme weather conditions whilst still providing light output that exceeds all international standards and requirements.",
-            "image": "/images/airport/rhag.png",
-            "portfolioLines": [
-                "Illumination is provided by either the latest LED technology with a life expectancy in excess of 75,000 hours or with long life fluorescent tubes",
-                "The sign cases are an aluminium construction designed to withstand the extremes of climate conditions encountered on airfields and airports worldwide",
-                "The sign fascia is hinge mounted to the main casing to provide quick and easy access for maintenance and lamp change. If required the whole sign fascia can be lifted free from the casing to provide full, unrestricted access to the main casing",
-                "Each sign regardless of type is tested for the average light output, according to the procedures stipulated in ICAO annex 14 and CAP 168",
-                "All signs will exceed the light output requirements for a RVR of <800m 3500K light source provides improved colour contrast and legibility",
-                "IP Protection, IP 54",
-                "Bottom cable-entry",
-                "Temperature range -25°C/+55°C",
-                "Complete with frangible legs and mounting flanges for installation on a concrete pad",
-                "Double sided: 4mm polycarbonate",
-                "Coated in RAL 1007 aviation yellow"
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "airfield-guidance-signs"
-        },
-        "vor-aerodrome-check-point-signs": {
-            "title": "VOR Aerodrome Check Point Signs",
-            "description": "When a VOR aerodrome checkpoint is established, it shall be indicated by a VOR aerodrome checkpoint marking and sign.",
-            "image": "/images/airport/vac.png",
-            "portfolioLines": [
-                "A VOR aerodrome checkpoint sign shall be located as near as possible to the checkpoint and so that the inscriptions are visible from the cockpit of an aircraft properly positioned on the VOR aerodrome checkpoint marking.",
-                "A VOR aerodrome checkpoint sign shall consist of an inscription in black on a yellow background.",
-                "The inscriptions on a VOR checkpoint sign should be in accordance with the following:",
-                "– VOR is an abbreviation identifying this as a VOR checkpoint;",
-                "– 115.4 is an example of the radio frequency of the VOR concerned;",
-                "– 270° is an example of the VOR bearing, to the nearest degree, which should be indicated at the VOR checkpoint;",
-                "– 0.2 NM is an example of the distance in nautical miles to a DME collocated with the VOR concerned."
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "airfield-guidance-signs"
-        },
-        "parking-stop-sign": {
-            "title": "Parking Stop Sign",
-            "description": "The Vardhman parking Stop sign is designed for use on aircraft parking stands. The new Vardhman parking sign employs the latest in LED technology to offer superior clarity and long operational life.",
-            "image": "/images/airport/pss.png",
-            "portfolioLines": [
-                "Flexilite LED strips which emit signal red.",
-                "Long life",
-                "Excellent clarity",
-                "100,000 hour guarantee against faulty workmanship",
-                "LED array is designed so that if one LED should fail the remainder will stay illuminated",
-                "Constructed from 2mm sheet steel, fully seam welded to ensure rigidity and give the unit a rating of IP65",
-                "To ensure the unit can withstand harsh environments the body is initially fully phosphated and then powder coated to give the body a 10 year perforation guarantee",
-                "The window glazing is constructed from 4mm polycarbonate and is UV stabilized, this assists the panel from discolouring",
-                "The panel is guaranteed for 10 years against normal defects",
-                "Wall mountable",
-                "IP65 enclosure"
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "airfield-guidance-signs"
-        },
-        "information-signs": {
-            "title": "Information Signs",
-            "description": "Type-I airfield guidance sign was originally manufactured by a Norwegian company called \u2018Smiths Airfield Equipment (SAFE)\u2019. The body of the sign is manufactured from anticorrosive aluminum extrusion which is powder coated with \u2018aviation yellow\u2019 paint. The extrusions interlocks creating a solid sign box structure which is water resistant to IP55. The fascia framework is also manufactured from an aluminum extrusion but is powder coated in black.",
-            "image": "/images/airport/is.png",
-            "portfolioLines": [
-                "When the type-I sign was first manufactured it utilised tungsten halogen lamps to illuminate the front polycarbonate fascia, but over time, technology has progressed. The concept of using fluorescent tubes was then adopted and specialized electronics were developed to control the brilliancy and operation of the unit. The third generation saw the implementation of LED\u2019s in a grid format for the illumination. Throughout the different generations the power consumption of the unit reduced helping to minimize the rating of the constant current regulator (CCR) that is used to power the circuits.",
-                "Although different light sources have been used internally, the ICAO candela requirements of 150cd\u2019s for yellow taxiway information signs, 300cd\u2019s for white used on a mandatory sign, and 30cd\u2019s for red colors, again on mandatory signs, have always been achieved.",
-                "Not only is the brilliancy of the sign important, but the chromaticity is essential ensuring that the information is displayed clearly to pilots and vehicles using the taxiway system. This is always tested during manufacture to ensure compliance of each sign against the necessary standards with a multispectral camera which also confirms light output.",
-                "There are different modes of operation the sign is designed to withstand, all of which are identified in the ICAO airport design manuals. These need to be considered when installing the sign as different couplings may need to be used. Discussion with atg airports customer support team should be able to assist in this matter.",
-                "Type-I LED Conversion retrofit kit:\nMany type-I signs are installed at airports all over the world, and some have been in operation for more than 20 years, before the LED was even considered for airfield lighting applications. However, to enable clients to benefit from the energy saving of LED usage, a conversion kit for the \u2018Smith (SAFE)\u2019 sign and also the type-I is available, thus extending the life of the sign. The kit is installed into the sign and the old tungsten halogen, fluorescent or cold cathode technology can be removed. Once converted, the sign will achieve the same efficiency benefits of the type-I LED sign."
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "airfield-guidance-signs"
-        },
         "series-circuit-isolating-transformers": {
             "title": "Series Circuit Isolating Transformers",
             "description": "Series circuit airfield lighting isolating transformers are featuring plug-in connectors to simplify installation and maintenance.",
@@ -1815,6 +1229,16 @@
                     "para": "A full range of transformers is available from 30/45 watts to 500 watts rated at 6.6A/6.6A. Other current capacities are available upon request including 6A, 8.33A, 12A and 20A. LED range is available from 10–20 Watts rated at 6.6A/0.4A and 6.6A/0.7A respectively."
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Isolation Transformer",
+                        "url": "scit.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -1839,30 +1263,16 @@
                     "para": "Each kit contains a plug housing, a receptacle housing and crimp applied electrical pin and socket contacts. These kits are directly interchangeable with kits having a locking feature and mate with the moulded-on primary connectors of an isolating transformer. The use of these connectors provides a test point at every isolating transformer. One kit is required for each splice or transformer installation."
                 }
             ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "transformers-connector-kits"
-        },
-        "primary-connector-kits": {
-            "title": "Primary Connector Kits",
-            "image": "/images/airport/pck.png",
-            "description": "To provide separable waterproof connections between all classes of armoured or un-armoured airfield lighting cable and polychloropene encapsulated transformers. To make separable waterproof splice in all classes of armoured or un-armoured airfield lighting cable.",
-            "sections": [
-                {
-                    "title": "Type",
-                    "para": "Model CEG-52 – 5kV (or less), suitable for copper or brass tape screened and steel wire armour."
-                },
-                {
-                    "title": "Compliance with Standards",
-                    "para": "FAA L-823, AC 150/5345-26D"
-                },
-                {
-                    "title": "Description",
-                    "para": "Each kit contains a plug housing and a receptacle housing, each with screen continuity provision for use with a copper or brass tape screen, crimp applied connector for screen continuity, and crimp applied electrical pin and socket contacts dimensionally identical to FAA specification L-823 contacts, plus incorporating a locking system that will withstand a static pull load of 155N (35 pounds) without separating. These kits mate with the moulded-on primary connectors of an isolating transformer. The use of these connectors provides a test point at every isolating transformer. One kit is required for each splice or transformer installation."
-                }
-            ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Primary Connector",
+                        "url": "pck2.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -1899,76 +1309,20 @@
             "description": "To terminate two core round waterproof insulated cable with a receptacle (female) connector conforming to FAA specification L-823, style 12 when field assembling a secondary extension lead, or when repairing a transformer secondary lead.",
             "sections": [
                 {
-                    "title": "Type",
-                    "para": "Model 91R – 600 volt (or less), non-screened (unshielded) cable."
-                },
-                {
                     "title": "Compliance with Standards",
                     "para": "FAA L-823, AC 150/5345-26"
-                },
-                {
-                    "title": "Specification",
-                    "para": "Conforms to FAA L-823 and Transport Canada K255."
-                },
-                {
-                    "title": "Description",
-                    "para": "Each kit contains a plug housing, and a crimp applied plug insert that, when assembled, makes a connector that provides a separable waterproof splice when mated with a model 90P or 91P kit or a 95MR moulded on connector."
                 }
             ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "transformers-connector-kits"
-        },
-        "secondary-connector-kits-model-90r": {
-            "title": "Secondary Connector Kits (Model 90R)",
-            "image": "/images/airport/sckm.png",
-            "description": "To provide separable waterproof connections between non-screened primary cable and an isolating transformer. To make a waterproof separable splice in non-screened primary supply cable.",
-            "sections": [
-                {
-                    "title": "Type",
-                    "para": "Model 90R – 600 volt (or less), nonscreened (unshielded) cable."
-                },
-                {
-                    "title": "Compliance with Standards",
-                    "para": "FAA L-823, AC 150/5345-26"
-                },
-                {
-                    "title": "Description",
-                    "para": "Each kit contains a plug housing, and a crimp applied plug insert that, when assembled, makes a connector that provides a separable waterproof splice when mated with a model 90R or 91R kit or a 95MR moulded on receptacle connector set such as is used to terminate the secondary lead of an airfield lighting transformer."
-                }
-            ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "transformers-connector-kits"
-        },
-        "isolating-transformer": {
-            "title": "Isolating Transformer",
-            "image": "/images/airport/it.png",
-            "description": "Isolating transformer for airfield lighting circuits with support for LED fixtures, robust environmental resistance and wide operating range.",
-            "features": [
-                "Operates LED AGL from airfield circuit",
-                "3 step or 5 step brilliancy control",
-                "Matches existing TH AGL performance",
-                "50/60Hz 6.6A circuits",
-                "FAA Style 1 & 7 Plug and socket",
-                "Interface between L-830/L-831 isolating transformer and LED fitting",
-                "Operates 1 watt to 7 watt LED products",
-                "Installation distance up to 100m from light fitting",
-                "Operating temperature -55°C to +60°C",
-                "Protection to IP68",
-                "Relative humidity 0-100%. Fully encapsulated in chemically resistant potting compound",
-                "Can be retro-fitted from 30 watt to 100 watt"
-            ],
-            "sections": [
-                {
-                    "title": "Compliance with standards",
-                    "para": "FAA L-830/831, AC 150/5345-46D"
-                }
-            ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Secondary Connector Kits",
+                        "url": "sck.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -1976,64 +1330,47 @@
             "subcategory": "transformers-connector-kits"
         },
         "micro-100-ccr": {
-            "title": "Micro 100 CCR",
+            "title": "Micro Processor Controlled Constant Current Regulator",
             "image": "/images/airport/m1ccr.png",
-            "description": "The MCCR 100 is specifically designed for the efficient and effective supply of power to airfield ground lighting series circuits.",
+            "description": "The CCR is specifically designed for the efficient and effective supply of power to airfield ground lighting series circuits.",
             "portfolioLines": [
                 "Power Factor: Up to 0.9 (≤10 kVA), 0.95 (≥12 kVA)",
                 "Efficiency: ≥90%",
                 "Output Ratings: 2.5 to 30 kVA at 380-415V; 2.5 to 15 kVA at 210-240V",
                 "Output Currents: 6.0, 6.6, 12, 20A",
-                "Input Voltages: 220–240V (1-phase), 380–440V (2-phase), 50/60 Hz"
+                "Input Voltages: 220–240V (1-phase), 380–440V (2-phase), 50 Hz"
             ],
             "features": [
-                "Pre-programmed with default operating parameters suitable for most applications",
-                "Front panel keypad for parameter changes; no PC required",
-                "Accurate control of RMS output for all loads from short circuit to full load",
-                "Multi-tapped output isolation transformer for optimal load matching",
-                "Output circuit isolated from mains",
+                "16 bits DSP Based Controller",
+                "RS-485 communication port for External Communication.",
+                "Nominal RMS output current.",
+                "NOS lamp failure indication Display",
+                "Stable Output Current",
                 "Minimal cubicle footprint",
                 "Air cooled — no fans",
                 "Low life cycle costs",
-                "Compatible with circuit selector and lamp switching equipment",
                 "Microprocessor-controlled display with diagnostics: Output Current, Brightness Step, % Output, Alarms, etc."
             ],
             "sections": [
                 {
                     "title": "Compliance with Standards",
-                    "para": "FAA AC 150/5345-10F"
+                    "bullets": [
+                        "ICAO: Aerodrome Design Manual 9157 Part 5, para 3.2.",
+                        "FAA: AC 150/5345-10H",
+                        "IS : 12291 - 1987"
+                    ]
                 }
             ],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "ccrs-accessories"
-        },
-        "micro-200-ccr": {
-            "title": "Micro 200 CCR",
-            "image": "/images/airport/m2ccr.png",
-            "description": "The Micro 200 CCR is fitted with state-of-the-art circuits that adjust the output waveform thousands of times per second for improved response, fault protection, and efficient power delivery.",
-            "portfolioLines": [
-                "Power Factor: Better than 0.9 (up to 15 kW)",
-                "Efficiency: Better than 90%",
-                "Output Power: 1.5 to 7.5 kW (220–240V); 2.5 to 15 kW (380–415V)",
-                "Output Currents: 6.0A, 6.6A, 12A",
-                "Input Voltages: 220–240V or 380–415V, 50/60 Hz"
-            ],
-            "features": [
-                "PWM control of IGBT H-bridge for high quality sinusoidal output",
-                "Superior harmonic performance and fault protection",
-                "Same cubicle footprint as earlier designs",
-                "Front-panel diagnostics with CCR monitoring",
-                "Diagnostic info: Output Current, Brightness Step, % Output, Alarms, etc."
-            ],
-            "sections": [
-                {
-                    "title": "Compliance with Standard",
-                    "para": "FAA AC 150/5345-10F"
-                }
-            ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Micro Processor Controlled Constant Current Regulator",
+                        "url": "m1ccr.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -2116,18 +1453,28 @@
             "subcategory": "portable-lighting"
         },
         "portable-aviation-runway-lighting-fixture": {
-            "title": "Portable Aviation Runway Lights",
-            "description": "The Portable LED Lighting Kit is used to set up temporary or semipermanent lighting systems for aircraft or helicopters to land on grass strips, frozen lakes, or roadways, or as emergency runway lighting on major airports.",
+            "title": "Portable Aviation Runway Light",
+            "description": "The Portable LED Light is used to set up temporary or semipermanent lighting systems for aircraft or helicopters to land on grass strips, frozen lakes, or roadways, or as emergency runway lighting on major airports.",
             "image": "/images/airport/parlf.png",
             "features": [],
             "portfolioLines": [
-                "POLARIS can be used as a standalone fitting or as part of a complete transportable runway lighting kit and is available for all relevant applications including:",
+                "The Light fitting can be used as a standalone fitting or as part of a complete transportable runway lighting kit and is available for all relevant applications including:",
                 "Runway Edge (white) bi & omnidirectional",
                 "Taxiway Edge (blue)",
                 "Runway end (red)",
                 "Threshold (green)",
                 "Combined Threshold/Runway End"
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Portable Aviation Light Chargeable - LED",
+                        "url": "parlf.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -2138,6 +1485,16 @@
             "title": "Portable Aviation LED Light",
             "description": "For temporary installations at civil and military airfields and heliports in case of emergency or maintenance power-offs or to delineate areas temporarily closed to traffic for works.",
             "image": "/images/airport/pal.jpg",
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Portable LED Aviation Light ",
+                        "url": "pal.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -2145,41 +1502,32 @@
             "subcategory": "portable-lighting"
         },
         "windsock-mast": {
-            "title": "Floodlit Windsock Mast",
-            "description": "All masts are fabricated from mild steel, then galvanised to BS 1729.\n\nBase Post 90mm x 6.3mm SHS\nMast 90mm x 3.6mm / 80mm x 3.6mm / 70mm x 3.6mm SHS box section & 60mm RHS tube.\n\nThe mast can be safely lowered and raised by one man using the auto-braked winch.\nThe light arms can be rotated to service any of the lamps from the ground.\nA mast lock secures the mast in the upright position when raised.\nFrangibility in the event of a collision is achieved by a slot system near the mast base.\nThe mast is powder coated over the galvanising in 7 x red & white bands as per ICAO Annex 14.",
+            "title": "Illuminated Wind Direction Indicator",
+            "description": "",
             "image": "/images/airport/ms.png",
             "features": [
-                "Base Post 90mm x 6.3mm SHS",
-                "Mast options: 90mm / 80mm / 70mm x 3.6mm SHS + 60mm RHS tube",
-                "Auto-braked winch enables single-person operation",
-                "Rotating arms allow servicing from the ground",
-                "Locking mechanism secures mast when raised",
-                "Slot system near base ensures frangibility",
-                "7x red & white ICAO-compliant bands",
-                "Powder coated over galvanised steel"
+                "Pole: 5 mtr Length, 75mm dia B class GI pipe painted in red / white color having support during maintenance with MS hinged plate of 10 mm thickness . along with 4 nos, 600 mm long anchor bolts for installation",
+                "LED Lights : LED obstruction light - having Aluminum cast body in aviation yellow color and Red Polycarbonate dome on top. 20 watt LED lamp - 4 nos. with holder and Aluminum shade for external lighting. ",
+                "Junction Box : 4 way Aluminum casting junction box with arm painted in red color for fixing 4 nos. External lights including MCB box & electrical copper wiring to connect with 220 vac",
+                "Aluminum frame work : Dia- 900 mm, Length 1.40 mtr. made of solid aluminum rod, painted in red color ",
+                "Windsock cloth : Truncated fabric (nylon ) - size 3.75 mtr length, 0.9 mtr dia at one end and 0.45 mtr dia at another end having Red & white color",
+                "Bearing : 1 set ( 2 nos.) including protection from water, bracket & ss nut bolts for mounting /support to Aluminum drum, painted in red color. "
             ],
-            "portfolioLines": [
-                "**Lighting System:**\nFour wide beam LED floodlights give the correct illumination throughout 360 degree wind direction. Total power consumption (including standard 8W LED Obstruction Light) when illuminated is less than 130W.\n\nIllumination is fully compliant with CAP 168 Appendix 7D – 9 ‘Test Procedure for Illuminated Wind Sleeve’, including 9.6 ‘Glare & Overall Performance’.\n\nThe lamps are 50,000 hour life and weatherproof to IP65.\nThey are mounted on arms above the windsock to spread the light evenly onto it irrespective of wind speed and direction, and point straight down to avoid pilot glare.\nAs standard, a Single 100k hour LED Obstruction Light is mounted on top of the mast.",
-                "**Electrical Control System:**\nA double switch is provided on the Base Post to allow control of the Obstruction Light and Floodlighting independently. The floodlighting is also controlled by a photocell mounted beside the switches.\n\nThe Obstruction Light has an integral photocell, which can be disabled. We despatch these set for manual use as most users want this on 24/7, but this setting is easily altered.\n\nFor ease of assembly, a junction box at the top of the mast distributes power to the floodlights and Obstruction Light. Two supply cable pass inside the mast to supply power to the junction box; one for Illumination, one for the Obstruction Light.\nFasteners are supplied to secure the supply cable to the Base Post. The ground supply cable is not supplied as this varies from one location to another.",
-                "**Windsock & Swivel Frame:**\nThe standard windsock is 3.6m / 12ft long x 0.91m / 36” mouth diameter, in dayglow orange polyester for long life. A Red & White (or other combination) 5 banded windsock can be provided if required.\n\nThe tail of the windsock has a unique design to prevent flutter, thus prolonging its life.\nNo chains, wire or metal hoops are used in the windsocks to maximise responsiveness and minimise chafe.\nThe Swivel Frame is specially designed in 316 stainless wire to minimise maintenance bearings."
-            ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Illuminated Wind Direction Indicator",
+                        "url": "ms.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "airfield-ground-lights",
             "subcategory": "windsock-mast"
-        },
-        "agnis-docking-aid": {
-            "title": "AGNiS Docking Aid",
-            "description": "AGNiS Docking Aid: Azimuth Guidance for Nose-In Stand (AGNiS) is one of the most popular forms of stand guidance. It consists of two coloured lights mounted side by side.\n\nIf the pilot is on the stand centreline they will see two green lights. If they are off centreline, one of the lights will appear red and the pilot then steers towards the green one. AGNiS alone provides only azimuth guidance, it does not inform pilots when they should stop. It is relatively imprecise but cheap to implement and reliable.",
-            "image": "/images/airport/ada.png",
-            "features": [],
-            "portfolioLines": [],
-            "sector": [
-                "airport"
-            ],
-            "category": "airfield-ground-lights",
-            "subcategory": "agnis-docking-aid"
         },
         "avdgs": {
             "title": "Advanced Visual Docking Guidance System (AVDGS)",
@@ -2223,21 +1571,44 @@
                     "image": "/images/airport/avdgs4.png"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "AVDGS Datasheet",
+                        "url": "avdgs.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
             "category": "avdgs"
         },
         "ilcms": {
-            "title": "Integrated Lighting Control and Monitoring Systems (ILCMS)",
+            "title": "Airfield Lighting Control and Monitoring Systems (ALCMS)",
             "description": "",
+            "features" : [
+                "VAS-ALCMS enables control and monitoring of airfield lighting and other visual aids installed at the airport, providing increased safety of ground operations. The system architecture provides for a wide range of functionalities to support the needs of airport operations and allows for easy integration with other airport systems.", "VAS-ALCMS is a distributed, scalable electrical vault computer system that gives you control and monitoring of airport lighting equipment, with high speed operation redundancy and easy subsystem integration. It offers touchscreen HMIs, for ATC and airfield operations system with numerous functions to make daily work easier more efficient while ensuring airport lighting systems can be fully monitored.", "Reliable high speed operation including switching of field circuits in accordance with FAA requirements. All the alarms and events related to ALCMS and CCRs can be stored in ALCMS hard disk and backing up data.", "VAS-ALCMS is software controlled in order to ensure flexibility for expansion with complete ground movement guidance systems fully supported by AGL configuration. The system has fail safe features (maintain last / state) to ensures all equipments goes to fail safe state if the network or power fails."
+            ],
+            "sections" : [
+                {
+                    "title" : "Compliance with Standards",
+                    "bullets" : [
+                        "ICAO: Annex 14,Aerodrome Design Manual part 5 para. 3.4 and 3.7",
+                        "FAA: AC 150/5345-56B latest edition",
+                        "IEC: 61508"
+                    ]
+                }
+            ],
             "sector": "airport",
             "category": "ilcms",
             "downloads": {
                 "datasheet": [
                     {
-                        "title": "ILCMS Datasheet",
-                        "url": "ilcms.pdf"
+                        "title": "ALCMS Datasheet",
+                        "url": "alcms.pdf"
                     }
                 ],
                 "manual": [],
@@ -2245,31 +1616,12 @@
             }
         },
         "photometric-workshop-equipment": {
-            "title": "Photometric Workshop Equipment",
+            "title": "Photometric Workshop Equipment (PAC Lab II)",
             "description": "",
-            "image": "/images/airport/pwe.png",
-            "relatedProducts": [
-                {
-                    "key": "pac",
-                    "title": "Photometric Airfield Calibration",
-                    "image": "/images/airport/pac.png"
-                },
-                {
-                    "key": "workshop-photometry-controller",
-                    "title": "Workshop Photometry Controller",
-                    "image": "/images/airport/wpc.png"
-                }
-            ],
+            "image": "/images/airport/pac.png",
             "sector": [
                 "airport"
             ],
-            "category": "photometric-system",
-            "subcategory": "photometric-workshop-equipment"
-        },
-        "pac": {
-            "title": "Photometric Airfield Calibration",
-            "description": "",
-            "image": "/images/airport/pac.png",
             "portfolioLines": [
                 "PAC Lab II is an associate product of PAC system (Photometric Airfield Calibration).",
                 "The PAC Lab II system improves the maintenance work, making it more efficient and accurate by providing the capability to control the light output of each fitting before installing them on site.",
@@ -2277,9 +1629,16 @@
                 "The light fittings are positioned on a rotating plate in front of the PAC sensors strip fixed on a vertical bench. Bi-directional fittings are automatically measured both sides.",
                 "To facilitate the operator’s action, the rotating plate moves upwards and downwards so that fitting positioning remains user-friendly."
             ],
-            "sector": [
-                "airport"
-            ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "PAC Lab II Datasheet",
+                        "url": "pac.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "category": "photometric-system",
             "subcategory": "photometric-workshop-equipment"
         },
@@ -2315,6 +1674,25 @@
             ],
             "category": "photometric-system",
             "subcategory": "photometric-workshop-equipment"
+        },
+        "m-tac": {
+            "title": "m-TAC Manual Torque of AGL Control",
+            "description": "The m-TAC system is the ultimate tool for manual control of the torque value of each screw/ bolt tightening the inset fittings on their respective shallow base.",
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - m-TAC",
+                        "url": "mtac.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
+            "sector": [
+                "airport"
+            ],
+            "category": "photometric-system",
+            "subcategory": "frame-reader-equipment"
         },
         "pac-matrix": {
             "title": "PAC Matrix",
@@ -2361,6 +1739,16 @@
                     "para": "**All our products are compliant with ICAO, FAA, STAC and ENAC standards and recommendations.**"
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - PAC Matrix",
+                        "url": "fre.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "image": "/images/airport/fre.png",
             "sector": [
                 "airport"
@@ -2410,6 +1798,16 @@
                     ]
                 }
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Mobile Photometric Airfield Calibration",
+                        "url": "mpac.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -2462,6 +1860,16 @@
                 "Automatic mode and procedure;",
                 "Night operation for airside."
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Airfield Guidance Signs Calibration System",
+                        "url": "acs.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -2478,6 +1886,16 @@
                 "The operation causes no damage to the prism and does not pollute the environment, neither attracting nor favouring development of the fauna surrounding the platforms ( rodents, birds, etc.). Only few grams of soda powder are left on the runways or taxiways."
             ],
             "image": "/images/airport/ace.png",
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Airfield Lighting Soda Powder Cleaning Equipment",
+                        "url": "ace.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "sector": [
                 "airport"
             ],
@@ -2485,107 +1903,84 @@
             "subcategory": "sodice-airfield-lighting-soda-powder-cleaning-equipment"
         },
         "aiming-point-lights": {
-            "title": "Aiming Point Lights",
-            "description": "Where an aiming point marking is provided at a heliport intended for use at night, aiming point lights should be provided.",
-            "portfolioLines": [
-                "Aiming point lights shall be collocated with the aiming point marking.",
-                "Aiming point lights shall form a pattern of at least six omnidirectional white lights.",
-                "The lights shall be inset when a light extending above the surface could endanger helicopter operations."
-            ],
+            "title": "Heliport Approach Path Indicator (HAPI)",
+            "description": "The Helicopter Approach Path Indicator - HAPI system consists of a single lighting to provide a visual indication of the correct approaching path of the helicopter. The HAPI uses patented, LED-based optics to achieve the lowest power consumption, highest intensity and sharpest green/red transition.",
             "sector": [
                 "airport",
                 "defense"
             ],
             "category": "heliport-lighting",
             "subcategory": "aiming-point-lights",
-            "image": "/images/airport/apl.png"
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "HAPI Datasheet",
+                        "url": "hapi.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            }
         },
         "approach-steady": {
-            "title": "Approach Steady",
-            "description": "An approach lighting system should be provided at a heliport where it is desirable and practicable to indicate a preferred approach direction.",
-            "portfolioLines": [
-                "The approach lighting system shall be located in a straight line along the preferred direction of approach.",
-                "It should consist of a row of three lights spaced uniformly at 30 m intervals and of a crossbar 18m in length at 90 m from the FATO perimeter.",
-                "Additional lights spaced uniformly at 30m intervals should be added beyond the crossbar if more conspicuous final approach is needed.",
-                "The lights beyond the crossbar may be steady or sequenced flashing depending upon the environment."
-            ],
+            "title": "LED Helipad Elevated Light",
+            "description": "Heliport Elevated light should not exceed a height of 25cm. There is a fragile coupling in the base connection, so if aircraft hit the light by accident, the base will break immediately to avoid more damage.",
             "sector": [
                 "airport",
                 "defense"
             ],
             "category": "heliport-lighting",
             "subcategory": "approach-steady",
-            "image": "/images/airport/as.png"
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - LED Helipad Elevated Light",
+                        "url": "hel.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            }
         },
         "heliport-beacon": {
             "title": "Heliport Beacon",
             "description": "A heliport beacon should be provided at a heliport where:\na) long-range visual guidance is considered necessary and is not provided by other visual means; or\nb) identification of the heliport is difficult due to surrounding lights",
-            "portfolioLines": [
-                "The heliport beacon shall be located on or adjacent to the heliport preferably at an elevated position and so that it does not dazzle a pilot at short range.",
-                "The heliport beacon emit repeated series of equispaced short duration white flashes.",
-                "The light from the beacon is show at all angels of azimuth."
-            ],
-            "sections": [
-                {
-                    "title": "Scope",
-                    "para": "This specification details Federal Aviation Administration requirements for airport light beacons at civil airports, military airports, seaplane bases, and heliports."
-                },
-                {
-                    "title": "Classification",
-                    "bullets": [
-                        "L-801H Medium intensity heliport beacon",
-                        "L-802H High intensity heliport beacon"
-                    ]
-                },
-                {
-                    "title": "Flash Rate",
-                    "bullets": [
-                        "L-801H 33 to 39 flashes per minute (fpm)",
-                        "L-802H 33 to 39 flashes per minute (fpm)"
-                    ]
-                },
-                {
-                    "title": "Flash Duration",
-                    "bullets": [
-                        "The duration of individual flashes must be from 75 to 300 milliseconds (ms).",
-                        "The requirement above may be met in capacitor discharge-type beacons by a series of rapid successive flashes which appear to the viewer to be one uninterrupted flash."
-                    ]
-                },
-                {
-                    "title": "Signal Format",
-                    "bullets": [
-                        "Airport beacons must provide the following signal colors:",
-                        "L-801H & L-802H Alternate white, green, and yellow"
-                    ]
-                },
-                {
-                    "title": "Input Voltage",
-                    "para": "The airport beacons must be designed to operate from a standard line voltage below 600 volts, at a tolerance of ±10 percent, 60 Hertz line frequency, alternating current."
-                }
-            ],
             "sector": [
                 "airport",
                 "defense"
             ],
             "category": "heliport-lighting",
             "subcategory": "heliport-beacon",
-            "image": "/images/airport/hb.png"
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Heliport Beacon Datasheet",
+                        "url": "hbe.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            }
         },
         "fato": {
-            "title": "FATO",
+            "title": "LED Heliport Inset Light",
             "category": "heliport-lighting",
-            "image": "/images/airport/fato.png",
             "sector": [
                 "airport",
                 "defense"
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Isolation Transformer",
+                        "url": "insHEL.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "subCategory": "fato",
-            "description": "Where a FATO is established at a surface-level heliport on ground intended for use at night, FATO lights shall be provided except that they may be omitted where the FATO and the TLOF are nearly coincidental or the extent of the FATO is self-evident.",
-            "portfolioLines": [
-                "FATO lights shall be placed along the edges of the FATO. The lights shall be uniformly spaced as follows:",
-                "for an area in the form of a square or rectangle, at intervals of not more than 50 m with a minimum of four lights on each side including a light at each corner; and",
-                "for any other shaped area, including a circular area, a intervals of not more than 5 m with a minimum of ten lights."
-            ]
+            "description": "Heliport Inset light is always be installed at locations where the lights are frequently knocked down by aircraft or maintenance vehicles. It could be used as Aiming point light, perimeter light of FATO(Final approach and take-off areas), TLOF (Touchdown and lift-off areas), taxiway, runway, Flight path alignment guidance lighting, etc. The emitting color is green or yellow or white or blue."
         },
         "floodlight-helipad-lighting-system": {
             "title": "Floodlight Helipad Lighting System",
@@ -2594,87 +1989,27 @@
                 "airport",
                 "defense"
             ],
+            "downloads": {
+                "datasheet": [
+                    {
+                        "title": "Datasheet - Floodlight Helipad Lighting System",
+                        "url": "scit.pdf"
+                    }
+                ],
+                "manual": [],
+                "certification": []
+            },
             "subCategory": "floodlight-helipad-lighting-system",
             "image": "/images/airport/fhls.png",
-            "description": "The Surface Floodlights are designed to satisfy all the ICAO required performances:",
-            "portfolioLines": [
-                "they will provide the correct Touchdown and Lift-Off area illumination, as alternative or as integration of the perimeter lights, with a minimum of 10 cd/m2,",
-                "the maximum height is 13cm, less than the required 25cm, to increase safety during hovering/final approach operations,",
-                "the two pivoting lamp holders provides the correct illuminations in any installation, aside from helipad shape and light positioning",
-                "defenses on the lamp prevent the pilot from dazzling or direct light",
-                "The floodlights are normally installed along the perimeter of the Touchdown and Lift-Off area. They can be fixed on a special base by means of screws or bolts, or directly to the ground and must be carefully oriented, in order to achieve the most effective spreading of the light."
-            ]
-        },
-        "tlof": {
-            "title": "TLOF",
-            "category": "heliport-lighting",
-            "sector": [
-                "airport",
-                "defense"
-            ],
-            "subCategory": "tlof",
-            "image": "/images/airport/tlof.png",
-            "description": "A TLOF lighting system shall be provided at a heliport intended for use at night.",
-            "portfolioLines": [
-                "The TLOF lighting system for a surface-level heliport shall consist of one or more of the following: a) perimeter lights; or b) floodlighting; or c) arrays of segmented point source lighting (ASPSL) or luminescent panel (LP) lighting to identify the TLOF when a) and b) are not practicable and FATO lights are available.",
-                "The TLOF lighting system for an elevated heliport or helideck shall consist of a) perimeter lights; and b) ASPSL and/or LPs to identify the touchdown marking where it is provided and/or floodlighting to illuminate the TLOF."
-            ]
-        },
-        "inset-omni-directional-light": {
-            "title": "Inset Omni Directional Taxiway Light",
-            "category": "heliport-lighting",
-            "sector": [
-                "airport",
-                "defense"
-            ],
-            "subCategory": "inset-omni-directional-light",
-            "image": "/images/airport/iodtl.png",
-            "description": "LED inset omni directional taxiway light",
-            "portfolioLines": [
-                "120V and 240V mains supply versions also available. Suitable for use in a dedicated passive circuit supplied from a 10W ir 25W 6.6A/0-4A isolating transformer. Power consumption is 10W."
-            ]
-        },
-        "inset-omni-directional-approach-light": {
-            "title": "Inset Omni Directional Approach Light",
-            "category": "heliport-lighting",
-            "sector": [
-                "airport",
-                "defense"
-            ],
-            "subCategory": "inset-omni-directional-approach-light",
-            "image": "/images/airport/iodal.png",
-            "description": "Inset omni directional final approach and take off light",
-            "portfolioLines": [
-                "Inset Omni-directional fitting for Heliport Taxiway Suitable for use in 6.6A airfield lighting circuits normally supplied from 1 \u00d7 30W, 45W, 65W or 100W isolating transformer. 120V and 240V mains supply versions also available.",
-                "Suitable for use in a dedicated passive circuit supplied from a 10W ir 25W 6.6A/0-4A isolating transformer. Power consumption is 10W."
-            ]
-        },
-        "elevated-omni-directional-tdz": {
-            "title": "Elevated Omni Directional TDZ",
-            "category": "heliport-lighting",
-            "sector": [
-                "airport",
-                "defense"
-            ],
-            "subCategory": "elevated-omni-directional-tdz",
-            "image": "/images/airport/eodt.png",
-            "description": "Elevated Helipad edge light | ZA216",
-            "portfolioLines": [
-                "Elevated Helipad edge light or low intensity light. Suitable for use in 6.6A airfield lighting circuits normally supplied from 1 \u00d7 45W isolating transformer. Also suitable for use in a dedicated passive circuit."
-            ]
-        },
-        "omni-directional-approach-light": {
-            "title": "Omni Directional Approach Light",
-            "category": "heliport-lighting",
-            "sector": [
-                "airport",
-                "defense"
-            ],
-            "subCategory": "omni-directional-approach-light",
-            "image": "/images/airport/odal.png",
-            "description": "Elevated omni directional final approach and take off light",
-            "portfolioLines": [
-                "Elevated Helipad edge light or low intensity light. Suitable for use in 6.6A airfield lighting circuits normally supplied from 1 \u00d7 45W isolating transformer. Also suitable for use in a dedicated passive circuit."
+            "description": "LED Surface Heliport Flood Light is used for illuminate the whole heliport area at night. It is specially designed for helipads/Helideck, providing glare-free, uniform surface lighting for landing and loading activities. LED Surface Floodlights improve pilot depth perception by reflecting the surface of the helipad/helideck, allowing pilots to better estimate their altitude during landing.",
+            "sections" : [
+                {
+                    "title": "Compliance with Standards",
+                    "bullets" : [
+                        "ICAO Annex 14 Volume II Heliports 5.3.9",
+                        "FAA AC 150/5390-2B Heliport Design Guide"
+                    ]
+                }
             ]
         },
         "air-traffic-management-system": {
